@@ -15,7 +15,7 @@ export default function PetCalculatorPage() {
           🐾 Pet Calculator Grow A Garden
         </h1>
         <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
-          Welcome to the official <strong>pet calculator grow a garden</strong> hub. Estimate exact pet values by entering weight, age, and ability modifiers. Track your <strong>grow a garden value</strong> and filter by rarity to find your exact pet and see detailed stat scaling.
+          Welcome to the official <strong>pet calculator grow a garden</strong> hub. Whether you need a <strong>gag pet calculator</strong> for instant checks, a <strong>pet weight calculator grow a garden</strong> formula, or a <strong>pet age calculator grow a garden</strong> tracker, we have it all. Estimate exact <strong>gag calculator pets</strong> values by entering weight, age, and ability modifiers. Track your <strong>grow a garden value</strong> and filter by rarity to find your exact pet and see detailed stat scaling.
         </p>
       </div>
       <PetCalculator />

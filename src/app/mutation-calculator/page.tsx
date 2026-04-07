@@ -15,7 +15,7 @@ export default function MutationCalculatorPage() {
           🧬 Mutation Value Calculator
         </h1>
         <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
-          Browse all mutations by category, stack them together, and see the total multiplier effect on your crop value. Find the best mutation combos.
+          Welcome to the ultimate <strong>grow a garden mutation calculator</strong>. Browse all mutations by category, stack them together, and see the total multiplier effect on your crop value. Using this <strong>mutation calculator grow a garden</strong> tool, you can easily find the absolute best and rarest mutation combos for massive profit.
         </p>
       </div>
       <MutationCalculator />
