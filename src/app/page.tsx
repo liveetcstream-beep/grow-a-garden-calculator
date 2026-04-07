@@ -34,10 +34,10 @@ export default function HomePage() {
             The #1 Calculator Grow A Garden Players Trust
           </h2>
           <p className="mb-4" style={{ color: 'var(--muted)' }}>
-            If you want to maximize your profits and dominate trading, you need an accurate <strong>grow a garden calculator</strong>. This multi-tool platform serves as a complete <strong>gag calculator</strong> suite replacing messy spreadsheets. From calculating exact crop mutation multipliers to finding the perfect trade offer, our tools are updated alongside every game patch.
+            If you want to maximize your profits and dominate trading, you need an strictly accurate <strong>grow a garden calculator</strong>. This multi-tool platform serves as a complete <strong>gag calculator</strong> suite replacing messy spreadsheets. From calculating exact multipliers with the integrated <strong>grow a garden mutation</strong> tools to finding the perfect trade offer, we keep everything updated to reflect the true <strong>grow a garden values</strong> in real-time. Whether you need a standard <strong>weight calculator grow a garden</strong> formula, a massive <strong>grow a garden kg calculator</strong>, or just want to quickly check the <strong>kalkulator grow a garden</strong> format for international trading, this covers it all.
           </p>
           <p className="mb-4" style={{ color: 'var(--muted)' }}>
-            Looking for a reliable <strong>pet calculator grow a garden</strong> expansion? We have that too! Track exactly how much your mythical and divine pets are worth, combine them with your crop values, and get a true picture of your complete <strong>grow a garden value</strong> in your virtual backpack. Check your net worth live without any login required.
+            Looking for a reliable <strong>pet calculator grow a garden</strong> expansion? We have that too! Track exactly how much your mythical and divine pets are worth, check their current <strong>grow a garden pet value</strong> margins, combine them with your crop yields, and get a true picture of your complete <strong>grow a garden value</strong> in your virtual backpack. Check your net worth live without any login required.
           </p>
         </div>
       </section>
