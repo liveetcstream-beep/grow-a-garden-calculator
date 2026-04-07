@@ -1,0 +1,14 @@
+import { CROPS } from "@/data/crops";
+import { PETS } from "@/data/pets";
+
+export async function generateStaticParams() {
+  const cropParams = CROPS.map((crop) => ({
+    slug: `${crop.id}-value`,
+  }));
+  
+  const petParams = PETS.map((pet) => ({
+    slug: `${pet.id}-value`,
+  }));
+
+  return [...cropParams, ...petParams];
+}

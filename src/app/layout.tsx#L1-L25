@@ -1,0 +1,24 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Grow A Garden Calculator - Ultimate Plant & Pet Value Hub',
+  description: 'Calculate the most accurate plant, crop, and pet values for Roblox Grow A Garden with our real-time calculator. Track your net worth and get trade advice.',
+};
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <head>
+        <link rel="canonical" href="https://growagardencalcs.com" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Grow A Garden Calculator - Ultimate Value Hub" />
+        <meta property="og:description" content="Calculate the most accurate values for GAG Roblox. Track inventory and share trades." />
+        <meta property="og:image" content="https://growagardencalcs.com/og-image.png" />
+      </head>
+      <body>
+        {children}
+      </body>
+    </html>
+  );
+}
