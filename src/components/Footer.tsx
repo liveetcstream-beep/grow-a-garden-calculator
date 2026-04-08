@@ -83,6 +83,16 @@ export default function Footer() {
                   🎯 Play on Roblox
                 </a>
               </li>
+              <li>
+                <a href="https://www.pinterest.com/growagardencals/" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors hover:text-[var(--primary)]" style={{ color: 'var(--muted)' }}>
+                  📌 Pinterest
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/growagardencalc/" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors hover:text-[var(--primary)]" style={{ color: 'var(--muted)' }}>
+                  👥 Facebook
+                </a>
+              </li>
             </ul>
           </div>
         </div>
