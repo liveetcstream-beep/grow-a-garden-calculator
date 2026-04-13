@@ -4,8 +4,8 @@ import { CROPS } from "@/data/crops";
 import { formatNumber } from "@/lib/calculator";
 
 export const metadata: Metadata = {
-  title: "Grow A Garden Value List | All Crop & Pet Values",
-  description: "The complete, up-to-date grow a garden value list for all crops, seeds, and pets. Check the exact base values before you trade.",
+  title: "Grow A Garden Value List & Calculator [2026 Updated]",
+  description: "The complete, up-to-date grow a garden value list and gag calculator for all crops, seeds, and pets. Check the exact base values before you trade.",
   keywords: ["grow a garden value", "value list grow a garden", "GAG value list", "grow a garden crop values"],
 };
 
@@ -55,7 +55,7 @@ export default function ValueListPage() {
                         </td>
                         <td className="px-6 py-4 text-center">
                           <Link 
-                            href={`/crop-calculator`} 
+                            href={`/crop/${crop.id}-value`} 
                             className="inline-block px-4 py-2 rounded-xl text-xs font-bold transition-all hover:scale-105"
                             style={{ background: 'var(--primary)', color: 'white' }}
                           >

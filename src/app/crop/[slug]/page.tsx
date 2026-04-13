@@ -24,9 +24,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${crop.name} Value Calculator - Grow A Garden ${crop.name} Price`,
-    description: `Calculate the exact value of ${crop.name} in Grow A Garden. Base price: ${crop.basePrice}. Use mutations and weight to find the sell value. Category: ${crop.category}.`,
-    keywords: [`${crop.name} GAG value`, `Grow A Garden ${crop.name}`, `${crop.name} price calculator`, `${crop.name} mutations`],
+    title: `${crop.name} Value & Calculator | Grow A Garden GAG Calculator`,
+    description: `How much is ${crop.name} worth in Grow A Garden? Base price is ${crop.basePrice} coins. Use our gag calculator to find exact ${crop.name} value with weight & mutations.`,
+    keywords: [`${crop.name} grow a garden value`, `${crop.name} gag calculator`, `grow a garden calculator ${crop.name}`, `${crop.name} price grow a garden`, `calculator grow a garden`],
+    alternates: { canonical: `/crop/${crop.id}-value` },
   };
 }
 

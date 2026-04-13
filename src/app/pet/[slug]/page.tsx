@@ -31,9 +31,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${pet.name} Stats & Value - ${pet.rarity} Pet | Grow A Garden`,
-    description: `${pet.name} is a ${pet.rarity} pet in Grow A Garden. Base value: ${pet.baseValue}. Ability: ${pet.ability} (×${pet.abilityMultiplier}). Calculate exact pet value with weight and age.`,
-    keywords: [`${pet.name} GAG`, `Grow A Garden ${pet.name}`, `${pet.name} pet value`, `${pet.name} ability`],
+    title: `${pet.name} Value | Pet Calculator Grow A Garden`,
+    description: `${pet.name} is a ${pet.rarity} pet in Grow A Garden. Use our pet calculator grow a garden tool to get exact value. Base: ${pet.baseValue}. Ability: ${pet.ability} ×${pet.abilityMultiplier}.`,
+    keywords: [`${pet.name} pet calculator grow a garden`, `${pet.name} grow a garden value`, `gag calculator ${pet.name}`, `pet calculator grow a garden`],
+    alternates: { canonical: `/pet/${pet.id}-stats` },
   };
 }
 

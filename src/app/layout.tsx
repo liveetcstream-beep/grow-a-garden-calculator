@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Grow A Garden Calculator - GAG Calculator & Pet Tools",
+    default: "Grow A Garden Calculator & Value List [Live 2026]",
     template: "%s | Grow A Garden Calculator"
   },
   description: "The ultimate Grow A Garden calculator. Accurately figure out your grow a garden value, use the pet calculator grow a garden tools, and dominate trading with our gag calculator.",
