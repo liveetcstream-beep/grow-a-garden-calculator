@@ -21,9 +21,6 @@ export const metadata: Metadata = {
     "crop value calculator",
     "mutation calculator"
   ],
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
     title: "Grow A Garden Calculator - GAG Calculator & Pet Tools",
     description: "Accurately figure out your grow a garden value with the best pet calculator and crop tools.",

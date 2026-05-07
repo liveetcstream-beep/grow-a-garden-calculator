@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${mutation.name} Mutation - ×${mutation.multiplier} Multiplier | Grow A Garden`,
     description: `${mutation.name} mutation in Grow A Garden has a ×${mutation.multiplier} multiplier. ${mutation.howToGet}. Category: ${mutation.category}. Calculate exact values with our mutation calculator.`,
     keywords: [`${mutation.name} mutation GAG`, `Grow A Garden ${mutation.name}`, `${mutation.name} multiplier`, `how to get ${mutation.name}`],
+    alternates: { canonical: `/mutation/${mutation.id}` },
   };
 }
 

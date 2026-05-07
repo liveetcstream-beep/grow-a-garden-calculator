@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "GAG Calculator Trade Tools | Win Fair Lose | Grow A Garden",
   description: "Use the ultimate GAG calculator to compare trade values in Grow A Garden. Find out if your trade is a WIN, FAIR, or LOSE. Share trade exports.",
   keywords: ["gag calculator", "GAG trade calculator", "Grow A Garden trade", "trade win fair lose", "trade value calculator", "grow a garden calculator"],
+  alternates: { canonical: '/trade-calculator' },
 };
 
 export default function TradeCalculatorPage() {

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Seed Profit Calculator - Best Crops ROI | Grow A Garden",
   description: "Find the most profitable seeds in Grow A Garden. Calculate ROI, profit per minute, and compare all crops to maximize your earnings.",
   keywords: ["GAG seed profit", "Grow A Garden best seeds", "seed ROI calculator", "best crops GAG"],
+  alternates: { canonical: '/seed-profit' },
 };
 
 export default function SeedProfitPage() {

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Mutation Value Calculator - Stack Grow A Garden Mutations",
   description: "Calculate mutation multiplier stacks in Grow A Garden. Browse 150+ mutations, see combined values, and find the highest multiplier combos.",
   keywords: ["GAG mutation calculator", "Grow A Garden mutations", "mutation multiplier", "mutation stack"],
+  alternates: { canonical: '/mutation-calculator' },
 };
 
 export default function MutationCalculatorPage() {

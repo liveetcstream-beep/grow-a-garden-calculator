@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Pet Calculator Grow A Garden [2026] | GAG Pet Value Calculator",
   description: "The #1 pet calculator grow a garden players use to find values. Calculate exact pet values based on weight, age, rarity. The definitive gag calculator for pets.",
   keywords: ["pet calculator grow a garden", "GAG pet calculator", "Grow A Garden pets", "pet value calculator", "grow a garden value"],
+  alternates: { canonical: '/pet-calculator' },
 };
 
 export default function PetCalculatorPage() {

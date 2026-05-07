@@ -1,6 +1,14 @@
 import Link from "next/link";
 import Dashboard from "@/components/Dashboard";
 import { CROPS } from "@/data/crops";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+  },
+};
+
 
 const FAQ_DATA = [
   {

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Calculator Grow A Garden | Exact Crop Values & Multipliers",
   description: "The best calculator grow a garden tool. Calculate your exact grow a garden value for crops, including weight, mutations, friend boost, and quantity.",
   keywords: ["calculator grow a garden", "grow a garden value", "GAG crop calculator", "Grow A Garden crop value", "crop value calculator"],
+  alternates: { canonical: '/crop-calculator' },
 };
 
 export default function CropCalculatorPage() {
