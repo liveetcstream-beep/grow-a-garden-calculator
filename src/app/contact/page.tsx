@@ -29,12 +29,12 @@ export default function ContactPage() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          
+
           {/* Contact Info */}
           <div className="space-y-6">
             <div className="p-8 rounded-3xl border h-full" style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
               <h2 className="text-2xl font-black mb-6" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>Contact Info</h2>
-              
+
               <div className="space-y-6">
                 <div>
                   <h3 className="text-sm font-bold mb-1" style={{ color: "var(--muted)" }}>General Inquiries & Support</h3>
@@ -42,7 +42,7 @@ export default function ContactPage() {
                     {contactEmail}
                   </a>
                 </div>
-                
+
                 <div>
                   <h3 className="text-sm font-bold mb-1" style={{ color: "var(--muted)" }}>Community</h3>
                   <a href="https://discord.gg/growagarden" target="_blank" rel="noopener noreferrer" className="text-lg font-medium flex items-center gap-2 transition-colors hover:text-[#5865F2]" style={{ color: "var(--foreground)" }}>
@@ -65,12 +65,12 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div className="p-8 rounded-3xl border" style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
             <form className="space-y-6" action={`mailto:${contactEmail}`} method="POST" encType="text/plain">
-              
+
               <div>
                 <label className="block text-xs font-bold mb-2 uppercase tracking-wider" style={{ color: "var(--muted)" }}>Your Name</label>
-                <input 
-                  type="text" 
-                  name="name" 
+                <input
+                  type="text"
+                  name="name"
                   required
                   placeholder="John Doe"
                   className="w-full px-4 py-3 rounded-xl border outline-none transition-all focus:border-[var(--primary)]"
@@ -80,9 +80,9 @@ export default function ContactPage() {
 
               <div>
                 <label className="block text-xs font-bold mb-2 uppercase tracking-wider" style={{ color: "var(--muted)" }}>Your Email</label>
-                <input 
-                  type="email" 
-                  name="email" 
+                <input
+                  type="email"
+                  name="email"
                   required
                   placeholder="john@example.com"
                   className="w-full px-4 py-3 rounded-xl border outline-none transition-all focus:border-[var(--primary)]"
@@ -92,7 +92,7 @@ export default function ContactPage() {
 
               <div>
                 <label className="block text-xs font-bold mb-2 uppercase tracking-wider" style={{ color: "var(--muted)" }}>Subject</label>
-                <select 
+                <select
                   name="subject"
                   className="w-full px-4 py-3 rounded-xl border outline-none transition-all focus:border-[var(--primary)] appearance-none"
                   style={{ background: "var(--background)", borderColor: "var(--glass-border)", color: "var(--foreground)" }}
@@ -106,8 +106,8 @@ export default function ContactPage() {
 
               <div>
                 <label className="block text-xs font-bold mb-2 uppercase tracking-wider" style={{ color: "var(--muted)" }}>Message</label>
-                <textarea 
-                  name="message" 
+                <textarea
+                  name="message"
                   required
                   rows={5}
                   placeholder="How can we help you?"
@@ -116,7 +116,7 @@ export default function ContactPage() {
                 ></textarea>
               </div>
 
-              <button 
+              <button
                 type="submit"
                 className="w-full py-4 rounded-xl font-bold text-white transition-all hover:scale-[1.02] shadow-lg"
                 style={{ background: "var(--primary)" }}

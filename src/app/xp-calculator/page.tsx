@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
+import { getCanonical } from "@/lib/canonical";
 
-export const metadata: Metadata = {
-  title: "XP Calculator | Grow A Garden Player Level Guide",
-  description: "Calculate how much XP you need to level up in Grow A Garden. Plan your farming strategy to reach max level quickly.",
-  keywords: ["grow a garden xp calculator", "GAG xp guide", "how to level up fast in grow a garden", "roblox grow a garden levels"],
+export const generateMetadata = async (): Promise<Metadata> => {
+  return {
+    title: "XP Calculator | Grow A Garden Player Level Guide",
+    description: "Calculate how much XP you need to level up in Grow A Garden. Plan your farming strategy to reach max level quickly.",
+    keywords: ["grow a garden xp calculator", "GAG xp guide", "how to level up fast in grow a garden", "roblox grow a garden levels"],
+    alternates: {
+      canonical: getCanonical("/xp-calculator"),
+    },
+  };
 };
 
 export default function XpCalculatorPage() {

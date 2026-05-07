@@ -2,11 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CROPS } from "@/data/crops";
 import { formatNumber } from "@/lib/calculator";
+import { getCanonical } from "@/lib/canonical";
 
-export const metadata: Metadata = {
-  title: "Grow A Garden Value List & Calculator [2026 Updated]",
-  description: "The complete, up-to-date grow a garden value list and gag calculator for all crops, seeds, and pets. Check the exact base values before you trade.",
-  keywords: ["grow a garden value", "value list grow a garden", "GAG value list", "grow a garden crop values"],
+export const generateMetadata = async (): Promise<Metadata> => {
+  return {
+    title: "Grow A Garden Value List & Calculator [2026 Updated]",
+    description: "The complete, up-to-date grow a garden value list and gag calculator for all crops, seeds, and pets. Check the exact base values before you trade.",
+    keywords: ["grow a garden value", "value list grow a garden", "GAG value list", "grow a garden crop values"],
+    alternates: {
+      canonical: getCanonical("/value-list"),
+    },
+  };
 };
 
 export default function ValueListPage() {
