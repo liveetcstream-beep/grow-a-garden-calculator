@@ -31,6 +31,7 @@ export default function Footer() {
                 { href: "/pet-calculator", label: "🐾 Pet Calculator" },
                 { href: "/trade-calculator", label: "🤝 Trade Calculator" },
                 { href: "/seed-profit", label: "🌱 Seed Profit" },
+                { href: "/xp-calculator", label: "⭐ XP Calculator" },
               ].map(link => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm transition-colors hover:text-[var(--primary)]" style={{ color: 'var(--muted)' }}>
