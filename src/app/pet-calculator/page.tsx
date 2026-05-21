@@ -17,8 +17,11 @@ export default function PetCalculatorPage() {
         <h1 className="text-3xl sm:text-4xl font-extrabold mb-3" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
           🐾 Pet Calculator Grow A Garden
         </h1>
+        <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
+          Welcome to the official <strong>pet calculator grow a garden</strong> hub. Whether you need a lightning-fast <strong>gag pet calculator</strong> for instant trade checks, a precise <strong>grow a garden pet weight calculator</strong> formula, or a <strong>pet age calculator gag</strong> tracker, this engine handles it all. We use real-time market data to estimate exact <strong>gag calculator pets</strong> values by analyzing base stats, ability modifiers, and rarity tiers. 
+        </p>
         <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
-          Welcome to the official <strong>pet calculator grow a garden</strong> hub. Whether you need a <strong>gag pet calculator</strong> for instant checks, a <strong>pet weight calculator grow a garden</strong> formula, or a <strong>pet age calculator grow a garden</strong> tracker, we have it all. Estimate exact <strong>gag calculator pets</strong> values by entering weight, age, and ability modifiers. Track your <strong>grow a garden value</strong> and filter by rarity to find your exact pet and see detailed stat scaling.
+          By factoring in complex game mechanics like <strong>logarithmic weight scaling</strong> and linear age bonuses, our tool ensures your <strong>grow a garden value</strong> is 100% accurate. Compare trading margins, filter by mythic or divine rarity, and maximize your inventory net worth before executing any trades.
         </p>
       </div>
       

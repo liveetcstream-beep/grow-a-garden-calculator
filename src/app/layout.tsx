@@ -6,24 +6,24 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Grow A Garden Calculator & Value List [Live 2026]",
+    default: "Grow A Garden Calculator | GAG Calculator & Pet Values",
     template: "%s | Grow A Garden Calculator"
   },
-  description: "The ultimate Grow A Garden calculator. Accurately figure out your grow a garden value, use the pet calculator grow a garden tools, and dominate trading with our gag calculator.",
+  description: "The ultimate Grow A Garden calculator. Accurately figure out your crop values, use the pet calculator grow a garden tools, and dominate trading with our gag calculator.",
   metadataBase: new URL('https://growagardencalcs.com'),
   keywords: [
     "grow a garden calculator", 
     "gag calculator", 
+    "kalkulator grow a garden",
     "calculator grow a garden", 
     "pet calculator grow a garden", 
-    "grow a garden value",
-    "roblox grow a garden",
-    "crop value calculator",
+    "grow a garden values",
+    "gag pet calculator",
     "mutation calculator"
   ],
   openGraph: {
     title: "Grow A Garden Calculator - GAG Calculator & Pet Tools",
-    description: "Accurately figure out your grow a garden value with the best pet calculator and crop tools.",
+    description: "The #1 kalkulator grow a garden. Accurately figure out your grow a garden value with the best pet calculator and crop tools.",
     url: 'https://growagardencalcs.com',
     siteName: "Grow A Garden Calculator",
     type: "website",

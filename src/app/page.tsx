@@ -85,7 +85,7 @@ export default function HomePage() {
               Grow A Garden <span style={{ background: 'var(--gradient-1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Calculator</span>
             </h1>
             <h2 className="text-sm sm:text-base font-medium max-w-2xl mx-auto" style={{ color: 'var(--muted)' }}>
-              Welcome to the ultimate <strong className="text-[var(--foreground)] font-bold">GAG calculator</strong>. Accurately figure out your <strong className="text-[var(--foreground)] font-bold">grow a garden value</strong> for crops, pets, and trades instantly.
+              Welcome to the ultimate <strong className="text-[var(--foreground)] font-bold">GAG calculator</strong> and <strong className="text-[var(--foreground)] font-bold">pet weight calculator</strong>. Accurately figure out your <strong className="text-[var(--foreground)] font-bold">grow a garden value</strong> for crops, pets, and trades instantly.
             </h2>
           </div>
 
@@ -102,10 +102,10 @@ export default function HomePage() {
             The #1 Calculator Grow A Garden Players Trust
           </h2>
           <p className="mb-4" style={{ color: 'var(--muted)' }}>
-            If you want to maximize your profits and dominate trading, you need an strictly accurate <strong>grow a garden calculator</strong>. This multi-tool platform serves as a complete <strong>gag calculator</strong> suite replacing messy spreadsheets. From calculating exact multipliers with the integrated <strong>grow a garden mutation</strong> tools to finding the perfect trade offer, we keep everything updated to reflect the true <strong>grow a garden values</strong> in real-time. Whether you need a standard <strong>weight calculator grow a garden</strong> formula, a massive <strong>grow a garden kg calculator</strong>, or just want to quickly check the <strong>kalkulator grow a garden</strong> format for international trading, this covers it all.
+            If you want to maximize your profits and dominate trading, you need an strictly accurate <strong>grow a garden calculator</strong>. This multi-tool platform serves as a complete <strong>gag calculator</strong> suite replacing messy spreadsheets. From calculating exact multipliers with the integrated <strong>grow a garden mutation calculator</strong> tools to finding the perfect trade offer, we keep everything updated to reflect the true <strong>grow a garden values</strong> in real-time. Whether you need a standard <strong>weight calculator grow a garden</strong> formula, a massive <strong>grow a garden kg calculator</strong>, or just want to quickly check the <strong>kalkulator grow a garden</strong> data for international trading, this covers it all.
           </p>
           <p className="mb-4" style={{ color: 'var(--muted)' }}>
-            Looking for a reliable <strong>pet calculator grow a garden</strong> expansion? We have that too! Track exactly how much your mythical and divine pets are worth, check their current <strong>grow a garden pet value</strong> margins, combine them with your crop yields, and get a true picture of your complete <strong>grow a garden value</strong> in your virtual backpack. Check your net worth live without any login required.
+            Looking for a reliable <strong>pet calculator grow a garden</strong> expansion? We have that too! Track exactly how much your mythical and divine pets are worth, check their current <strong>grow a garden pet value</strong> margins, use our fast <strong>pet weight calculator</strong> to combine them with your crop yields, and get a true picture of your complete <strong>grow a garden value</strong>. Check your net worth live without any login required.
           </p>
         </div>
       </section>

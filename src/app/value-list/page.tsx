@@ -24,8 +24,11 @@ export default function ValueListPage() {
         <h1 className="text-4xl sm:text-5xl font-black mb-4" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
           Grow A Garden <span style={{ background: 'var(--gradient-1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Value List</span>
         </h1>
+        <p className="text-sm max-w-2xl mx-auto leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
+          Welcome to the most accurate <strong>grow a garden value</strong> database. Below is the complete, continually-updated value list for every plant, fruit, and crop in the game ecosystem. Whether you are using a <strong>seed combiner grow a garden website</strong> tool, calculating earnings for exactly 18 watermelons, or checking <strong>easter egg value</strong> fluctuations, this directory provides the baseline pricing algorithms you need.
+        </p>
         <p className="text-sm max-w-2xl mx-auto leading-relaxed" style={{ color: 'var(--muted)' }}>
-          Welcome to the most accurate <strong>grow a garden value</strong> database. Below is the complete, official value list for every plant/crop in the game. Use this list to check base coin values, or click on any crop to open the full calculator.
+          Use this exact <strong>gag value list</strong> to monitor base coin prices before calculating mutation multipliers or pet weight scaling. Understanding these core economics is the first step to maximizing your total inventory net worth and securing profitable trades. Click any crop below to open the dedicated value calculator.
         </p>
       </div>
 

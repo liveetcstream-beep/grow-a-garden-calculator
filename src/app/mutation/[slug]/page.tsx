@@ -22,9 +22,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${mutation.name} Mutation - ×${mutation.multiplier} Multiplier | Grow A Garden`,
-    description: `${mutation.name} mutation in Grow A Garden has a ×${mutation.multiplier} multiplier. ${mutation.howToGet}. Category: ${mutation.category}. Calculate exact values with our mutation calculator.`,
-    keywords: [`${mutation.name} mutation GAG`, `Grow A Garden ${mutation.name}`, `${mutation.name} multiplier`, `how to get ${mutation.name}`],
+    title: `${mutation.name} Mutation Grow A Garden - Multiplier & Value Calculator (×${mutation.multiplier})`,
+    description: `Calculate the ${mutation.name} mutation multiplier (×${mutation.multiplier}) in Grow A Garden. Find the exact value, price, and how to get the ${mutation.name} mutation with our GAG calculator.`,
+    keywords: [`${mutation.name} mutation grow a garden`, `${mutation.name} mutation multiplier`, `grow a garden ${mutation.name} mutation`, `${mutation.name} mutation value`, `GAG mutation calculator`],
     alternates: { canonical: `/mutation/${mutation.id}` },
   };
 }
