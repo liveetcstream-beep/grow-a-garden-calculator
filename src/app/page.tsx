@@ -198,6 +198,9 @@ export default function HomePage() {
             lets you track the worth of your mythical, divine, and event pets. Calculate logarithmic weight scaling, compare values side-by-side, 
             and see your overall backpack net worth instantly without logging in.
           </p>
+          <p className="mb-4 text-left" style={{ color: 'var(--muted)', fontSize: '0.9rem', borderLeft: '3px solid var(--primary)', paddingLeft: '1rem' }}>
+            🇮🇩 <strong>Untuk Pemain Indonesia:</strong> Portal ini juga berfungsi sebagai <strong>kalkulator grow a garden</strong> paling akurat. Anda dapat menghitung nilai jual buah, melacak multiplier mutasi, serta mengecek <strong>kalkulator pet grow a garden</strong> terlengkap untuk memastikan perdagangan (trade) Anda selalu menguntungkan.
+          </p>
         </div>
       </section>
 
