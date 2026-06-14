@@ -31,6 +31,39 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
+function getHowToGetText(crop: any) {
+  switch (crop.category) {
+    case "Seed Shop":
+      return `The ${crop.name} seed can be purchased directly from the main Seed Shop in the game lobby using Sheckles. It is a baseline beginner crop, making it extremely reliable for early-game coin farming before transitioning to exotic crops.`;
+    case "Exotic Seed Pack":
+      return `To get ${crop.name} seeds, you need to purchase and open Exotic Seed Packs from the game shop. Because of its exotic rarity tier, it yields a significantly higher return on investment (ROI) compared to basic seeds.`;
+    case "Normal Seed Pack":
+      return `The ${crop.name} seed is obtained by purchasing and opening standard Normal Seed Packs. It represents an intermediate tier of crop farming, bridging the gap between starter crops and high-end exotics.`;
+    case "Night Event":
+      return `The ${crop.name} is a special night-active crop that can only be obtained and grown during the GAG Night Event. Keep an eye on the sky and wait for the map lighting to shift to night to activate growth speeds for this category.`;
+    case "Easter Event":
+      return `The ${crop.name} is a seasonal crop introduced during the Easter Event. You can obtain its seeds by participating in the egg hunt mini-games or exchanging event tokens at the event merchant.`;
+    case "Summer Event":
+      return `The ${crop.name} is a summer-themed crop obtained through limited-time Summer Event chests. Stack these seeds during the event period to maximize your hot-weather yield multipliers.`;
+    case "Prehistoric":
+      return `To get the prehistoric ${crop.name}, you need to gather fossils or participate in the Prehistoric Update tasks. Growth in this prehistoric category is heavily influenced by lava and deep-soil multipliers.`;
+    case "Zen Update":
+      return `The Zen ${crop.name} is obtained through Zen Update mechanics. You can nurture these plants in specialized tranquil garden plots to guarantee smooth, consistent growth with minimal decay.`;
+    case "Cooking Update":
+      return `The ${crop.name} was introduced in the Cooking Update. These crops are primary ingredients in kitchen recipes, making them highly valuable for player-to-player trade lists since chefs need them in large quantities.`;
+    case "Beanstalk Event":
+      return `The ${crop.name} is an epic high-altitude crop obtained from the Beanstalk Event. Climbers can find these seeds near the top of the giant beanstalk or trade them with sky-dwellers.`;
+    case "Fairy Event":
+      return `To get ${crop.name} seeds, you must participate in the Fairy Event. These mystical seeds carry a high chance of turning into valuable mutations like Golden or Rainbow when watered with fairy dust.`;
+    case "Bee Event":
+      return `The ${crop.name} is unlocked during the Bee Event. You must cultivate these plants alongside beehives to optimize pollination cycles and accelerate harvest weight.`;
+    case "Limited Reward":
+      return `The ${crop.name} is an elite, highly restricted limited-reward item. It cannot be purchased in the standard shops and is typically obtained through special global tournament achievements, promo codes, or high-value player trades.`;
+    default:
+      return `The ${crop.name} is a valuable crop in Grow A Garden. You can obtain its seeds from normal gameplay, event bundles, or by trading with other players in the lobby.`;
+  }
+}
+
 export default async function CropValuePage({ params }: PageProps) {
   const { slug } = await params;
   const cropId = slug.replace("-value", "");
@@ -117,8 +150,8 @@ export default async function CropValuePage({ params }: PageProps) {
               <tr style={{ borderBottom: '1px solid var(--glass-border)' }}>
                 <th className="text-left py-3 px-4 font-semibold" style={{ color: 'var(--muted)' }}>Weight (kg)</th>
                 <th className="text-right py-3 px-4 font-semibold" style={{ color: 'var(--muted)' }}>Base Value</th>
-                <th className="text-right py-3 px-4 font-semibold" style={{ color: 'var(--muted)' }}>w/ Golden (×20)</th>
-                <th className="text-right py-3 px-4 font-semibold" style={{ color: 'var(--muted)' }}>w/ Rainbow (×50)</th>
+                <th className="text-right py-3 px-4 font-semibold" style={{ color: '#FFD700' }}>w/ Golden (×20)</th>
+                <th className="text-right py-3 px-4 font-semibold" style={{ color: '#FF6B9D' }}>w/ Rainbow (×50)</th>
               </tr>
             </thead>
             <tbody>
@@ -180,6 +213,30 @@ export default async function CropValuePage({ params }: PageProps) {
           </div>
         </div>
       )}
+
+      {/* Detailed SEO Guide Section */}
+      <section className="mt-8 border-t pt-8" style={{ borderColor: 'var(--glass-border)' }}>
+        <div className="glass-card-static p-6 sm:p-8">
+          <h2 className="text-xl font-bold mb-4 flex items-center gap-2" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
+            🔍 How to Get {crop.name} & GAG Value Guide
+          </h2>
+          
+          <div className="space-y-4 text-sm leading-relaxed text-left" style={{ color: 'var(--muted)' }}>
+            <p>
+              Looking to find out how to get <strong>{crop.name} grow a garden</strong> seeds? {getHowToGetText(crop)}
+            </p>
+            <p>
+              When it comes to value estimation, the baseline <strong>{crop.name} price grow a garden</strong> metrics start at <strong>{crop.basePrice} coins</strong>. 
+              However, the final yield is exponentially higher depending on weight scaling. Under the standard formula, a 10kg {crop.name} scales at 10² (100x multiplier), 
+              resulting in a base value of <strong>{(crop.basePrice * 100).toLocaleString()} coins</strong> before any mutations are applied!
+            </p>
+            <p>
+              To check advanced combination multipliers, you can combine this with mutations like Golden (x20) or Rainbow (x50). Stacking these will turn a standard 
+              {crop.name} harvest into a multi-million coin payout. Use our interactive calculator above to simulate different weights, friend boosts, and active GAG mutations live.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -38,6 +38,29 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
+function getPetHowToGetText(pet: any) {
+  switch (pet.rarity) {
+    case "Common":
+      return `hatching standard Starter/Farm eggs or Domestic eggs in the pet shop. It is a great early-game companion to boost base crop yields before you unlock higher tiers.`;
+    case "Uncommon":
+      return `opening Forest or Pond eggs from the lobby merchants. Because of its uncommon status, it carries a slightly stronger ability modifier to assist in field calculations.`;
+    case "Rare":
+      return `purchasing Savanna or Jungle eggs. It provides a solid mid-tier boost to your crop weight and overall value scaling formulas.`;
+    case "Epic":
+      return `opening specialized Arctic, Sky, or event-specific eggs. It carries highly powerful passive abilities that significantly scale up crop coin output.`;
+    case "Legendary":
+      return `hatching Mythical eggs or participating in special GAG events. Legendary pets are highly valued in trade communities for their massive ability multipliers.`;
+    case "Mythic":
+      return `hatching Ocean or Prehistoric eggs with a low drop probability. They possess massive game-changing abilities that scale up your backpack net worth.`;
+    case "Divine":
+      return `hatching extremely rare Divine eggs. These represent the highest value tier in the game, providing massive multipliers for active farmers.`;
+    case "Event":
+      return `participating in seasonal event challenges (such as Easter, Summer, or Halloween) and exchanging event tokens. They cannot be hatched from standard shop eggs.`;
+    default:
+      return `hatching shop eggs or trading with other players in the main trading hubs.`;
+  }
+}
+
 export default async function PetStatsPage({ params }: PageProps) {
   const { slug } = await params;
   const petId = slug.replace("-stats", "");
@@ -168,19 +191,23 @@ export default async function PetStatsPage({ params }: PageProps) {
       {/* Info */}
       <div className="glass-card-static p-6 mb-8">
         <h2 className="text-lg font-bold mb-4" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
-          📖 About {pet.name}
+          📖 About {pet.name} & GAG Pet Value Guide
         </h2>
         <div className="space-y-3 text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
           <p>
             The <strong style={{ color: 'var(--foreground)' }}>{pet.name}</strong> is a <strong style={{ color: rarityColor }}>{pet.rarity}</strong> pet in Grow A Garden belonging to the {pet.category} category.
           </p>
           <p>
-            Its special ability is <strong style={{ color: 'var(--primary)' }}>{pet.ability}</strong> with a base ability multiplier of ×{pet.abilityMultiplier}.
-            This ability enhances your garden by providing mutation effects or boosts to your crops.
+            <strong>How to get {pet.name} in Grow A Garden?</strong> You can obtain the {pet.name} by {getPetHowToGetText(pet)}
           </p>
           <p>
-            Pet values scale with weight (logarithmic) and age (linear), meaning older and heavier pets are worth significantly more.
-            The value formula is: <strong style={{ color: 'var(--accent)' }}>Value = Base × Weight Bonus × Age Bonus × Ability Modifier</strong>.
+            Its special ability is <strong style={{ color: 'var(--primary)' }}>{pet.ability}</strong> with a base ability multiplier of ×{pet.abilityMultiplier}.
+            This ability enhances your garden by providing mutation effects or boosts to your crops, making it a critical asset for high-yield farming setups.
+          </p>
+          <p>
+            Under the game mechanics, <strong>{pet.name} grow a garden value</strong> statistics scale with weight (logarithmic scaling) and age (linear bonus). 
+            Older and heavier pets are worth significantly more in trading hubs. The value formula applied in our <strong>{pet.name} pet calculator grow a garden</strong> tool is: 
+            <strong style={{ color: 'var(--accent)' }}>Value = Base ({pet.baseValue}) × Weight Bonus × Age Bonus × Ability Modifier (×{pet.abilityMultiplier})</strong>.
           </p>
         </div>
       </div>
