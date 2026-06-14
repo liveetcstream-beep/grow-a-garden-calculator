@@ -13,35 +13,107 @@ export const metadata: Metadata = {
 const FAQ_DATA = [
   {
     q: "How much is Easter Egg Fruit worth in Grow A Garden?",
-    a: "The Easter Egg has a base price of 250 coins. With a Golden mutation (×20) at 10 kg weight, it can reach 500,000+ coins. Use our grow a garden calculator to find the exact value with your specific weight and mutations."
+    aText: "The Easter Egg has a base price of 250 coins. With a Golden mutation (×20) at 10 kg weight, it can reach 500,000+ coins. Use our grow a garden calculator to find the exact value with your specific weight and mutations.",
+    aRender: (
+      <>
+        The Easter Egg has a base price of 250 coins. With a Golden mutation (×20) at 10 kg weight, it can reach 500,000+ coins. Use our{" "}
+        <Link href="/crop/easter-egg-value" className="text-[var(--primary)] hover:underline font-semibold">
+          Easter Egg Fruit value calculator
+        </Link>{" "}
+        to find the exact value with your specific weight and mutations.
+      </>
+    )
   },
   {
     q: "What is the Mango value in the Grow A Garden calculator?",
-    a: "Mango has a base price of 350 coins, making it one of the most valuable Exotic Seed Pack crops. At 10 kg with a Rainbow mutation (×50), it reaches over 1,750,000 coins. Use our gag calculator for exact values."
+    aText: "Mango has a base price of 350 coins, making it one of the most valuable Exotic Seed Pack crops. At 10 kg with a Rainbow mutation (×50), it reaches over 1,750,000 coins. Use our gag calculator for exact values.",
+    aRender: (
+      <>
+        Mango has a base price of 350 coins, making it one of the most valuable Exotic Seed Pack crops. At 10 kg with a Rainbow mutation (×50), it reaches over 1,750,000 coins. Use our{" "}
+        <Link href="/crop/mango-value" className="text-[var(--primary)] hover:underline font-semibold">
+          Mango value calculator
+        </Link>{" "}
+        for exact values.
+      </>
+    )
   },
   {
     q: "How do Firework Mutation multipliers work in GAG?",
-    a: "The Firework Mutation in Grow A Garden applies a multiplicative bonus to your crop's base value. Stack it with other mutations like Golden or Rainbow for massive multipliers. Use the mutation calculator to see combined effects."
+    aText: "The Firework Mutation in Grow A Garden applies a multiplicative bonus to your crop's base value. Stack it with other mutations like Golden or Rainbow for massive multipliers. Use the mutation calculator to see combined effects.",
+    aRender: (
+      <>
+        The Firework Mutation in Grow A Garden applies a multiplicative bonus to your crop's base value. Stack it with other mutations like Golden or Rainbow for massive multipliers. Use the{" "}
+        <Link href="/mutation-calculator" className="text-[var(--primary)] hover:underline font-semibold">
+          mutation calculator
+        </Link>{" "}
+        to see combined effects.
+      </>
+    )
   },
   {
     q: "What does Whimsical Mutation do in Grow A Garden?",
-    a: "The Whimsical Mutation is one of the most sought-after multipliers in GAG. It dramatically increases your crop's final sell value. Open the mutation calculator to see exact multiplier values and stack combinations."
+    aText: "The Whimsical Mutation is one of the most sought-after multipliers in GAG. It dramatically increases your crop's final sell value. Open the mutation calculator to see exact multiplier values and stack combinations.",
+    aRender: (
+      <>
+        The Whimsical Mutation is one of the most sought-after multipliers in GAG. It dramatically increases your crop's final sell value. Open the{" "}
+        <Link href="/mutation-calculator" className="text-[var(--primary)] hover:underline font-semibold">
+          mutation calculator
+        </Link>{" "}
+        to see exact multiplier values and stack combinations.
+      </>
+    )
   },
   {
     q: "How does the Pet Calculator Grow A Garden work?",
-    a: "The pet calculator grow a garden tool uses weight, age, rarity, and ability modifiers to calculate exact pet values. Heavier and older pets are worth significantly more due to logarithmic weight scaling and linear age bonuses."
+    aText: "The pet calculator grow a garden tool uses weight, age, rarity, and ability modifiers to calculate exact pet values. Heavier and older pets are worth significantly more due to logarithmic weight scaling and linear age bonuses.",
+    aRender: (
+      <>
+        The{" "}
+        <Link href="/pet-calculator" className="text-[var(--primary)] hover:underline font-semibold">
+          pet calculator grow a garden
+        </Link>{" "}
+        tool uses weight, age, rarity, and ability modifiers to calculate exact pet values. Heavier and older pets are worth significantly more due to logarithmic weight scaling and linear age bonuses.
+      </>
+    )
   },
   {
     q: "What is the GAG Calculator formula for crop value?",
-    a: "The official formula is: Final Value = Base Price × Weight² × Mutation Multipliers × Friend Boost × Quantity. Our grow a garden calculator applies this formula automatically — just select your crop and enter your parameters."
+    aText: "The official formula is: Final Value = Base Price × Weight² × Mutation Multipliers × Friend Boost × Quantity. Our grow a garden calculator applies this formula automatically — just select your crop and enter your parameters.",
+    aRender: (
+      <>
+        The official formula is: Final Value = Base Price × Weight² × Mutation Multipliers × Friend Boost × Quantity. Our{" "}
+        <Link href="/crop-calculator" className="text-[var(--primary)] hover:underline font-semibold">
+          grow a garden calculator
+        </Link>{" "}
+        applies this formula automatically — just select your crop and enter your parameters.
+      </>
+    )
   },
   {
     q: "What is the Glimmering Mutation multiplier in Grow A Garden?",
-    a: "The Glimmering Mutation is a rare and powerful mutation that provides a high value multiplier in Grow A Garden. Check the mutation calculator page for the exact glimmering mutation grow a garden multiplier value."
+    aText: "The Glimmering Mutation is a rare and powerful mutation that provides a high value multiplier in Grow A Garden. Check the mutation calculator page for the exact glimmering mutation grow a garden multiplier value.",
+    aRender: (
+      <>
+        The Glimmering Mutation is a rare and powerful mutation that provides a high value multiplier in Grow A Garden. Check the{" "}
+        <Link href="/mutation-calculator" className="text-[var(--primary)] hover:underline font-semibold">
+          mutation calculator
+        </Link>{" "}
+        for the exact glimmering mutation grow a garden multiplier value.
+      </>
+    )
   },
   {
     q: "How do I use the Stampede Mutation in Grow A Garden?",
-    a: "The Stampede Mutation is a special mutation that multiplies your crop value. Grow a garden stampede mutation can be stacked with other mutations. Use the calculator grow a garden tool to see its exact effect on any crop."
+    aText: "The Stampede Mutation is a special mutation that multiplies your crop value. Grow a garden stampede mutation can be stacked with other mutations. Use the calculator grow a garden tool to see its exact effect on any crop.",
+    aRender: (
+      <>
+        The Stampede Mutation is a special mutation that multiplies your crop value. Grow a garden stampede mutation can be stacked with other mutations. Use the{" "}
+        <Link href="/crop-calculator" className="text-[var(--primary)] hover:underline font-semibold">
+          grow a garden calculator
+        </Link>{" "}
+        tool to see its exact effect on any crop.
+      </>
+    )
   },
 ];
 
@@ -55,7 +127,7 @@ export default function HomePage() {
       "name": faq.q,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": faq.a
+        "text": faq.aText
       }
     }))
   };
@@ -99,13 +171,32 @@ export default function HomePage() {
       <section className="py-12 border-t" style={{ borderColor: 'var(--glass-border)', background: 'var(--background)' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 prose prose-invert prose-sm sm:prose-base text-center sm:text-left">
           <h2 className="text-2xl font-bold mb-4" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
-            The #1 Calculator Grow A Garden Players Trust
+            The #1 Grow A Garden Calculator for Roblox Players
           </h2>
           <p className="mb-4" style={{ color: 'var(--muted)' }}>
-            If you want to maximize your profits and dominate trading, you need an strictly accurate <strong>grow a garden calculator</strong>. This multi-tool platform serves as a complete <strong>gag calculator</strong> suite replacing messy spreadsheets. From calculating exact multipliers with the integrated <strong>grow a garden mutation calculator</strong> tools to finding the perfect trade offer, we keep everything updated to reflect the true <strong>grow a garden values</strong> in real-time. Whether you need a standard <strong>weight calculator grow a garden</strong> formula, a massive <strong>grow a garden kg calculator</strong>, or just want to quickly check the <strong>kalkulator grow a garden</strong> data for international trading, this covers it all.
+            If you want to maximize your in-game profits and dominate trading, you need a precise and up-to-date{" "}
+            <Link href="/crop-calculator" className="text-[var(--primary)] hover:underline font-semibold">
+              Grow A Garden Calculator
+            </Link>
+            . This interactive platform functions as a complete GAG value hub, replacing outdated spreadsheets with real-time math. 
+            From calculating exact multiplier stacks using our advanced{" "}
+            <Link href="/mutation-calculator" className="text-[var(--primary)] hover:underline font-semibold">
+              mutation calculator
+            </Link>{" "}
+            to executing fair deals via the{" "}
+            <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-semibold">
+              trade calculator
+            </Link>
+            , we keep everything updated to reflect actual market values. Whether you need a simple weight calculation or want to estimate 
+            large garden harvests with the seed profit tools, this portal covers all your needs.
           </p>
           <p className="mb-4" style={{ color: 'var(--muted)' }}>
-            Looking for a reliable <strong>pet calculator grow a garden</strong> expansion? We have that too! Track exactly how much your mythical and divine pets are worth, check their current <strong>grow a garden pet value</strong> margins, use our fast <strong>pet weight calculator</strong> to combine them with your crop yields, and get a true picture of your complete <strong>grow a garden value</strong>. Check your net worth live without any login required.
+            Looking to check pet value projections? Our integrated{" "}
+            <Link href="/pet-calculator" className="text-[var(--primary)] hover:underline font-semibold">
+              pet calculator
+            </Link>{" "}
+            lets you track the worth of your mythical, divine, and event pets. Calculate logarithmic weight scaling, compare values side-by-side, 
+            and see your overall backpack net worth instantly without logging in.
           </p>
         </div>
       </section>
@@ -196,7 +287,7 @@ export default function HomePage() {
                   <span className="text-lg ml-4 transition-transform group-open:rotate-45" style={{ color: 'var(--primary)' }}>+</span>
                 </summary>
                 <div className="px-6 pb-5 text-sm leading-relaxed" style={{ color: 'var(--muted)', borderTop: '1px solid var(--glass-border)' }}>
-                  <p className="pt-4">{faq.a}</p>
+                  <p className="pt-4">{faq.aRender}</p>
                 </div>
               </details>
             ))}

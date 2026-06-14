@@ -26,12 +26,21 @@ export const metadata: Metadata = {
     description: "The #1 kalkulator grow a garden. Accurately figure out your grow a garden value with the best pet calculator and crop tools.",
     url: 'https://growagardencalcs.com',
     siteName: "Grow A Garden Calculator",
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: "Grow A Garden Calculator & Pet Value Hub",
+      }
+    ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Grow A Garden Calculator - GAG Calculator",
     description: "The ultimate calculator for Grow A Garden crop values & pets.",
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
