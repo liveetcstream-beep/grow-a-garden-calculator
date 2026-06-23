@@ -87,10 +87,10 @@ export default function RootLayout({
       <body className="antialiased bg-grid">
         {/* Google Analytics Tag */}
         <Script
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src={'https://www.googletagmanager.com/gtag/js?id=G-SCYE342DM5'}
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

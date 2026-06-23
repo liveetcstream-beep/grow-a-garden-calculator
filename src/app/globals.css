@@ -14,7 +14,7 @@
   --danger: #ef4444;
   --warning: #f59e0b;
   --success: #22c55e;
-  --muted: #64748b;
+  --muted: #94a3b8;
   --glass: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.08);
   --surface-1: #111927;
@@ -34,6 +34,7 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
+  --color-muted: var(--muted);
   --font-sans: 'Inter', sans-serif;
   --font-display: 'Outfit', sans-serif;
 }
@@ -156,8 +157,8 @@ body {
 
 .btn-primary {
   background: var(--gradient-1);
-  color: white;
-  font-weight: 600;
+  color: #0a0e17;
+  font-weight: 700;
   padding: 12px 24px;
   border-radius: var(--radius-sm);
   border: none;

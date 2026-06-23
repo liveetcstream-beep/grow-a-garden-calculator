@@ -59,6 +59,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button 
+          aria-label="Toggle menu"
           className="md:hidden w-10 h-10 flex items-center justify-center rounded-xl"
           style={{ background: 'var(--surface-1)', border: '1px solid var(--glass-border)' }}
           onClick={() => setIsOpen(!isOpen)}

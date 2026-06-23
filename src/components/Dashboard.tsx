@@ -79,8 +79,8 @@ export default function Dashboard() {
       {/* Search Bar / Mode Toggle Header */}
       <div className="flex flex-col md:flex-row items-center gap-6 mb-12">
         <div className="inline-flex rounded-2xl p-1 border" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)' }}>
-          <button onClick={() => handleModeChange("crops")} className={`px-6 py-3 rounded-xl text-xs font-bold transition-all ${mode === "crops" ? "shadow-lg bg-primary text-white" : "text-muted hover:text-white"}`}>🌾 Plants / Crops</button>
-          <button onClick={() => handleModeChange("pets")} className={`px-6 py-3 rounded-xl text-xs font-bold transition-all ${mode === "pets" ? "shadow-lg bg-amber-500 text-white" : "text-muted hover:text-white"}`}>🐾 Pets</button>
+          <button onClick={() => handleModeChange("crops")} className={`px-6 py-3 rounded-xl text-xs font-bold transition-all ${mode === "crops" ? "shadow-lg bg-primary text-[#0a0e17]" : "text-muted hover:text-white"}`}>🌾 Plants / Crops</button>
+          <button onClick={() => handleModeChange("pets")} className={`px-6 py-3 rounded-xl text-xs font-bold transition-all ${mode === "pets" ? "shadow-lg bg-amber-500 text-[#0a0e17]" : "text-muted hover:text-white"}`}>🐾 Pets</button>
         </div>
 
         <div className="flex-1 relative w-full">
@@ -125,7 +125,7 @@ export default function Dashboard() {
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`px-4 py-2.5 rounded-xl text-xs font-black transition-all ${activeCategory === cat ? 'bg-primary text-white shadow-xl scale-105' : 'text-muted hover:text-white hover:bg-white/5'}`}
+            className={`px-4 py-2.5 rounded-xl text-xs font-black transition-all ${activeCategory === cat ? 'bg-primary text-[#0a0e17] shadow-xl scale-105' : 'text-muted hover:text-white hover:bg-white/5'}`}
             style={{ 
               background: activeCategory === cat ? 'var(--primary)' : 'transparent',
               fontFamily: 'var(--font-display)' 
@@ -176,7 +176,7 @@ export default function Dashboard() {
       ) : (
         <div className="mt-12 p-16 rounded-3xl border-2 border-dashed border-white/5 flex flex-col items-center justify-center text-center">
            <p className="text-5xl mb-4 opacity-20">🖱️</p>
-           <h3 className="text-xl font-bold text-white/20 uppercase tracking-widest">Select a {mode === "crops" ? "plant" : "pet"} above to start calculating</h3>
+           <h3 className="text-xl font-bold text-[var(--muted)] uppercase tracking-widest">Select a {mode === "crops" ? "plant" : "pet"} above to start calculating</h3>
         </div>
       )}
 
