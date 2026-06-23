@@ -102,7 +102,7 @@ export default function RootLayout({
         <GoogleAnalytics gaId="G-SCYE342DM5" />
         <div className="bg-aurora" />
         <Navbar />
-        <main className="min-h-screen pt-20">
+        <main className="min-h-screen">
           {children}
         </main>
         <Footer />

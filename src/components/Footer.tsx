@@ -101,7 +101,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
           <p className="text-xs" style={{ color: 'var(--muted)' }}>
-            © 2025 GAG Calculator. Not affiliated with Roblox Corporation.
+            © 2026 GAG Calculator. Not affiliated with Roblox Corporation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/about" className="text-xs transition-colors hover:text-[var(--primary)]" style={{ color: 'var(--muted)' }}>About Us</Link>
