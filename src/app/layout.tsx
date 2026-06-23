@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -99,20 +99,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-grid">
         {/* Google Analytics Tag */}
-        <Script
-          strategy="lazyOnload"
-          src={'https://www.googletagmanager.com/gtag/js?id=G-SCYE342DM5'}
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-SCYE342DM5', {
-              page_path: window.location.pathname,
-            });
-          `}
-        </Script>
+        <GoogleAnalytics gaId="G-SCYE342DM5" />
         <div className="bg-aurora" />
         <Navbar />
         <main className="min-h-screen pt-20">
