@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import Analytics from "@/components/Analytics";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -98,8 +98,8 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased bg-grid">
-        {/* Google Analytics Tag */}
-        <GoogleAnalytics gaId="G-SCYE342DM5" />
+        {/* Google Analytics Tag - Delayed for Pagespeed */}
+        <Analytics />
         <div className="bg-aurora" />
         <Navbar />
         <main className="min-h-screen">
