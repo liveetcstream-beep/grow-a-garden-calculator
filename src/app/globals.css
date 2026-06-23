@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap');
+
 @import "tailwindcss";
 
 :root {
@@ -35,8 +35,8 @@
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
   --color-muted: var(--muted);
-  --font-sans: 'Inter', sans-serif;
-  --font-display: 'Outfit', sans-serif;
+  --font-sans: var(--font-inter), sans-serif;
+  --font-display: var(--font-outfit), sans-serif;
 }
 
 * {
@@ -58,7 +58,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   overflow-x: hidden;
   min-height: 100vh;
 }
@@ -140,8 +140,7 @@ body {
   font-size: 14px;
   transition: all 0.2s ease;
   width: 100%;
-  outline: none;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
 }
 
 .input-glow:focus {
@@ -166,8 +165,7 @@ body {
   font-size: 14px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  overflow: hidden;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
 }
 
 .btn-primary::before {
@@ -199,8 +197,7 @@ body {
   border: 1px solid var(--glass-border);
   cursor: pointer;
   font-size: 14px;
-  transition: all 0.2s ease;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
 }
 
 .btn-secondary:hover {
@@ -236,7 +233,7 @@ body {
 /* ━━━━━━━━━━━━━━━━━━━━━━ RESULT DISPLAY ━━━━━━━━━━━━━━━━━━━━━━ */
 
 .result-value {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-display);
   font-weight: 800;
   font-size: 2.5rem;
   background: var(--gradient-1);
@@ -346,8 +343,7 @@ body {
   border-bottom: 2px solid transparent;
   cursor: pointer;
   transition: all 0.2s ease;
-  white-space: nowrap;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
 }
 
 .tab-btn:hover {
@@ -459,8 +455,7 @@ body {
   font-size: 14px;
   transition: all 0.2s ease;
   width: 100%;
-  outline: none;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   appearance: none;
   cursor: pointer;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
