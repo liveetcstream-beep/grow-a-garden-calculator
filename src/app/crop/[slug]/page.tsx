@@ -232,7 +232,7 @@ export default async function CropValuePage({ params }: PageProps) {
             </p>
             <p>
               To check advanced combination multipliers, you can combine this with mutations like Golden (x20) or Rainbow (x50). Stacking these will turn a standard 
-              {crop.name} harvest into a multi-million coin payout. Use our interactive calculator above to simulate different weights, friend boosts, and active GAG mutations live.
+              {crop.name} harvest into a multi-million coin payout. Use our interactive calculator above to simulate different weights, friend boosts, and active GAG mutations live. For full backpack net worth estimates, visit our main <Link href="/" className="text-[var(--primary)] hover:underline font-bold">Grow A Garden Calculator</Link>.
             </p>
           </div>
         </div>

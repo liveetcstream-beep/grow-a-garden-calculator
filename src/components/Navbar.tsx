@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const NAV_ITEMS = [
-  { href: "/", label: "Home Base", icon: "🏠" },
+  { href: "/", label: "Home", icon: "🏠" },
   { href: "/reverse-calculator", label: "Reverse Targeter", icon: "🎯" },
   { href: "/trade-calculator", label: "Trade Win/Lose", icon: "🤝" },
   { href: "/mutation-calculator", label: "Mutations", icon: "🧬" },

@@ -83,7 +83,7 @@ const FAQ_DATA = [
       <>
         The official formula is: Final Value = Base Price × Weight² × Mutation Multipliers × Friend Boost × Quantity. Our{" "}
         <Link href="/crop-calculator" className="text-[var(--primary)] hover:underline font-semibold">
-          grow a garden calculator
+          crop value calculator
         </Link>{" "}
         applies this formula automatically — just select your crop and enter your parameters.
       </>
@@ -109,7 +109,7 @@ const FAQ_DATA = [
       <>
         The Stampede Mutation is a special mutation that multiplies your crop value. Grow a garden stampede mutation can be stacked with other mutations. Use the{" "}
         <Link href="/crop-calculator" className="text-[var(--primary)] hover:underline font-semibold">
-          grow a garden calculator
+          crop value calculator
         </Link>{" "}
         tool to see its exact effect on any crop.
       </>
@@ -176,7 +176,7 @@ export default function HomePage() {
           <p className="mb-4" style={{ color: 'var(--muted)' }}>
             If you want to maximize your in-game profits and dominate trading, you need a precise and up-to-date{" "}
             <Link href="/crop-calculator" className="text-[var(--primary)] hover:underline font-semibold">
-              Grow A Garden Calculator
+              crop value calculator
             </Link>
             . This interactive platform functions as a complete GAG value hub, replacing outdated spreadsheets with real-time math. 
             From calculating exact multiplier stacks using our advanced{" "}

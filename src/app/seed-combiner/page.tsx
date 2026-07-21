@@ -19,7 +19,7 @@ export default function SeedCombinerPage() {
           🌱 Seed Combiner & <span style={{ background: 'var(--gradient-1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Fruit Mechanics</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
-          Welcome to the premier <strong>seed combiner grow a garden website</strong> hub. If you are looking to maximize your harvest yields, predict mutation algorithms, or specifically <strong>calculate earnings 18 watermelons</strong>, this is the exact fruit mechanics engine you need.
+          Welcome to the premier <strong>seed combiner grow a garden website</strong> hub. If you are looking to maximize your harvest yields, predict mutation algorithms, or specifically <strong>calculate earnings 18 watermelons</strong>, this is the exact fruit mechanics engine you need. For general calculations, check out our main <Link href="/" className="text-[var(--primary)] hover:underline font-bold">Grow A Garden Calculator</Link>.
         </p>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: 'var(--muted)' }}>
           By merging base-level seed data with high-tier market economics, we can calculate exact profit margins. Whether you're running a <strong>watermelon calculator</strong> projection or analyzing top-tier <strong>fruit value permutations</strong>, our combinatorial algorithms break down the exact mathematical yield of your garden plots.

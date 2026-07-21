@@ -19,10 +19,10 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "Grow A Garden Calculator | GAG Calculator & Pet Values",
+    default: "Grow A Garden Calculator [2026] | GAG Value & Trade W/F/L",
     template: "%s | Grow A Garden Calculator"
   },
-  description: "The ultimate Grow A Garden calculator. Accurately figure out your crop values, use the pet calculator grow a garden tools, and dominate trading with our gag calculator.",
+  description: "The ultimate GAG calculator for Roblox players. Calculate exact crop values by weight, estimate pet max age stats, and test trade values (Win/Fair/Lose) instantly!",
   metadataBase: new URL('https://growagardencalcs.com'),
   keywords: [
     "grow a garden calculator", 
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     "mutation calculator"
   ],
   openGraph: {
-    title: "Grow A Garden Calculator - GAG Calculator & Pet Tools",
-    description: "The #1 kalkulator grow a garden. Accurately figure out your grow a garden value with the best pet calculator and crop tools.",
+    title: "Grow A Garden Calculator [2026] | GAG Value & Trade W/F/L",
+    description: "The ultimate GAG calculator for Roblox players. Calculate exact crop values by weight, estimate pet max age stats, and test trade values (Win/Fair/Lose) instantly!",
     url: 'https://growagardencalcs.com',
     siteName: "Grow A Garden Calculator",
     images: [
@@ -51,8 +51,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grow A Garden Calculator - GAG Calculator",
-    description: "The ultimate calculator for Grow A Garden crop values & pets.",
+    title: "Grow A Garden Calculator [2026] | GAG Value & Trade W/F/L",
+    description: "The ultimate GAG calculator for Roblox players. Calculate exact crop values by weight, estimate pet max age stats, and test trade values (Win/Fair/Lose) instantly!",
     images: ['/og-image.png'],
   },
   robots: {
@@ -80,7 +80,7 @@ export default function RootLayout({
     "applicationCategory": "GameApplication",
     "operatingSystem": "Web",
     "url": "https://growagardencalcs.com",
-    "description": "The ultimate gag calculator. Accurately figure out your grow a garden value, and use the pet calculator grow a garden tools.",
+    "description": "The ultimate GAG calculator for Roblox players. Calculate exact crop values, test trade values (Win/Fair/Lose), and check pet stats.",
     "offers": {
       "@type": "Offer",
       "price": "0",

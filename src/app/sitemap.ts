@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/value-list',
     '/crop-calculator',
+    '/seed-combiner',
     '/pet-calculator',
     '/mutation-calculator',
     '/trade-calculator',

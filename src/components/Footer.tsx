@@ -7,15 +7,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
+            <Link href="/" className="flex items-center gap-3 mb-4 group hover:opacity-90 transition-opacity">
               <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style={{ background: 'var(--gradient-1)' }}>
                 🌱
               </div>
               <div>
-                <h3 className="font-bold" style={{ fontFamily: 'var(--font-display)' }}>GAG Calculator</h3>
+                <h3 className="font-bold" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>GAG Calculator</h3>
                 <p className="text-xs" style={{ color: 'var(--muted)' }}>Grow A Garden Tools</p>
               </div>
-            </div>
+            </Link>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
               The most advanced calculator suite for Roblox Grow A Garden players. Fast, accurate, and always updated.
             </p>

@@ -101,7 +101,7 @@ export default async function MutationPage({ params }: PageProps) {
           </p>
           <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
             <strong style={{ color: 'var(--foreground)' }}>Multiplier:</strong> The {mutation.name} mutation multiplies your crop&apos;s value by <strong style={{ color: mutation.color }}>×{mutation.multiplier}</strong>.
-            This means a crop worth 1,000 coins becomes worth <strong style={{ color: 'var(--primary)' }}>{(1000 * mutation.multiplier).toLocaleString()} coins</strong> with this mutation.
+            This means a crop worth 1,000 coins becomes worth <strong style={{ color: 'var(--primary)' }}>{(1000 * mutation.multiplier).toLocaleString()} coins</strong> with this mutation. To stack multiple multipliers, check the main <Link href="/" className="text-[var(--primary)] hover:underline font-bold">Grow A Garden Calculator</Link>.
           </p>
         </div>
       </div>
