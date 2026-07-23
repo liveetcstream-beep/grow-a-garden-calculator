@@ -142,12 +142,29 @@ export default async function CropValuePage({ params }: PageProps) {
     ]
   };
 
+  const itemPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemPage",
+    "name": `${crop.name} Value — Grow A Garden`,
+    "description": `${crop.name} is worth ${crop.basePrice} coins base price in Grow A Garden.`,
+    "mainEntity": {
+      "@type": "Product",
+      "name": crop.name,
+      "description": `${crop.category} crop with ${crop.basePrice} base coins price in Grow A Garden.`
+    }
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
       {/* Breadcrumb Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {/* ItemPage Product Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemPageSchema) }}
       />
 
       {/* Breadcrumb */}

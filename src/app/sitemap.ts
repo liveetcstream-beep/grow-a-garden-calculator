@@ -6,49 +6,113 @@ import { MUTATIONS } from '@/data/mutations'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://growagardencalcs.com'
 
-  // Add all static routes
-  const routes = [
-    '',
-    '/value-list',
-    '/crop-calculator',
-    '/seed-combiner',
-    '/pet-calculator',
-    '/mutation-calculator',
-    '/trade-calculator',
-    '/reverse-calculator',
-    '/seed-profit',
-    '/xp-calculator',
-    '/about',
-    '/contact',
-    '/privacy',
-    '/terms'
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'daily' as const,
-    priority: route === '' ? 1 : 0.8,
-  }))
+  const staticEntries: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/seed-combiner`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/value-list`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/crop-calculator`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/pet-calculator`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/trade-calculator`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/mutation-calculator`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/reverse-calculator`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/seed-profit`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/xp-calculator`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
+  ]
 
-  const dynamicCrops = CROPS.map((crop) => ({
+  const dynamicCrops: MetadataRoute.Sitemap = CROPS.map((crop) => ({
     url: `${baseUrl}/crop/${crop.id}-value`,
     lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
+    changeFrequency: 'weekly',
     priority: 0.7,
   }))
 
-  const dynamicPets = PETS.map((pet) => ({
+  const dynamicPets: MetadataRoute.Sitemap = PETS.map((pet) => ({
     url: `${baseUrl}/pet/${pet.id}-stats`,
     lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
+    changeFrequency: 'weekly',
     priority: 0.7,
   }))
 
-  const dynamicMutations = MUTATIONS.map((mutation) => ({
+  const dynamicMutations: MetadataRoute.Sitemap = MUTATIONS.map((mutation) => ({
     url: `${baseUrl}/mutation/${mutation.id}`,
     lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
+    changeFrequency: 'weekly',
     priority: 0.6,
   }))
 
-  return [...routes, ...dynamicCrops, ...dynamicPets, ...dynamicMutations]
+  return [...staticEntries, ...dynamicCrops, ...dynamicPets, ...dynamicMutations]
 }
