@@ -364,9 +364,9 @@ export default function AuroraMutationPage() {
               <tbody>
                 {featuredCrops.map((crop) => {
                   if (!crop) return null;
-                  const base10 = Math.round(crop.baseValue * 100);
-                  const aurora10 = Math.round(crop.baseValue * 100 * (auroraMut?.multiplier ?? 90));
-                  const cosmic10 = Math.round(crop.baseValue * 100 * (cosmicMut?.multiplier ?? 240));
+                  const base10 = Math.round(crop.basePrice * 100);
+                  const aurora10 = Math.round(crop.basePrice * 100 * (auroraMut?.multiplier ?? 90));
+                  const cosmic10 = Math.round(crop.basePrice * 100 * (cosmicMut?.multiplier ?? 240));
                   return (
                     <tr key={crop.id} style={{ borderBottom: "1px solid var(--glass-border)" }}>
                       <td className="py-3 px-3">
@@ -486,8 +486,8 @@ export default function AuroraMutationPage() {
                   style={{ background: `${auroraColor}08`, border: `1px solid ${auroraColor}20` }}>
                   <div className="text-2xl mb-2">{crop.emoji}</div>
                   <div className="text-sm font-bold mb-1" style={{ color: "var(--foreground)" }}>{crop.name}</div>
-                  <div className="text-xs mb-1" style={{ color: "var(--muted)" }}>Base: {crop.baseValue.toLocaleString()}/kg</div>
-                  <div className="text-xs font-black" style={{ color: auroraColor }}>@10kg w/ Aurora: {auroraVal.toLocaleString()}</div>
+                  <div className="text-xs mb-1" style={{ color: "var(--muted)" }}>Base: {crop.basePrice.toLocaleString()}/kg</div>
+                  <div className="text-xs font-black" style={{ color: auroraColor }}>@10kg w/ Aurora: {Math.round(crop.basePrice * 100 * (auroraMut?.multiplier ?? 90)).toLocaleString()}</div>
                 </Link>
               );
             })}
