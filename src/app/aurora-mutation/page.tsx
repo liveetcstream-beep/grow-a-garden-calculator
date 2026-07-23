@@ -479,7 +479,7 @@ export default function AuroraMutationPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {featuredCrops.map((crop) => {
               if (!crop) return null;
-              const auroraVal = Math.round(crop.baseValue * 100 * (auroraMut?.multiplier ?? 90));
+              const auroraVal = Math.round(crop.basePrice * 100 * (auroraMut?.multiplier ?? 90));
               return (
                 <Link key={crop.id} href={`/crop/${crop.id}-value`}
                   className="p-4 rounded-xl transition-all hover:scale-105"
