@@ -85,8 +85,39 @@ export default async function MutationPage({ params }: PageProps) {
     mutation.howToGet.toLowerCase().includes(m.name.toLowerCase())
   ).filter(m => m.id !== mutation.id).slice(0, 6);
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://growagardencalcs.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Mutations",
+        "item": "https://growagardencalcs.com/mutation-calculator"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": mutation.name,
+        "item": `https://growagardencalcs.com/mutation/${mutation.id}`
+      }
+    ]
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-xs mb-6" style={{ color: 'var(--muted)' }}>
         <Link href="/" className="hover:text-[var(--primary)] transition-colors">Home</Link>

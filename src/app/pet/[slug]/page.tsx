@@ -112,8 +112,39 @@ export default async function PetStatsPage({ params }: PageProps) {
   const ageExamples = [1, 7, 14, 30, 60, 90];
   const weightExamples = [1, 5, 10, 25, 50, 100];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://growagardencalcs.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Pets",
+        "item": "https://growagardencalcs.com/pet-calculator"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": pet.name,
+        "item": `https://growagardencalcs.com/pet/${pet.id}-stats`
+      }
+    ]
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-xs mb-6" style={{ color: 'var(--muted)' }}>
         <Link href="/" className="hover:text-[var(--primary)] transition-colors">Home</Link>

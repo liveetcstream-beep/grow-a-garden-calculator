@@ -48,7 +48,7 @@ export default function SeedCombinerPage() {
           Welcome to the premier <strong>seed combiner grow a garden website</strong> hub. If you are looking to maximize your harvest yields, predict mutation algorithms, or specifically <strong>calculate earnings 18 watermelons</strong>, this is the interactive fruit mechanics engine you need. For general calculations, check out our main <Link href="/" className="text-[var(--primary)] hover:underline font-bold">Grow A Garden Calculator</Link>.
         </p>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: 'var(--muted)' }}>
-          By merging base-level seed data with high-tier market economics, we can calculate exact profit margins. Use our interactive simulators below to test seed fusion probabilities, calculate watermelon stack profit, and forecast mutation rates.
+          By merging base-level seed data with high-tier market economics, we can calculate exact profit margins. Use our interactive simulators below to test seed fusion probabilities, calculate <Link href="/crop/watermelon-value" className="text-[var(--primary)] hover:underline font-bold">Watermelon Value</Link> stack profit, check <Link href="/crop/mango-value" className="text-[var(--primary)] hover:underline font-bold">Mango Value</Link> calculations, and forecast mutation rates.
         </p>
       </div>
 

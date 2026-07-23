@@ -117,8 +117,39 @@ export default async function CropValuePage({ params }: PageProps) {
   // Related crops from same category
   const relatedCrops = CROPS.filter(c => c.category === crop.category && c.id !== crop.id).slice(0, 6);
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://growagardencalcs.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Crops",
+        "item": "https://growagardencalcs.com/crop-calculator"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": crop.name,
+        "item": `https://growagardencalcs.com/crop/${crop.id}-value`
+      }
+    ]
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-xs mb-6" style={{ color: 'var(--muted)' }}>
         <Link href="/" className="hover:text-[var(--primary)] transition-colors">Home</Link>
@@ -257,7 +288,7 @@ export default async function CropValuePage({ params }: PageProps) {
             </p>
             <p>
               To check advanced combination multipliers, you can combine this with mutations like Golden (x20) or Rainbow (x50). Stacking these will turn a standard 
-              {crop.name} harvest into a multi-million coin payout. Use our interactive calculator above to simulate different weights, friend boosts, and active GAG mutations live. For full backpack net worth estimates, visit our main <Link href="/" className="text-[var(--primary)] hover:underline font-bold">Grow A Garden Calculator</Link>.
+              {crop.name} harvest into a multi-million coin payout. Use our interactive calculator above to simulate different weights, friend boosts, and active GAG mutations live. For full backpack net worth estimates, visit our main <Link href="/" className="text-[var(--primary)] hover:underline font-bold">Grow A Garden Calculator</Link> or check the complete market rates on the <Link href="/value-list" className="text-[var(--primary)] hover:underline font-bold">GAG Values List</Link>.
             </p>
           </div>
         </div>

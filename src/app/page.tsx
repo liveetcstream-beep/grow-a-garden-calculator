@@ -280,13 +280,16 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Section 5: Full GAG Values Database & International Guide */}
+          {/* Section 5: Full GAG Values Database & Seed Fusion Guide */}
           <div className="mb-6">
             <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
-              📊 Complete Grow A Garden Values Database
+              📊 Complete Grow A Garden Values Database & Seed Tools
             </h2>
             <p className="leading-relaxed mb-4 text-left" style={{ color: 'var(--muted)' }}>
-              Looking for quick baseline price references? Check out our complete <Link href="/value-list" className="text-[var(--primary)] hover:underline font-bold">grow a garden values</Link> list, where you can sort crops by event type (Night Event, Summer Event, Zen Update, Beanstalk Event) and compare <strong>gag values</strong> for all items in real time.
+              Looking for quick baseline price references? Check out our complete <Link href="/value-list" className="text-[var(--primary)] hover:underline font-bold">GAG Values List</Link>, where you can sort crops by event type (Night Event, Summer Event, Zen Update, Beanstalk Event) and compare <strong>gag values</strong> for all items in real time.
+            </p>
+            <p className="leading-relaxed mb-4 text-left" style={{ color: 'var(--muted)' }}>
+              If you want to fuse lower-tier seeds into rare and mythical crop strains, try our dedicated <Link href="/seed-combiner" className="text-[var(--primary)] hover:underline font-bold">Seed Combiner Tool</Link> to simulate outcome probabilities and calculate 18 watermelon stack yields.
             </p>
             <div className="p-4 rounded-2xl border text-sm leading-relaxed text-left" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)', color: 'var(--muted)' }}>
               🌐 <strong>Global Player Note:</strong> Whether you are searching for <i>kalkulator grow a garden</i> (Indonesia/Malaysia), <i>pet calculator grow a garden</i> (Philippines/US), or <i>calculator grow a garden</i> fruit rates, our platform supports multi-region players with updated baseline data for 2026.
