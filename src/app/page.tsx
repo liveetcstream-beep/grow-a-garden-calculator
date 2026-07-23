@@ -302,7 +302,7 @@ export default function HomePage() {
           </div>
 
           {/* Section 5: Full GAG Values Database & Seed Fusion Guide */}
-          <div className="mb-6">
+          <div className="mb-8">
             <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
               📊 Complete Grow A Garden Values Database & Seed Tools
             </h2>
@@ -312,9 +312,60 @@ export default function HomePage() {
             <p className="leading-relaxed mb-4 text-left" style={{ color: 'var(--muted)' }}>
               If you want to fuse lower-tier seeds into rare and mythical crop strains, try our dedicated <Link href="/seed-combiner" className="text-[var(--primary)] hover:underline font-bold">Seed Combiner Tool</Link> to simulate outcome probabilities and calculate 18 watermelon stack yields.
             </p>
-            <div className="p-4 rounded-2xl border text-sm leading-relaxed text-left" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)', color: 'var(--muted)' }}>
-              🌐 <strong>Global Player Note:</strong> Whether you are searching for <i>kalkulator grow a garden</i> (Indonesia/Malaysia), <i>pet calculator grow a garden</i> (Philippines/US), or <i>calculator grow a garden</i> fruit rates, our platform supports multi-region players with updated baseline data for 2026.
+          </div>
+
+          {/* Task 5.4: 🇵🇭 Popular Trading Crops in Philippines & Global Hub */}
+          <div className="mb-12 glass-card-static p-6 sm:p-8 rounded-2xl border" style={{ borderColor: 'rgba(34,197,94,0.2)', background: 'rgba(34,197,94,0.03)' }}>
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-3xl">🇵🇭</span>
+              <div>
+                <h3 className="text-xl font-bold text-left" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
+                  Popular Trading Crops — Philippines & Global Hub
+                </h3>
+                <p className="text-xs text-left" style={{ color: 'var(--muted)' }}>
+                  Top searched crops by Filipino, US, and international GAG traders. Click any crop for its live value calculator.
+                </p>
+              </div>
             </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+              {[
+                { id: "starfruit", name: "Starfruit", emoji: "⭐", base: 400, val: "40,000", tag: "🔥 High Demand" },
+                { id: "dragon-fruit", name: "Dragon Fruit", emoji: "🐉", base: 500, val: "50,000", tag: "💰 Top Tier" },
+                { id: "bamboo", name: "Bamboo", emoji: "🎍", base: 80, val: "8,000", tag: "⚡ Fast Trade" },
+                { id: "carrot", name: "Carrot", emoji: "🥕", base: 10, val: "1,000", tag: "🌱 Starter favorite" },
+                { id: "mango", name: "Mango", emoji: "🥭", base: 350, val: "35,000", tag: "✨ Summer Peak" },
+                { id: "royal-jelly-plant", name: "Royal Jelly Plant", emoji: "👑", base: 300, val: "30,000", tag: "🐝 Bee Event" },
+              ].map((c) => (
+                <Link
+                  key={c.id}
+                  href={`/crop/${c.id}-value`}
+                  className="p-3 rounded-xl transition-all hover:scale-105 flex flex-col justify-between"
+                  style={{ background: 'var(--surface-1)', border: '1px solid var(--glass-border)' }}
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-2xl">{c.emoji}</span>
+                      <span className="text-[10px] px-1.5 py-0.5 rounded-full font-semibold" style={{ background: 'rgba(34,197,94,0.15)', color: '#22c55e' }}>{c.tag}</span>
+                    </div>
+                    <p className="text-xs font-bold text-left" style={{ color: 'var(--foreground)' }}>{c.name}</p>
+                    <p className="text-[10px] text-left" style={{ color: 'var(--muted)' }}>Base: {c.base} coins</p>
+                  </div>
+                  <div className="mt-2 text-left pt-2 border-t" style={{ borderColor: 'var(--glass-border)' }}>
+                    <span className="text-[10px] font-medium block" style={{ color: 'var(--muted)' }}>@ 10kg value:</span>
+                    <span className="text-xs font-black font-mono" style={{ color: 'var(--primary)' }}>{c.val} coins</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            <p className="text-xs leading-relaxed text-left" style={{ color: 'var(--muted)' }}>
+              Filipino Grow A Garden players are active market traders in community Discord servers and Facebook trading groups. When trading <strong>Starfruit</strong>, <strong>Dragon Fruit</strong>, or <strong>Bamboo</strong>, always run both sides through our <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-bold">GAG Trade Calculator</Link> to ensure you maintain a positive net trade value.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-2xl border text-sm leading-relaxed text-left" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)', color: 'var(--muted)' }}>
+            🌐 <strong>Global Player Note:</strong> Whether you are searching for <i>kalkulator grow a garden</i> (Indonesia/Malaysia), <i>pet calculator grow a garden</i> (Philippines/US), or <i>calculator grow a garden</i> fruit rates (UK/India/Canada), our platform supports multi-region players with updated baseline data for 2026.
           </div>
 
         </div>
