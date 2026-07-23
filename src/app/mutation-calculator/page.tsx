@@ -3,11 +3,36 @@ import MutationCalculator from "@/components/MutationCalculator";
 import Link from "next/link";
 import { MUTATIONS } from "@/data/mutations";
 
+const mutationCalcTitle = "Mutation Value Calculator - Stack Grow A Garden Mutations";
+const mutationCalcDesc = "Calculate mutation multiplier stacks in Grow A Garden. Browse 150+ mutations, see combined values, and find the highest multiplier combos.";
+const mutationCalcUrl = "https://growagardencalcs.com/mutation-calculator";
+
 export const metadata: Metadata = {
-  title: "Mutation Value Calculator - Stack Grow A Garden Mutations",
-  description: "Calculate mutation multiplier stacks in Grow A Garden. Browse 150+ mutations, see combined values, and find the highest multiplier combos.",
+  title: mutationCalcTitle,
+  description: mutationCalcDesc,
   keywords: ["GAG mutation calculator", "Grow A Garden mutations", "mutation multiplier", "mutation stack"],
   alternates: { canonical: '/mutation-calculator' },
+  openGraph: {
+    title: mutationCalcTitle,
+    description: mutationCalcDesc,
+    url: mutationCalcUrl,
+    siteName: "Grow A Garden Calculator",
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: mutationCalcTitle,
+      }
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: mutationCalcTitle,
+    description: mutationCalcDesc,
+    images: ['/og-image.png'],
+  },
 };
 
 export default function MutationCalculatorPage() {

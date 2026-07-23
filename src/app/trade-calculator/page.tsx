@@ -2,9 +2,13 @@ import type { Metadata } from "next";
 import TradeCalculator from "@/components/TradeCalculator";
 import Link from "next/link";
 
+const tradeCalcTitle = "GAG Calculator Trade Tools | Win Fair Lose | Grow A Garden";
+const tradeCalcDesc = "Use the ultimate GAG calculator to compare trade values in Grow A Garden. Find out if your trade is a WIN, FAIR, or LOSE. Share trade exports.";
+const tradeCalcUrl = "https://growagardencalcs.com/trade-calculator";
+
 export const metadata: Metadata = {
-  title: "GAG Calculator Trade Tools | Win Fair Lose | Grow A Garden",
-  description: "Use the ultimate GAG calculator to compare trade values in Grow A Garden. Find out if your trade is a WIN, FAIR, or LOSE. Share trade exports.",
+  title: tradeCalcTitle,
+  description: tradeCalcDesc,
   keywords: [
     "grow a garden trade calculator", 
     "gag trade calculator", 
@@ -19,6 +23,27 @@ export const metadata: Metadata = {
     "trade value grow a garden"
   ],
   alternates: { canonical: '/trade-calculator' },
+  openGraph: {
+    title: tradeCalcTitle,
+    description: tradeCalcDesc,
+    url: tradeCalcUrl,
+    siteName: "Grow A Garden Calculator",
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: tradeCalcTitle,
+      }
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: tradeCalcTitle,
+    description: tradeCalcDesc,
+    images: ['/og-image.png'],
+  },
 };
 
 export default function TradeCalculatorPage() {

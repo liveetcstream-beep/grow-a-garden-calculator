@@ -1,12 +1,38 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CROPS } from "@/data/crops";
+import SeedCombinerTool from "./SeedCombinerTool";
+
+const seedCombinerTitle = "Seed Combiner Grow A Garden - Calculator & Fruit Mechanics";
+const seedCombinerDesc = "The ultimate seed combiner grow a garden website tool. Calculate earnings for 18 watermelons, predict mutation algorithms, and master fruit mechanics.";
+const seedCombinerUrl = "https://growagardencalcs.com/seed-combiner";
 
 export const metadata: Metadata = {
-  title: "Seed Combiner Grow A Garden - Calculator & Fruit Mechanics",
-  description: "The ultimate seed combiner grow a garden website tool. Calculate earnings for 18 watermelons, predict mutation algorithms, and master fruit mechanics.",
+  title: seedCombinerTitle,
+  description: seedCombinerDesc,
   keywords: ["seed combiner grow a garden website", "calculate earnings 18 watermelons", "grow a garden seed mechanics", "fruit mechanic calculator", "watermelon calculator"],
   alternates: { canonical: '/seed-combiner' },
+  openGraph: {
+    title: seedCombinerTitle,
+    description: seedCombinerDesc,
+    url: seedCombinerUrl,
+    siteName: "Grow A Garden Calculator",
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: seedCombinerTitle,
+      }
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: seedCombinerTitle,
+    description: seedCombinerDesc,
+    images: ['/og-image.png'],
+  },
 };
 
 export default function SeedCombinerPage() {
@@ -14,42 +40,49 @@ export default function SeedCombinerPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-      <div className="text-center mb-12">
+      <div className="text-center mb-8">
         <h1 className="text-4xl sm:text-5xl font-black mb-4" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
           🌱 Seed Combiner & <span style={{ background: 'var(--gradient-1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Fruit Mechanics</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
-          Welcome to the premier <strong>seed combiner grow a garden website</strong> hub. If you are looking to maximize your harvest yields, predict mutation algorithms, or specifically <strong>calculate earnings 18 watermelons</strong>, this is the exact fruit mechanics engine you need. For general calculations, check out our main <Link href="/" className="text-[var(--primary)] hover:underline font-bold">Grow A Garden Calculator</Link>.
+          Welcome to the premier <strong>seed combiner grow a garden website</strong> hub. If you are looking to maximize your harvest yields, predict mutation algorithms, or specifically <strong>calculate earnings 18 watermelons</strong>, this is the interactive fruit mechanics engine you need. For general calculations, check out our main <Link href="/" className="text-[var(--primary)] hover:underline font-bold">Grow A Garden Calculator</Link>.
         </p>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: 'var(--muted)' }}>
-          By merging base-level seed data with high-tier market economics, we can calculate exact profit margins. Whether you're running a <strong>watermelon calculator</strong> projection or analyzing top-tier <strong>fruit value permutations</strong>, our combinatorial algorithms break down the exact mathematical yield of your garden plots.
+          By merging base-level seed data with high-tier market economics, we can calculate exact profit margins. Use our interactive simulators below to test seed fusion probabilities, calculate watermelon stack profit, and forecast mutation rates.
         </p>
       </div>
 
-      <div className="glass-card-static p-8 mb-12 border-2" style={{ borderColor: 'var(--primary)' }}>
+      {/* Interactive Tools Component */}
+      <SeedCombinerTool />
+
+      {/* Step-by-Step Guide: How does the seed combiner work? */}
+      <div className="glass-card-static p-6 sm:p-8 mb-12 border" style={{ borderColor: 'var(--glass-border)' }}>
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
-          <span className="text-3xl">🍉</span> 18 Watermelons Earning Calculator Example
+          <span>📖</span> How Does the Seed Combiner Work? (Step-by-Step)
         </h2>
-        <p className="text-sm mb-6" style={{ color: 'var(--muted)' }}>
-          A highly requested calculation: "How much do 18 watermelons earn?" Using the standard logarithmic weight scaling and baseline market metrics:
+        <p className="text-sm leading-relaxed mb-6" style={{ color: 'var(--muted)' }}>
+          The seed combiner machine in Roblox <i>Grow A Garden</i> allows players to fuse lower-tier seeds into rare, epic, and mythical seed strains. Here is how the combination mechanics work in practice:
         </p>
-        <div className="grid sm:grid-cols-3 gap-4 text-center">
-          <div className="p-4 rounded-xl" style={{ background: 'var(--surface-1)' }}>
-            <p className="text-xs font-bold text-[var(--muted)] mb-1">Base Price per Watermelon</p>
-            <p className="text-xl font-mono text-[var(--primary)] font-bold">120 Coins</p>
-          </div>
-          <div className="p-4 rounded-xl" style={{ background: 'var(--surface-1)' }}>
-            <p className="text-xs font-bold text-[var(--muted)] mb-1">Quantity Stack</p>
-            <p className="text-xl font-mono text-[var(--foreground)] font-bold">x 18</p>
-          </div>
-          <div className="p-4 rounded-xl" style={{ border: '1px solid var(--success)', background: 'rgba(16, 185, 129, 0.05)' }}>
-            <p className="text-xs font-bold text-[var(--success)] mb-1">Total Baseline Earnings</p>
-            <p className="text-2xl font-mono text-[var(--success)] font-black">2,160 Coins</p>
-          </div>
-        </div>
-        <p className="text-xs mt-4 text-center" style={{ color: 'var(--muted)' }}>
-          *This assumes perfectly standard 1kg weight and 0 mutations. Use the <Link href="/crop-calculator" className="text-[var(--primary)] hover:underline">Crop Calculator</Link> to add specific Weight scaling multipliers to your watermelons.
-        </p>
+        <ol className="space-y-4 text-sm mb-6" style={{ color: 'var(--muted)' }}>
+          <li className="flex items-start gap-3">
+            <span className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0" style={{ background: 'var(--primary)', color: 'black' }}>1</span>
+            <div>
+              <strong style={{ color: 'var(--foreground)' }}>Select Two Input Seeds:</strong> Place two seeds into the combiner slots. Fusing two seeds of the same tier yields a higher baseline probability for an upgraded tier.
+            </div>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0" style={{ background: 'var(--primary)', color: 'black' }}>2</span>
+            <div>
+              <strong style={{ color: 'var(--foreground)' }}>Apply Fusion Catalysts:</strong> Using catalysts (Silver, Golden, or Rainbow Catalyst) shifts outcome probabilities upward by 10% to 35%, significantly reducing Common tier fail rates.
+            </div>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0" style={{ background: 'var(--primary)', color: 'black' }}>3</span>
+            <div>
+              <strong style={{ color: 'var(--foreground)' }}>Harvest & Mutate:</strong> Once fused, plant your newly generated seed during favorable weather events (like Night Event or Solar Eclipse) with mutation sprays to maximize sell values.
+            </div>
+          </li>
+        </ol>
       </div>
 
       <div className="grid sm:grid-cols-2 gap-8 mb-12">

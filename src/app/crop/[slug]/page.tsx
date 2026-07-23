@@ -23,11 +23,36 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: "Crop Not Found" };
   }
 
+  const pageTitle = `${crop.name} Value & Calculator | Grow A Garden GAG Calculator`;
+  const pageDesc = `How much is ${crop.name} worth in Grow A Garden? Base price is ${crop.basePrice} coins. Use our gag calculator to find exact ${crop.name} value with weight & mutations.`;
+  const pageUrl = `https://growagardencalcs.com/crop/${crop.id}-value`;
+
   return {
-    title: `${crop.name} Value & Calculator | Grow A Garden GAG Calculator`,
-    description: `How much is ${crop.name} worth in Grow A Garden? Base price is ${crop.basePrice} coins. Use our gag calculator to find exact ${crop.name} value with weight & mutations.`,
+    title: pageTitle,
+    description: pageDesc,
     keywords: [`${crop.name} grow a garden value`, `${crop.name} gag calculator`, `grow a garden calculator ${crop.name}`, `${crop.name} price grow a garden`, `calculator grow a garden`],
     alternates: { canonical: `/crop/${crop.id}-value` },
+    openGraph: {
+      title: pageTitle,
+      description: pageDesc,
+      url: pageUrl,
+      siteName: "Grow A Garden Calculator",
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: `${crop.name} Value & Calculator`,
+        }
+      ],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageTitle,
+      description: pageDesc,
+      images: ['/og-image.png'],
+    },
   };
 }
 

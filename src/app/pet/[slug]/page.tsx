@@ -30,11 +30,36 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: "Pet Not Found" };
   }
 
+  const pageTitle = `${pet.name} Value | Pet Calculator Grow A Garden`;
+  const pageDesc = `${pet.name} is a ${pet.rarity} pet in Grow A Garden. Use our pet calculator grow a garden tool to get exact value. Base: ${pet.baseValue}. Ability: ${pet.ability} ×${pet.abilityMultiplier}.`;
+  const pageUrl = `https://growagardencalcs.com/pet/${pet.id}-stats`;
+
   return {
-    title: `${pet.name} Value | Pet Calculator Grow A Garden`,
-    description: `${pet.name} is a ${pet.rarity} pet in Grow A Garden. Use our pet calculator grow a garden tool to get exact value. Base: ${pet.baseValue}. Ability: ${pet.ability} ×${pet.abilityMultiplier}.`,
+    title: pageTitle,
+    description: pageDesc,
     keywords: [`${pet.name} pet calculator grow a garden`, `${pet.name} grow a garden value`, `gag calculator ${pet.name}`, `pet calculator grow a garden`],
     alternates: { canonical: `/pet/${pet.id}-stats` },
+    openGraph: {
+      title: pageTitle,
+      description: pageDesc,
+      url: pageUrl,
+      siteName: "Grow A Garden Calculator",
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: `${pet.name} Value & Stats`,
+        }
+      ],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageTitle,
+      description: pageDesc,
+      images: ['/og-image.png'],
+    },
   };
 }
 

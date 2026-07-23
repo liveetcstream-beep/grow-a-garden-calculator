@@ -1,10 +1,35 @@
 import { Metadata } from "next";
 
+const privacyTitle = "Privacy Policy | Grow A Garden Calculator";
+const privacyDesc = "Privacy Policy for Grow A Garden Calculator. Learn how we collect, use, and protect your data.";
+const privacyUrl = "https://growagardencalcs.com/privacy";
+
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for Grow A Garden Calculator. Learn how we collect, use, and protect your data.",
+  description: privacyDesc,
   alternates: { canonical: "/privacy" },
   robots: { index: true, follow: true },
+  openGraph: {
+    title: privacyTitle,
+    description: privacyDesc,
+    url: privacyUrl,
+    siteName: "Grow A Garden Calculator",
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: privacyTitle,
+      }
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: privacyTitle,
+    description: privacyDesc,
+    images: ['/og-image.png'],
+  },
 };
 
 export default function PrivacyPage() {

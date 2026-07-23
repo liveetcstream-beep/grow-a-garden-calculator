@@ -1,10 +1,35 @@
 import { Metadata } from "next";
 
+const contactTitle = "Contact Us | Grow A Garden Calculator";
+const contactDesc = "Contact the Grow A Garden Calculator team for support, business inquiries, or feedback.";
+const contactUrl = "https://growagardencalcs.com/contact";
+
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Contact the Grow A Garden Calculator team for support, business inquiries, or feedback.",
+  description: contactDesc,
   alternates: { canonical: "/contact" },
   robots: { index: true, follow: true },
+  openGraph: {
+    title: contactTitle,
+    description: contactDesc,
+    url: contactUrl,
+    siteName: "Grow A Garden Calculator",
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: contactTitle,
+      }
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: contactTitle,
+    description: contactDesc,
+    images: ['/og-image.png'],
+  },
 };
 
 export default function ContactPage() {

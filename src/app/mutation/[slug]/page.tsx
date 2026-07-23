@@ -21,11 +21,36 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: "Mutation Not Found" };
   }
 
+  const pageTitle = `${mutation.name} Mutation Grow A Garden - Multiplier & Value Calculator (×${mutation.multiplier})`;
+  const pageDesc = `Calculate the ${mutation.name} mutation multiplier (×${mutation.multiplier}) in Grow A Garden. Find the exact value, price, and how to get the ${mutation.name} mutation with our GAG calculator.`;
+  const pageUrl = `https://growagardencalcs.com/mutation/${mutation.id}`;
+
   return {
-    title: `${mutation.name} Mutation Grow A Garden - Multiplier & Value Calculator (×${mutation.multiplier})`,
-    description: `Calculate the ${mutation.name} mutation multiplier (×${mutation.multiplier}) in Grow A Garden. Find the exact value, price, and how to get the ${mutation.name} mutation with our GAG calculator.`,
+    title: pageTitle,
+    description: pageDesc,
     keywords: [`${mutation.name} mutation grow a garden`, `${mutation.name} mutation multiplier`, `grow a garden ${mutation.name} mutation`, `${mutation.name} mutation value`, `GAG mutation calculator`],
     alternates: { canonical: `/mutation/${mutation.id}` },
+    openGraph: {
+      title: pageTitle,
+      description: pageDesc,
+      url: pageUrl,
+      siteName: "Grow A Garden Calculator",
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: `${mutation.name} Mutation Guide`,
+        }
+      ],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageTitle,
+      description: pageDesc,
+      images: ['/og-image.png'],
+    },
   };
 }
 

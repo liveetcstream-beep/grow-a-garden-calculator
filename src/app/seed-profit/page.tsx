@@ -1,11 +1,36 @@
 import type { Metadata } from "next";
 import SeedProfitCalculator from "@/components/SeedProfitCalculator";
 
+const seedProfitTitle = "Seed Profit Calculator - Best Crops ROI | Grow A Garden";
+const seedProfitDesc = "Find the most profitable seeds in Grow A Garden. Calculate ROI, profit per minute, and compare all crops to maximize your earnings.";
+const seedProfitUrl = "https://growagardencalcs.com/seed-profit";
+
 export const metadata: Metadata = {
-  title: "Seed Profit Calculator - Best Crops ROI | Grow A Garden",
-  description: "Find the most profitable seeds in Grow A Garden. Calculate ROI, profit per minute, and compare all crops to maximize your earnings.",
+  title: seedProfitTitle,
+  description: seedProfitDesc,
   keywords: ["GAG seed profit", "Grow A Garden best seeds", "seed ROI calculator", "best crops GAG"],
   alternates: { canonical: '/seed-profit' },
+  openGraph: {
+    title: seedProfitTitle,
+    description: seedProfitDesc,
+    url: seedProfitUrl,
+    siteName: "Grow A Garden Calculator",
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: seedProfitTitle,
+      }
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: seedProfitTitle,
+    description: seedProfitDesc,
+    images: ['/og-image.png'],
+  },
 };
 
 export default function SeedProfitPage() {

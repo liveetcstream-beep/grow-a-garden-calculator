@@ -1,11 +1,36 @@
 import type { Metadata } from "next";
 import CropCalculator from "@/components/CropCalculator";
 
+const cropCalcTitle = "Calculator Grow A Garden | Exact Crop Values & Multipliers";
+const cropCalcDesc = "The best calculator grow a garden tool. Calculate your exact grow a garden value for crops, including weight, mutations, friend boost, and quantity.";
+const cropCalcUrl = "https://growagardencalcs.com/crop-calculator";
+
 export const metadata: Metadata = {
-  title: "Calculator Grow A Garden | Exact Crop Values & Multipliers",
-  description: "The best calculator grow a garden tool. Calculate your exact grow a garden value for crops, including weight, mutations, friend boost, and quantity.",
+  title: cropCalcTitle,
+  description: cropCalcDesc,
   keywords: ["calculator grow a garden", "grow a garden value", "GAG crop calculator", "Grow A Garden crop value", "crop value calculator"],
   alternates: { canonical: '/crop-calculator' },
+  openGraph: {
+    title: cropCalcTitle,
+    description: cropCalcDesc,
+    url: cropCalcUrl,
+    siteName: "Grow A Garden Calculator",
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: cropCalcTitle,
+      }
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: cropCalcTitle,
+    description: cropCalcDesc,
+    images: ['/og-image.png'],
+  },
 };
 
 export default function CropCalculatorPage() {

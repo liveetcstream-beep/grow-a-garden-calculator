@@ -91,7 +91,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
       <head>
-        <meta name="google-site-verification" content="Mv6Tki1iVOyt84Zrh7tSgz2hrGj4Wr6uKs9YyDOoGWo" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -1,13 +1,38 @@
 import type { Metadata } from "next";
 import { getCanonical } from "@/lib/canonical";
 
+const xpTitle = "XP Calculator | Grow A Garden Player Level Guide";
+const xpDesc = "Calculate how much XP you need to level up in Grow A Garden. Plan your farming strategy to reach max level quickly.";
+const xpUrl = "https://growagardencalcs.com/xp-calculator";
+
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "XP Calculator | Grow A Garden Player Level Guide",
-    description: "Calculate how much XP you need to level up in Grow A Garden. Plan your farming strategy to reach max level quickly.",
+    title: xpTitle,
+    description: xpDesc,
     keywords: ["grow a garden xp calculator", "GAG xp guide", "how to level up fast in grow a garden", "roblox grow a garden levels"],
     alternates: {
       canonical: getCanonical("/xp-calculator"),
+    },
+    openGraph: {
+      title: xpTitle,
+      description: xpDesc,
+      url: xpUrl,
+      siteName: "Grow A Garden Calculator",
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: xpTitle,
+        }
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: xpTitle,
+      description: xpDesc,
+      images: ['/og-image.png'],
     },
   };
 };

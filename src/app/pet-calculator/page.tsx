@@ -3,11 +3,36 @@ import PetCalculator from "@/components/PetCalculator";
 import Link from "next/link";
 import { PETS } from "@/data/pets";
 
+const petCalcTitle = "Pet Calculator Grow A Garden [2026] | GAG Pet Value Calculator";
+const petCalcDesc = "The #1 pet calculator grow a garden players use to find values. Calculate exact pet values based on weight, age, rarity. The definitive gag calculator for pets.";
+const petCalcUrl = "https://growagardencalcs.com/pet-calculator";
+
 export const metadata: Metadata = {
-  title: "Pet Calculator Grow A Garden [2026] | GAG Pet Value Calculator",
-  description: "The #1 pet calculator grow a garden players use to find values. Calculate exact pet values based on weight, age, rarity. The definitive gag calculator for pets.",
+  title: petCalcTitle,
+  description: petCalcDesc,
   keywords: ["pet calculator grow a garden", "GAG pet calculator", "Grow A Garden pets", "pet value calculator", "grow a garden value"],
   alternates: { canonical: '/pet-calculator' },
+  openGraph: {
+    title: petCalcTitle,
+    description: petCalcDesc,
+    url: petCalcUrl,
+    siteName: "Grow A Garden Calculator",
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: petCalcTitle,
+      }
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: petCalcTitle,
+    description: petCalcDesc,
+    images: ['/og-image.png'],
+  },
 };
 
 export default function PetCalculatorPage() {

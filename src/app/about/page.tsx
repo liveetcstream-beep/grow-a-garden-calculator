@@ -1,11 +1,36 @@
 import { Metadata } from "next";
 import Link from "next/link";
 
+const aboutTitle = "About Us | Grow A Garden Calculator";
+const aboutDesc = "Learn about Grow A Garden Calculator — the most advanced free calculator tool suite for Roblox Grow A Garden players.";
+const aboutUrl = "https://growagardencalcs.com/about";
+
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about Grow A Garden Calculator — the most advanced free calculator tool suite for Roblox Grow A Garden players.",
+  description: aboutDesc,
   alternates: { canonical: "/about" },
   robots: { index: true, follow: true },
+  openGraph: {
+    title: aboutTitle,
+    description: aboutDesc,
+    url: aboutUrl,
+    siteName: "Grow A Garden Calculator",
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: aboutTitle,
+      }
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: aboutTitle,
+    description: aboutDesc,
+    images: ['/og-image.png'],
+  },
 };
 
 export default function AboutPage() {

@@ -1,10 +1,35 @@
 import { Metadata } from "next";
 
+const termsTitle = "Terms of Service | Grow A Garden Calculator";
+const termsDesc = "Terms of Service for Grow A Garden Calculator. Read our rules and conditions for using this website.";
+const termsUrl = "https://growagardencalcs.com/terms";
+
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Terms of Service for Grow A Garden Calculator. Read our rules and conditions for using this website.",
+  description: termsDesc,
   alternates: { canonical: "/terms" },
   robots: { index: true, follow: true },
+  openGraph: {
+    title: termsTitle,
+    description: termsDesc,
+    url: termsUrl,
+    siteName: "Grow A Garden Calculator",
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: termsTitle,
+      }
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: termsTitle,
+    description: termsDesc,
+    images: ['/og-image.png'],
+  },
 };
 
 export default function TermsPage() {
