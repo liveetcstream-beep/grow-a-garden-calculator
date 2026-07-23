@@ -43,7 +43,8 @@ export default function MutationCalculatorPage() {
           🧬 Mutation Value Calculator
         </h1>
         <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
-          Welcome to the ultimate <strong>grow a garden mutation calculator</strong>. Browse all mutations by category, stack them together, and see the total multiplier effect on your crop value. Using this <strong>mutation calculator grow a garden</strong> tool, you can easily find the absolute best and rarest mutation combos for massive profit.
+          Welcome to the ultimate <strong>grow a garden mutation calculator</strong>. Browse all mutations by category, stack them together, and see the total multiplier effect on your crop value. Using this <strong>mutation calculator grow a garden</strong> tool, you can easily find the absolute best and rarest mutation combos for massive profit. Want to learn how every mutation works and how to get them? Read our complete{' '}
+          <Link href="/mutation-guide" className="text-[var(--primary)] hover:underline font-bold">Mutation Guide →</Link>
         </p>
       </div>
       

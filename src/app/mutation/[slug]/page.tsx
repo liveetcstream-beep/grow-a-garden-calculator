@@ -124,6 +124,8 @@ export default async function MutationPage({ params }: PageProps) {
         <span>/</span>
         <Link href="/mutation-calculator" className="hover:text-[var(--primary)] transition-colors">Mutations</Link>
         <span>/</span>
+        <Link href="/mutation-guide" className="hover:text-[var(--primary)] transition-colors">Guide</Link>
+        <span>/</span>
         <span style={{ color: mutation.color }}>{mutation.name}</span>
       </nav>
 
