@@ -75,11 +75,11 @@ export default function Footer() {
                 </li>
               ))}
               <li className="pt-2">
-                <a href="https://discord.gg/growagarden" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors hover:text-[var(--primary)]" style={{ color: 'var(--muted)' }}>
-                  🎮 GAG Discord
+                <a href="https://discord.gg/growagarden" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold transition-colors hover:underline text-[var(--primary)] flex items-center gap-1">
+                  <span>💬 Join our Discord for real-time value updates →</span>
                 </a>
               </li>
-              <li>
+              <li className="pt-1">
                 <a href="https://www.roblox.com/games/126884695634066/Grow-A-Garden" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors hover:text-[var(--primary)]" style={{ color: 'var(--muted)' }}>
                   🎯 Play on Roblox
                 </a>

@@ -6,11 +6,13 @@ import { useState } from "react";
 
 const NAV_ITEMS = [
   { href: "/", label: "Home", icon: "🏠" },
-  { href: "/seed-combiner", label: "Seed Combiner", icon: "🔧" },
+  { href: "/crop-calculator", label: "Crop Calc", icon: "🌾" },
   { href: "/value-list", label: "Value List", icon: "💰" },
-  { href: "/pet-calculator", label: "Pet Calculator", icon: "🐾" },
+  { href: "/pet-calculator", label: "Pet Calc", icon: "🐾" },
   { href: "/trade-calculator", label: "Trade", icon: "🤝" },
   { href: "/mutation-calculator", label: "Mutations", icon: "🧬" },
+  { href: "/mutation-guide", label: "Guide", icon: "📜" },
+  { href: "/about", label: "About Us", icon: "ℹ️" },
 ];
 
 export default function Navbar() {

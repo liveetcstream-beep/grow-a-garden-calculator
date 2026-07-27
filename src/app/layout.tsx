@@ -19,11 +19,14 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "Grow A Garden Calculator [2026] | GAG Value & Trade W/F/L",
+    default: "Grow A Garden Calculator 2026 | GAG Value & Trade W/F/L",
     template: "%s | Grow A Garden Calculator"
   },
   description: "The ultimate GAG calculator for Roblox players. Calculate exact crop values by weight, estimate pet max age stats, and test trade values (Win/Fair/Lose) instantly!",
   metadataBase: new URL('https://growagardencalcs.com'),
+  authors: [{ name: "GrowAGardenCalcs Team", url: "https://growagardencalcs.com/about" }],
+  creator: "GrowAGardenCalcs Team",
+  publisher: "GrowAGardenCalcs",
   keywords: [
     "grow a garden calculator", 
     "gag calculator", 
@@ -34,14 +37,23 @@ export const metadata: Metadata = {
     "gag pet calculator",
     "mutation calculator"
   ],
+  alternates: {
+    canonical: 'https://growagardencalcs.com',
+    languages: {
+      'en': 'https://growagardencalcs.com',
+      'id': 'https://growagardencalcs.com',
+      'tl': 'https://growagardencalcs.com',
+      'x-default': 'https://growagardencalcs.com',
+    },
+  },
   openGraph: {
-    title: "Grow A Garden Calculator [2026] | GAG Value & Trade W/F/L",
+    title: "Grow A Garden Calculator 2026 | GAG Value & Trade W/F/L",
     description: "The ultimate GAG calculator for Roblox players. Calculate exact crop values by weight, estimate pet max age stats, and test trade values (Win/Fair/Lose) instantly!",
     url: 'https://growagardencalcs.com',
     siteName: "Grow A Garden Calculator",
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: "Grow A Garden Calculator & Pet Value Hub",
@@ -51,9 +63,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grow A Garden Calculator [2026] | GAG Value & Trade W/F/L",
+    title: "Grow A Garden Calculator 2026 | GAG Value & Trade W/F/L",
     description: "The ultimate GAG calculator for Roblox players. Calculate exact crop values by weight, estimate pet max age stats, and test trade values (Win/Fair/Lose) instantly!",
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
