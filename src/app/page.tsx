@@ -240,13 +240,13 @@ export default function HomePage() {
             </a>
           </div>
 
-          {/* Social Proof Trust Banner */}
+          {/* Factual Codebase Trust Banner */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
             {[
-              { value: "50,000+", label: "Monthly Players", icon: "👥" },
-              { value: "2M+", label: "Calculations Run", icon: "⚡" },
-              { value: "350+", label: "Verified Pages", icon: "✅" },
-              { value: "24h", label: "Patch Update SLA", icon: "🔄" },
+              { value: "99+", label: "Crop Database", icon: "🌾" },
+              { value: "174+", label: "Mutation Formulas", icon: "🧬" },
+              { value: "350+", label: "Calculator Pages", icon: "📊" },
+              { value: "100%", label: "Free & Fan-Made", icon: "🛡️" },
             ].map(stat => (
               <div key={stat.label} className="p-4 rounded-2xl border text-center" style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
                 <p className="text-xl font-black" style={{ fontFamily: "var(--font-display)", color: "var(--primary)" }}>

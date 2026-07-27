@@ -55,10 +55,10 @@ const TEAM_MEMBERS = [
 ];
 
 const SITE_STATS = [
-  { value: "50,000+", label: "Monthly Players" },
-  { value: "2M+", label: "Calculations Run" },
-  { value: "350+", label: "Pages Verified" },
-  { value: "24h", label: "Update SLA" },
+  { value: "99+", label: "Crops Catalogued" },
+  { value: "174+", label: "Mutation Formulas" },
+  { value: "350+", label: "Verified Pages" },
+  { value: "24h", label: "Patch Update SLA" },
 ];
 
 const UPDATE_LOG = [
@@ -141,7 +141,7 @@ export default function AboutPage() {
             </span>
           </h1>
           <p className="text-base max-w-2xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-            Built by active Roblox Grow A Garden players, traders, and data analysts — delivering empirical, in-game verified crop and pet calculation tools trusted by over 50,000 monthly players.
+            Built by active Roblox Grow A Garden players, traders, and data analysts — delivering empirical, in-game verified crop and pet calculation tools across 350+ dedicated calculator pages.
           </p>
         </div>
 
