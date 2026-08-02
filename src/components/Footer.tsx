@@ -29,6 +29,7 @@ export default function Footer() {
                 { href: "/crop-calculator", label: "🌾 Crop Value Calculator" },
                 { href: "/mutation-calculator", label: "🧬 Mutation Calculator" },
                 { href: "/pet-calculator", label: "🐾 Pet Calculator" },
+                { href: "/elephant-calculator", label: "🐘 Elephant Calculator" },
                 { href: "/trade-calculator", label: "🤝 Trade Calculator" },
                 { href: "/seed-profit", label: "🌱 Seed Profit" },
                 { href: "/xp-calculator", label: "⭐ XP Calculator" },
@@ -49,6 +50,7 @@ export default function Footer() {
               {[
                 { href: "/crop/carrot-value", label: "Crop Values" },
                 { href: "/mutation/golden", label: "Mutation Guide" },
+                { href: "/aurora-mutation", label: "🌌 Aurora Mutation Guide" },
                 { href: "/pet/phoenix-stats", label: "Pet Stats" },
               ].map(link => (
                 <li key={link.href}>

@@ -606,6 +606,8 @@ export default function MutationGuidePage() {
             {[
               { href: "/", label: "🌱 GAG Calculator", desc: "Crop value calculator" },
               { href: "/mutation-calculator", label: "🧬 Mutation Calculator", desc: "Calculate mutation stacks" },
+              { href: "/aurora-mutation", label: "🌌 Aurora Guide", desc: "x90 mutation trigger" },
+              { href: "/elephant-calculator", label: "🐘 Elephant Calc", desc: "Elephant pet stats" },
               { href: "/value-list", label: "💰 GAG Values List", desc: "All crop base prices" },
               { href: "/pet-calculator", label: "🐾 Pet Calculator", desc: "Pet value & weight" },
               { href: "/trade-calculator", label: "🤝 Trade Calculator", desc: "Win/Fair/Lose checker" },
