@@ -39,12 +39,6 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://growagardencalcs.com',
-    languages: {
-      'en': 'https://growagardencalcs.com',
-      'id': 'https://growagardencalcs.com',
-      'tl': 'https://growagardencalcs.com',
-      'x-default': 'https://growagardencalcs.com',
-    },
   },
   openGraph: {
     title: "Grow A Garden Calculator 2026 | GAG Value & Trade W/F/L",

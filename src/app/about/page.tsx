@@ -185,7 +185,6 @@ export default function AboutPage() {
           <div className="p-4 rounded-xl border text-xs" style={{ background: "rgba(34,197,94,0.05)", borderColor: "rgba(34,197,94,0.2)", color: "var(--muted)" }}>
             <p className="font-bold text-[var(--primary)] mb-2">📚 Data Sources & References:</p>
             <ul className="space-y-1">
-              <li>• <a href="https://growagardenroblox.fandom.com/wiki/Grow_a_Garden_Wiki" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">Grow A Garden Official Fandom Wiki</a> — base price reference database</li>
               <li>• Official Roblox patch update logs for each game version</li>
               <li>• Community-submitted test data from verified GAG Discord servers</li>
               <li>• Direct in-game sell verification on Roblox public servers</li>

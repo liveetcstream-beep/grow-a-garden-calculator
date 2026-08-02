@@ -37,12 +37,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     authors: [{ name: "GrowAGardenCalcs Team", url: "https://growagardencalcs.com/about" }],
     alternates: {
       canonical: `/crop/${crop.id}-value`,
-      languages: {
-        'en': `/crop/${crop.id}-value`,
-        'id': `/crop/${crop.id}-value`,
-        'tl': `/crop/${crop.id}-value`,
-        'x-default': `/crop/${crop.id}-value`,
-      },
     },
     openGraph: {
       title: pageTitle,
