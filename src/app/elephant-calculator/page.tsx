@@ -97,7 +97,7 @@ const itemPageSchema = {
   name: "Elephant Value — Grow A Garden",
   description: `The Elephant is an Epic Savanna pet in Grow A Garden with a base value of ${elephantBaseValue.toLocaleString()} coins and Trunk Splash ability (×5.5).`,
   mainEntity: {
-    "@type": "Product",
+    "@type": "Thing",
     name: "Elephant",
     description: `Epic Savanna pet in Grow A Garden. Base value: ${elephantBaseValue.toLocaleString()} coins. Ability: Trunk Splash (Wet mutation, ×5.5 multiplier).`,
     category: "Grow A Garden Pet",

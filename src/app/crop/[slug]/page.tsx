@@ -246,7 +246,7 @@ export default async function CropValuePage({ params }: PageProps) {
     "name": `${crop.name} Value — Grow A Garden`,
     "description": `${crop.name} is worth ${crop.basePrice} coins base price in Grow A Garden.`,
     "mainEntity": {
-      "@type": "Product",
+      "@type": "Thing",
       "name": crop.name,
       "description": `${crop.category} crop with ${crop.basePrice} base coins price in Grow A Garden.`
     }
