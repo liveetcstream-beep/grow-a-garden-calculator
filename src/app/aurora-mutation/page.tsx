@@ -463,6 +463,9 @@ export default function AuroraMutationPage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-3 text-xs" style={{ color: "var(--muted)" }}>
+            Calculate Aurora&apos;s effect on any crop using our master <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">Grow A Garden Calculator</Link>.
+          </p>
         </div>
       </section>
 

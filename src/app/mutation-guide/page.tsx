@@ -510,7 +510,7 @@ export default function MutationGuidePage() {
             </table>
           </div>
           <p className="mt-3 text-xs" style={{ color: "var(--muted)" }}>
-            <Link href="/mutation-calculator" className="text-[var(--primary)] hover:underline">Use the Mutation Calculator</Link> to compute exact crop values with any combination.
+            Apply these mutation multipliers to any crop using our master <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">Grow A Garden Calculator</Link>, or compute custom stacks in the <Link href="/mutation-calculator" className="text-[var(--primary)] hover:underline">Mutation Calculator</Link>.
           </p>
         </div>
       </section>

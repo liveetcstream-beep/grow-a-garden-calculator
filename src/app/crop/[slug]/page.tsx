@@ -349,9 +349,9 @@ export default async function CropValuePage({ params }: PageProps) {
                 : ` While ${comparisonCrop.name} yields higher single-harvest coins, ${crop.name} is faster to cultivate for rapid rotation stacks.`}
             </p>
             <div className="flex items-center gap-3 text-[11px] flex-wrap pt-2 border-t" style={{ borderColor: 'var(--glass-border)', color: 'var(--muted)' }}>
-              <span>💬 Community-verified values from GAG Discord</span>
+              <span>💬 Compare with other crops in our <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">Grow A Garden Calculator</Link></span>
               <span>•</span>
-              <span>📜 Formula source: Official GAG mechanics (verified {lastMondayDate})</span>
+              <span>📜 Formula source: Official GAG mechanics (verified September 13, 2026)</span>
             </div>
           </div>
         );

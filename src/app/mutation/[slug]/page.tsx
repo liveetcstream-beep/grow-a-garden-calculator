@@ -412,7 +412,7 @@ export default async function MutationPage({ params }: PageProps) {
           🧬 More {mutation.category} Mutations
         </h2>
         <p className="text-xs text-left mb-4" style={{ color: 'var(--muted)' }}>
-          Compare {mutation.name} (×{mutation.multiplier}) with other {mutation.category} modifiers:
+          Compare {mutation.name} (×{mutation.multiplier}) with other {mutation.category} modifiers, or test your harvest values in our <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">GAG Calculator</Link>:
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {sameCat.map(mut => (

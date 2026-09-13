@@ -72,7 +72,7 @@ export default function ValueListPage() {
           Whether you are comparing trading multipliers, checking <strong>gag pet values</strong>, or searching for <strong>gag values</strong> rates, this directory provides instant access to base prices and multiplier tables.
         </p>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
-          Use this value list to verify crop base values before applying weight scaling (Weight²) or stacking mutation multipliers. Click any item card to open its dedicated live calculator.
+          Use this value list to verify crop base values, or open our master <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">Grow A Garden Calculator</Link> to calculate weight and mutation values instantly. Click any item card to open its dedicated live calculator.
         </p>
       </div>
 

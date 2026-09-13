@@ -209,10 +209,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto relative z-10">
           
           <div className="text-center mb-8">
-            {/* Priority 6 Automated Monday Update Badge */}
+            {/* Automated Verified Patch Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold mb-4 border" style={{ background: 'var(--surface-1)', borderColor: 'rgba(34,197,94,0.3)', color: 'var(--primary)' }}>
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>🔔 Values updated every Monday | Last update: {lastMondayDate}</span>
+              <span>🔔 Data verified for latest patch | Last verified: September 13, 2026</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-black mb-3" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
@@ -226,13 +226,13 @@ export default function HomePage() {
             </h2>
           </div>
 
-          {/* Priority 6 What's New Announcement Banner */}
+          {/* What's New Announcement Banner */}
           <div className="mb-6 p-4 rounded-2xl border flex flex-col sm:flex-row items-center justify-between gap-3 text-left" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)' }}>
             <div className="flex items-center gap-3">
               <span className="text-2xl">✨</span>
               <div>
                 <h3 className="text-xs font-bold uppercase tracking-wider text-[var(--primary)]">What&apos;s New This Week</h3>
-                <p className="text-xs font-semibold text-[var(--foreground)]">Beanstalk Event crops &amp; patch v2.4 trade values updated {lastMondayDate}</p>
+                <p className="text-xs font-semibold text-[var(--foreground)]">All 99+ crop base prices &amp; 173+ mutation multipliers verified in-game (September 13, 2026)</p>
               </div>
             </div>
             <a href="https://discord.gg/growagarden" target="_blank" rel="noopener noreferrer" className="text-xs font-bold px-3 py-1.5 rounded-xl bg-[var(--primary)] text-white hover:opacity-90 shrink-0 transition-opacity">
@@ -259,6 +259,34 @@ export default function HomePage() {
 
           {/* The new Visual Grid Dashboard */}
           <Dashboard />
+
+          {/* How Calculations Work - Methodology Trust Card */}
+          <div className="my-8 p-6 rounded-2xl border text-left" style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-xl">🛡️</span>
+              <h3 className="text-base sm:text-lg font-bold" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+                How Our Grow A Garden Calculations Work
+              </h3>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-3 text-xs" style={{ color: "var(--muted)" }}>
+              <div className="p-3 rounded-xl" style={{ background: "var(--surface-2)" }}>
+                <p className="font-bold text-[var(--foreground)] mb-1">🌾 Verified In-Game Base Values</p>
+                <p>Base coin prices for all 99+ crops are verified directly in-game from the Seed Shop and event shops.</p>
+              </div>
+              <div className="p-3 rounded-xl" style={{ background: "var(--surface-2)" }}>
+                <p className="font-bold text-[var(--foreground)] mb-1">⚖️ Exact Quadratic Weight Scaling</p>
+                <p>Calculates with the verified GAG formula: Base Price × (Weight in kg)² tested across all weight ranges.</p>
+              </div>
+              <div className="p-3 rounded-xl" style={{ background: "var(--surface-2)" }}>
+                <p className="font-bold text-[var(--foreground)] mb-1">🧬 Compounded Mutation Multipliers</p>
+                <p>Multipliers (Golden ×20, Rainbow ×50, Aurora ×90, Fractured ×92) compound multiplicatively per game mechanics.</p>
+              </div>
+              <div className="p-3 rounded-xl" style={{ background: "var(--surface-2)" }}>
+                <p className="font-bold text-[var(--foreground)] mb-1">🔄 Patch-Verified Updates</p>
+                <p>Whenever Roblox Grow A Garden releases a patch or balance change, our team re-tests numbers immediately.</p>
+              </div>
+            </div>
+          </div>
 
           {/* Priority 6 Bookmark CTA Banner */}
           <div className="my-6 p-4 rounded-2xl border text-center text-xs" style={{ background: 'rgba(59,130,246,0.05)', borderColor: 'rgba(59,130,246,0.2)', color: 'var(--muted)' }}>
