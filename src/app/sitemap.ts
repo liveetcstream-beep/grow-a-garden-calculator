@@ -6,6 +6,7 @@ import { MUTATIONS } from '@/data/mutations'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://growagardencalcs.com'
   const staticLastMod = new Date('2026-07-27')
+  const recentlyUpdated = new Date('2026-09-13')
 
   const staticEntries: MetadataRoute.Sitemap = [
     {
@@ -28,15 +29,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/mutation-guide`,
-      lastModified: staticLastMod,
+      lastModified: recentlyUpdated,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/aurora-mutation`,
-      lastModified: staticLastMod,
+      lastModified: recentlyUpdated,
       changeFrequency: 'weekly',
-      priority: 0.85,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/elephant-calculator`,
@@ -132,12 +133,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  const dynamicMutations: MetadataRoute.Sitemap = MUTATIONS.map((mutation) => ({
-    url: `${baseUrl}/mutation/${mutation.id}`,
-    lastModified: staticLastMod,
-    changeFrequency: 'weekly',
-    priority: 0.6,
-  }))
+  const dynamicMutations: MetadataRoute.Sitemap = MUTATIONS
+    .filter((mutation) => mutation.id !== 'aurora')
+    .map((mutation) => ({
+      url: `${baseUrl}/mutation/${mutation.id}`,
+      lastModified: staticLastMod,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    }))
 
   return [...staticEntries, ...dynamicCrops, ...dynamicPets, ...dynamicMutations]
 }

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MUTATIONS } from "@/data/mutations";
 
-const pageTitle = "Complete GAG Mutation Guide 2026 | How to Get Every Grow A Garden Mutation";
-const pageDesc = "Complete Grow A Garden mutations guide — all 170+ mutations listed with multipliers, how to get each one, Fractured mutation guide, Aurora mutation triggers, and tier-sorted GAG mutation list.";
+const pageTitle = "Grow A Garden Mutations List – Multipliers & How to Get";
+const pageDesc = "Complete Grow A Garden mutation list: exact multipliers (Aurora ×90, Fractured ×92), tier rankings, combos, and how to get every mutation.";
 const pageUrl = "https://growagardencalcs.com/mutation-guide";
 
 export const metadata: Metadata = {
@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     "grow a garden mutation multipliers",
   ],
   alternates: { canonical: "/mutation-guide" },
+  robots: { index: true, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDesc,
@@ -162,7 +163,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Mutation Guide",
+      name: "Grow A Garden Mutation List",
       item: "https://growagardencalcs.com/mutation-guide",
     },
   ],
@@ -193,30 +194,21 @@ export default function MutationGuidePage() {
         <h1 className="text-3xl sm:text-5xl font-black mb-4" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
           Grow A Garden{" "}
           <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-            Mutations Guide
+            Mutation List &amp; Multipliers
           </span>
         </h1>
         <p className="text-sm sm:text-base max-w-3xl mx-auto leading-relaxed mb-6" style={{ color: "var(--muted)" }}>
-          The complete <strong>Grow A Garden mutations guide</strong> — all{" "}
-          <strong>{MUTATIONS.length}+ mutations</strong> with exact multipliers, how to get each one, and combo
-          chains. Use our{" "}
-          <Link href="/mutation-calculator" className="text-[var(--primary)] hover:underline font-bold">
-            GAG Mutation Calculator
-          </Link>{" "}
-          to calculate exact crop values with any mutation stack.
+          Complete <strong>Grow A Garden mutation list</strong> — all <strong>{MUTATIONS.length}+ mutations</strong> with exact multipliers, how to get each one, tier rankings, and combo chains. Open any mutation below for its full guide and value calculator.
         </p>
         <div className="flex flex-wrap gap-3 justify-center">
-          <Link href="#tier-list" className="px-5 py-2.5 rounded-xl text-sm font-bold transition-all hover:scale-105" style={{ background: "var(--primary)", color: "#0a0e17" }}>
-            📊 View Tier List
+          <Link href="#mutation-table" className="px-5 py-2.5 rounded-xl text-sm font-bold transition-all hover:scale-105" style={{ background: "var(--primary)", color: "#0a0e17" }}>
+            📋 Full Mutation List
           </Link>
-          <Link href="#fractured" className="px-5 py-2.5 rounded-xl text-sm font-bold transition-all hover:scale-105" style={{ background: "var(--surface-1)", border: "1px solid var(--glass-border)", color: "var(--foreground)" }}>
-            💜 Fractured Guide
-          </Link>
-          <Link href="#aurora" className="px-5 py-2.5 rounded-xl text-sm font-bold transition-all hover:scale-105" style={{ background: "var(--surface-1)", border: "1px solid var(--glass-border)", color: "var(--foreground)" }}>
-            🌌 Aurora Guide
+          <Link href="#tier-list" className="px-5 py-2.5 rounded-xl text-sm font-bold transition-all hover:scale-105" style={{ background: "var(--surface-1)", border: "1px solid var(--glass-border)", color: "var(--foreground)" }}>
+            📊 Tier List
           </Link>
           <Link href="/mutation-calculator" className="px-5 py-2.5 rounded-xl text-sm font-bold transition-all hover:scale-105" style={{ background: "var(--surface-1)", border: "1px solid var(--glass-border)", color: "var(--foreground)" }}>
-            🧮 Calculator
+            🧮 Mutation Calculator
           </Link>
         </div>
       </div>
@@ -276,10 +268,62 @@ export default function MutationGuidePage() {
         </div>
       </section>
 
+      {/* Top Mutations Quick Reference Table */}
+      <section id="mutation-table" className="mb-10 scroll-mt-24">
+        <div className="glass-card-static p-6">
+          <h2 className="text-xl font-bold mb-2" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+            🔥 Key Mutations — Quick Reference
+          </h2>
+          <p className="text-xs mb-5" style={{ color: "var(--muted)" }}>Most-searched mutations in Grow A Garden. Click any mutation for full guide, value calculator and combo chains.</p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr style={{ borderBottom: "1px solid var(--glass-border)" }}>
+                  <th className="text-left py-3 px-3 font-semibold" style={{ color: "var(--muted)" }}>Mutation</th>
+                  <th className="text-right py-3 px-3 font-semibold" style={{ color: "var(--muted)" }}>Multiplier</th>
+                  <th className="text-left py-3 px-3 font-semibold hidden sm:table-cell" style={{ color: "var(--muted)" }}>How to Get</th>
+                  <th className="text-left py-3 px-3 font-semibold" style={{ color: "var(--muted)" }}>Guide</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { id: "fractured", label: "Fractured", howToGet: "Glitched + Plasma combo" },
+                  { id: "aurora",    label: "Aurora",    howToGet: "Aurora Borealis weather event" },
+                  { id: "shadow",    label: "Shadowbound (Shadow)", howToGet: "Umbral + Gloom combo" },
+                  { id: "luminous",  label: "Luminous",  howToGet: "Sprite pet, spray, or pet shard" },
+                  { id: "rot",       label: "Rot (Rotting)", howToGet: "Mandrake pet mutation" },
+                  { id: "celestial", label: "Celestial", howToGet: "Meteor Shower event" },
+                  { id: "rainbow",   label: "Rainbow",   howToGet: "Natural growth, butterfly, or spray" },
+                  { id: "golden",    label: "Golden",    howToGet: "Natural growth or fertilizer" },
+                ].map((row) => {
+                  const mut = MUTATIONS.find((m) => m.id === row.id);
+                  const guideHref = row.id === "aurora" ? "/aurora-mutation" : `/mutation/${row.id}`;
+                  return (
+                    <tr key={row.id} style={{ borderBottom: "1px solid var(--glass-border)" }}>
+                      <td className="py-3 px-3">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: mut?.color ?? "#fff" }} />
+                          <span className="font-bold text-xs" style={{ color: mut?.color ?? "var(--foreground)" }}>{row.label}</span>
+                        </div>
+                      </td>
+                      <td className="py-3 px-3 text-right font-black" style={{ color: mut?.color ?? "var(--primary)", fontFamily: "var(--font-display)" }}>×{mut?.multiplier ?? "—"}</td>
+                      <td className="py-3 px-3 text-xs hidden sm:table-cell" style={{ color: "var(--muted)" }}>{row.howToGet}</td>
+                      <td className="py-3 px-3">
+                        <Link href={guideHref} className="text-xs font-semibold hover:underline" style={{ color: "var(--primary)" }}>Full Guide →</Link>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       {/* Tier List Table */}
       <section id="tier-list" className="mb-12 scroll-mt-24">
         <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-          📊 All GAG Mutations — Complete Tier List by Multiplier
+          📊 All Grow A Garden Mutations — Tier List by Multiplier
         </h2>
 
         {/* Top 10 Highest Multipliers */}
@@ -303,7 +347,7 @@ export default function MutationGuidePage() {
                   <tr key={mut.id} style={{ borderBottom: "1px solid var(--glass-border)" }}>
                     <td className="py-3 px-3 font-bold" style={{ color: "var(--muted)" }}>{idx + 1}</td>
                     <td className="py-3 px-3">
-                      <Link href={`/mutation/${mut.id}`} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                      <Link href={mut.id === "aurora" ? "/aurora-mutation" : `/mutation/${mut.id}`} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                         <div className="w-3 h-3 rounded-full shrink-0" style={{ background: mut.color }} />
                         <span className="font-bold" style={{ color: mut.color }}>{mut.name}</span>
                       </Link>
@@ -338,7 +382,7 @@ export default function MutationGuidePage() {
                 {muts.sort((a, b) => b.multiplier - a.multiplier).map((mut) => (
                   <Link
                     key={mut.id}
-                    href={`/mutation/${mut.id}`}
+                    href={mut.id === "aurora" ? "/aurora-mutation" : `/mutation/${mut.id}`}
                     className="p-3 rounded-xl transition-all hover:scale-105 flex flex-col items-start gap-1"
                     style={{ background: tierGlow, border: `1px solid ${mut.color}25` }}
                   >
@@ -360,162 +404,56 @@ export default function MutationGuidePage() {
         })}
       </section>
 
-      {/* Fractured Mutation Deep Dive */}
-      <section id="fractured" className="mb-12 scroll-mt-24">
-        <div className="glass-card-static p-6 sm:p-8" style={{ border: `1px solid ${fracturedMutation?.color ?? "#DA70D6"}30` }}>
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl font-black shrink-0"
+      {/* Fractured Mutation — Hub Summary Card */}
+      <section id="fractured" className="mb-8 scroll-mt-24">
+        <div className="glass-card-static p-6" style={{ border: `1px solid ${fracturedMutation?.color ?? "#DA70D6"}30` }}>
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center text-xl font-black shrink-0"
               style={{ background: `${fracturedMutation?.color ?? "#DA70D6"}15`, border: `1.5px solid ${fracturedMutation?.color ?? "#DA70D6"}40`, color: fracturedMutation?.color }}>
               ×{fracturedMutation?.multiplier ?? 92}
             </div>
-            <div>
-              <h2 className="text-2xl font-bold" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-                💜 How to Trigger the Fractured Mutation
+            <div className="flex-1">
+              <h2 className="text-lg font-bold mb-2" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+                💜 Fractured Mutation
               </h2>
-              <p className="text-xs mt-1" style={{ color: "var(--muted)" }}>
-                Target keyword: <strong style={{ color: "var(--primary)" }}>fractured mutation grow a garden</strong>
+              <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
+                The <strong style={{ color: fracturedMutation?.color ?? "#DA70D6" }}>Fractured mutation</strong> (×{fracturedMutation?.multiplier ?? 92}) is a high-tier combo mutation formed by combining <strong>Glitched</strong> and <strong>Plasma</strong> on the same crop. Both mutations must be active simultaneously — the combo triggers automatically. Glitched is obtained during the Jhai or Glitch Rain admin event; Plasma comes from the Admin Laser event. At ×92 with a 10 kg Dragon Fruit (base 500), a single Fractured harvest yields <strong>4,600,000 coins</strong> before stacking further mutations.
               </p>
-            </div>
-          </div>
-
-          <div className="space-y-5 text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            <div>
-              <h3 className="text-base font-bold mb-2" style={{ color: "var(--foreground)" }}>What is the Fractured Mutation?</h3>
-              <p>
-                The <strong style={{ color: fracturedMutation?.color ?? "#DA70D6" }}>Fractured</strong> mutation is a{" "}
-                <strong>Special category combo mutation</strong> in Grow A Garden with a multiplier of{" "}
-                <strong>×{fracturedMutation?.multiplier ?? 92}</strong>. It is formed by combining the{" "}
-                <strong>Glitched</strong> mutation and the <strong>Plasma</strong> mutation on the same crop simultaneously.
-                The Fractured mutation creates a reality-distortion visual effect on your crop — a shimmering, glitched
-                appearance — and is one of the most visually striking mutations in the game.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-base font-bold mb-2" style={{ color: "var(--foreground)" }}>Step-by-Step: How to Get Fractured</h3>
-              <ol className="space-y-3">
-                {[
-                  { step: "1", title: "Get Glitched (×85)", desc: "The Glitched mutation is obtained during the Jhai admin event. When Jhai triggers, crops in your garden automatically receive the Glitched mutation. You can also obtain it through the Glitch Rain admin event. Monitor server announcements." },
-                  { step: "2", title: "Get Plasma (×5)", desc: "The Plasma mutation is applied during the Admin Laser event. When the laser fires, it applies the Plasma mutation (×5) to your growing crops. It can also be obtained via the Plasma spray if available in the shop." },
-                  { step: "3", title: "Combo Triggers Automatically", desc: "Once your crop has both Glitched and Plasma simultaneously, the game engine automatically combines them into the Fractured mutation (×92). You do NOT need to do anything extra — the combo triggers on its own." },
-                  { step: "4", title: "Harvest Your Fractured Crop", desc: "Harvest the crop once Fractured is confirmed (look for the reality-distortion glow effect). Use our GAG calculator to compute the exact sell value with your crop's weight and any additional mutations." },
-                ].map((s) => (
-                  <li key={s.step} className="flex items-start gap-3">
-                    <span className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
-                      style={{ background: fracturedMutation?.color ?? "#DA70D6", color: "black" }}>
-                      {s.step}
-                    </span>
-                    <div>
-                      <strong style={{ color: "var(--foreground)" }}>{s.title}:</strong> {s.desc}
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </div>
-
-            <div className="p-4 rounded-2xl border" style={{ background: "rgba(218,112,214,0.06)", borderColor: "rgba(218,112,214,0.2)" }}>
-              <h3 className="text-base font-bold mb-3" style={{ color: "var(--foreground)" }}>Best Crops to Pair with Fractured (×92)</h3>
-              <p className="text-xs mb-3" style={{ color: "var(--muted)" }}>Highest base price crops benefit most from ×92 multiplier:</p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
-                {[
-                  { crop: "🐉 Dragon Fruit", base: 500, val: (500 * 100 * 92).toLocaleString() },
-                  { crop: "🥭 Mango", base: 350, val: (350 * 100 * 92).toLocaleString() },
-                  { crop: "⭐ Starfruit", base: 400, val: (400 * 100 * 92).toLocaleString() },
-                  { crop: "🌙 Moon Melon", base: 280, val: (280 * 100 * 92).toLocaleString() },
-                  { crop: "🔮 Nightshade", base: 240, val: (240 * 100 * 92).toLocaleString() },
-                  { crop: "🌌 Aurora Vine", base: 320, val: (320 * 100 * 92).toLocaleString() },
-                ].map((c) => (
-                  <div key={c.crop} className="p-2 rounded-xl text-center" style={{ background: "var(--surface-1)" }}>
-                    <div className="text-base mb-1">{c.crop.split(" ")[0]}</div>
-                    <div className="font-bold text-[10px]" style={{ color: "var(--foreground)" }}>{c.crop.split(" ").slice(1).join(" ")}</div>
-                    <div className="text-[10px]" style={{ color: "var(--muted)" }}>Base: {c.base}</div>
-                    <div className="font-black text-xs" style={{ color: fracturedMutation?.color ?? "#DA70D6" }}>@10kg: {c.val}</div>
-                  </div>
-                ))}
-              </div>
-              <p className="text-xs mt-3" style={{ color: "var(--muted)" }}>
-                *Values at 10 kg weight with Fractured (×92) only. Stack with Golden or Rainbow for multi-billion payouts.{" "}
-                <Link href="/" className="text-[var(--primary)] hover:underline">Use Calculator →</Link>
-              </p>
+              <Link
+                href="/mutation/fractured"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all hover:scale-105"
+                style={{ background: `${fracturedMutation?.color ?? "#DA70D6"}15`, border: `1px solid ${fracturedMutation?.color ?? "#DA70D6"}30`, color: fracturedMutation?.color ?? "#DA70D6" }}
+              >
+                View complete Fractured Mutation guide →
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Aurora Mutation Deep Dive */}
-      <section id="aurora" className="mb-12 scroll-mt-24">
-        <div className="glass-card-static p-6 sm:p-8" style={{ border: `1px solid ${auroraMutation?.color ?? "#00FF7F"}30` }}>
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl font-black shrink-0"
+      {/* Aurora Mutation — Hub Summary Card */}
+      <section id="aurora" className="mb-8 scroll-mt-24">
+        <div className="glass-card-static p-6" style={{ border: `1px solid ${auroraMutation?.color ?? "#00FF7F"}30` }}>
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center text-xl font-black shrink-0"
               style={{ background: `${auroraMutation?.color ?? "#00FF7F"}15`, border: `1.5px solid ${auroraMutation?.color ?? "#00FF7F"}40`, color: auroraMutation?.color }}>
               ×{auroraMutation?.multiplier ?? 90}
             </div>
-            <div>
-              <h2 className="text-2xl font-bold" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-                🌌 Aurora Mutation — Complete Guide
+            <div className="flex-1">
+              <h2 className="text-lg font-bold mb-2" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+                🌌 Aurora Mutation
               </h2>
-              <p className="text-xs mt-1" style={{ color: "var(--muted)" }}>
-                Target keyword: <strong style={{ color: "var(--primary)" }}>aurora mutation grow a garden</strong>
+              <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
+                The <strong style={{ color: auroraMutation?.color ?? "#00FF7F" }}>Aurora mutation</strong> (×{auroraMutation?.multiplier ?? 90}) is a high-tier Environmental mutation triggered exclusively during the <strong>Aurora Borealis weather event</strong>. No spray can force it — crops must be growing when the event activates. Aurora is also the first step in the most powerful combo chain in GAG: <strong>Aurora + Celestial = Cosmic (×240)</strong>, then <strong>Cosmic + Galactic = Astral (×365)</strong>.
               </p>
+              <Link
+                href="/aurora-mutation"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all hover:scale-105"
+                style={{ background: `${auroraMutation?.color ?? "#00FF7F"}15`, border: `1px solid ${auroraMutation?.color ?? "#00FF7F"}30`, color: auroraMutation?.color ?? "#00FF7F" }}
+              >
+                View complete Aurora Mutation guide →
+              </Link>
             </div>
-          </div>
-
-          <div className="space-y-5 text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            <p>
-              The <strong style={{ color: auroraMutation?.color ?? "#00FF7F" }}>Aurora</strong> mutation (×90) is a high-tier{" "}
-              <strong>Environmental</strong> mutation in Grow A Garden triggered exclusively during the{" "}
-              <strong>Aurora Borealis weather event</strong>. When the northern lights fill the sky, any crops growing in
-              your garden during that event have a chance to receive the Aurora mutation automatically — no spray required.
-              Aurora is also a key ingredient in the powerful <strong>Cosmic combo chain</strong> (Celestial + Aurora = Cosmic ×240).
-            </p>
-
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div className="p-4 rounded-2xl border" style={{ background: "rgba(0,255,127,0.05)", borderColor: "rgba(0,255,127,0.2)" }}>
-                <h3 className="text-base font-bold mb-3" style={{ color: "var(--foreground)" }}>⚡ How to Trigger Aurora</h3>
-                <ol className="space-y-2 text-sm" style={{ color: "var(--muted)" }}>
-                  {[
-                    "Wait for the Aurora Borealis weather event to activate in your server",
-                    "Have crops actively growing in your garden when the event starts",
-                    "The Aurora mutation applies automatically during the event window",
-                    "You cannot use a spray to force Aurora — it must be triggered by the weather",
-                  ].map((s, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <span className="font-bold shrink-0" style={{ color: auroraMutation?.color ?? "#00FF7F" }}>{i + 1}.</span>
-                      <span>{s}</span>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-              <div className="p-4 rounded-2xl border" style={{ background: "rgba(0,255,127,0.05)", borderColor: "rgba(0,255,127,0.2)" }}>
-                <h3 className="text-base font-bold mb-3" style={{ color: "var(--foreground)" }}>🔗 Aurora Combo Chains</h3>
-                <div className="space-y-3 text-sm" style={{ color: "var(--muted)" }}>
-                  <div className="p-3 rounded-xl" style={{ background: "var(--surface-1)" }}>
-                    <div className="flex items-center gap-2 font-bold text-xs mb-1" style={{ color: "var(--foreground)" }}>
-                      Aurora (×90) + Celestial (×120) =
-                    </div>
-                    <div className="font-black text-lg" style={{ color: "#DA70D6", fontFamily: "var(--font-display)" }}>
-                      🌌 Cosmic ×240
-                    </div>
-                  </div>
-                  <div className="p-3 rounded-xl" style={{ background: "var(--surface-1)" }}>
-                    <div className="flex items-center gap-2 font-bold text-xs mb-1" style={{ color: "var(--foreground)" }}>
-                      Cosmic (×240) + Galactic (×120) =
-                    </div>
-                    <div className="font-black text-lg" style={{ color: "#9400D3", fontFamily: "var(--font-display)" }}>
-                      ✨ Astral ×{astralMutation?.multiplier ?? 365}
-                    </div>
-                  </div>
-                  <p className="text-xs" style={{ color: "var(--muted)" }}>
-                    Aurora → Cosmic → Astral is the most powerful combo chain in GAG!
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <Link href="/mutation/aurora" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all hover:scale-105"
-              style={{ background: `${auroraMutation?.color ?? "#00FF7F"}15`, border: `1px solid ${auroraMutation?.color ?? "#00FF7F"}30`, color: auroraMutation?.color ?? "#00FF7F" }}>
-              View Full Aurora Mutation Page →
-            </Link>
           </div>
         </div>
       </section>
@@ -606,7 +544,8 @@ export default function MutationGuidePage() {
             {[
               { href: "/", label: "🌱 GAG Calculator", desc: "Crop value calculator" },
               { href: "/mutation-calculator", label: "🧬 Mutation Calculator", desc: "Calculate mutation stacks" },
-              { href: "/aurora-mutation", label: "🌌 Aurora Guide", desc: "x90 mutation trigger" },
+              { href: "/aurora-mutation", label: "🌌 Aurora Mutation", desc: "×90 full guide & calculator" },
+              { href: "/mutation/fractured", label: "💜 Fractured Mutation", desc: "×92 top combo guide" },
               { href: "/elephant-calculator", label: "🐘 Elephant Calc", desc: "Elephant pet stats" },
               { href: "/value-list", label: "💰 GAG Values List", desc: "All crop base prices" },
               { href: "/pet-calculator", label: "🐾 Pet Calculator", desc: "Pet value & weight" },

@@ -24,8 +24,29 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: "Mutation Not Found" };
   }
 
-  const pageTitle = `${mutation.name} Mutation Grow A Garden - Multiplier & Value Calculator (×${mutation.multiplier})`;
-  const pageDesc = `Calculate the ${mutation.name} mutation multiplier (×${mutation.multiplier}) in Grow A Garden. Find the exact value, price, and how to get the ${mutation.name} mutation with our GAG calculator.`;
+  // CTR-optimized titles for high-impression zero-click mutations (strictly under 60 chars)
+  const MUTATION_TITLE_OVERRIDES: Record<string, string> = {
+    "shadow": "Shadow Mutation Grow A Garden – Multiplier & Guide (×70)",
+    "rot": "Rotting Mutation Grow A Garden – Multiplier & Guide (×8)",
+    "aurora": "Aurora Mutation Grow A Garden – Multiplier & Guide (×90)",
+    "luminous": "Luminous Mutation Grow A Garden – Multiplier & Guide (×50)",
+  };
+  // CTR-optimized descriptions (strictly under 155 chars)
+  const MUTATION_DESC_OVERRIDES: Record<string, string> = {
+    "shadow": "Get the Shadow (Shadowbound) mutation in Grow A Garden (×70 multiplier). Learn Umbral + Gloom combos and calculate crop values with our GAG calculator.",
+    "rot": "The Rot (Rotting) mutation gives a ×8 multiplier in Grow A Garden. Learn how to get Rot via the Mandrake pet and calculate crop values instantly.",
+    "aurora": "The Aurora mutation gives a ×90 multiplier in Grow A Garden. Triggered during the Aurora Borealis event. Calculate crop values and combos instantly.",
+    "luminous": "The Luminous mutation gives a ×50 multiplier in Grow A Garden. Obtain via Sprite pet, spray, or pet shard. Calculate crop value with our GAG calculator.",
+  };
+
+  let pageTitle = MUTATION_TITLE_OVERRIDES[mutation.id];
+  if (!pageTitle) {
+    pageTitle = `${mutation.name} Mutation – GAG Multiplier (×${mutation.multiplier})`;
+    if (pageTitle.length >= 60) {
+      pageTitle = `${mutation.name} Mutation – GAG (×${mutation.multiplier})`;
+    }
+  }
+  const pageDesc = MUTATION_DESC_OVERRIDES[mutation.id] ?? `Get the ${mutation.name} mutation in Grow A Garden (×${mutation.multiplier} multiplier). Learn how to unlock it and calculate crop values with our GAG calculator.`;
   const pageUrl = `https://growagardencalcs.com/mutation/${mutation.id}`;
 
   return {
@@ -34,7 +55,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     keywords: [`${mutation.name} mutation grow a garden`, `${mutation.name} mutation multiplier`, `grow a garden ${mutation.name} mutation`, `${mutation.name} mutation value`, `GAG mutation calculator`],
     authors: [{ name: "GrowAGardenCalcs Team", url: "https://growagardencalcs.com/about" }],
     alternates: {
-      canonical: `/mutation/${mutation.id}`,
+      // Aurora has a dedicated standalone authority page — point canonical there to consolidate signals
+      canonical: mutation.id === "aurora" ? `/aurora-mutation` : `/mutation/${mutation.id}`,
     },
     openGraph: {
       title: pageTitle,

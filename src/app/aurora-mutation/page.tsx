@@ -418,7 +418,7 @@ export default function AuroraMutationPage() {
             ].map((item) => (
               <div key={item.id} className="flex items-center shrink-0">
                 {item.mult !== null ? (
-                  <Link href={`/mutation/${item.id}`}
+                  <Link href={item.id === "aurora" ? "/aurora-mutation" : `/mutation/${item.id}`}
                     className="p-3 rounded-2xl text-center min-w-[70px] transition-all hover:scale-105"
                     style={{ background: `${item.color}15`, border: `1.5px solid ${item.color}40` }}>
                     <div className="w-3 h-3 rounded-full mx-auto mb-1" style={{ background: item.color }} />
@@ -525,7 +525,7 @@ export default function AuroraMutationPage() {
                     background: row.highlight ? `${auroraColor}06` : "transparent"
                   }}>
                     <td className="py-3 px-3">
-                      <Link href={`/mutation/${row.mut!.id}`} className="flex items-center gap-2 hover:opacity-80">
+                      <Link href={row.mut!.id === "aurora" ? "/aurora-mutation" : `/mutation/${row.mut!.id}`} className="flex items-center gap-2 hover:opacity-80">
                         <div className="w-3 h-3 rounded-full shrink-0" style={{ background: row.mut!.color }} />
                         <span className="font-bold text-xs" style={{ color: row.mut!.color }}>
                           {row.mut!.name} {row.highlight && "← this page"}
@@ -581,7 +581,7 @@ export default function AuroraMutationPage() {
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {[
-              { href: "/mutation/aurora", label: "🌌 Aurora Mutation", desc: "Individual mutation stats" },
+              { href: "/mutation/fractured", label: "💜 Fractured Mutation", desc: "×92 top combo mutation" },
               { href: "/mutation/celestial", label: "☄️ Celestial Mutation", desc: "Aurora's combo partner" },
               { href: "/mutation/cosmic", label: "🌠 Cosmic Mutation", desc: "Aurora + Celestial result" },
               { href: "/mutation/astral", label: "✨ Astral Mutation", desc: "Highest Cosmic chain tier" },

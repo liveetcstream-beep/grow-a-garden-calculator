@@ -94,12 +94,12 @@ export default function ValueListPage() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
           {[
-            { id: "starfruit", name: "Starfruit Value", emoji: "⭐", base: 400, val: "40,000", tag: "Pos 6.1 — High Search" },
-            { id: "dragon-fruit", name: "Dragon Fruit Value", emoji: "🐉", base: 500, val: "50,000", tag: "Pos 5.8 — Top Rated" },
-            { id: "bamboo", name: "Bamboo Value", emoji: "🎍", base: 80, val: "8,000", tag: "Pos 5.6 — Fast Trade" },
-            { id: "carrot", name: "Carrot Value", emoji: "🥕", base: 10, val: "1,000", tag: "Pos 6.2 — Starter" },
-            { id: "mango", name: "Mango Value", emoji: "🥭", base: 350, val: "35,000", tag: "Pos 6.6 — Summer" },
-            { id: "royal-jelly-plant", name: "Royal Jelly Plant Value", emoji: "👑", base: 300, val: "30,000", tag: "Pos 6.8 — Bee Event" },
+            { id: "starfruit", name: "Starfruit Value", emoji: "⭐", base: 400, val: "40,000", tag: "Popular" },
+            { id: "dragon-fruit", name: "Dragon Fruit Value", emoji: "🐉", base: 500, val: "50,000", tag: "High Value" },
+            { id: "bamboo", name: "Bamboo Value", emoji: "🎍", base: 80, val: "8,000", tag: "Fast Trade" },
+            { id: "carrot", name: "Carrot Value", emoji: "🥕", base: 10, val: "1,000", tag: "Beginner Crop" },
+            { id: "mango", name: "Mango Value", emoji: "🥭", base: 350, val: "35,000", tag: "Summer Event" },
+            { id: "royal-jelly-plant", name: "Royal Jelly Plant Value", emoji: "👑", base: 300, val: "30,000", tag: "Bee Event" },
           ].map((c) => (
             <Link
               key={c.id}

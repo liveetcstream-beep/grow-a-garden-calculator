@@ -26,8 +26,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: "Crop Not Found" };
   }
 
-  const pageTitle = `${crop.name} Value & Calculator | Grow A Garden GAG Calculator`;
-  const pageDesc = `How much is ${crop.name} worth in Grow A Garden? Base price is ${crop.basePrice} coins. Use our gag calculator to find exact ${crop.name} value with weight & mutations.`;
+  // CTR-optimized titles for high-impression zero-click crops (strictly under 60 chars)
+  const CROP_TITLE_OVERRIDES: Record<string, string> = {
+    "dragon-fruit": "Dragon Fruit Value in Grow A Garden – GAG Calculator",
+    "mango": "Mango Value in Grow A Garden – GAG Calculator",
+    "bamboo": "Bamboo Value in Grow A Garden – GAG Calculator & Price",
+  };
+  // CTR-optimized descriptions (strictly under 155 chars)
+  const CROP_DESC_OVERRIDES: Record<string, string> = {
+    "dragon-fruit": "Dragon Fruit base value is 100 coins in Grow A Garden. Calculate exact value by weight and mutations (Golden, Rainbow) with our free GAG calculator.",
+    "mango": "Mango base value is 100 coins in Grow A Garden. Calculate exact Summer Event crop value by weight and mutation with our free GAG calculator.",
+    "bamboo": "Bamboo base value is 100 coins in Grow A Garden. Calculate exact fast-trade crop value by weight and mutation with our free GAG calculator.",
+  };
+
+  let pageTitle = CROP_TITLE_OVERRIDES[cropId];
+  if (!pageTitle) {
+    pageTitle = `${crop.name} Value – Grow A Garden Calculator`;
+    if (pageTitle.length >= 60) {
+      pageTitle = `${crop.name} Value – GAG Calculator`;
+    }
+  }
+  const pageDesc = CROP_DESC_OVERRIDES[cropId] ?? `${crop.name} base value is ${crop.basePrice} coins in Grow A Garden. Calculate exact value by weight and mutations instantly with our free GAG calculator.`;
   const pageUrl = `https://growagardencalcs.com/crop/${crop.id}-value`;
 
   return {
