@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 const termsTitle = "Terms of Service";
-const termsDesc = "Terms of Service for Grow A Garden Calculator. Read our rules and conditions for using this website.";
+const termsDesc = "Terms of Service for Grow A Garden Calculator: rules for using our free GAG calculators, value lists and tools. Updated October 2026.";
 const termsUrl = "https://growagardencalcs.com/terms";
 
 export const metadata: Metadata = {

@@ -24,7 +24,7 @@ const featuredCrops = ["dragon-fruit", "mango", "starfruit", "watermelon", "blue
 
 const pageTitle = "Aurora Mutation Grow A Garden — ×90 Multiplier Guide 2026";
 const pageDesc =
-  "Complete Aurora mutation guide for Grow A Garden — how to get Aurora (×90), trigger conditions, Aurora Borealis weather event timing, best crops, Cosmic combo chain (Aurora + Celestial = ×240), and value examples. GAG aurora mutation calculator.";
+  "Aurora mutation guide: how to get Aurora (×90) in Grow A Garden, Borealis event timing, best crops and the Cosmic ×240 combo. Free GAG calculator.";
 const pageUrl = "https://growagardencalcs.com/aurora-mutation";
 
 export const metadata: Metadata = {
