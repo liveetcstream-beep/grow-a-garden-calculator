@@ -177,7 +177,6 @@ export const MUTATIONS: Mutation[] = [
   { id: "lightcycle", name: "Lightcycle", multiplier: 50, category: "Holiday", color: "#00FFFF", description: "Light cycle", howToGet: "Blood Owl Stoplight admin event" },
   { id: "sliced", name: "Sliced", multiplier: 50, category: "Special", color: "#FF6347", description: "Sliced apart", howToGet: "Jandel admin event" },
   { id: "heavenly", name: "Heavenly", multiplier: 5, category: "Special", color: "#FFFFF0", description: "Divine blessing", howToGet: "Jandel admin event" },
-  { id: "enchanted_2", name: "Enchanted", multiplier: 50, category: "Special", color: "#9370DB", description: "Magical enchantment", howToGet: "Admin mutation" },
   { id: "junkshock", name: "Junkshock", multiplier: 45, category: "Special", color: "#CD853F", description: "Flamingo junk shock", howToGet: "Flamingo admin event" },
   { id: "oil", name: "Oil", multiplier: 15, category: "Special", color: "#2F2F2F", description: "Oil coated", howToGet: "Flamingo admin event or Oil Rain" },
   { id: "boil", name: "Boil", multiplier: 15, category: "Special", color: "#FF4500", description: "Boiling hot", howToGet: "Flamingo admin event or Boil Rain" },

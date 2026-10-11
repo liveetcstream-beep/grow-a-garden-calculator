@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 
-const aboutTitle = "About Us | Grow A Garden Calculator";
+const aboutTitle = "About Us";
 const aboutDesc = "Learn about Grow A Garden Calculator — built by active Roblox GAG players to provide verified crop values, trade calculations, and pet stats.";
 const aboutUrl = "https://growagardencalcs.com/about";
 
