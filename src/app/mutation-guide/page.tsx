@@ -3,7 +3,7 @@ import Link from "next/link";
 import { MUTATIONS } from "@/data/mutations";
 
 const pageTitle = "Grow A Garden Mutations List – Multipliers & How to Get";
-const pageDesc = "Complete Grow A Garden mutation list: exact multipliers (Aurora ×90, Fractured ×92), tier rankings, combos, and how to get every mutation.";
+const pageDesc = "Complete Grow A Garden mutation list: exact multipliers (Aurora ×90, Fractured ×92), tier rankings, combos and how to get every mutation. Updated 2026.";
 const pageUrl = "https://growagardencalcs.com/mutation-guide";
 
 export const metadata: Metadata = {

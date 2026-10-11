@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 const contactTitle = "Contact Us";
-const contactDesc = "Contact the Grow A Garden Calculator team for support, business inquiries, or feedback.";
+const contactDesc = "Contact the Grow A Garden Calculator team — support, business inquiries, feedback and data corrections. We reply within 48 hours.";
 const contactUrl = "https://growagardencalcs.com/contact";
 
 export const metadata: Metadata = {

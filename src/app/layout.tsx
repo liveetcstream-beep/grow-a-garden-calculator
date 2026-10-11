@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     // chars). A template suffix here caused 341/344 pages to truncate in SERPs.
     default: "Grow A Garden Calculator 2026 | GAG Value & Trade W/F/L"
   },
-  description: "The ultimate GAG calculator for Roblox players. Calculate exact crop values by weight, estimate pet max age stats, and test trade values (Win/Fair/Lose) instantly!",
+  description: "The ultimate GAG calculator for Roblox players. Calculate crop values by weight, pet stats and trade values (Win/Fair/Lose) instantly. Free, no signup.",
   metadataBase: new URL('https://growagardencalcs.com'),
   authors: [{ name: "GrowAGardenCalcs Team", url: "https://growagardencalcs.com/about" }],
   creator: "GrowAGardenCalcs Team",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Grow A Garden Calculator 2026 | GAG Value & Trade W/F/L",
-    description: "The ultimate GAG calculator for Roblox players. Calculate exact crop values by weight, estimate pet max age stats, and test trade values (Win/Fair/Lose) instantly!",
+    description: "The ultimate GAG calculator for Roblox players. Calculate crop values by weight, pet stats and trade values (Win/Fair/Lose) instantly. Free, no signup.",
     url: 'https://growagardencalcs.com',
     siteName: "Grow A Garden Calculator",
     images: [
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Grow A Garden Calculator 2026 | GAG Value & Trade W/F/L",
-    description: "The ultimate GAG calculator for Roblox players. Calculate exact crop values by weight, estimate pet max age stats, and test trade values (Win/Fair/Lose) instantly!",
+    description: "The ultimate GAG calculator for Roblox players. Calculate crop values by weight, pet stats and trade values (Win/Fair/Lose) instantly. Free, no signup.",
     images: ['/og-image.jpg'],
   },
   robots: {

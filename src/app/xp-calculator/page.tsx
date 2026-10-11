@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getCanonical } from "@/lib/canonical";
 
 const xpTitle = "XP Calculator | Grow A Garden Player Level Guide";
-const xpDesc = "Calculate how much XP you need to level up in Grow A Garden. Plan your farming strategy to reach max level quickly.";
+const xpDesc = "Calculate how much XP you need to level up in Grow A Garden. Plan farming sessions, track progress and reach max level fast. Free XP calculator.";
 const xpUrl = "https://growagardencalcs.com/xp-calculator";
 
 export const generateMetadata = async (): Promise<Metadata> => {
