@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const title = "Update Log & Changelog | Grow A Garden Calculator";
+const title = "Update Log & Changelog";
 const desc = "Full update history of growagardencalcs.com — every GAG patch we verified, every crop price confirmed, and every calculator fix we deployed.";
 
 export const metadata: Metadata = {

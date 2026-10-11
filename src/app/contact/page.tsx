@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-const contactTitle = "Contact Us | Grow A Garden Calculator";
+const contactTitle = "Contact Us";
 const contactDesc = "Contact the Grow A Garden Calculator team for support, business inquiries, or feedback.";
 const contactUrl = "https://growagardencalcs.com/contact";
 

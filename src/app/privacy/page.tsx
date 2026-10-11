@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-const privacyTitle = "Privacy Policy | Grow A Garden Calculator";
+const privacyTitle = "Privacy Policy";
 const privacyDesc = "Privacy Policy for Grow A Garden Calculator. Learn how we collect, use, and protect your data.";
 const privacyUrl = "https://growagardencalcs.com/privacy";
 

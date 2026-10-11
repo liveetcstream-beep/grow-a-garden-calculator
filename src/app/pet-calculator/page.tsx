@@ -3,7 +3,7 @@ import PetCalculator from "@/components/PetCalculator";
 import Link from "next/link";
 import { PETS } from "@/data/pets";
 
-const petCalcTitle = "Pet Calculator Grow A Garden [2026] | GAG Pet Value Calculator";
+const petCalcTitle = "Pet Calculator Grow A Garden [2026] | GAG Pet Values";
 const petCalcDesc = "The #1 pet calculator grow a garden players use to find values. Calculate exact pet values based on weight, age, rarity. The definitive gag calculator for pets.";
 const petCalcUrl = "https://growagardencalcs.com/pet-calculator";
 

@@ -19,8 +19,9 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "Grow A Garden Calculator 2026 | GAG Value & Trade W/F/L",
-    template: "%s | Grow A Garden Calculator"
+    // No global template: every page sets its own full title (kept under 60
+    // chars). A template suffix here caused 341/344 pages to truncate in SERPs.
+    default: "Grow A Garden Calculator 2026 | GAG Value & Trade W/F/L"
   },
   description: "The ultimate GAG calculator for Roblox players. Calculate exact crop values by weight, estimate pet max age stats, and test trade values (Win/Fair/Lose) instantly!",
   metadataBase: new URL('https://growagardencalcs.com'),
