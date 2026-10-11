@@ -443,6 +443,28 @@ export default async function CropValuePage({ params }: PageProps) {
         </div>
       </div>
 
+      {/* 7b. Weight Scaling Explained (dynamic prose for topical depth) */}
+      <div className="glass-card-static p-6 sm:p-8 mb-8">
+        <h2 className="text-lg font-bold mb-4 text-left" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
+          ⚖️ {crop.name} Weight Scaling, Explained
+        </h2>
+        <div className="space-y-3 text-xs leading-relaxed text-left" style={{ color: 'var(--muted)' }}>
+          <p>
+            {crop.name} pays {crop.basePrice.toLocaleString()} coins at base weight, but weight scales <strong>quadratically</strong> —
+            value grows with the square of the weight. A 5&nbsp;kg {crop.name} is worth {(crop.basePrice * 25).toLocaleString()} coins
+            (25× base), while a 10&nbsp;kg one reaches {(crop.basePrice * 100).toLocaleString()} coins (100× base). Doubling the
+            weight quadruples the payout, which is why veteran farmers prioritize weight-boosting methods over planting more plots.
+          </p>
+          <p>
+            Weight then multiplies with mutations: that 10&nbsp;kg {crop.name} worth {(crop.basePrice * 100).toLocaleString()} coins
+            becomes {(crop.basePrice * 100 * 20).toLocaleString()} with a single Golden (×20) mutation, and{" "}
+            {(crop.basePrice * 100 * 20 * 50).toLocaleString()} coins if Rainbow (×50) stacks on top. When trading, always
+            weigh the actual harvest — two {crop.name} crops can differ 100× in value on weight alone. Verify any deal with our{" "}
+            <Link href="/trade-calculator" className="text-[var(--primary)] font-semibold hover:underline">trade calculator</Link>.
+          </p>
+        </div>
+      </div>
+
       {/* 8. Best Mutations & Related Crops (Contextual Internal Links) */}
       <div className="glass-card-static p-6 mb-8">
         <h2 className="text-lg font-bold mb-2" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>

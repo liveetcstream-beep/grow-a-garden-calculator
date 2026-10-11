@@ -379,6 +379,31 @@ export default async function MutationPage({ params }: PageProps) {
         </div>
       </div>
 
+      {/* 7b. Stacking Math Explained (dynamic prose for topical depth) */}
+      <div className="glass-card-static p-6 sm:p-8 mb-8">
+        <h2 className="text-lg font-bold mb-4 text-left" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
+          📐 {mutation.name} Stacking Math, Explained
+        </h2>
+        <div className="space-y-3 text-xs leading-relaxed text-left" style={{ color: 'var(--muted)' }}>
+          <p>
+            A ×{mutation.multiplier} multiplier means every coin of base value becomes {mutation.multiplier} coins before
+            weight scaling. On a 1&nbsp;kg Carrot (10 base), {mutation.name} alone pays {(10 * mutation.multiplier).toLocaleString()} coins;
+            on a 1&nbsp;kg Diamond Fruit (10,000 base), it pays {(10000 * mutation.multiplier).toLocaleString()} coins. The
+            mutation does not care which crop it lands on — the multiplier is identical, so it is always most profitable on
+            your highest base-value harvest.
+          </p>
+          <p>
+            Because stacking is multiplicative, {mutation.name} (×{mutation.multiplier}) paired with Rainbow (×50) reaches{" "}
+            <strong>{(mutation.multiplier * 50).toLocaleString()}×</strong> total — turning a 50,000-coin 10&nbsp;kg harvest into{" "}
+            {(50000 * mutation.multiplier * 50).toLocaleString()} coins. This compounding is why veteran players chase
+            mutation combinations rather than single big multipliers: each additional mutation multiplies everything that
+            came before it. Plan your stacks with our{" "}
+            <Link href="/mutation-calculator" className="text-[var(--primary)] font-semibold hover:underline">mutation stacking calculator</Link>{" "}
+            before committing seeds.
+          </p>
+        </div>
+      </div>
+
       {/* 8. Combo Mutations & Same Category (Contextual Internal Links) */}
       {comboMutations.length > 0 && (
         <div className="glass-card-static p-6 mb-8">

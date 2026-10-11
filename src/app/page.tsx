@@ -126,6 +126,33 @@ const FAQ_DATA = [
     )
   },
   {
+    q: "What is the Fractured mutation multiplier in Grow a Garden?",
+    aText: "The Fractured mutation gives a ×92 multiplier in Grow a Garden, obtained by combining Glitched and Plasma. It is one of the most searched mutations because of its huge value boost. See the full breakdown on our Fractured mutation page.",
+    aRender: (
+      <>
+        The Fractured mutation gives a <strong>×92 multiplier</strong> in Grow a Garden, obtained by combining{" "}
+        <strong>Glitched + Plasma</strong>. It is one of the most searched mutations because of its huge value boost.
+        See the full breakdown, how to obtain it, and value examples on our{" "}
+        <Link href="/mutation/fractured" className="text-[var(--primary)] hover:underline font-semibold">
+          Fractured mutation page
+        </Link>.
+      </>
+    )
+  },
+  {
+    q: "How does the seed combiner work in Grow a Garden?",
+    aText: "The seed combiner lets you merge seeds to create new crop varieties with combined traits. Our seed combiner tool calculates expected earnings and explains the fruit mechanics behind every combination.",
+    aRender: (
+      <>
+        The seed combiner lets you merge seeds to create new crop varieties with combined traits. Our{" "}
+        <Link href="/seed-combiner" className="text-[var(--primary)] hover:underline font-semibold">
+          seed combiner tool
+        </Link>{" "}
+        calculates expected earnings for every combination and explains the fruit mechanics behind seed merging.
+      </>
+    )
+  },
+  {
     q: "How do I check if a trade is Win, Fair, or Lose?",
     aText: "Use our GAG Trade Calculator to place your offered crops and pets on Team A and the trader's items on Team B. The tool instantly calculates the percentage difference and displays a Win, Fair, or Lose evaluation with a 1-click Discord copy button.",
     aRender: (
@@ -216,8 +243,11 @@ export default function HomePage() {
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-black mb-3" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
-              Grow A Garden <span style={{ background: 'var(--gradient-1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Calculator</span>
+              Grow A Garden <span style={{ background: 'var(--gradient-1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Calculator (GAG)</span>
             </h1>
+            <p className="text-xs sm:text-sm font-semibold mb-6" style={{ color: 'var(--muted)' }}>
+              Fruit values, pet stats & mutation multipliers — free, no signup
+            </p>
             <p className="text-sm sm:text-base font-medium max-w-2xl mx-auto mb-6" style={{ color: 'var(--muted)' }}>
               Welcome to the ultimate <strong className="text-[var(--foreground)] font-bold">GAG calculator</strong> and <strong className="text-[var(--foreground)] font-bold">pet weight calculator</strong>. Accurately figure out your <strong className="text-[var(--foreground)] font-bold">grow a garden value</strong> for crops, pets, and trades instantly.
             </p>
@@ -515,6 +545,101 @@ export default function HomePage() {
             </Link>
 
           </div>
+        </div>
+      </section>
+
+      {/* Complete Guide Section — 1000+ word topical depth for the head term */}
+      <section className="py-16 border-t" style={{ borderColor: 'var(--glass-border)', background: 'var(--surface-1)' }}>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
+          <h2 className="text-2xl sm:text-3xl font-black mb-6 text-left" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
+            📖 The Complete Grow a Garden Calculator Guide (2026)
+          </h2>
+
+          <h3 className="text-lg font-bold mt-8 mb-3 text-left" style={{ color: 'var(--foreground)' }}>
+            How crop values are calculated
+          </h3>
+          <p className="mb-4">
+            Every crop in Grow a Garden has a <strong>base value</strong> in coins — the starting number before anything else
+            applies. Diamond Fruit leads the game at 10,000 coins base, followed by Obsidian Onion at 9,000 and Ruby Rose at
+            8,000. But base value is only the beginning. Your final harvest price is:
+          </p>
+          <p className="mb-4 pl-4 border-l-2 font-mono text-xs sm:text-sm" style={{ borderColor: 'var(--primary)', color: 'var(--foreground)' }}>
+            Final value = Base value × Weight multiplier × Mutation multipliers
+          </p>
+          <p className="mb-4">
+            <strong>Weight</strong> scales what you earn — a 10&nbsp;kg harvest pays far more than a 1&nbsp;kg one of the same crop.
+            This is why two players can harvest the same plant and walk away with wildly different coin counts. Our{" "}
+            <Link href="/crop-calculator" className="text-[var(--primary)] hover:underline font-semibold">crop calculator</Link>{" "}
+            handles the weight math for all 99+ crops instantly: pick the crop, enter the weight, and see the exact payout.
+          </p>
+
+          <h3 className="text-lg font-bold mt-8 mb-3 text-left" style={{ color: 'var(--foreground)' }}>
+            Mutation multipliers: where the real money is
+          </h3>
+          <p className="mb-4">
+            Mutations are the single biggest lever on crop value, and they <strong>stack multiplicatively, not additively</strong>.
+            A Golden mutation (×20) plus a Rainbow mutation (×50) on the same crop does not give ×70 — it gives{" "}
+            <strong>×1,000</strong>. This is the mechanic behind every jaw-dropping harvest screenshot you have seen.
+          </p>
+          <p className="mb-4">
+            The most sought-after mutations include <strong>Fractured (×92)</strong>, obtained by combining Glitched and Plasma,
+            and the legendary <strong>Goldsparkle (×500)</strong> — the highest single multiplier in the game. Because stacking is
+            multiplicative, even mid-tier mutations compound fast: three ×20-range mutations already push past ×8,000 on the base
+            price. Use our <Link href="/mutation-calculator" className="text-[var(--primary)] hover:underline font-semibold">mutation calculator</Link> to
+            stack any combination and see the true multiplier, and browse the{" "}
+            <Link href="/mutation-guide" className="text-[var(--primary)] hover:underline font-semibold">mutation guide</Link> for
+            every multiplier and how to obtain it.
+          </p>
+
+          <h3 className="text-lg font-bold mt-8 mb-3 text-left" style={{ color: 'var(--foreground)' }}>
+            Pet values and stats, explained
+          </h3>
+          <p className="mb-4">
+            Pets work like crops with an extra dimension: <strong>base value, rarity, age/weight and ability multipliers</strong>.
+            Divine-rarity pets sit at the top of the market — the Angelic Guardian (300,000 base), Sun God Bird (250,000) and
+            Moon Rabbit (220,000) are the most valuable pets in the game. A pet's ability can multiply its worth further, so two
+            pets of the same species can trade at very different prices.
+          </p>
+          <p className="mb-4">
+            Never guess a pet's price in a trade. Our <Link href="/pet-calculator" className="text-[var(--primary)] hover:underline font-semibold">pet calculator</Link> combines
+            base value, rarity, age modifiers and ability boosts into one accurate market estimate, and the{" "}
+            <Link href="/value-list" className="text-[var(--primary)] hover:underline font-semibold">value list</Link> shows
+            live prices for every pet side by side.
+          </p>
+
+          <h3 className="text-lg font-bold mt-8 mb-3 text-left" style={{ color: 'var(--foreground)' }}>
+            Seed profits and the seed combiner
+          </h3>
+          <p className="mb-4">
+            Smart players think in <strong>profit per plot</strong>, not just sale price. A cheap, fast-growing seed you can
+            harvest five times an hour often beats a slow premium seed on coins-per-hour. Our{" "}
+            <Link href="/seed-profit" className="text-[var(--primary)] hover:underline font-semibold">seed profit calculator</Link> compares
+            seeds on exactly that basis.
+          </p>
+          <p className="mb-4">
+            The <Link href="/seed-combiner" className="text-[var(--primary)] hover:underline font-semibold">seed combiner</Link> takes
+            this further: merging seeds creates new crop varieties with combined traits, and our tool calculates the expected
+            earnings of every combination so you can plan which merges are actually worth the investment.
+          </p>
+
+          <h3 className="text-lg font-bold mt-8 mb-3 text-left" style={{ color: 'var(--foreground)' }}>
+            Trading fair: Win, Fair or Lose
+          </h3>
+          <p className="mb-4">
+            The fastest way to lose coins in Grow a Garden is not bad farming — it is bad trading. Before accepting any deal,
+            total up both sides with live values: base prices from the{" "}
+            <Link href="/value-list" className="text-[var(--primary)] hover:underline font-semibold">value list</Link>, weight
+            and mutation math from the calculators above. Our{" "}
+            <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-semibold">trade calculator</Link> does
+            this in one click and rates every offer as <strong>Win</strong> (you profit), <strong>Fair</strong> (even deal) or{" "}
+            <strong>Lose</strong> (you overpay) — with a Discord-ready export for posting offers.
+          </p>
+          <p className="mb-4">
+            Playing the sequel too? Our <Link href="/grow-a-garden-2" className="text-[var(--primary)] hover:underline font-semibold">Grow a Garden 2 guide</Link> covers
+            night-stealing PVP, defenses, the seed stock rotation and GAG2 values — including the{" "}
+            <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link> and{" "}
+            <Link href="/grow-a-garden-2/stock-predictor" className="text-[var(--primary)] hover:underline font-semibold">stock predictor</Link>.
+          </p>
         </div>
       </section>
 
