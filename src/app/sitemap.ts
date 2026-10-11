@@ -40,6 +40,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/grow-a-garden-2`,
+      lastModified: recentlyUpdated,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/grow-a-garden-2/wiki`,
+      lastModified: recentlyUpdated,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/grow-a-garden-2/stock-predictor`,
+      lastModified: recentlyUpdated,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/elephant-calculator`,
       lastModified: staticLastMod,
       changeFrequency: 'weekly',

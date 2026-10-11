@@ -5,15 +5,15 @@ import { PETS } from "@/data/pets";
 import { getCanonical } from "@/lib/canonical";
 import ValueListTabs from "./ValueListTabs";
 
-const valListTitle = "GAG Values — Complete Grow A Garden Value List 2026";
-const valListDesc = "Complete GAG value list with all crop prices, seed shop values, event crops, and gag values in Grow A Garden 2026.";
+const valListTitle = "Grow a Garden Pet & Crop Values List - GAG";
+const valListDesc = "Live Grow a Garden pet values and crop value list for 2026. Check GAG values, trade fairness (Win/Fair/Lose) and mutation multipliers. Updated daily.";
 const valListUrl = "https://growagardencalcs.com/value-list";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
     title: valListTitle,
     description: valListDesc,
-    keywords: ["gag values", "grow a garden value", "value list grow a garden", "gag pet values", "grow a garden pet value list", "grow a garden values", "kalkulator grow a garden pet"],
+    keywords: ["gag values", "grow a garden value", "value list grow a garden", "gag pet values", "grow a garden pet value list", "grow a garden values", "gag value calculator", "gag trade values"],
     alternates: {
       canonical: getCanonical("/value-list"),
     },
@@ -41,6 +41,33 @@ export const generateMetadata = async (): Promise<Metadata> => {
   };
 };
 
+const faqs = [
+  {
+    q: "What are Grow a Garden pet values?",
+    a: "Grow a Garden pet values are the base trading prices of every pet in the game, measured in coins. A pet's final worth depends on its base value, its weight or age, and any applied mutations. The most valuable pets right now are Divine-rarity pets like the Angelic Guardian (300,000 base), Sun God Bird (250,000) and Moon Rabbit (220,000). Use our pet calculator to get the exact value of your specific pet.",
+  },
+  {
+    q: "How do I know if a trade is fair in Grow a Garden?",
+    a: "A trade is fair when both sides offer roughly equal total coin value. Add up the base values of every item on each side (including pet values and mutated crop values), then compare. Our trade calculator does this automatically and rates every deal as Win, Fair or Lose, so you never accept a bad trade again.",
+  },
+  {
+    q: "What is the most valuable crop in Grow a Garden?",
+    a: "By base price, the most valuable crops are Diamond Fruit (10,000 coins), Obsidian Onion (9,000) and Ruby Rose (8,000). But final crop value is driven by weight and mutations — a heavy, multi-mutated common crop can easily out-value a plain rare one. Check any crop's live value on its dedicated calculator page.",
+  },
+  {
+    q: "How do mutations change GAG values?",
+    a: "Mutations multiply a crop's base value. They stack multiplicatively — for example, a crop with Golden (×20) and Rainbow (×50) is worth 1,000x its base value. Rare mutations like Goldsparkle (×500) can turn an ordinary harvest into millions of coins. Our mutation calculator shows every mutation multiplier and lets you stack them.",
+  },
+  {
+    q: "What does Win / Fair / Lose mean on the trade calculator?",
+    a: "Win means your side of the trade is worth more than what you give — you profit. Fair means both sides are within a small margin of each other. Lose means you are overpaying. The rating is computed from live pet and crop values in this value list, so it stays accurate as the game updates.",
+  },
+  {
+    q: "How often is this GAG value list updated?",
+    a: "This value list is updated daily to track game patches, new pets, new crops and balance changes. Every value on this page feeds directly into our calculators, so the numbers you see here are the same numbers behind every calculation on the site.",
+  },
+];
+
 export default function ValueListPage() {
   const itemListSchema = {
     "@context": "https://schema.org",
@@ -56,20 +83,34 @@ export default function ValueListPage() {
     }))
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="text-center mb-12">
         <h1 className="text-4xl sm:text-5xl font-black mb-4" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
-          Complete Grow A Garden <span style={{ background: 'var(--gradient-1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Values List</span>
+          Grow a Garden <span style={{ background: 'var(--gradient-1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Pet & Crop Values</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
-          Welcome to the official <strong>GAG values</strong> and <strong>grow a garden value</strong> list database for 2026. 
-          Below is the complete, live-updated value directory for all crops, seeds, event fruits, and mythical pets. 
-          Whether you are comparing trading multipliers, checking <strong>gag pet values</strong>, or searching for <strong>gag values</strong> rates, this directory provides instant access to base prices and multiplier tables.
+          Welcome to the complete <strong>grow a garden pet values</strong> and <strong>gag values</strong> database for 2026.
+          Below is the live-updated value directory for all crops, seeds, event fruits, and mythical pets.
+          Whether you are comparing trading multipliers, checking <strong>gag pet values</strong>, or searching for fair <strong>gag trade values</strong>, this directory provides instant access to base prices and multiplier tables.
         </p>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
           Use this value list to verify crop base values, or open our master <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">Grow A Garden Calculator</Link> to calculate weight and mutation values instantly. Click any item card to open its dedicated live calculator.
@@ -77,6 +118,29 @@ export default function ValueListPage() {
       </div>
 
       <ValueListTabs crops={CROPS} pets={PETS} />
+
+      {/* How GAG values work */}
+      <div className="mt-16 glass-card-static p-6 sm:p-8 rounded-2xl border" style={{ borderColor: 'var(--glass-border)' }}>
+        <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
+          💰 How Grow a Garden Values Work
+        </h2>
+        <div className="space-y-4 text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
+          <p>
+            Every item in Grow a Garden has a <strong>base value</strong> in coins — that is the number listed in the tables above.
+            Your final sale or trade price is the base value scaled by <strong>weight</strong> (heavier harvests pay more),
+            <strong> pet age and stats</strong> for pets, and <strong>mutations</strong>, which multiply the value.
+            Mutations stack multiplicatively, so combining several high-multiplier mutations is how top players reach millions of coins per harvest.
+          </p>
+          <p>
+            Before any big trade, run both sides through our <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-semibold">trade calculator</Link> for
+            an instant Win / Fair / Lose verdict. To see exactly what a single harvest is worth with its weight and mutations,
+            use the <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">crop calculator</Link>;
+            for pets, the <Link href="/pet-calculator" className="text-[var(--primary)] hover:underline font-semibold">pet calculator</Link> factors
+            in base value, rarity and ability multipliers. New to mutations? The <Link href="/mutation-guide" className="text-[var(--primary)] hover:underline font-semibold">mutation guide</Link> lists
+            every mutation multiplier and how to obtain it.
+          </p>
+        </div>
+      </div>
 
       {/* Task 5.4: 🇵🇭 Popular Trading Crops in Philippines & Global Marketplace */}
       <div className="mt-16 glass-card-static p-6 sm:p-8 rounded-2xl border" style={{ borderColor: 'rgba(34,197,94,0.2)', background: 'rgba(34,197,94,0.03)' }}>
@@ -120,6 +184,25 @@ export default function ValueListPage() {
                 <span className="text-xs font-black font-mono" style={{ color: 'var(--primary)' }}>{c.val} coins</span>
               </div>
             </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* FAQ */}
+      <div className="mt-16">
+        <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+          ❓ Frequently Asked Questions — GAG Values
+        </h2>
+        <div className="space-y-4">
+          {faqs.map((faq, i) => (
+            <div key={i} className="glass-card-static p-5">
+              <h3 className="text-base font-bold mb-2" style={{ color: "var(--foreground)" }}>
+                {faq.q}
+              </h3>
+              <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
+                {faq.a}
+              </p>
+            </div>
           ))}
         </div>
       </div>
