@@ -8,7 +8,7 @@ const elephantAbility = "Trunk Splash (Wet Mutation)";
 const elephantEmoji = "🐘";
 const elephantCategory = "Savanna";
 
-const pageTitle = "Elephant Value in Grow A Garden | GAG Elephant Calculator 2026";
+const pageTitle = "Elephant Value in Grow A Garden | GAG Calculator 2026";
 const pageDesc =
   "How much is the Elephant worth in Grow A Garden? Use our Elephant calculator to find exact value by weight, age, and mutations. Elephant base value is 2,500 coins. Epic Savanna pet guide, trading tips, and max value breakdown.";
 const pageUrl = "https://growagardencalcs.com/elephant-calculator";

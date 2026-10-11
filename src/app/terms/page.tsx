@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-const termsTitle = "Terms of Service | Grow A Garden Calculator";
+const termsTitle = "Terms of Service";
 const termsDesc = "Terms of Service for Grow A Garden Calculator. Read our rules and conditions for using this website.";
 const termsUrl = "https://growagardencalcs.com/terms";
 
