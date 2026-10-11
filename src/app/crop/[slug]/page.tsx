@@ -240,6 +240,37 @@ export default async function CropValuePage({ params }: PageProps) {
     ]
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `How much is a 10kg ${crop.name} worth in Grow A Garden?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `At 10 kg weight, a baseline ${crop.name} is worth ${(crop.basePrice * 100).toLocaleString()} coins (base price ${crop.basePrice} x 100). With a Golden mutation (x20), it reaches ${(crop.basePrice * 100 * 20).toLocaleString()} coins.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `What is the best mutation for ${crop.name}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Rainbow (x50) and Celestial (x120) give massive individual boosts, but stacking Golden (x20) with secondary soil mutations generates the highest coin ROI relative to fertilizing cost.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `Where can I trade ${crop.name} for pets?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Trade ${crop.name} stacks in public GAG trading lobbies or community Discord servers. Check baseline market exchange rates on a GAG value list before finalizing any trade.`,
+        },
+      },
+    ],
+  };
+
   const itemPageSchema = {
     "@context": "https://schema.org",
     "@type": "ItemPage",
@@ -263,6 +294,11 @@ export default async function CropValuePage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemPageSchema) }}
+      />
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* Breadcrumb */}

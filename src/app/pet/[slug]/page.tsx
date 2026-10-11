@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const pageTitle = `${pet.name} Value | Pet Calculator Grow A Garden`;
-  const pageDesc = `${pet.name} is a ${pet.rarity} pet in Grow A Garden. Use our pet calculator grow a garden tool to get exact value. Base: ${pet.baseValue}. Ability: ${pet.ability} ×${pet.abilityMultiplier}.`;
+  const pageDesc = `${pet.name} is a ${pet.rarity} pet in Grow A Garden. Get exact value with our pet calculator. Base: ${pet.baseValue}. Ability: ${pet.ability} ×${pet.abilityMultiplier}.`;
   const pageUrl = `https://growagardencalcs.com/pet/${pet.id}-stats`;
 
   return {
@@ -137,12 +137,48 @@ export default async function PetStatsPage({ params }: PageProps) {
     ]
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `How much is ${pet.name} worth in Grow A Garden?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `${pet.name} has a base value of ${Number(pet.baseValue).toLocaleString()} coins and is a ${pet.rarity}-rarity pet. Final trade value depends on age, weight and ability boosts.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `How do I get ${pet.name}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `You can obtain ${pet.name} by ${getPetHowToGetText(pet)}`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `What does ${pet.name}'s ability do?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `${pet.name}'s ability (${pet.ability}) provides a x${pet.abilityMultiplier} multiplier.`,
+        },
+      },
+    ],
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
       {/* Breadcrumb Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* Breadcrumb */}
@@ -265,6 +301,54 @@ export default async function PetStatsPage({ params }: PageProps) {
             Older and heavier pets are worth significantly more in trading hubs. The value formula applied in our <strong>{pet.name} pet calculator grow a garden</strong> tool is: 
             <strong style={{ color: 'var(--accent)' }}>Value = Base ({pet.baseValue}) × Weight Bonus × Age Bonus × Ability Modifier (×{pet.abilityMultiplier})</strong>.
           </p>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="glass-card-static p-6 sm:p-8 mb-8">
+        <h2 className="text-xl font-bold mb-4 text-left" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
+          ❓ {pet.name} — Frequently Asked Questions
+        </h2>
+        <div className="space-y-4 text-left">
+          <div className="p-4 rounded-xl border" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)' }}>
+            <h3 className="text-sm font-bold mb-1" style={{ color: 'var(--foreground)' }}>
+              How much is {pet.name} worth in Grow A Garden?
+            </h3>
+            <p className="text-xs leading-relaxed" style={{ color: 'var(--muted)' }}>
+              {pet.name} has a base value of <strong>{Number(pet.baseValue).toLocaleString()} coins</strong> and is a {pet.rarity}-rarity pet.
+              Final trade value depends on age, weight and active ability boosts — use our{" "}
+              <Link href="/pet-calculator" className="text-[var(--primary)] font-semibold hover:underline">pet calculator</Link>{" "}
+              for the exact number.
+            </p>
+          </div>
+          <div className="p-4 rounded-xl border" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)' }}>
+            <h3 className="text-sm font-bold mb-1" style={{ color: 'var(--foreground)' }}>
+              How do I get {pet.name}?
+            </h3>
+            <p className="text-xs leading-relaxed" style={{ color: 'var(--muted)' }}>
+              You can obtain {pet.name} by {getPetHowToGetText(pet)}
+            </p>
+          </div>
+          <div className="p-4 rounded-xl border" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)' }}>
+            <h3 className="text-sm font-bold mb-1" style={{ color: 'var(--foreground)' }}>
+              What does {pet.name}&apos;s ability do?
+            </h3>
+            <p className="text-xs leading-relaxed" style={{ color: 'var(--muted)' }}>
+              {pet.name}&apos;s ability ({pet.ability}) provides a <strong>×{pet.abilityMultiplier} multiplier</strong>,
+              making it {pet.abilityMultiplier >= 5 ? "one of the stronger ability pets in its rarity tier" : "a solid utility pet for its tier"}.
+            </p>
+          </div>
+          <div className="p-4 rounded-xl border" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)' }}>
+            <h3 className="text-sm font-bold mb-1" style={{ color: 'var(--foreground)' }}>
+              Is trading for {pet.name} worth it?
+            </h3>
+            <p className="text-xs leading-relaxed" style={{ color: 'var(--muted)' }}>
+              Compare both sides with live values before accepting — run the deal through our{" "}
+              <Link href="/trade-calculator" className="text-[var(--primary)] font-semibold hover:underline">trade calculator</Link>{" "}
+              for an instant Win / Fair / Lose verdict, and check current market prices on the{" "}
+              <Link href="/value-list" className="text-[var(--primary)] font-semibold hover:underline">value list</Link>.
+            </p>
+          </div>
         </div>
       </div>
 
