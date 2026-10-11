@@ -6,8 +6,8 @@ import { getLastMondayFormatted } from "@/lib/dateUtils";
 import type { Metadata } from "next";
 
 const lastMondayDate = getLastMondayFormatted();
-const pageTitle = "Grow A Garden Calculator 2026 | Crop Values, Pet & Trade Calculator";
-const pageDesc = "#1 Grow A Garden Calculator — Instantly calculate crop values with mutations, check GAG pet stats, and test trade Win/Fair/Lose. Free & updated daily for 2026!";
+const pageTitle = "Grow a Garden Calculator (GAG) – Fruit, Pet & Mutations";
+const pageDesc = "Calculate Grow a Garden crop values with mutations, pet stats, seed profits and trade fairness. Free, no signup, updated daily for 2026 Roblox players.";
 
 export const metadata: Metadata = {
   title: pageTitle,

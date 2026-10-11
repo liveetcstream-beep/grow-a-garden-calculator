@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   let pageTitle = CROP_TITLE_OVERRIDES[cropId];
   if (!pageTitle) {
-    pageTitle = `${crop.name} Value – Grow A Garden Calculator`;
+    pageTitle = `${crop.name} Value`;
     if (pageTitle.length >= 60) {
       pageTitle = `${crop.name} Value – GAG Calculator`;
     }
