@@ -7,6 +7,35 @@ const seedCombinerTitle = "Seed Combiner Grow A Garden - Calculator & Fruit Mech
 const seedCombinerDesc = "The ultimate seed combiner grow a garden website tool. Calculate earnings for 18 watermelons, predict mutation algorithms, and master fruit mechanics.";
 const seedCombinerUrl = "https://growagardencalcs.com/seed-combiner";
 
+const seedCombinerFaqs = [
+  {
+    q: "What does the seed combiner do in Grow A Garden?",
+    a: "The seed combiner fuses two seeds into a new seed, with a chance of producing a higher rarity tier than either input. Combining is the main way to obtain rare, epic and mythical seed strains without buying them directly.",
+  },
+  {
+    q: "What are the seed combiner odds?",
+    a: "Odds depend on the input tiers: fusing two Commons yields about 80% Common and 20% Uncommon, while two Rares can produce Epic or even Legendary results. Fusion catalysts (Silver, Golden, Rainbow) shift the odds upward by roughly 10% to 35%.",
+  },
+  {
+    q: "Is it worth combining seeds or should I just buy better ones?",
+    a: "It depends on the tier gap and catalyst cost. Combining duplicate low-tier seeds is usually worth it since the inputs are cheap, but chasing Legendary results without a catalyst burns through seeds fast. Run the profit math in our seed profit calculator before committing expensive inputs.",
+  },
+  {
+    q: "Do combined seeds keep mutations?",
+    a: "The seed produced by the combiner starts fresh — mutations apply to grown crops, not to seeds in your inventory. For maximum value, plant your best combined seeds during weather events and apply mutation sprays after they sprout.",
+  },
+];
+
+const seedCombinerFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: seedCombinerFaqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export const metadata: Metadata = {
   title: seedCombinerTitle,
   description: seedCombinerDesc,
@@ -40,6 +69,10 @@ export default function SeedCombinerPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(seedCombinerFaqSchema) }}
+      />
       <div className="text-center mb-8">
         <h1 className="text-4xl sm:text-5xl font-black mb-4" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
           🌱 Seed Combiner & <span style={{ background: 'var(--gradient-1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Fruit Mechanics</span>
@@ -123,6 +156,25 @@ export default function SeedCombinerPage() {
               <div className="text-3xl mb-2">{crop.emoji}</div>
               <p className="text-xs font-bold truncate" style={{ color: 'var(--foreground)' }}>{crop.name}</p>
             </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* FAQ */}
+      <div className="glass-card-static p-6 sm:p-8 mt-12">
+        <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
+          ❓ Seed Combiner — Frequently Asked Questions
+        </h2>
+        <div className="space-y-4 text-left">
+          {seedCombinerFaqs.map((f) => (
+            <div key={f.q} className="p-4 rounded-xl border" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)' }}>
+              <h3 className="text-sm font-bold mb-1" style={{ color: 'var(--foreground)' }}>
+                {f.q}
+              </h3>
+              <p className="text-xs leading-relaxed" style={{ color: 'var(--muted)' }}>
+                {f.a}
+              </p>
+            </div>
           ))}
         </div>
       </div>
