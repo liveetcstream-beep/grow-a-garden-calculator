@@ -31,12 +31,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     "dragon-fruit": "Dragon Fruit Value in Grow A Garden – GAG Calculator",
     "mango": "Mango Value in Grow A Garden – GAG Calculator",
     "bamboo": "Bamboo Value in Grow A Garden – GAG Calculator & Price",
+    "starfruit": "Starfruit Value in Grow A Garden – GAG Calculator",
+    "coconut": "Coconut Value in Grow A Garden – GAG Calculator",
+    "watermelon": "Watermelon Value in Grow A Garden – GAG Calculator",
+    "carrot": "Carrot Value in Grow A Garden – GAG Calculator",
   };
   // CTR-optimized descriptions (strictly under 155 chars)
   const CROP_DESC_OVERRIDES: Record<string, string> = {
-    "dragon-fruit": "Dragon Fruit base value is 100 coins in Grow A Garden. Calculate exact value by weight and mutations (Golden, Rainbow) with our free GAG calculator.",
-    "mango": "Mango base value is 100 coins in Grow A Garden. Calculate exact Summer Event crop value by weight and mutation with our free GAG calculator.",
-    "bamboo": "Bamboo base value is 100 coins in Grow A Garden. Calculate exact fast-trade crop value by weight and mutation with our free GAG calculator.",
+    "dragon-fruit": "How much is Dragon Fruit worth in Grow A Garden? Base value 500 coins — exact price by weight, mutations and friend boost with our free calculator.",
+    "mango": "How much is Mango worth in Grow A Garden? Base value 350 coins — exact Summer Event crop price by weight and mutations with our free calculator.",
+    "bamboo": "How much is Bamboo worth in Grow A Garden? Base value 150 coins — exact fast-trade crop price by weight and mutations with our free calculator.",
+    "starfruit": "How much is Starfruit worth in Grow A Garden? Base value 400 coins — exact price by weight, mutations and friend boost with our free calculator.",
+    "coconut": "How much is Coconut worth in Grow A Garden? Base value 250 coins — exact price by weight, mutations and friend boost with our free calculator.",
+    "watermelon": "How much is Watermelon worth in Grow A Garden? Base value 75 coins — exact price by weight, mutations and friend boost with our free calculator.",
+    "carrot": "How much is Carrot worth in Grow A Garden? Base value 10 coins — exact price by weight, mutations and friend boost with our free calculator.",
   };
 
   let pageTitle = CROP_TITLE_OVERRIDES[cropId];
@@ -46,7 +54,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       pageTitle = `${crop.name} Value – GAG Calculator`;
     }
   }
-  const pageDesc = CROP_DESC_OVERRIDES[cropId] ?? `${crop.name} base value is ${crop.basePrice} coins in Grow A Garden. Calculate exact value by weight and mutations instantly with our free GAG calculator.`;
+  const pageDesc = CROP_DESC_OVERRIDES[cropId] ?? `How much is ${crop.name} worth in Grow A Garden? Base value ${crop.basePrice} coins — exact price by weight and mutations with our free calculator.`;
   const pageUrl = `https://growagardencalcs.com/crop/${crop.id}-value`;
 
   return {
