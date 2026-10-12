@@ -53,6 +53,18 @@ export default function ContactPage() {
           </p>
         </div>
 
+        {/* Quick answers before you write */}
+        <div className="p-6 rounded-2xl border mb-8 text-left" style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
+          <h2 className="text-lg font-bold mb-3" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+            💡 Before You Write — Quick Answers
+          </h2>
+          <ul className="text-sm leading-relaxed space-y-2" style={{ color: "var(--muted)" }}>
+            <li><strong style={{ color: "var(--foreground)" }}>Wrong value in a calculator?</strong> Send the crop or pet name, the number you saw, and a screenshot — data corrections are our top priority and usually go live within 24 hours.</li>
+            <li><strong style={{ color: "var(--foreground)" }}>How do I use a tool?</strong> Every calculator page has a guide section below the tool, and our <a href="/mutation-guide" className="text-[var(--primary)] hover:underline">mutation guide</a> and <a href="/value-list" className="text-[var(--primary)] hover:underline">value list</a> cover the underlying mechanics.</li>
+            <li><strong style={{ color: "var(--foreground)" }}>Business or advertising?</strong> Choose “Business / Ad Inquiry” in the subject dropdown so your message reaches the right inbox immediately.</li>
+          </ul>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-8">
 
           {/* Contact Info */}
