@@ -157,6 +157,16 @@ export default function ChangelogPage() {
           </p>
         </div>
 
+        {/* How we verify */}
+        <div className="p-6 rounded-2xl border mb-8 text-left" style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
+          <h2 className="text-lg font-bold mb-3" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+            🔍 How We Verify Every Update
+          </h2>
+          <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
+            Patch notes tell you what changed — we confirm what actually changed <em>in game</em>. After every Grow A Garden update, our team re-checks crop base prices with live test harvests, re-measures mutation multipliers across multiple trials, and re-runs every calculator against the new numbers before marking an entry <strong style={{ color: "var(--foreground)" }}>✅ Verified</strong> above. If a value cannot be confirmed in-game, it stays out of the database until it can. That is why traders and Discord communities treat this changelog as the source of truth for GAG data.
+          </p>
+        </div>
+
         {/* Timeline */}
         <div className="space-y-6">
           {CHANGELOG.map((entry, index) => (
