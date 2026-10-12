@@ -21,6 +21,10 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
+    q: "What is Grow a Garden 2?",
+    a: "Grow a Garden 2 (GAG2) is the official sequel to the Roblox farming hit Grow a Garden, released June 12, 2026 by Strawberreh Squad. It keeps the plant-grow-sell loop and adds nighttime PVP stealing, a central-hub map, defensive plants, guilds, and a day-night cycle.",
+  },
+  {
     q: "When did Grow a Garden 2 release?",
     a: "Grow a Garden 2 released on June 12, 2026 at 10 AM PST as a free-to-play Roblox experience by Strawberreh Squad. It launched with 400,000+ concurrent players in the first 20 minutes and passed 1.67 billion visits by late September 2026.",
   },
@@ -68,7 +72,7 @@ export default function GrowAGarden2Hub() {
           Grow a Garden 2 <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Guide 2026</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-          The official sequel to Roblox's biggest farming hit is here — and it changes the rules. <strong>Grow a Garden 2</strong> keeps
+          <strong>Grow a Garden 2</strong> (GAG2) is the official sequel to Roblox's biggest farming hit — and it changes the rules. It keeps
           the plant-grow-sell loop you know, then bolts on <strong>nighttime PVP stealing</strong>, a central-hub map, defensive
           plants, guilds and a full day-and-night cycle. This hub covers everything: mechanics, strategy, codes and values.
         </p>
