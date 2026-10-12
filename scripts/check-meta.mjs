@@ -95,11 +95,11 @@ checkDesc(
 );
 checkDesc(
   "crop/[slug] worst case",
-  `${pad(maxLen(crops))} base value is 10000 coins in Grow A Garden. Calculate exact value by weight and mutations instantly with our free GAG calculator.`
+  `How much is ${pad(maxLen(crops))} worth in Grow A Garden? Base value 10000 coins — exact price by weight and mutations with our free calculator.`
 );
 checkDesc(
   "mutation/[slug] worst case",
-  `Get the ${pad(maxLen(muts))} mutation in Grow A Garden (×100 multiplier). Learn how to unlock it and calculate crop values with our GAG calculator.`
+  `${pad(maxLen(muts))}: ×100 multiplier in Grow A Garden. How to get it, best stacking combos and exact crop values with our free calculator.`
 );
 
 if (failures.length) {
