@@ -304,6 +304,25 @@ export default async function PetStatsPage({ params }: PageProps) {
         </div>
       </div>
 
+      {/* How to maximize value */}
+      <div className="glass-card-static p-6 mb-8">
+        <h2 className="text-lg font-bold mb-4" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
+          💰 How to Maximize {pet.name}&apos;s Value
+        </h2>
+        <div className="space-y-3 text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
+          <p>
+            {pet.name}&apos;s trade value follows <strong style={{ color: 'var(--foreground)' }}>Value = Base ({pet.baseValue.toLocaleString()}) × Weight Bonus × Age Bonus × Ability Modifier (×{pet.abilityMultiplier})</strong>.
+            Three levers move that number: <strong style={{ color: 'var(--foreground)' }}>weight</strong> scales logarithmically (each tenfold weight jump adds a flat +0.5× bonus), <strong style={{ color: 'var(--foreground)' }}>age</strong> adds +2% per day linearly, and the <strong style={{ color: 'var(--foreground)' }}>{pet.ability}</strong> ability multiplies everything by ×{pet.abilityMultiplier} from day one.
+          </p>
+          <p>
+            In practice, that means an old, heavy {pet.name} can be worth many times its base value — check the age table above to see the curve. Keep the pet equipped so it keeps aging, prioritize weight-boosting treats or events when available, and never trade a young {pet.rarity}-rarity pet if you can afford to wait: the age bonus compounds every single day.
+          </p>
+          <p>
+            For trading, compare your {pet.name}&apos;s computed value against live listings on our <Link href="/value-list" className="text-[var(--primary)] hover:underline font-bold">pet value list</Link> before accepting offers, and use the <Link href="/pet-calculator" className="text-[var(--primary)] hover:underline font-bold">full pet calculator</Link> to test age and weight scenarios side by side.
+          </p>
+        </div>
+      </div>
+
       {/* FAQ Section */}
       <div className="glass-card-static p-6 sm:p-8 mb-8">
         <h2 className="text-xl font-bold mb-4 text-left" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
