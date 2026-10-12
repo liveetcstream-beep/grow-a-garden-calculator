@@ -18,11 +18,11 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: {
-    // No global template: every page sets its own full title (kept under 60
-    // chars). A template suffix here caused 341/344 pages to truncate in SERPs.
-    default: "Grow A Garden Calculator 2026 | GAG Value & Trade W/F/L"
-  },
+  // No global template: every page sets its own full title (kept under 60
+  // chars). A template suffix here caused 341/344 pages to truncate in SERPs.
+  // Plain string (not { default }) — this Next.js version requires `template`
+  // on object titles, and we want no template at all.
+  title: "Grow A Garden Calculator 2026 | GAG Value & Trade W/F/L",
   description: "The ultimate GAG calculator for Roblox players. Calculate crop values by weight, pet stats and trade values (Win/Fair/Lose) instantly. Free, no signup.",
   metadataBase: new URL('https://growagardencalcs.com'),
   authors: [{ name: "GrowAGardenCalcs Team", url: "https://growagardencalcs.com/about" }],
