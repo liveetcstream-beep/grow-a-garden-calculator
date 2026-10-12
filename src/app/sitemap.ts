@@ -64,6 +64,48 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/grow-a-garden-2/trades`,
+      lastModified: new Date('2026-10-12'),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/grow-a-garden-2/wiki/plants/moonbloom`,
+      lastModified: new Date('2026-10-12'),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/grow-a-garden-2/wiki/plants/sunbloom`,
+      lastModified: new Date('2026-10-12'),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/grow-a-garden-2/wiki/plants/mushroom`,
+      lastModified: new Date('2026-10-12'),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/grow-a-garden-2/wiki/plants/corn`,
+      lastModified: new Date('2026-10-12'),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/grow-a-garden-2/wiki/pets/raccoon`,
+      lastModified: new Date('2026-10-12'),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/grow-a-garden-2/wiki/pets/bunny`,
+      lastModified: new Date('2026-10-12'),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
+    {
       url: `${baseUrl}/grow-a-garden-2/stock-predictor`,
       lastModified: recentlyUpdated,
       changeFrequency: 'weekly',
