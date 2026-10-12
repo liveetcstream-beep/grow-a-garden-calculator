@@ -93,6 +93,48 @@ const indexCards = [
     title: "GAG2 Beginner Guide",
     desc: "New to the sequel? Start with the full Grow a Garden 2 guide hub.",
   },
+  {
+    href: "/grow-a-garden-2/wiki/plants/moonbloom",
+    icon: "🌙",
+    title: "Moon Bloom Guide",
+    desc: "Super crop: price, stock odds, value, and the Eclipse Bloom merge.",
+  },
+  {
+    href: "/grow-a-garden-2/wiki/plants/sunbloom",
+    icon: "☀️",
+    title: "Sun Bloom Guide",
+    desc: "The 110M Super crop — how to get it and merge it into Eclipse Bloom.",
+  },
+  {
+    href: "/grow-a-garden-2/wiki/plants/mushroom",
+    icon: "🍄",
+    title: "Mushroom Guide",
+    desc: "Epic S-tier money crop: 15K seed, ~13K per fruit. Price and strategy.",
+  },
+  {
+    href: "/grow-a-garden-2/wiki/plants/corn",
+    icon: "🌽",
+    title: "Corn Profit Guide",
+    desc: "Rare multi-harvest workhorse: price, value, and profit-over-time math.",
+  },
+  {
+    href: "/grow-a-garden-2/wiki/pets/raccoon",
+    icon: "🦝",
+    title: "Raccoon Pet Guide",
+    desc: "The night-thief pet: how to get it, its steal ability, and counters.",
+  },
+  {
+    href: "/grow-a-garden-2/wiki/pets/bunny",
+    icon: "🐰",
+    title: "Bunny Pet Guide",
+    desc: "How much is the Bunny worth? Price, +5 walk speed, and trade value.",
+  },
+  {
+    href: "/grow-a-garden-2/trades",
+    icon: "🤝",
+    title: "Trading Guide",
+    desc: "How trading works in GAG2: tickets, the trade window, anti-scam rules.",
+  },
 ];
 
 export default function GAG2Wiki() {
