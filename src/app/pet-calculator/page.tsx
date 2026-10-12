@@ -7,6 +7,35 @@ const petCalcTitle = "Pet Calculator Grow A Garden [2026] | GAG Pet Values";
 const petCalcDesc = "Pet calculator for Grow A Garden: exact pet values by weight, age and rarity. Divine to Common pets. Free GAG pet value calculator, no signup.";
 const petCalcUrl = "https://growagardencalcs.com/pet-calculator";
 
+const petCalcFaqs = [
+  {
+    q: "How is a pet's value calculated in Grow A Garden?",
+    a: "Pet value = base value × weight bonus × age bonus × ability multiplier. Weight scales logarithmically, age adds about +2% per day, and the pet's ability applies its multiplier on top. Enter your pet's stats above for the exact figure.",
+  },
+  {
+    q: "Does a pet's age really affect its trade value?",
+    a: "Yes. Age grants a linear bonus of roughly +2% per day, so a 50-day-old pet is worth about twice its newborn value before weight is even counted. Older pets consistently fetch higher offers in trading hubs.",
+  },
+  {
+    q: "Which pets are worth the most?",
+    a: "Divine and Mythic rarity pets with high base values and strong ability multipliers top the market. Open any pet in the directory below to see its exact stats, ability and value-by-age table.",
+  },
+  {
+    q: "Should I trade my pet now or keep aging it?",
+    a: "If you do not need coins urgently, aging usually wins — the daily bonus compounds with zero effort while the pet stays equipped. Compare your pet's current vs projected value in the calculator before deciding.",
+  },
+];
+
+const petCalcFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: petCalcFaqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export const metadata: Metadata = {
   title: petCalcTitle,
   description: petCalcDesc,
@@ -38,6 +67,10 @@ export const metadata: Metadata = {
 export default function PetCalculatorPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(petCalcFaqSchema) }}
+      />
       <div className="mb-8">
         <h1 className="text-3xl sm:text-4xl font-extrabold mb-3" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
           🐾 Pet Calculator Grow A Garden
@@ -68,6 +101,25 @@ export default function PetCalculatorPage() {
               <div className="text-2xl mb-1">{pet.emoji}</div>
               <p className="text-xs font-bold mt-1" style={{ color: 'var(--foreground)' }}>{pet.name}</p>
             </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* FAQ */}
+      <div className="glass-card-static p-6 sm:p-8 mt-12">
+        <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
+          ❓ Pet Values — Frequently Asked Questions
+        </h2>
+        <div className="space-y-4 text-left">
+          {petCalcFaqs.map((f) => (
+            <div key={f.q} className="p-4 rounded-xl border" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)' }}>
+              <h3 className="text-sm font-bold mb-1" style={{ color: 'var(--foreground)' }}>
+                {f.q}
+              </h3>
+              <p className="text-xs leading-relaxed" style={{ color: 'var(--muted)' }}>
+                {f.a}
+              </p>
+            </div>
           ))}
         </div>
       </div>
