@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getCanonical } from "@/lib/canonical";
 
-const pageTitle = "Grow a Garden 2 Wiki | Crops, Pets & Mechanics";
-const pageDesc = "GAG2 wiki: every mechanic explained — night stealing, defenses, weather, mutations, guilds, shops and codes. Updated for 2026.";
+const pageTitle = "Grow a Garden 2 Wiki – Codes, Plants, Pets & Guides";
+const pageDesc = "The Grow a Garden 2 wiki: redeem codes, plant and pet guides, weather tracker, mutations, night stealing and guilds. Updated for 2026.";
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDesc,
-  keywords: ["grow a garden 2 wiki", "gag2 wiki", "grow a garden 2 mechanics", "grow a garden 2 stealing", "grow a garden 2 defenses", "gag2 guide"],
+  keywords: ["grow a garden 2 wiki", "gag2 wiki", "grow a garden 2 codes", "grow a garden 2 plants", "grow a garden 2 pets", "grow a garden 2 weather", "grow a garden 2 mechanics", "grow a garden 2 stealing", "grow a garden 2 defenses", "gag2 guide"],
   alternates: { canonical: getCanonical("/grow-a-garden-2/wiki") },
   openGraph: {
     title: pageTitle,
@@ -20,6 +20,10 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
+  {
+    q: "Where is the Grow a Garden 2 wiki?",
+    a: "You are on it. This wiki covers every Grow a Garden 2 system: redeem codes, plants, pets, weather, mutations, night stealing, defenses and guilds. Use the index below to jump to any guide.",
+  },
   {
     q: "How does stealing work in Grow a Garden 2?",
     a: "At night, you can leave your garden and enter other players' plots to take their crops. Defenses — walls, traps, defensive plants and gear — can block or punish thieves. Successful raiders keep the stolen harvest; victims lose it. Harvest valuables before nightfall to stay safe.",
@@ -52,6 +56,45 @@ const faqSchema = {
   })),
 };
 
+const indexCards = [
+  {
+    href: "/grow-a-garden-2/wiki/codes",
+    icon: "🎟️",
+    title: "Redeem Codes",
+    desc: "Every active Grow a Garden 2 code, what each one gives, and how to redeem before they expire.",
+  },
+  {
+    href: "/grow-a-garden-2/weather-tracker",
+    icon: "🌦️",
+    title: "Weather Tracker",
+    desc: "How the GAG2 weather cycle works, which weather boosts mutations, and when to plant for max value.",
+  },
+  {
+    href: "/grow-a-garden-2/stock-predictor",
+    icon: "🌱",
+    title: "Seed Stock Predictor",
+    desc: "Predict seed shop restocks and never miss rare seeds again.",
+  },
+  {
+    href: "/mutation-guide",
+    icon: "✨",
+    title: "Mutation Guide",
+    desc: "All 172 mutations, their multipliers, and how stacking works in both games.",
+  },
+  {
+    href: "/value-list",
+    icon: "💎",
+    title: "Value List",
+    desc: "Live trading values for pets and crops so you never overpay.",
+  },
+  {
+    href: "/grow-a-garden-2",
+    icon: "🗺️",
+    title: "GAG2 Beginner Guide",
+    desc: "New to the sequel? Start with the full Grow a Garden 2 guide hub.",
+  },
+];
+
 export default function GAG2Wiki() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
@@ -64,9 +107,24 @@ export default function GAG2Wiki() {
           Grow a Garden 2 <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Wiki</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-          Every mechanic in the sequel, explained: night stealing, defenses, the day-night economy, weather and mutations,
-          guilds, the central hub and codes. Part of our <Link href="/grow-a-garden-2" className="text-[var(--primary)] hover:underline font-semibold">Grow a Garden 2 guide hub</Link>.
+          Welcome to the <strong>Grow a Garden 2 wiki</strong> — every mechanic in the sequel, explained: redeem codes,
+          plants, pets, weather and mutations, night stealing, defenses, the day-night economy, guilds and the central hub.
+          Part of our <Link href="/grow-a-garden-2" className="text-[var(--primary)] hover:underline font-semibold">Grow a Garden 2 guide hub</Link>.
         </p>
+      </div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+        {indexCards.map((card) => (
+          <Link
+            key={card.href}
+            href={card.href}
+            className="glass-card-static p-5 hover:-translate-y-0.5 transition-transform"
+          >
+            <div className="text-2xl mb-2">{card.icon}</div>
+            <h2 className="text-base font-bold mb-1" style={{ color: "var(--foreground)" }}>{card.title}</h2>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>{card.desc}</p>
+          </Link>
+        ))}
       </div>
 
       <div className="space-y-10 text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
@@ -118,7 +176,8 @@ export default function GAG2Wiki() {
           <p className="mb-4">
             The sequel twist is that mutations now paint a target on your garden. A rainbow-mutated field visible at dusk
             is an invitation. Experienced players mutate in waves and harvest immediately, minimizing the window their
-            jackpot crops sit exposed overnight.
+            jackpot crops sit exposed overnight. Our <Link href="/grow-a-garden-2/weather-tracker" className="text-[var(--primary)] hover:underline font-semibold">weather tracker guide</Link> explains
+            which weather to plant around for the best mutation odds.
           </p>
         </section>
 
@@ -145,8 +204,8 @@ export default function GAG2Wiki() {
           <p className="mb-4">
             Developers drop <strong>monthly redeem codes</strong> for free seeds, watering cans and crates — redeem them
             immediately, as they expire. Weekly <strong>admin abuse events</strong> (staff-run item drops) carry over from
-            the original game's community tradition and are the best source of free premium items. Watch the game's social
-            channels and redeem codes the hour they release.
+            the original game's community tradition and are the best source of free premium items. Our <Link href="/grow-a-garden-2/wiki/codes" className="text-[var(--primary)] hover:underline font-semibold">GAG2 codes page</Link> tracks
+            every active code so you never miss one.
           </p>
         </section>
 
