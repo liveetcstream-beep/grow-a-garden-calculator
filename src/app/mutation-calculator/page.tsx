@@ -7,6 +7,35 @@ const mutationCalcTitle = "Mutation Value Calculator - Stack Grow A Garden Mutat
 const mutationCalcDesc = "Calculate mutation multiplier stacks in Grow A Garden. Browse 150+ mutations, see combined values, and find the highest multiplier combos.";
 const mutationCalcUrl = "https://growagardencalcs.com/mutation-calculator";
 
+const mutationCalcFaqs = [
+  {
+    q: "How do mutation multipliers stack in Grow A Garden?",
+    a: "Mutation multipliers multiply together, not add. A crop with Golden (×20) and Shocked (×100) sells for 2,000× its base value — which is why stacking even two strong mutations beats a dozen weak ones. Use the calculator above to test any combination.",
+  },
+  {
+    q: "What is the highest mutation multiplier combo?",
+    a: "The theoretical ceiling keeps rising as new mutations release, but the strongest single multipliers in our database include Fractured (×92) and other event-exclusive mutations. Stack two or three top-tier mutations and the combined multiplier reaches the hundreds of thousands.",
+  },
+  {
+    q: "How many mutations can a crop have at once?",
+    a: "Crops can carry many mutations simultaneously — there is no small hard cap, which is what makes stacking so powerful. Every mutation applied multiplies the total further, so late-game profit comes from piling mutations onto high base-value crops.",
+  },
+  {
+    q: "Where can I learn how to get each mutation?",
+    a: "Every mutation page on this site explains how to trigger it, from weather events to sprays and admin events. Start with the complete mutation guide, then open any mutation in the directory below for its unlock method and exact multiplier.",
+  },
+];
+
+const mutationCalcFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: mutationCalcFaqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export const metadata: Metadata = {
   title: mutationCalcTitle,
   description: mutationCalcDesc,
@@ -38,6 +67,10 @@ export const metadata: Metadata = {
 export default function MutationCalculatorPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(mutationCalcFaqSchema) }}
+      />
       <div className="mb-8">
         <h1 className="text-3xl sm:text-4xl font-extrabold mb-3" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
           🧬 Mutation Value Calculator
@@ -49,6 +82,19 @@ export default function MutationCalculatorPage() {
       </div>
       
       <MutationCalculator />
+
+      {/* How mutation stacking works */}
+      <div className="glass-card-static p-6 sm:p-8 mt-12 mb-8" style={{ border: '1px solid var(--glass-border)' }}>
+        <h2 className="text-2xl font-bold mb-4" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
+          📐 How Mutation Stacking Works
+        </h2>
+        <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
+          In Grow A Garden, every mutation on a crop multiplies its sell value — and multiple mutations <strong style={{ color: 'var(--foreground)' }}>multiply together, not add up</strong>. A crop carrying Golden (×20) and Shocked (×100) sells for 2,000× its base value. Add a third strong mutation and you are in the hundreds of thousands. This multiplicative math is why stacking two elite mutations beats collecting a dozen weak ones, and why end-game profit comes from piling mutations onto crops that already have a high base value.
+        </p>
+        <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
+          The calculator above lets you tick any of the 172 mutations in our database and see the combined multiplier instantly. Experiment with weather-event mutations, spray mutations and rare admin-event ones to find the highest-value combos — then read each mutation's page in the directory below to learn exactly how to trigger it in game. For the full mechanics, see our <Link href="/mutation-guide" className="text-[var(--primary)] hover:underline font-bold">complete mutation guide</Link>.
+        </p>
+      </div>
 
       {/* Mutation Directory for SEO Internal Linking */}
       <div className="mt-16 glass-card-static p-6">
@@ -67,6 +113,25 @@ export default function MutationCalculatorPage() {
               <p className="text-xs font-bold" style={{ color: 'var(--foreground)' }}>{mut.name}</p>
               <p className="text-[10px] mt-1 font-mono font-bold" style={{ color: mut.color }}>×{mut.multiplier}</p>
             </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* FAQ */}
+      <div className="glass-card-static p-6 sm:p-8 mt-12">
+        <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
+          ❓ Mutation Stacking — Frequently Asked Questions
+        </h2>
+        <div className="space-y-4 text-left">
+          {mutationCalcFaqs.map((f) => (
+            <div key={f.q} className="p-4 rounded-xl border" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)' }}>
+              <h3 className="text-sm font-bold mb-1" style={{ color: 'var(--foreground)' }}>
+                {f.q}
+              </h3>
+              <p className="text-xs leading-relaxed" style={{ color: 'var(--muted)' }}>
+                {f.a}
+              </p>
+            </div>
           ))}
         </div>
       </div>
