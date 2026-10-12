@@ -37,6 +37,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     "rot": "The Rot (Rotting) mutation gives a ×8 multiplier in Grow A Garden. Learn how to get Rot via the Mandrake pet and calculate crop values instantly.",
     "aurora": "The Aurora mutation gives a ×90 multiplier in Grow A Garden. Triggered during the Aurora Borealis event. Calculate crop values and combos instantly.",
     "luminous": "The Luminous mutation gives a ×50 multiplier in Grow A Garden. Obtain via Sprite pet, spray, or pet shard. Calculate crop value with our GAG calculator.",
+    "fractured": "Fractured gives a ×92 multiplier in Grow A Garden — one of the strongest mutations. How to get it, best stacking combos and exact crop values.",
   };
 
   let pageTitle = MUTATION_TITLE_OVERRIDES[mutation.id];
@@ -46,7 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       pageTitle = `${mutation.name} Mutation – GAG (×${mutation.multiplier})`;
     }
   }
-  const pageDesc = MUTATION_DESC_OVERRIDES[mutation.id] ?? `Get the ${mutation.name} mutation in Grow A Garden (×${mutation.multiplier} multiplier). Learn how to unlock it and calculate crop values with our GAG calculator.`;
+  const pageDesc = MUTATION_DESC_OVERRIDES[mutation.id] ?? `${mutation.name}: ×${mutation.multiplier} multiplier in Grow A Garden. How to get it, best stacking combos and exact crop values with our free calculator.`;
   const pageUrl = `https://growagardencalcs.com/mutation/${mutation.id}`;
 
   return {
