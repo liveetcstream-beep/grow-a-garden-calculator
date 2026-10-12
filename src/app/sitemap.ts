@@ -52,6 +52,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/grow-a-garden-2/wiki/codes`,
+      lastModified: new Date('2026-10-12'),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/grow-a-garden-2/weather-tracker`,
+      lastModified: new Date('2026-10-12'),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/grow-a-garden-2/stock-predictor`,
       lastModified: recentlyUpdated,
       changeFrequency: 'weekly',
