@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "When is the Grow A Garden Ghoul Garden Halloween event?",
-    a: "The Ghoul Garden Halloween event runs from October 11 to October 25, 2026. A second-week expansion (Ghoul Garden 2) is scheduled to begin October 18 with additional pets, seeds, and Halloween Market stock.",
+    a: "The Ghoul Garden Halloween event runs from October 11 to October 25, 2026, as a single phase. Note: \u201cGhoul Garden 2\u201d was the 2025 second-week expansion (October 18\u201325, 2025) \u2014 no second phase has been announced for the 2026 event.",
   },
   {
     q: "How do you get Candy Corn in Grow A Garden?",
@@ -54,11 +54,11 @@ const faqs = [
   },
   {
     q: "What pets are in the Ghoul Garden Halloween event?",
-    a: "Key event pets include Headless Horseman, Spider, Reaper, and Bone Dog. More are available from the Creepy Critters pet shop (Spooky Egg, Pumpkin Rat, Goat, Wolf, Ghost Bear, Dark Spriggan, Reaper) and from grave digging. The Ghoul Garden 2 expansion on October 18 adds more pets.",
+    a: "Key event pets include Headless Horseman, Spider, Reaper, and Bone Dog. More are available from the Creepy Critters pet shop (Spooky Egg hatches, Pumpkin Rat) and from grave digging. The 2025 phase-2 pets (Goat, Goblin, Dark Spriggan, Hex Serpent) are not confirmed for the 2026 event.",
   },
   {
     q: "What seeds are in the Ghoul Garden Halloween event?",
-    a: "Premium event seeds include Jack-O-Lantern, Great Pumpkin, and Ghoul Root. The Spooky Seeds shop also stocks Bloodred Mushroom, Pumpkin, Candy Cornflower, Chicken Feed, Seer Vine, and Poison Apple — all bought with Candy Corn. The Great Pumpkin can grant the Ghostly mutation.",
+    a: "Premium event seeds include Jack-O-Lantern, Great Pumpkin, and Ghoul Root. The Spooky Seeds shop also stocks Bloodred Mushroom, Chicken Feed, Seer Vine, and Poison Apple \u2014 all bought with Candy Corn. The Great Pumpkin can grant the Ghostly mutation.",
   },
   {
     q: "What is the Halloween Market in Grow A Garden?",
@@ -165,7 +165,7 @@ export default function GhoulGardenPage() {
               { label: "Dates", value: "Oct 11 – Oct 25, 2026" },
               { label: "Currency", value: "🍬 Candy Corn" },
               { label: "Location", value: "Ghoul Garden (map center)" },
-              { label: "Part 2", value: "Ghoul Garden 2 from Oct 18" },
+              { label: "Phases", value: "Single phase (Oct 11–25)" },
             ].map((s) => (
               <div key={s.label} className="p-4 rounded-xl" style={{ background: "var(--surface-1)", border: "1px solid var(--glass-border)" }}>
                 <div className="text-xs font-bold mb-1" style={{ color: "var(--muted)" }}>{s.label}</div>
