@@ -184,6 +184,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/pet/scarecrow-stats`,
+      lastModified: new Date('2026-10-16'),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
+    {
       url: `${baseUrl}/contact`,
       lastModified: staticLastMod,
       changeFrequency: 'monthly',
