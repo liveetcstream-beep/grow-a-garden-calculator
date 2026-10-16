@@ -66,6 +66,7 @@ export const PETS: Pet[] = [
   { id: "blood-kiwi", name: "Blood Kiwi", baseValue: 14000, rarity: "Legendary", ability: "Vampiric Drain", abilityMultiplier: 22.0, emoji: "🔴", category: "Event" },
   { id: "blood-owl", name: "Blood Owl", baseValue: 14500, rarity: "Legendary", ability: "Night Terror", abilityMultiplier: 23.0, emoji: "🦉", category: "Event" },
   { id: "cockatrice", name: "Cockatrice", baseValue: 16000, rarity: "Legendary", ability: "Petrify", abilityMultiplier: 25.0, emoji: "🐉", category: "Mythical" },
+  { id: "red-cap", name: "Red Cap", baseValue: 16500, rarity: "Legendary", ability: "Hatch Trade", abilityMultiplier: 24.0, emoji: "🍄", category: "Event" },
 
   // Mythic
   { id: "kraken", name: "Kraken", baseValue: 50000, rarity: "Mythic", ability: "Ocean's Fury", abilityMultiplier: 50.0, emoji: "🦑", category: "Ocean" },
@@ -80,4 +81,8 @@ export const PETS: Pet[] = [
   { id: "sun-god-bird", name: "Sun God Bird", baseValue: 250000, rarity: "Divine", ability: "Solar Flare", abilityMultiplier: 200.0, emoji: "🌞", category: "Divine" },
   { id: "moon-rabbit", name: "Moon Rabbit", baseValue: 220000, rarity: "Divine", ability: "Lunar Eclipse", abilityMultiplier: 180.0, emoji: "🐇", category: "Divine" },
   { id: "angelic-guardian", name: "Angelic Guardian", baseValue: 300000, rarity: "Divine", ability: "Heavenly Shield", abilityMultiplier: 250.0, emoji: "👼", category: "Divine" },
+  { id: "manticore", name: "Manticore", baseValue: 220000, rarity: "Divine", ability: "Beast of Omen", abilityMultiplier: 175.0, emoji: "🦁", category: "Event" },
+
+  // Event (Fairy Update, Oct 2026 — Wolpertinger rarity unconfirmed, placeholder)
+  { id: "wolpertinger", name: "Wolpertinger", baseValue: 13000, rarity: "Event", ability: "Growth Surge", abilityMultiplier: 20.0, emoji: "🐾", category: "Event" },
 ];
