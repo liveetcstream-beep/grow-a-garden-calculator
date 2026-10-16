@@ -40,6 +40,14 @@ const faqs = [
     q: "How do I know if a trade is fair?",
     a: "Trading values are player-driven — there is no official in-game value list. Check our live value list for current pet and crop prices, and run both sides through the trade calculator before you confirm.",
   },
+  {
+    q: "Can new accounts trade in GAG2?",
+    a: "Not right away. Brand-new accounts must wait 7 days before the trading system unlocks for them. This is a blanket anti-scam measure aimed at throwaway scam accounts — there is no way to skip the waiting period.",
+  },
+  {
+    q: "Why do trade values vary so much between players?",
+    a: "Because values are 100% community-driven: two players can quote different prices for the same item, and a fruit's weight and mutations (like Golden or Rainbow) swing its worth far above the base price. Be skeptical of any 'official' value list — cross-check live prices on our value list and price both sides on the trade calculator.",
+  },
 ];
 
 const faqSchema = {
@@ -67,12 +75,17 @@ export default function GAG2Trades() {
           Everything about <strong>trading in Grow a Garden 2</strong>: tickets, the trade window, what's tradable, and how
           to never get scammed. Part of the <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link>.
         </p>
+        <p className="text-sm max-w-3xl mx-auto leading-relaxed mt-4" style={{ color: "var(--muted)" }}>
+          Trading in Grow a Garden 2 works through a secure two-step trade window: buy a Trading Ticket (100,000 sheckles)
+          from the Gear Stall in the main hub, equip it, then interact with another player to open the window. Both sides add
+          pets, fruits, or sheckles, then Accept and Confirm — a 5-second cooldown guards against last-second offer swaps.
+        </p>
       </div>
 
       <div className="space-y-10 text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            🎟️ How to Start a Trade
+            🎟️ How Do You Start a Trade in Grow a Garden 2?
           </h2>
           <ol className="list-decimal list-inside space-y-2 mb-4">
             <li>Buy a <strong>Trading Ticket</strong> from the <strong>Gear Stall in the main hub</strong> — 100,000 sheckles, Uncommon item that restocks frequently.</li>
@@ -82,40 +95,66 @@ export default function GAG2Trades() {
           </ol>
           <p className="mb-4">
             Only the <strong>requester needs a ticket</strong> — the other player trades free. Declined requests typically don't
-            consume the ticket, but treat it as precious anyway.
+            consume the ticket, but treat it as precious anyway. At 100,000 sheckles a pop, the ticket is a real cost barrier
+            that keeps the trading plaza from being flooded with spam requests — one reason GAG2's trading economy is calmer
+            than the anything-goes free trading of the original Grow a Garden.
           </p>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            📦 What's Tradable (and What Isn't)
+            📦 What Can You Trade in GAG2 (and What Can't You)?
           </h2>
           <p className="mb-4">
-            <strong>Tradable:</strong> pets, fruits, and sheckles. <strong>Not tradable:</strong> seeds of any kind, and any
-            item you've favorited. <strong>New accounts must wait 7 days</strong> before they can trade at all — a blanket
-            anti-scam rule.
+            <strong>Tradable:</strong> pets, fruits, and sheckles. <strong>Not tradable:</strong> seeds of any kind — seed trading
+            simply doesn't exist in GAG2 — and any item you've favorited. <strong>New accounts must wait 7 days</strong> before
+            they can trade at all — a blanket anti-scam rule aimed at throwaway scam accounts.
           </p>
           <p className="mb-4">
             The trade window shows each item's <strong>weight, age, mutations, and value</strong>, so you can verify exactly
-            what you're getting. A heavy, mutated fruit is worth far more than its base price suggests — check both sides on
-            our <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-semibold">trade calculator</Link> before
-            you hit Confirm.
+            what you're getting. This matters: a heavy, mutated fruit is worth far more than its base price suggests, and a pet's
+            age tier changes its demand. Check both sides on our <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-semibold">trade calculator</Link> before
+            you hit Confirm — overpaying on a "cheap" trade because you ignored a Rainbow mutation is one of the most common
+            ways new traders lose value.
           </p>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            🛡️ Anti-Scam Rules
+            💹 How Do You Know If a Trade Is Fair?
+          </h2>
+          <p className="mb-4">
+            <strong>Fair values</strong> are player-driven — there is no official in-game value list, and the developers have
+            never published one. That means values float with supply, demand, and rarity tiers, and they can shift after a
+            balance patch. Our <Link href="/value-list" className="text-[var(--primary)] hover:underline font-semibold">value list</Link> tracks
+            live community prices for pets and crops so you always have a current reference point.
+          </p>
+          <p className="mb-4">
+            Be skeptical of <strong>"official" value lists on social media</strong> — a pain point veteran traders know well.
+            Fake or outdated value lists are a classic scam setup: a scammer links you a doctored list that wildly overvalues
+            their item so their lowball offer looks generous. Always cross-check with a live, community-updated source, and
+            don't carry over values from the original Grow a Garden (GAG1) — GAG2's economy, rarities, and mutation multipliers
+            are different, so GAG1 prices are meaningless here. When in doubt, run both sides of any trade through the{" "}
+            <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-semibold">trade calculator</Link>{" "}
+            and only confirm when the numbers make sense.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+            🛡️ How Do You Avoid Trade Scams in GAG2?
           </h2>
           <p className="mb-4">
             The trade window protects you by design: after both players press Accept, <strong>any change to either offer triggers
             a 5-second cooldown</strong> before Confirm becomes available — so nobody can swap a valuable pet for a worthless one
-            at the last second. The golden rule stands: <strong>never drop items on the ground</strong> for a "trade." If it's not
-            in the ticket window, it's not a trade.
+            at the last second. Always re-read the offer after the cooldown resets; the window re-locks for a reason.
           </p>
           <p className="mb-4">
-            <strong>Fair values</strong> are player-driven — there is no official in-game value list. Our <Link href="/value-list" className="text-[var(--primary)] hover:underline font-semibold">value list</Link> tracks
-            live community prices for pets and crops so you always know what your side is worth.
+            Beyond the built-in protection, the golden rules still apply. <strong>Never drop items on the ground</strong> for a
+            "trade" — if it's not in the ticket window, it's not a trade, and anything on the ground can be picked up by
+            anyone. Never trade with a player pressuring you to hurry through the Accept → Confirm steps — rushing you is how
+            scammers hope you'll skip the cooldown check. And if a deal looks too good to be true (a rare pet for a common fruit),
+            it usually is: it's either a scam or the item is worth far less than you think.
           </p>
         </section>
 
