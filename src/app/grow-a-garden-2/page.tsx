@@ -76,6 +76,11 @@ export default function GrowAGarden2Hub() {
           the plant-grow-sell loop you know, then bolts on <strong>nighttime PVP stealing</strong>, a central-hub map, defensive
           plants, guilds and a full day-and-night cycle. This hub covers everything: mechanics, strategy, codes and values.
         </p>
+        <p className="text-sm max-w-3xl mx-auto leading-relaxed mt-4 font-medium" style={{ color: "var(--foreground)" }}>
+          Grow a Garden 2 (GAG2) is the official Roblox sequel released June 12, 2026: the same plant-grow-sell loop plus
+          nighttime PVP stealing, a central-hub map, defensive plants, guilds, weather mutations, redeem codes, and a day-night
+          economy. This hub covers mechanics, strategy, values, and tools.
+        </p>
       </div>
 
       <div className="space-y-10 text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
@@ -98,7 +103,7 @@ export default function GrowAGarden2Hub() {
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            🌙 The Day-Night Cycle Changes Everything
+            🌙 How Does the Day-Night Cycle Work in GAG2?
           </h2>
           <p className="mb-4">
             Grow a Garden 2 runs on a full <strong>day-and-night cycle</strong>. Daytime is for traditional farming: planting,
@@ -115,7 +120,7 @@ export default function GrowAGarden2Hub() {
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            🗺️ New Map, New Crops, New Systems
+            🗺️ What's New in GAG2 Compared to the Original Game?
           </h2>
           <p className="mb-4">
             Instead of the original's rows-based layout, gardens in the sequel <strong>surround a central hub</strong> packed with
@@ -133,7 +138,26 @@ export default function GrowAGarden2Hub() {
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            🧮 GAG2 Tools & Values
+            🎮 How Do I Progress Fast as a GAG2 Beginner?
+          </h2>
+          <p className="mb-4">
+            The fastest early game in GAG2 is deliberately boring: plant cheap seeds, sell every harvest, and roll the sheckles
+            straight back into the <strong>Seed Shop</strong>. Watch restock timers on the <Link href="/grow-a-garden-2/stock-predictor" className="text-[var(--primary)] hover:underline font-semibold">seed stock predictor</Link> and
+            pounce on premium seeds the moment they appear — rare seeds are the first real power spike. Join an active guild
+            early too: the weekly rewards are free income while you learn.
+          </p>
+          <p className="mb-4">
+            The beginner mistake is copying old GAG1 guides and skipping defense. In the sequel, an undefended garden full of
+            valuable crops is a target, not a flex. Harvest before nightfall, spend a share of profits on walls and traps, and
+            price every harvest with our <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">crop calculator</Link> so
+            you know what is actually worth protecting. Our <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link> covers
+            the full beginner path in depth.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+            🧮 Which GAG2 Tools Should I Use for Values and Trades?
           </h2>
           <p className="mb-4">
             Values in the sequel work like the original — base prices scaled by weight and mutations — but the night market
@@ -142,6 +166,36 @@ export default function GrowAGarden2Hub() {
             check live pet and crop prices, and the <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-semibold">trade calculator</Link> before
             accepting any deal. Watching the <Link href="/grow-a-garden-2/stock-predictor" className="text-[var(--primary)] hover:underline font-semibold">seed stock predictor</Link> helps
             you buy rare seeds the moment they restock.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+            ✅ How We Keep This GAG2 Guide Accurate
+          </h2>
+          <p className="mb-4">
+            Every mechanic, value and timer on this page is <strong>tested in the live game</strong> and re-checked after
+            patches — never copied from other lists. Trading values shift with player demand, so always confirm a deal against
+            the <Link href="/value-list" className="text-[var(--primary)] hover:underline font-semibold">value list</Link> and <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-semibold">trade calculator</Link> before
+            accepting. When the developers change something, this guide changes with it.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+            ⚠️ How Do I Avoid Scams, Outdated Guides, and Wasted Sheckles?
+          </h2>
+          <p className="mb-4">
+            Three traps catch almost every new GAG2 player. <strong>GAG1 vs GAG2 confusion:</strong> guides written for the
+            original describe a peaceful game with no stealing and no defenses — follow one and you will leave crops out
+            overnight for thieves. If a guide never mentions night stealing, treat it as outdated.
+          </p>
+          <p className="mb-4">
+            <strong>Fake value lists and expired codes:</strong> many "value list" sites copy each other's numbers without
+            testing, and old articles keep listing dead codes. Always check trades against our <Link href="/value-list" className="text-[var(--primary)] hover:underline font-semibold">live value list</Link>,
+            price the deal in the <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-semibold">trade calculator</Link> before
+            accepting, and only trust codes from our live <Link href="/grow-a-garden-2/wiki/codes" className="text-[var(--primary)] hover:underline font-semibold">GAG2 codes page</Link>.
+            Never trade outside the official trade window, and never spend sheckles based on a random screenshot in a trading server.
           </p>
         </section>
 
