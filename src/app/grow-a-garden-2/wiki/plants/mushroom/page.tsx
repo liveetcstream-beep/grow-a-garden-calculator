@@ -40,6 +40,14 @@ const faqs = [
     q: "What is the Maple Mushroom?",
     a: "A reported event variant of the Mushroom — Epic rarity, bought with 15,000 Leaves (event currency) during event rotations. It appears in only one source so far, so treat details as provisional.",
   },
+  {
+    q: "Should new players buy Mushroom seeds?",
+    a: "Only once you have capital to spare. At 15,000 sheckles per seed it is a mid-game crop — new players should build their bankroll with cheap multi-harvest crops like Corn first, then rotate Mushrooms in as a high-value second layer. Buying one Mushroom seed with your last sheckles is a classic bad seed purchase.",
+  },
+  {
+    q: "Do weight and mutations change Mushroom value?",
+    a: "Yes. The ~13,000-sheckle figure is an average — tested values land around 12,300, with 11.7K at 1kg. Heavier fruit and mutations like Golden or Rainbow sell well above the average, so always price your actual harvest on the crop calculator instead of assuming the flat number.",
+  },
 ];
 
 const faqSchema = {
@@ -70,44 +78,79 @@ export default function MushroomGuide() {
       </div>
 
       <div className="space-y-10 text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
+        <div className="glass-card-static p-5">
+          <p className="text-base leading-relaxed" style={{ color: "var(--foreground)" }}>
+            The Mushroom is an Epic-rarity single-harvest crop in Grow a Garden 2 worth ~13,000 sheckles per fruit
+            against a 15,000-sheckle seed price. Buy the seed from the Seed Shop at roughly a 9% stock chance per
+            restock. Tested-value tier lists rank it S-tier — the best value-per-seed money crop in GAG2, ideal for
+            mid-game sheckle farming.
+          </p>
+        </div>
+
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            🍄 How to Get the Mushroom
+            🍄 How to Get the Mushroom in Grow a Garden 2?
           </h2>
           <p className="mb-4">
             Mushroom seeds cost <strong>15,000 sheckles</strong> from the <strong>Seed Shop</strong>. At <strong>Epic</strong> rarity
             with roughly a <strong>9% chance per 5-minute restock</strong>, it sits in the sweet spot: uncommon enough that you
-            should buy on sight, common enough that you will catch it regularly without camping. Track restocks with our <Link href="/grow-a-garden-2/stock-predictor" className="text-[var(--primary)] hover:underline font-semibold">seed stock predictor</Link>.
+            should buy on sight, common enough that you will catch it regularly without camping. Track restocks with our <Link href="/grow-a-garden-2/stock-predictor" className="text-[var(--primary)] hover:underline font-semibold">seed stock predictor</Link> and
+            top up your funds with the freebies on our <Link href="/grow-a-garden-2/wiki/codes" className="text-[var(--primary)] hover:underline font-semibold">GAG2 codes page</Link>.
           </p>
           <p className="mb-4">
             <strong>Note:</strong> this is the GAG2 Mushroom (Epic, 15K). The original game's Mushroom is a completely different
             crop (Divine, 150K) — search results mix them up constantly, so make sure any guide you read is about the sequel.
+            GAG1 vs GAG2 confusion is one of the most common ways players misjudge seed value, since the two games share crop
+            names but not stats, rarity tiers, or prices.
           </p>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            💰 Why It's S-Tier
+            💰 How Much Is the Mushroom Worth?
           </h2>
           <p className="mb-4">
             The math is the selling point: <strong>~13,000 sheckles average per fruit</strong> against a 15,000 seed price means
             you nearly earn the seed back in a single harvest — 11.7K at 1kg, ~12,300 in tested values. No other Epic crop returns
-            its cost this fast. Tested-value tier lists rank it <strong>S tier: best high-value money crop</strong>.
+            its cost this fast. Tested-value tier lists rank it <strong>S tier: best high-value money crop</strong>. These numbers
+            are averages recorded across multiple in-game harvests and community listings; weight and mutations like Golden or
+            Rainbow move individual fruit well above or below the average.
           </p>
           <p className="mb-4">
             The tradeoff: <strong>single-harvest</strong>. Each plant pays once, so replant constantly. Pair it with a background <Link href="/grow-a-garden-2/wiki/plants/corn" className="text-[var(--primary)] hover:underline font-semibold">Corn</Link> patch
             for steady multi-harvest income between Mushroom rotations, and price every harvest on our <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">crop calculator</Link>.
+            If you trade spare seeds or fruit, check live demand on our <Link href="/grow-a-garden-2/trades" className="text-[var(--primary)] hover:underline font-semibold">trades guide</Link> before accepting offers — S-tier
+            crops attract lowballers.
           </p>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            🍁 Maple Mushroom (Event Variant)
+            🌱 Is the Mushroom Good for Mid-Game Farming?
+          </h2>
+          <p className="mb-4">
+            Yes — this is where the Mushroom earns its S-tier rating. Early game, your capital is too thin for 15K seeds: one bad
+            purchase wipes out a day of farming. Once you have a steady income base, the Mushroom becomes a sheckle compounder —
+            each harvest nearly refunds its seed, so every replant cycle is close to free profit. The replant treadmill is the real
+            cost: single-harvest means you are constantly rebuying and replanting, so batch your planting sessions and keep a seed
+            stockpile from high-stock restocks.
+          </p>
+          <p className="mb-4">
+            Run the full rotation — Corn for baseline income, Mushroom for high-value bursts — and let restock timers work for you
+            instead of against you. Players who chase only Mushroom seeds and ignore their background income are the ones who stall
+            out between restocks.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+            🍁 What Is the Maple Mushroom?
           </h2>
           <p className="mb-4">
             A <strong>Maple Mushroom</strong> variant has been reported — Epic rarity, purchased with <strong>15,000 Leaves</strong> (event
             currency) during event rotations, at ~11.7K per kg. It currently appears in only one source, so treat it as provisional
-            until more guides confirm it.
+            until more guides confirm it. Event variants like this often follow patch cycles, so watch our <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">wiki</Link> for
+            updates after the next event rotation.
           </p>
         </section>
 
