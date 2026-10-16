@@ -172,6 +172,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
+      url: `${baseUrl}/fairy-update`,
+      lastModified: new Date('2026-10-16'),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ghoul-garden-halloween-event`,
+      lastModified: new Date('2026-10-16'),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/contact`,
       lastModified: staticLastMod,
       changeFrequency: 'monthly',
