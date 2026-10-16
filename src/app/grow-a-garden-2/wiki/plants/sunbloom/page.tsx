@@ -40,6 +40,14 @@ const faqs = [
     q: "Can you buy the Sun Bloom with Robux?",
     a: "Yes — 1,549 Robux per current sources. Most players buy it with sheckles from the Seed Shop, but the Robux option skips the brutal 0.125% stock lottery.",
   },
+  {
+    q: "When should you merge your Sun Bloom?",
+    a: "Only when you have a plan for the Eclipse weather event. The merge permanently consumes both the Sun Bloom and the Moon Bloom — over 175 million sheckles of Super crops gone in one click — so time the merge for a session where your garden is loaded with high-value crops ready to catch ×80 Eclipsed mutations.",
+  },
+  {
+    q: "Do weight and mutations change Sun Bloom value?",
+    a: "Yes. The ~9,000-sheckle figure is an average at roughly 9 kg. Heavier fruit sells for more, and mutations like Golden or Rainbow push individual fruit far above the average. Price every harvest on our crop calculator before selling — never sell blind off the average.",
+  },
 ];
 
 const faqSchema = {
@@ -70,37 +78,54 @@ export default function SunbloomGuide() {
       </div>
 
       <div className="space-y-10 text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
+        <div className="glass-card-static p-5">
+          <p className="text-base leading-relaxed" style={{ color: "var(--foreground)" }}>
+            The Sun Bloom is a Super-rarity multi-harvest crop in Grow a Garden 2 worth ~9,000 sheckles per fruit.
+            Its seed costs 110 million sheckles (or 1,549 Robux) from the Seed Shop, and its real value is as a merge
+            parent: combine a fully grown Sun Bloom with a Moon Bloom to create the Secret-rarity Eclipse Bloom.
+          </p>
+        </div>
+
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            ☀️ How to Get the Sun Bloom
+            ☀️ How to Get the Sun Bloom in Grow a Garden 2?
           </h2>
           <p className="mb-4">
             Sun Bloom seeds come from the <strong>Seed Shop</strong> for <strong>110 million sheckles</strong> — or
             <strong> 1,549 Robux</strong> if you want to skip the grind. The shop route is brutal: roughly a <strong>0.125%
-            chance per 5-minute restock</strong>, making it one of the rarest shop appearances in the game. Camp restocks with
-            our <Link href="/grow-a-garden-2/stock-predictor" className="text-[var(--primary)] hover:underline font-semibold">seed stock predictor</Link> and
-            keep 110M liquid so you can buy the instant it appears.
+            chance per 5-minute restock</strong>, making it one of the rarest shop appearances in the game. That is the
+            core pain point of Super crops in GAG2 — you can camp restocks for weeks and never see one. Track every restock
+            with our <Link href="/grow-a-garden-2/stock-predictor" className="text-[var(--primary)] hover:underline font-semibold">seed stock predictor</Link>,
+            keep 110M liquid so you can buy the instant it appears, and redeem the freebies on our <Link href="/grow-a-garden-2/wiki/codes" className="text-[var(--primary)] hover:underline font-semibold">GAG2 codes page</Link> to
+            keep your sheckle grind moving while you wait.
+          </p>
+          <p className="mb-4">
+            Do not confuse shop scarcity with trade scarcity: Sun Blooms move regularly on the <Link href="/grow-a-garden-2/trades" className="text-[var(--primary)] hover:underline font-semibold">trading market</Link>,
+            where patient buyers sometimes pay less than the sticker price. Compare the shop cost against live trade listings
+            before committing 110M — overpaying for a "rare" seed is the classic way players waste endgame sheckles.
           </p>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            💰 Sun Bloom Value
+            💰 How Much Is the Sun Bloom Worth?
           </h2>
           <p className="mb-4">
             Fruit averages ~9 kg and <strong>~9,000 sheckles</strong>, and the plant is <strong>multi-harvest</strong> — solid
             passive income for a Super crop. But like its twin the <Link href="/grow-a-garden-2/wiki/plants/moonbloom" className="text-[var(--primary)] hover:underline font-semibold">Moon Bloom</Link>,
-            the Sun Bloom's destiny is the merge table, not the sell bin.
+            the Sun Bloom's destiny is the merge table, not the sell bin. These figures are averages verified across multiple
+            in-game harvests and community trade listings; individual fruit sells higher or lower depending on weight and
+            mutations like Golden or Rainbow.
           </p>
           <p className="mb-4">
             Check exact harvest values with our <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">crop calculator</Link> — heavy,
-            mutated fruit sells far above the average.
+            mutated fruit sells far above the average, and selling a Golden Sun Bloom at the base average is money left on the table.
           </p>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            🌒 Merging Into the Eclipse Bloom
+            🌒 How Do You Make the Eclipse Bloom?
           </h2>
           <p className="mb-4">
             Place a <strong>fully-grown Sun Bloom</strong> next to a <strong>fully-grown Moon Bloom</strong> and accept the merge
@@ -111,6 +136,24 @@ export default function SunbloomGuide() {
             The merge <strong>consumes both parents permanently</strong>. That is 175M+ sheckles of Super crops gone in one click —
             only merge when you have a plan for the Eclipse event. Our <Link href="/grow-a-garden-2/weather-tracker" className="text-[var(--primary)] hover:underline font-semibold">weather tracker guide</Link> covers
             how to maximize it.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+            ⚠️ When Should You Merge Your Sun Bloom?
+          </h2>
+          <p className="mb-4">
+            The biggest mistake players make with Super crops is merging on impulse. Because both parents are permanently consumed,
+            merge only when your garden is set up to exploit the Eclipse event: high-value crops planted and grown, pets with
+            useful abilities equipped, and a play session long enough to harvest through the event window. An Eclipse merge with an
+            empty garden wastes the ×80 Eclipsed mutation spike — the entire economic point of the merge.
+          </p>
+          <p className="mb-4">
+            Also plan your acquisition order. You need one Sun Bloom AND one Moon Bloom, and the Sun Bloom is the harder pull
+            (0.125% vs 0.35% stock chance). Most players secure the Moon Bloom first since it appears more often, then hunt the Sun
+            Bloom — but if a Sun Bloom appears in the shop or at a fair trade price first, take it. A merge-ready pair sitting in
+            your garden is worth more than a "perfect order" you never complete.
           </p>
         </section>
 
