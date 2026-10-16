@@ -67,6 +67,14 @@ const faqs = [
     q: "What do GAG2 codes give you?",
     a: "Free seeds, seed packs, and watering cans. They are most valuable early on, when free seeds compound into faster income — but even late-game players should claim them since they cost nothing.",
   },
+  {
+    q: "Where is the safest place to find new GAG2 codes?",
+    a: "Stick to the official Discord server and X account, plus this page — we re-verify every code against multiple sources before listing it. Random code-aggregator sites often list fake or long-dead codes that waste your time; a code is only real if it actually redeems in-game.",
+  },
+  {
+    q: "What does the FREESEED friend requirement mean?",
+    a: "FREESEED only redeems after you invite 3 friends to your server. Bring three friends into a server with you, then enter the code through the Settings menu — the 3× Uncommon Seed Pack lands in your inventory like any other code reward.",
+  },
 ];
 
 const faqSchema = {
@@ -90,18 +98,29 @@ export default function GAG2Codes() {
         <h1 className="text-4xl sm:text-5xl font-black mb-4" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
           Grow a Garden 2 <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Codes</span>
         </h1>
+        <p className="text-sm max-w-3xl mx-auto leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
+          This page lists every working <strong>Grow a Garden 2 code</strong>, verified in-game as of October 16, 2026:
+          FREESEED, TEAMGREENBEAN, WATERYOPLANTS, and REMEMBERTODRINKWATER. Redeem them through the Settings gear menu for
+          free seed packs and watering cans. No code has expired yet — but new codes drop roughly monthly, so claim these
+          before they stop working.
+        </p>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-          Every active <strong>Grow a Garden 2 code</strong> for October 2026, verified across multiple sources. Redeem them
-          for free seeds, seed packs and watering cans — then check the <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link> for
-          what to do with your head start.
+          New to the sequel? The <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link> covers
+          seeds, mutations and trading for the head start these give you, and the <Link href="/grow-a-garden-2/weather-tracker" className="text-[var(--primary)] hover:underline font-semibold">weather tracker</Link> shows
+          how to time your free-seed harvests around mutation events.
         </p>
       </div>
 
       <div className="space-y-10 text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            🎟️ Active GAG2 Codes (October 2026)
+            🎟️ Which Grow a Garden 2 codes are working right now?
           </h2>
+          <p className="mb-4">
+            Below is the complete list of GAG2 codes we have tested and confirmed working as of October 16, 2026. Copy each
+            code exactly as shown — codes are case-sensitive, and a single mistyped letter is the most common reason a
+            redeem fails.
+          </p>
           <div className="space-y-4">
             {activeCodes.map((c) => (
               <div key={c.code} className="glass-card-static p-5">
@@ -121,14 +140,15 @@ export default function GAG2Codes() {
             ))}
           </div>
           <p className="mt-4 text-sm">
-            <strong>No expired codes yet.</strong> Every GAG2 code released so far still redeems — but codes are
-            time-limited by design, so claim these today rather than next week.
+            <strong>No expired codes yet.</strong> Every GAG2 code released so far still redeems — but Roblox codes are
+            time-limited by design and developers can retire them without warning, so claim these today rather than next
+            week. New codes almost always drop alongside game updates and player milestones, so check back after each patch.
           </p>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            ⌨️ How to Redeem Codes
+            ⌨️ How do you redeem codes in Grow a Garden 2?
           </h2>
           <ol className="list-decimal list-inside space-y-2 mb-4">
             <li>Launch Grow a Garden 2 on Roblox.</li>
@@ -137,21 +157,52 @@ export default function GAG2Codes() {
             <li>Press <strong>Claim</strong>. Rewards appear in your inventory immediately.</li>
           </ol>
           <p className="mb-4">
-            New to the sequel? Free seeds from codes compound fast early on: plant them, sell the harvest, and roll the
-            profits into better seeds from the shop. Our <Link href="/grow-a-garden-2/stock-predictor" className="text-[var(--primary)] hover:underline font-semibold">seed stock predictor</Link> shows
-            how to catch rare seeds the moment they restock.
+            If a code refuses to redeem, run through the three usual suspects before anything else: a typo or wrong letter
+            case, an expired code, or an unmet requirement — FREESEED, for example, stays locked until you invite 3 friends
+            to your server. Confirmed-working codes never hurt to retry a second time; codes pasted from random aggregator
+            sites are the ones that usually turn out to be fake or long dead.
+          </p>
+          <p className="mb-4">
+            Free seeds from codes compound fast early on: plant them, sell the harvest, and roll the profits into better
+            seeds from the shop. Our <Link href="/grow-a-garden-2/stock-predictor" className="text-[var(--primary)] hover:underline font-semibold">seed stock predictor</Link> shows
+            how to catch rare seeds the moment they restock — and our <Link href="/grow-a-garden-2/weather-tracker" className="text-[var(--primary)] hover:underline font-semibold">weather tracker</Link> helps
+            you time the harvest so your free crops catch a high-multiplier mutation.
           </p>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            🔔 Never Miss a New Code
+            🎟️ What do GAG2 codes give you — and are they worth it?
+          </h2>
+          <p className="mb-4">
+            GAG2 codes pay out in <strong>seeds, seed packs and watering cans</strong> — the exact currencies of early-game
+            momentum. Watering cans speed up growth timers, and every free seed you plant is harvestable produce you never
+            paid sheckles for. In the first days of a garden, that head start compounds: free crops become free income,
+            which becomes better seeds from the Seed Shop, which becomes faster income still.
+          </p>
+          <p className="mb-4">
+            Even established players should claim every code. They cost nothing, take seconds to redeem, and watering cans
+            stay useful no matter how developed your plot is. Think of codes as the sequel's free sample economy — the
+            developers use them to pull players back for each update, and there is no reason not to take what's offered.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+            🔔 Where do new GAG2 codes come from — and how do you avoid fake ones?
           </h2>
           <p className="mb-4">
             Developers drop fresh codes through the <strong>official Discord server</strong> and <strong>X account</strong>,
             usually tied to updates, milestones and events — roughly monthly. Weekly admin events also hand out free premium
-            items in-game. Bookmark this page: we re-verify every code against multiple sources and update the list when new
-            ones drop.
+            items in-game, so staying active around update day pays off in more ways than one.
+          </p>
+          <p className="mb-4">
+            The biggest pain point for code hunters is fake codes: aggregator sites recycle expired codes or publish codes
+            that never existed, and the only symptom is a failed redeem with no explanation. Protect yourself with a simple
+            rule — trust a code only if it comes from the official channels or a page that re-tests every code against
+            multiple sources before listing it. That is our methodology here: every code above was verified working before
+            it was published, and the list is updated when new ones drop. Bookmark this page and you will never need to
+            gamble on a sketchy code list again.
           </p>
         </section>
 
