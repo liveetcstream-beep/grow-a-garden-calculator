@@ -106,6 +106,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.75,
     },
     {
+      url: `${baseUrl}/grow-a-garden-2/wiki/pets/rainbowturtle`,
+      lastModified: new Date('2026-10-17'),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/grow-a-garden-2/wiki/pets/dragonfly`,
+      lastModified: new Date('2026-10-17'),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/grow-a-garden-2/wiki/plants/bamboo`,
+      lastModified: new Date('2026-10-17'),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/grow-a-garden-2/wiki/plants/sunflower`,
+      lastModified: new Date('2026-10-17'),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/grow-a-garden-2/wiki/plants/ghostpepper`,
+      lastModified: new Date('2026-10-17'),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/grow-a-garden-2/wiki/plants/dragonsbreath`,
+      lastModified: new Date('2026-10-17'),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
+    {
       url: `${baseUrl}/grow-a-garden-2/stock-predictor`,
       lastModified: recentlyUpdated,
       changeFrequency: 'weekly',
