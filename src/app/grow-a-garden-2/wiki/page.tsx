@@ -130,6 +130,42 @@ const indexCards = [
     desc: "How much is the Bunny worth? Price, +5 walk speed, and trade value.",
   },
   {
+    href: "/grow-a-garden-2/wiki/pets/rainbowturtle",
+    icon: "🌈",
+    title: "Rainbow Turtle Guide",
+    desc: "+30 backpack slots: Rainbow Turtle spawn, stacking, and trade value.",
+  },
+  {
+    href: "/grow-a-garden-2/wiki/pets/dragonfly",
+    icon: "✨",
+    title: "Golden Dragonfly Guide",
+    desc: "The 9M Mythic pet: 2x Gold mutation chance, value, and how to get it.",
+  },
+  {
+    href: "/grow-a-garden-2/wiki/plants/bamboo",
+    icon: "🎋",
+    title: "Bamboo Guide",
+    desc: "Rare 700-sheckle single-harvest crop: value, mutation farming, profit math.",
+  },
+  {
+    href: "/grow-a-garden-2/wiki/plants/sunflower",
+    icon: "🌻",
+    title: "Sunflower Guide",
+    desc: "Legendary 5M crop: price, harvest-type dispute, and profit vs Cherry.",
+  },
+  {
+    href: "/grow-a-garden-2/wiki/plants/ghostpepper",
+    icon: "🌶️",
+    title: "Ghost Pepper Guide",
+    desc: "Mythic pack-only crop: 1% odds, Robux costs, plant size, and defense use.",
+  },
+  {
+    href: "/grow-a-garden-2/wiki/plants/dragonsbreath",
+    icon: "🐉",
+    title: "Dragon's Breath Guide",
+    desc: "How much does Dragon's Breath cost? 90M Super crop stats and strategy.",
+  },
+  {
     href: "/grow-a-garden-2/trades",
     icon: "🤝",
     title: "Trading Guide",
