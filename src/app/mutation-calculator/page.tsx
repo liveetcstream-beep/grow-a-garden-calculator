@@ -3,8 +3,8 @@ import MutationCalculator from "@/components/MutationCalculator";
 import Link from "next/link";
 import { MUTATIONS } from "@/data/mutations";
 
-const mutationCalcTitle = "Mutation Value Calculator - Stack Grow A Garden Mutations";
-const mutationCalcDesc = "Calculate mutation multiplier stacks in Grow A Garden. Browse 150+ mutations, see combined values, and find the highest multiplier combos.";
+const mutationCalcTitle = "Mutation Calculator Grow A Garden: Stack Multipliers";
+const mutationCalcDesc = "Stack Grow A Garden Mutations And Calculate The Total Multiplier On Crop Value. Use This Free Mutation Calculator For Exact Results.";
 const mutationCalcUrl = "https://growagardencalcs.com/mutation-calculator";
 
 const mutationCalcFaqs = [
