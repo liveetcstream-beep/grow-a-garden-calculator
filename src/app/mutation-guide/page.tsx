@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MUTATIONS } from "@/data/mutations";
 
-const pageTitle = "172 Grow A Garden Mutations – Multipliers & How to Get";
-const pageDesc = "All 172 Grow A Garden mutations with exact multipliers — Fractured ×92, Aurora ×90, Shocked ×100. Tier list, combos and how to get each. Updated 2026.";
+const pageTitle = "Grow A Garden Mutations: 172+ Multipliers 2026";
+const pageDesc = "Explore 172+ Grow A Garden Mutations With Exact Multipliers, Tier Lists, And How To Get Each One. See Fractured ×92, Aurora ×90, And Shocked ×100.";
 const pageUrl = "https://growagardencalcs.com/mutation-guide";
 
 export const metadata: Metadata = {
