@@ -137,7 +137,7 @@ export default function AboutPage() {
           <h1 className="text-4xl sm:text-5xl font-black mb-6" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
             About{" "}
             <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              GAG Calculator
+              GrowAGardenCalcs
             </span>
           </h1>
           <p className="text-base max-w-2xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
@@ -289,7 +289,7 @@ export default function AboutPage() {
         <div className="text-center">
           <Link href="/" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-bold text-white transition-all hover:scale-105 hover:shadow-xl"
             style={{ background: "var(--gradient-1)" }}>
-            🌱 Start Calculating Now
+            🌱 Try The GAG Calculator
           </Link>
         </div>
 
