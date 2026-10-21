@@ -18,6 +18,13 @@ const nextConfig: NextConfig = {
         destination: "/mutation/enchanted",
         permanent: true,
       },
+      {
+        // Stray URL showing as 404 in GSC (last crawled Sep 3, 2026).
+        // No matching content exists — send to homepage.
+        source: "/kg",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
 };
