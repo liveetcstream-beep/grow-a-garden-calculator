@@ -212,7 +212,7 @@ export default function HomePage() {
 
   // Get popular crops for quick links
   const popularCrops = CROPS.filter(c =>
-    ["mango", "easter-egg", "starfruit", "diamond-fruit", "aurora-vine", "void-berry", "golden-apple", "magic-bean", "crystal-lotus", "dragon-fruit", "coconut", "watermelon"].includes(c.id)
+    ["mango", "easter-egg", "starfruit", "diamond-fruit", "aurora-vine", "void-berry", "golden-apple", "magic-bean", "crystal-lotus", "dragon-fruit", "coconut", "watermelon", "phantom-pepper", "dino-egg-plant", "strawberry", "pepper", "eggplant", "butternut-squash", "badland-pepper", "papaya", "mint", "aloe-vera", "zen-lily"].includes(c.id)
   );
 
   return (
