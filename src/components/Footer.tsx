@@ -96,6 +96,11 @@ export default function Footer() {
                   👥 Facebook
                 </a>
               </li>
+              <li>
+                <a href="https://www.youtube.com/@GrowAGardenCalcs" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors hover:text-[var(--primary)]" style={{ color: 'var(--muted)' }}>
+                  ▶️ YouTube
+                </a>
+              </li>
             </ul>
           </div>
         </div>
