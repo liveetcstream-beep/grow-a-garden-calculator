@@ -582,7 +582,7 @@ export default function HomePage() {
             <strong>×1,000</strong>. This is the mechanic behind every jaw-dropping harvest screenshot you have seen.
           </p>
           <p className="mb-4">
-            The most sought-after mutations include <strong>Fractured (×92)</strong>, obtained by combining Glitched and Plasma,
+            The most sought-after mutations include <Link href="/mutation/fractured" className="text-[var(--primary)] hover:underline font-semibold">Fractured (×92)</Link>, obtained by combining Glitched and Plasma,
             and the legendary <strong>Goldsparkle (×500)</strong> — the highest single multiplier in the game. Because stacking is
             multiplicative, even mid-tier mutations compound fast: three ×20-range mutations already push past ×8,000 on the base
             price. Use our <Link href="/mutation-calculator" className="text-[var(--primary)] hover:underline font-semibold">mutation calculator</Link> to
