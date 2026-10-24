@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     "rot": "Rotting Mutation Grow A Garden – Multiplier & Guide (×8)",
     "aurora": "Aurora Mutation Grow A Garden – Multiplier & Guide (×90)",
     "luminous": "Luminous Mutation Grow A Garden – Multiplier & Guide (×50)",
+    "fractured": "Fractured Mutation Multiplier Grow A Garden – Guide (×92)",
   };
   // CTR-optimized descriptions (strictly under 155 chars)
   const MUTATION_DESC_OVERRIDES: Record<string, string> = {
