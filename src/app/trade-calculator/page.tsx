@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import TradeCalculator from "@/components/TradeCalculator";
 import Link from "next/link";
 
-const tradeCalcTitle = "GAG Calculator Trade Tools | Win Fair Lose | Grow A Garden";
-const tradeCalcDesc = "Use the ultimate GAG calculator to compare trade values in Grow A Garden. Find out if your trade is a WIN, FAIR, or LOSE. Share trade exports.";
+const tradeCalcTitle = "Gag Trade Calculator: Win, Fair Or Lose Checker 2026";
+const tradeCalcDesc = "Use Our Free Gag Trade Calculator To Compare Grow A Garden Trade Values And Check If Your Trade Is A Win, Fair, Or Lose. No Signup Needed.";
 const tradeCalcUrl = "https://growagardencalcs.com/trade-calculator";
 
 export const metadata: Metadata = {
