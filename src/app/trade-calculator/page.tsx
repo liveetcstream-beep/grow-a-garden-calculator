@@ -90,7 +90,7 @@ export default function TradeCalculatorPage() {
             <h3 className="text-lg font-bold mb-3 text-white">Top 3 Trading Rules in GAG</h3>
             <ul className="text-sm space-y-2 list-disc pl-5" style={{ color: 'var(--muted)' }}>
               <li>
-                <strong>Always Factor in Mutations:</strong> A crop with a Golden (x20) or Rainbow (x50) mutation is worth far more than a standard crop. Always apply mutation filters in the <strong>gag trade calculator</strong>.
+                <strong>Always Factor in Mutations:</strong> A crop with a Golden (x20), Rainbow (x50), or <Link href="/mutation/fractured" className="text-[var(--primary)] hover:underline font-semibold">Fractured (×92)</Link> mutation is worth far more than a standard crop. Always apply mutation filters in the <strong>gag trade calculator</strong>.
               </li>
               <li>
                 <strong>Watch the Weight Scaling:</strong> Because value scales with Weight², a single 10kg crop is worth 100 times more than a 1kg crop of the same type. Weight is the ultimate profit driver!
