@@ -239,7 +239,11 @@ export default function MutationGuidePage() {
               <Link href="/mutation-calculator" className="text-[var(--primary)] hover:underline font-bold">
                 mutation calculator
               </Link>{" "}
-              to compute any stack instantly.
+              to compute any stack instantly. Read our full{" "}
+              <Link href="/mutation-stacking-guide" className="text-[var(--primary)] hover:underline font-bold">
+                mutation stacking guide
+              </Link>{" "}
+              for the best combos and worked examples.
             </p>
           </div>
 
