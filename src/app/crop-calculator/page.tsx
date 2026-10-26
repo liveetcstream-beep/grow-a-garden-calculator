@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CropCalculator from "@/components/CropCalculator";
 
-const cropCalcTitle = "Grow A Garden Crop Calculator – Calculate Crop Values";
+const cropCalcTitle = "Grow A Garden Value Calculator: Exact Crop Values";
 const cropCalcDesc = "Calculate exact Grow A Garden crop values with weight scaling, mutations, and friend boost. Free GAG crop value calculator tool.";
 const cropCalcUrl = "https://growagardencalcs.com/crop-calculator";
 
@@ -38,7 +38,7 @@ const cropCalcFaqSchema = {
 export const metadata: Metadata = {
   title: cropCalcTitle,
   description: cropCalcDesc,
-  keywords: ["grow a garden crop calculator", "crop value calculator", "GAG crop calculator", "grow a garden crop value", "crop calculator gag"],
+  keywords: ["grow a garden value calculator", "gag value calculator", "grow a garden values", "grow a garden crop calculator", "crop value calculator", "GAG crop calculator", "grow a garden crop value", "crop calculator gag"],
   alternates: { canonical: '/crop-calculator' },
   openGraph: {
     title: cropCalcTitle,
