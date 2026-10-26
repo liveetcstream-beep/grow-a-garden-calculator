@@ -178,6 +178,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/mutation-stacking-guide`,
+      lastModified: staticLastMod,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/reverse-calculator`,
       lastModified: staticLastMod,
       changeFrequency: 'weekly',
