@@ -134,7 +134,7 @@ export default function ValueListPage() {
           <p>
             Before any big trade, run both sides through our <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-semibold">trade calculator</Link> for
             an instant Win / Fair / Lose verdict. To see exactly what a single harvest is worth with its weight and mutations,
-            use the <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">crop calculator</Link>;
+            use the <Link href="/crop-calculator" className="text-[var(--primary)] hover:underline font-semibold">crop value calculator</Link>;
             for pets, the <Link href="/pet-calculator" className="text-[var(--primary)] hover:underline font-semibold">pet calculator</Link> factors
             in base value, rarity and ability multipliers. New to mutations? The <Link href="/mutation-guide" className="text-[var(--primary)] hover:underline font-semibold">mutation guide</Link> lists
             every mutation multiplier and how to obtain it.
