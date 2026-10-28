@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const MUTATION_TITLE_OVERRIDES: Record<string, string> = {
     "shadow": "Shadow Mutation Grow A Garden – Multiplier & Guide (×70)",
     "rot": "Rotting Mutation Grow A Garden – Multiplier & Guide (×8)",
+    "webbed": "Webbed Mutation Grow A Garden – Multiplier & Guide (×8)",
     "aurora": "Aurora Mutation Grow A Garden – Multiplier & Guide (×90)",
     "luminous": "Luminous Mutation Grow A Garden – Multiplier & Guide (×50)",
     "fractured": "Fractured Mutation Multiplier Grow A Garden – Guide (×92)",
@@ -36,6 +37,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const MUTATION_DESC_OVERRIDES: Record<string, string> = {
     "shadow": "Get the Shadow (Shadowbound) mutation in Grow A Garden (×70 multiplier). Learn Umbral + Gloom combos and calculate crop values with our GAG calculator.",
     "rot": "The Rot (Rotting) mutation gives a ×8 multiplier in Grow A Garden. Learn how to get Rot via the Mandrake pet and calculate crop values instantly.",
+    "webbed": "The Webbed mutation gives a ×8 multiplier in Grow A Garden. Get it via the Trapdoor Spider pet ability and calculate crop values instantly.",
     "aurora": "The Aurora mutation gives a ×90 multiplier in Grow A Garden. Triggered during the Aurora Borealis event. Calculate crop values and combos instantly.",
     "luminous": "The Luminous mutation gives a ×50 multiplier in Grow A Garden. Obtain via Sprite pet, spray, or pet shard. Calculate crop value with our GAG calculator.",
     "fractured": "Fractured gives a ×92 multiplier in Grow A Garden — one of the strongest mutations. How to get it, best stacking combos and exact crop values.",
