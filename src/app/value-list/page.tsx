@@ -3,10 +3,11 @@ import Link from "next/link";
 import { CROPS } from "@/data/crops";
 import { PETS } from "@/data/pets";
 import { getCanonical } from "@/lib/canonical";
+import { formatDataUpdatedAt } from "@/lib/contentDates";
 import ValueListTabs from "./ValueListTabs";
 
 const valListTitle = "Grow a Garden Pet & Crop Values List - GAG";
-const valListDesc = "Live Grow a Garden pet values and crop value list for 2026. Check GAG values, trade fairness (Win/Fair/Lose) and mutation multipliers. Updated daily.";
+const valListDesc = "Browse Grow A Garden crop and pet values, compare GAG trade values, and open calculators. Dates show when each data source was last updated.";
 const valListUrl = "https://growagardencalcs.com/value-list";
 
 export const generateMetadata = async (): Promise<Metadata> => {
@@ -52,7 +53,7 @@ const faqs = [
   },
   {
     q: "What is the most valuable crop in Grow a Garden?",
-    a: "By base price, the most valuable crops are Diamond Fruit (10,000 coins), Obsidian Onion (9,000) and Ruby Rose (8,000). But final crop value is driven by weight and mutations — a heavy, multi-mutated common crop can easily out-value a plain rare one. Check any crop's live value on its dedicated calculator page.",
+    a: "By base price, the most valuable crops in the site's stored data are Diamond Fruit (10,000 coins), Obsidian Onion (9,000) and Ruby Rose (8,000). But final crop value is driven by weight and mutations — a heavy, multi-mutated common crop can out-value a plain rare one. Calculate a crop's value on its dedicated page.",
   },
   {
     q: "How do mutations change GAG values?",
@@ -60,11 +61,11 @@ const faqs = [
   },
   {
     q: "What does Win / Fair / Lose mean on the trade calculator?",
-    a: "Win means your side of the trade is worth more than what you give — you profit. Fair means both sides are within a small margin of each other. Lose means you are overpaying. The rating is computed from live pet and crop values in this value list, so it stays accurate as the game updates.",
+    a: "Win means your side of the trade is worth more than what you give — you profit. Fair means both sides are within a small margin of each other. Lose means you are overpaying. The rating is calculated from the pet and crop values stored on this site.",
   },
   {
     q: "How often is this GAG value list updated?",
-    a: "This value list is updated daily to track game patches, new pets, new crops and balance changes. Every value on this page feeds directly into our calculators, so the numbers you see here are the same numbers behind every calculation on the site.",
+    a: "The crop and pet dates at the top of this page follow the latest committed changes to their data lists. A new deployment alone does not advance those dates. The values here feed the calculators across the site.",
   },
 ];
 
@@ -109,8 +110,11 @@ export default function ValueListPage() {
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
           Welcome to the complete <strong>grow a garden pet values</strong> and <strong>gag values</strong> database for 2026.
-          Below is the live-updated value directory for all crops, seeds, event fruits, and mythical pets.
+          Below is the value directory for all crops, seeds, event fruits, and pets from the site&apos;s stored data.
           Whether you are comparing trading multipliers, checking <strong>gag pet values</strong>, or searching for fair <strong>gag trade values</strong>, this directory provides instant access to base prices and multiplier tables.
+        </p>
+        <p className="text-xs max-w-3xl mx-auto leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
+          Crop data last updated: {formatDataUpdatedAt("crops")} · Pet data last updated: {formatDataUpdatedAt("pets")}
         </p>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
           Use this value list to verify crop base values, or open our master <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">Grow A Garden Calculator</Link> to calculate weight and mutation values instantly. Click any item card to open its dedicated live calculator.

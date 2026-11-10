@@ -72,6 +72,8 @@ const fracturedMutation = MUTATIONS.find((m) => m.id === "fractured");
 const auroraMutation = MUTATIONS.find((m) => m.id === "aurora");
 const astralMutation = MUTATIONS.find((m) => m.id === "astral");
 const goldSparkleMutation = MUTATIONS.find((m) => m.id === "goldsparkle");
+const enchantedMutation = MUTATIONS.find((m) => m.id === "enchanted");
+const grimMutation = MUTATIONS.find((m) => m.id === "grim");
 
 // FAQ data
 const faqs = [
@@ -516,6 +518,28 @@ export default function MutationGuidePage() {
           <p className="mt-3 text-xs" style={{ color: "var(--muted)" }}>
             Apply these mutation multipliers to any crop using our master <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">Grow A Garden Calculator</Link>, or compute custom stacks in the <Link href="/mutation-calculator" className="text-[var(--primary)] hover:underline">Mutation Calculator</Link>.
           </p>
+        </div>
+      </section>
+
+      <section className="mb-12" aria-labelledby="popular-mutation-pages">
+        <div className="glass-card-static p-6">
+          <h2 id="popular-mutation-pages" className="text-xl font-bold mb-3" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+            Popular Grow A Garden Mutation Pages
+          </h2>
+          <p className="text-sm mb-4" style={{ color: "var(--muted)" }}>
+            Open a mutation page for its multiplier, source, and crop value examples.
+          </p>
+          <div className="flex flex-wrap gap-x-5 gap-y-3 text-sm">
+            <Link href="/mutation/enchanted" className="text-[var(--primary)] hover:underline font-semibold">
+              Enchanted mutation multiplier (×{enchantedMutation?.multiplier ?? 50})
+            </Link>
+            <Link href="/mutation/grim" className="text-[var(--primary)] hover:underline font-semibold">
+              Grim mutation (×{grimMutation?.multiplier ?? 170})
+            </Link>
+            <Link href="/mutation/fractured" className="text-[var(--primary)] hover:underline font-semibold">
+              Fractured mutation multiplier (×{fracturedMutation?.multiplier ?? 92})
+            </Link>
+          </div>
         </div>
       </section>
 

@@ -2,10 +2,9 @@ import Link from "next/link";
 import Dashboard from "@/components/Dashboard";
 import EEATAssets from "@/components/EEATAssets";
 import { CROPS } from "@/data/crops";
-import { getLastMondayFormatted } from "@/lib/dateUtils";
+import { formatDataUpdatedAt } from "@/lib/contentDates";
 import type { Metadata } from "next";
 
-const lastMondayDate = getLastMondayFormatted();
 const pageTitle = "Grow A Garden Calculator: Exact Values & Trades 2026";
 const pageDesc = "Use Our Free GAG Calculator For Crop Values, Pet Stats, Mutation Multipliers, And Fair Trades. No Signup Needed. Updated For 2026.";
 
@@ -101,14 +100,14 @@ const FAQ_DATA = [
   },
   {
     q: "Where can I find the complete gag values list for trading?",
-    aText: "You can view the full live database of all crop, seed, and pet prices on our Grow A Garden Value List page. It updates constantly with current market trends.",
+    aText: "You can view the full database of crop, seed, and pet prices on our Grow A Garden Value List page.",
     aRender: (
       <>
-        You can view the full live database of all crop, seed, and pet market prices on our{" "}
+        You can view the database of crop, seed, and pet prices on our{" "}
         <Link href="/value-list" className="text-[var(--primary)] hover:underline font-semibold">
           Grow A Garden Value List
         </Link>{" "}
-        page, which features current trading multipliers and baseline market values.
+        page, which lists the values stored on this site.
       </>
     )
   },
@@ -236,10 +235,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto relative z-10">
           
           <div className="text-center mb-8">
-            {/* Automated Verified Patch Badge */}
+            {/* Dataset update dates come from the last source change, not the deploy clock. */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold mb-4 border" style={{ background: 'var(--surface-1)', borderColor: 'rgba(34,197,94,0.3)', color: 'var(--primary)' }}>
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>🔔 Data verified for latest patch | Last verified: September 13, 2026</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span>Data last updated: crops {formatDataUpdatedAt("crops")} · mutations {formatDataUpdatedAt("mutations")} · pets {formatDataUpdatedAt("pets")}</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-black mb-3" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
@@ -256,13 +255,13 @@ export default function HomePage() {
             </h2>
           </div>
 
-          {/* What's New Announcement Banner */}
+          {/* Dataset update dates */}
           <div className="mb-6 p-4 rounded-2xl border flex flex-col sm:flex-row items-center justify-between gap-3 text-left" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)' }}>
             <div className="flex items-center gap-3">
               <span className="text-2xl">✨</span>
               <div>
-                <h3 className="text-xs font-bold uppercase tracking-wider text-[var(--primary)]">What&apos;s New This Week</h3>
-                <p className="text-xs font-semibold text-[var(--foreground)]">All 99+ crop base prices &amp; 173+ mutation multipliers verified in-game (September 13, 2026)</p>
+                <h3 className="text-xs font-bold uppercase tracking-wider text-[var(--primary)]">Data update dates</h3>
+                <p className="text-xs font-semibold text-[var(--foreground)]">Crop values: {formatDataUpdatedAt("crops")} · Mutation values: {formatDataUpdatedAt("mutations")} · Pet values: {formatDataUpdatedAt("pets")}</p>
               </div>
             </div>
             <a href="https://discord.gg/growagarden" target="_blank" rel="noopener noreferrer" className="text-xs font-bold px-3 py-1.5 rounded-xl bg-[var(--primary)] text-white hover:opacity-90 shrink-0 transition-opacity">
@@ -300,20 +299,20 @@ export default function HomePage() {
             </div>
             <div className="grid sm:grid-cols-2 gap-3 text-xs" style={{ color: "var(--muted)" }}>
               <div className="p-3 rounded-xl" style={{ background: "var(--surface-2)" }}>
-                <p className="font-bold text-[var(--foreground)] mb-1">🌾 Verified In-Game Base Values</p>
-                <p>Base coin prices for all 99+ crops are verified directly in-game from the Seed Shop and event shops.</p>
+                <p className="font-bold text-[var(--foreground)] mb-1">🌾 Crop Base Values</p>
+                <p>Crop base prices are read from the site&apos;s crop dataset. Its update date is shown above.</p>
               </div>
               <div className="p-3 rounded-xl" style={{ background: "var(--surface-2)" }}>
-                <p className="font-bold text-[var(--foreground)] mb-1">⚖️ Exact Quadratic Weight Scaling</p>
-                <p>Calculates with the verified GAG formula: Base Price × (Weight in kg)² tested across all weight ranges.</p>
+                <p className="font-bold text-[var(--foreground)] mb-1">⚖️ Weight Calculation</p>
+                <p>The calculator applies the stored formula: base price × weight in kg squared.</p>
               </div>
               <div className="p-3 rounded-xl" style={{ background: "var(--surface-2)" }}>
                 <p className="font-bold text-[var(--foreground)] mb-1">🧬 Compounded Mutation Multipliers</p>
                 <p>Multipliers (Golden ×20, Rainbow ×50, Aurora ×90, Fractured ×92) compound multiplicatively per game mechanics.</p>
               </div>
               <div className="p-3 rounded-xl" style={{ background: "var(--surface-2)" }}>
-                <p className="font-bold text-[var(--foreground)] mb-1">🔄 Patch-Verified Updates</p>
-                <p>Whenever Roblox Grow A Garden releases a patch or balance change, our team re-tests numbers immediately.</p>
+                <p className="font-bold text-[var(--foreground)] mb-1">🔄 Data Updates</p>
+                <p>These dates change when the corresponding crop, mutation, or pet data is changed in the site repository. They do not indicate a new game patch by themselves.</p>
               </div>
             </div>
           </div>
@@ -604,7 +603,7 @@ export default function HomePage() {
             Never guess a pet's price in a trade. Our <Link href="/pet-calculator" className="text-[var(--primary)] hover:underline font-semibold">pet calculator</Link> combines
             base value, rarity, age modifiers and ability boosts into one accurate market estimate, and the{" "}
             <Link href="/value-list" className="text-[var(--primary)] hover:underline font-semibold">value list</Link> shows
-            live prices for every pet side by side.
+            stored base values for every pet side by side.
           </p>
 
           <h3 className="text-lg font-bold mt-8 mb-3 text-left" style={{ color: 'var(--foreground)' }}>

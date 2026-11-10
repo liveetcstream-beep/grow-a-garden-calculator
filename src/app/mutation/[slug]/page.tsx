@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 import { MUTATIONS } from "@/data/mutations";
 import { CROPS } from "@/data/crops";
-import { getLastMondayFormatted } from "@/lib/dateUtils";
+import { formatSourceDate, getDataUpdatedAt, getLatestSourceModifiedAt } from "@/lib/contentDates";
 import Link from "next/link";
 
-const lastMondayDate = getLastMondayFormatted();
+const mutationDataUpdatedAt = getDataUpdatedAt("mutations");
+const mutationPageUpdatedAt = getLatestSourceModifiedAt(["src/app/mutation/[slug]/page.tsx", "src/data/mutations.ts"]);
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -68,7 +69,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: pageUrl,
       siteName: "Grow A Garden Calculator",
       publishedTime: "2026-07-01T00:00:00.000Z",
-      modifiedTime: new Date().toISOString(),
+      ...(mutationPageUpdatedAt ? { modifiedTime: mutationPageUpdatedAt.toISOString() } : {}),
       authors: ["GrowAGardenCalcs Team"],
       images: [
         {
@@ -237,7 +238,7 @@ export default async function MutationPage({ params }: PageProps) {
 
           <div className="flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full border" style={{ background: 'var(--surface-1)', borderColor: 'rgba(34,197,94,0.3)', color: 'var(--primary)' }}>
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Last Verified: {lastMondayDate}</span>
+            <span>Mutation data last updated: {mutationDataUpdatedAt ? formatSourceDate(mutationDataUpdatedAt) : "Date unavailable"}</span>
           </div>
         </div>
 
@@ -275,7 +276,7 @@ export default async function MutationPage({ params }: PageProps) {
             <span>⚡</span> In-Game Multiplier Impact ({mutation.name} ×{mutation.multiplier} Benchmark)
           </h3>
           <span className="text-[10px] px-2 py-0.5 rounded-full font-semibold" style={{ background: 'rgba(34,197,94,0.15)', color: 'var(--primary)' }}>
-            Verified Test Data
+            Calculated from stored mutation values
           </span>
         </div>
         <p className="text-xs leading-relaxed mb-3 text-left" style={{ color: 'var(--muted)' }}>
@@ -286,9 +287,9 @@ export default async function MutationPage({ params }: PageProps) {
             : ` While an accessible mid-tier mutation, combining ${mutation.name} with secondary soil boosts exponentially elevates profit.`}
         </p>
         <div className="flex items-center gap-3 text-[11px] flex-wrap pt-2 border-t" style={{ borderColor: 'var(--glass-border)', color: 'var(--muted)' }}>
-          <span>💬 Community-verified values from GAG Discord</span>
+          <span>Multiplier data from the site&apos;s mutation table</span>
           <span>•</span>
-          <span>📜 Formula source: Official GAG mechanics (verified {lastMondayDate})</span>
+          <span>📜 Formula used by this calculator</span>
         </div>
       </div>
 
@@ -299,7 +300,7 @@ export default async function MutationPage({ params }: PageProps) {
             📊 {mutation.name} Value Examples (Weight = 1kg)
           </h2>
           <span className="text-xs font-bold px-2.5 py-1 rounded-md" style={{ background: 'rgba(59,130,246,0.15)', color: '#60a5fa', border: '1px solid rgba(59,130,246,0.3)' }}>
-            ✓ Tested in-game
+            Calculated using listed mutation multiplier
           </span>
         </div>
         <div className="overflow-x-auto">
@@ -350,7 +351,7 @@ export default async function MutationPage({ params }: PageProps) {
           <span>🧪</span> Real Harvest Case Study: 10kg Harvest with {mutation.name}
         </h2>
         <p className="text-xs leading-relaxed mb-4 text-left" style={{ color: 'var(--muted)' }}>
-          Here is a step-by-step breakdown of how a single 10 kg crop with <strong>{mutation.name} (×{mutation.multiplier})</strong> scales under live server parameters:
+          Here is a step-by-step breakdown of how a single 10 kg crop with <strong>{mutation.name} (×{mutation.multiplier})</strong> calculates using the stored crop and mutation values:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
           <div className="p-3 rounded-xl border" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)' }}>
@@ -486,10 +487,6 @@ export default async function MutationPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* 10. Automated Monday Verification Footer */}
-      <div className="p-4 rounded-2xl border text-center text-xs mb-8" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)', color: 'var(--muted)' }}>
-        🛡️ <strong>Verification Guarantee:</strong> {mutation.name} multiplier data verified against live game patches on <strong>{lastMondayDate}</strong>.
-      </div>
     </div>
   );
 }
