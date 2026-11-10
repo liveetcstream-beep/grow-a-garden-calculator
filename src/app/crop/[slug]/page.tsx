@@ -1,11 +1,12 @@
 import { Metadata } from "next";
 import { CROPS } from "@/data/crops";
 import { MUTATIONS } from "@/data/mutations";
-import { getLastMondayFormatted } from "@/lib/dateUtils";
+import { formatSourceDate, getDataUpdatedAt, getLatestSourceModifiedAt } from "@/lib/contentDates";
 import Link from "next/link";
 import CropMiniCalculator from "./CropMiniCalculator";
 
-const lastMondayDate = getLastMondayFormatted();
+const cropDataUpdatedAt = getDataUpdatedAt("crops");
+const cropPageUpdatedAt = getLatestSourceModifiedAt(["src/app/crop/[slug]/page.tsx", "src/data/crops.ts"]);
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -71,7 +72,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: pageUrl,
       siteName: "Grow A Garden Calculator",
       publishedTime: "2026-07-01T00:00:00.000Z",
-      modifiedTime: new Date().toISOString(),
+      ...(cropPageUpdatedAt ? { modifiedTime: cropPageUpdatedAt.toISOString() } : {}),
       authors: ["GrowAGardenCalcs Team"],
       images: [
         {
@@ -93,7 +94,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 const CROP_UNIQUE_GUIDES: Record<string, string> = {
-  "mango": "Mango is currently one of the most profitable Exotic Seed Pack crops in Grow A Garden as of July 2026. In our testing across 10 server runs during the Summer Event, Mango plants consistently reached the 8–10 kg weight tier with automated water timer setups. At a 10 kg weight multiplier (10² = 100x), a base 350 coin Mango scales to 35,000 coins base value. When combined with a Rainbow mutation (×50), the calculated sell value reaches 1,750,000 coins — a figure we verified in live server testing. During summer events, Mango seed drop rates in Exotic Seed Packs increase by ~3x, making it the premier choice for scaling backpack net worth.",
+  "mango": "Mango's stored base price is 350 coins. At 10 kg, the calculator applies a 100× weight multiplier for 35,000 base coins; with Rainbow (×50), the calculated value is 1,750,000 coins. These amounts use the crop value and formula shown on this page. Seed availability and event rates can change, so check the game for current drop details.",
   
   "starfruit": "Starfruit is the flagship Night Event crop in Grow A Garden with a high base price of 400 coins. Because it thrives exclusively under night lighting cycles, harvesting Starfruit during server night phases applies a base speed boost. At 10 kg with a Golden mutation (×20), a single Starfruit yields 800,000 coins. In community trading Discord servers, Starfruit is widely used as a liquid currency alongside Dragon Fruit because of its stable price floor and high demand among alchemy crafters.",
   
@@ -157,7 +158,7 @@ function getHowToGetText(crop: any) {
   const valGolden = (basePrice * 100 * 20).toLocaleString();
   const valRainbow = (basePrice * 100 * 50).toLocaleString();
 
-  return `The ${crop.name} is a ${crop.category} crop in Grow A Garden with a verified base price of ${basePrice} coins. Under the game's quadratic weight scaling formula (Weight²), a 5 kg ${crop.name} yields ${val5kg} base coins, while a 10 kg harvest scales 100-fold to ${val10kg} base coins before mutations. When applying a Golden mutation (×20), a 10 kg harvest reaches ${valGolden} coins, and a Rainbow mutation (×50) pushes it to ${valRainbow} coins. Whether you are farming ${crop.name} seeds from ${crop.category} drops or evaluating trade offers, using our GAG calculator ensures you receive full market coin value.`;
+  return `The ${crop.name} is a ${crop.category} crop in Grow A Garden with a stored base price of ${basePrice} coins. Under the calculator's quadratic weight formula (Weight²), a 5 kg ${crop.name} yields ${val5kg} base coins, while a 10 kg harvest scales 100-fold to ${val10kg} base coins before mutations. With Golden (×20), a 10 kg harvest calculates to ${valGolden} coins; with Rainbow (×50), it calculates to ${valRainbow} coins. Use the crop data update date above to see when this dataset was last changed.`;
 }
 
 const CROP_ANGLES: Record<string, string> = {
@@ -345,7 +346,7 @@ export default async function CropValuePage({ params }: PageProps) {
         <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
           The {crop.name} is a {crop.category} crop in Grow A Garden with a base price of {crop.basePrice} coins.
           Use the interactive engine below to calculate its exact sell value based on weight, mutations, and friend boost.
-          The official selling formula is: <strong style={{ color: 'var(--primary)' }}>Value = {crop.basePrice} × Weight² × Mutation Multipliers × (1 + Friend Boost %) × Quantity</strong>.
+          The formula used by this calculator is: <strong style={{ color: 'var(--primary)' }}>Value = {crop.basePrice} × Weight² × Mutation Multipliers × (1 + Friend Boost %) × Quantity</strong>.
         </p>
       </div>
 
@@ -357,7 +358,7 @@ export default async function CropValuePage({ params }: PageProps) {
           </h2>
           <div className="flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full border" style={{ background: 'var(--surface-1)', borderColor: 'rgba(34,197,94,0.3)', color: 'var(--primary)' }}>
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Last Verified: {lastMondayDate}</span>
+            <span>Crop data last updated: {cropDataUpdatedAt ? formatSourceDate(cropDataUpdatedAt) : "Date unavailable"}</span>
           </div>
         </div>
         <CropMiniCalculator crop={crop} />
@@ -380,7 +381,7 @@ export default async function CropValuePage({ params }: PageProps) {
                 <span>⚖️</span> In-Game Yield Comparison ({crop.name} vs {comparisonCrop.name} at 10kg)
               </h3>
               <span className="text-[10px] px-2 py-0.5 rounded-full font-semibold" style={{ background: 'rgba(34,197,94,0.15)', color: 'var(--primary)' }}>
-                Verified Test Data
+              Calculated from stored crop values
               </span>
             </div>
             <p className="text-xs leading-relaxed mb-3" style={{ color: 'var(--muted)' }}>
@@ -395,7 +396,7 @@ export default async function CropValuePage({ params }: PageProps) {
             <div className="flex items-center gap-3 text-[11px] flex-wrap pt-2 border-t" style={{ borderColor: 'var(--glass-border)', color: 'var(--muted)' }}>
               <span>💬 Compare with other crops in our <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">Grow A Garden Calculator</Link></span>
               <span>•</span>
-              <span>📜 Formula source: Official GAG mechanics (verified September 13, 2026)</span>
+              <span>📜 Formula used by this calculator</span>
             </div>
           </div>
         );
@@ -408,7 +409,7 @@ export default async function CropValuePage({ params }: PageProps) {
             📊 {crop.name} Values by Weight
           </h2>
           <span className="text-xs font-bold px-2.5 py-1 rounded-md" style={{ background: 'rgba(59,130,246,0.15)', color: '#60a5fa', border: '1px solid rgba(59,130,246,0.3)' }}>
-            ✓ Tested in-game
+            Calculated using stored crop data
           </span>
         </div>
         <div className="overflow-x-auto">
@@ -591,10 +592,9 @@ export default async function CropValuePage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* 10. Automated Monday Verification Footer */}
-      <div className="p-4 rounded-2xl border text-center text-xs" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)', color: 'var(--muted)' }}>
-        🛡️ <strong>Verification Guarantee:</strong> {crop.name} base price data &amp; weight formulas verified against live game patches on <strong>{lastMondayDate}</strong>.
-      </div>
+      <p className="text-xs text-center mb-8" style={{ color: 'var(--muted)' }}>
+        The date above follows the crop data source update; it is not a separate in-game verification date.
+      </p>
     </div>
   );
 }

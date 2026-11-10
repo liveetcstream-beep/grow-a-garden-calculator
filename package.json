@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run check-meta && next build",
+    "build": "node scripts/prepare-content-history.mjs && npm run check-meta && next build",
     "start": "next start",
     "lint": "eslint",
     "check-meta": "node scripts/check-meta.mjs"
