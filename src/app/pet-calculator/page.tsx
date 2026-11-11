@@ -3,26 +3,26 @@ import PetCalculator from "@/components/PetCalculator";
 import Link from "next/link";
 import { PETS } from "@/data/pets";
 
-const petCalcTitle = "Gag Pet Calculator: Exact Pet Values By Weight";
-const petCalcDesc = "Get Exact Grow A Garden Pet Values By Weight, Age, And Rarity, From Divine To Common. Use This Free Pet Calculator With No Signup.";
+const petCalcTitle = "GAG Pet Calculator | Estimate Values by Weight & Age";
+const petCalcDesc = "Estimate Grow A Garden pet values by weight, age and ability using the stats stored in this free fan-made calculator. Trade offers can vary.";
 const petCalcUrl = "https://growagardencalcs.com/pet-calculator";
 
 const petCalcFaqs = [
   {
     q: "How is a pet's value calculated in Grow A Garden?",
-    a: "Pet value = base value × weight bonus × age bonus × ability multiplier. Weight scales logarithmically, age adds about +2% per day, and the pet's ability applies its multiplier on top. Enter your pet's stats above for the exact figure.",
+    a: "This site's estimate multiplies the stored base value by a weight factor, an age factor and the ability multiplier. These are the calculator's stored rules, not an official game price or a live market quote.",
   },
   {
-    q: "Does a pet's age really affect its trade value?",
-    a: "Yes. Age grants a linear bonus of roughly +2% per day, so a 50-day-old pet is worth about twice its newborn value before weight is even counted. Older pets consistently fetch higher offers in trading hubs.",
+    q: "How does this calculator use pet age?",
+    a: "Its current model uses an age factor of 1 + (age × 0.02). This describes the site's calculation rule; check current in-game mechanics and player offers separately.",
   },
   {
-    q: "Which pets are worth the most?",
-    a: "Divine and Mythic rarity pets with high base values and strong ability multipliers top the market. Open any pet in the directory below to see its exact stats, ability and value-by-age table.",
+    q: "How can I compare two pets?",
+    a: "Open each pet in the directory to review the stats stored on this site, then enter the same weight and age settings in the calculator. Actual trade offers can differ from calculated estimates.",
   },
   {
-    q: "Should I trade my pet now or keep aging it?",
-    a: "If you do not need coins urgently, aging usually wins — the daily bonus compounds with zero effort while the pet stays equipped. Compare your pet's current vs projected value in the calculator before deciding.",
+    q: "Does the result show current player trade prices?",
+    a: "No. It is calculated from the site's stored pet data and the settings you enter. Player demand and trade offers can change independently.",
   },
 ];
 
@@ -76,10 +76,10 @@ export default function PetCalculatorPage() {
           🐾 Pet Calculator Grow A Garden
         </h1>
         <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
-          Welcome to the official <strong>pet calculator grow a garden</strong> hub. Whether you need a lightning-fast <strong>gag pet calculator</strong> for instant trade checks, a precise <strong>grow a garden pet weight calculator</strong> formula, or a <strong>pet age calculator gag</strong> tracker, this engine handles it all. We use real-time market data to estimate exact <strong>gag calculator pets</strong> values by analyzing base stats, ability modifiers, and rarity tiers. 
+          Use this free fan-made <strong>Grow A Garden pet calculator</strong> to estimate a pet value from the base value and stats stored on this site. Enter weight, age, and an ability multiplier to see how the current calculator model combines those inputs.
         </p>
         <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
-          By factoring in complex game mechanics like <strong>logarithmic weight scaling</strong> and linear age bonuses, our tool ensures your <strong>grow a garden value</strong> is 100% accurate. Compare trading margins, filter by mythic or divine rarity, calculate specialized stats with our <Link href="/elephant-calculator" className="text-[var(--primary)] hover:underline font-bold">Elephant Value Calculator</Link>, and maximize your inventory net worth before executing any trades. Got an offer on the table? Verify it first with our <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-bold">gag trade calculator</Link>. For general crop calculations, return to our main <Link href="/" className="text-[var(--primary)] hover:underline font-bold">Grow A Garden Calculator</Link> or check full market rates on the <Link href="/value-list" className="text-[var(--primary)] hover:underline font-bold">GAG Values List</Link>.
+          The result is an estimate based on those stored rules, not a live market price or a guarantee of a fair trade. Browse the <Link href="/value-list" className="text-[var(--primary)] hover:underline font-bold">pet and crop values list</Link>, compare an offer with the <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-bold">GAG trade calculator</Link>, or return to the <Link href="/" className="text-[var(--primary)] hover:underline font-bold">Grow A Garden calculator</Link>.
         </p>
       </div>
       

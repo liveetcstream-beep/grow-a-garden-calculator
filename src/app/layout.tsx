@@ -22,12 +22,9 @@ export const metadata: Metadata = {
   // chars). A template suffix here caused 341/344 pages to truncate in SERPs.
   // Plain string (not { default }) — this Next.js version requires `template`
   // on object titles, and we want no template at all.
-  title: "Grow A Garden Calculator 2026 | GAG Value & Trade W/F/L",
-  description: "The ultimate GAG calculator for Roblox players. Calculate crop values by weight, pet stats and trade values (Win/Fair/Lose) instantly. Free, no signup.",
+  title: "Grow A Garden Calculator | Crop, Pet & Trade Tools",
+  description: "Free fan-made Grow A Garden calculators for crop, pet, mutation, and trade estimates using the values stored on this site.",
   metadataBase: new URL('https://growagardencalcs.com'),
-  authors: [{ name: "GrowAGardenCalcs Team", url: "https://growagardencalcs.com/about" }],
-  creator: "GrowAGardenCalcs Team",
-  publisher: "GrowAGardenCalcs",
   keywords: [
     "grow a garden calculator", 
     "gag calculator", 
@@ -42,8 +39,8 @@ export const metadata: Metadata = {
     canonical: 'https://growagardencalcs.com',
   },
   openGraph: {
-    title: "Grow A Garden Calculator 2026 | GAG Value & Trade W/F/L",
-    description: "The ultimate GAG calculator for Roblox players. Calculate crop values by weight, pet stats and trade values (Win/Fair/Lose) instantly. Free, no signup.",
+    title: "Grow A Garden Calculator | Crop, Pet & Trade Tools",
+    description: "Free fan-made Grow A Garden calculators for crop, pet, mutation, and trade estimates using the values stored on this site.",
     url: 'https://growagardencalcs.com',
     siteName: "Grow A Garden Calculator",
     images: [
@@ -58,8 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grow A Garden Calculator 2026 | GAG Value & Trade W/F/L",
-    description: "The ultimate GAG calculator for Roblox players. Calculate crop values by weight, pet stats and trade values (Win/Fair/Lose) instantly. Free, no signup.",
+    title: "Grow A Garden Calculator | Crop, Pet & Trade Tools",
+    description: "Free fan-made Grow A Garden calculators for crop, pet, mutation, and trade estimates using the values stored on this site.",
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -82,12 +79,12 @@ export default function RootLayout({
   // JSON-LD Schema for rich Google Results
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "WebApplication",
     "name": "Grow A Garden Calculator",
-    "applicationCategory": "GameApplication",
+    "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Web",
     "url": "https://growagardencalcs.com",
-    "description": "The ultimate GAG calculator for Roblox players. Calculate exact crop values, test trade values (Win/Fair/Lose), and check pet stats.",
+    "description": "A free, fan-made set of Grow A Garden calculators for crop, pet, mutation, and trade estimates based on stored values and user inputs.",
     "offers": {
       "@type": "Offer",
       "price": "0",

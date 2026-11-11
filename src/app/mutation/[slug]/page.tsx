@@ -34,16 +34,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     "luminous": "Luminous Mutation Grow A Garden – Multiplier & Guide (×50)",
     "fractured": "Fractured Mutation Multiplier Grow A Garden – Guide (×92)",
   };
-  // CTR-optimized descriptions (strictly under 155 chars)
-  const MUTATION_DESC_OVERRIDES: Record<string, string> = {
-    "shadow": "Get the Shadow (Shadowbound) mutation in Grow A Garden (×70 multiplier). Learn Umbral + Gloom combos and calculate crop values with our GAG calculator.",
-    "rot": "The Rot (Rotting) mutation gives a ×8 multiplier in Grow A Garden. Learn how to get Rot via the Mandrake pet and calculate crop values instantly.",
-    "webbed": "The Webbed mutation gives a ×8 multiplier in Grow A Garden. Get it via the Trapdoor Spider pet ability and calculate crop values instantly.",
-    "aurora": "The Aurora mutation gives a ×90 multiplier in Grow A Garden. Triggered during the Aurora Borealis event. Calculate crop values and combos instantly.",
-    "luminous": "The Luminous mutation gives a ×50 multiplier in Grow A Garden. Obtain via Sprite pet, spray, or pet shard. Calculate crop value with our GAG calculator.",
-    "fractured": "Fractured gives a ×92 multiplier in Grow A Garden — one of the strongest mutations. How to get it, best stacking combos and exact crop values.",
-  };
-
   let pageTitle = MUTATION_TITLE_OVERRIDES[mutation.id];
   if (!pageTitle) {
     pageTitle = `${mutation.name} Mutation – GAG Multiplier (×${mutation.multiplier})`;
@@ -51,14 +41,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       pageTitle = `${mutation.name} Mutation – GAG (×${mutation.multiplier})`;
     }
   }
-  const pageDesc = MUTATION_DESC_OVERRIDES[mutation.id] ?? `${mutation.name}: ×${mutation.multiplier} multiplier in Grow A Garden. How to get it, best stacking combos and exact crop values with our free calculator.`;
+  const pageDesc = `${mutation.name}: ×${mutation.multiplier} is the multiplier listed in this Grow A Garden site's data. See calculation examples and try it in the free mutation calculator.`;
   const pageUrl = `https://growagardencalcs.com/mutation/${mutation.id}`;
 
   return {
     title: pageTitle,
     description: pageDesc,
     keywords: [`${mutation.name} mutation grow a garden`, `${mutation.name} mutation multiplier`, `grow a garden ${mutation.name} mutation`, `${mutation.name} mutation value`, `GAG mutation calculator`],
-    authors: [{ name: "GrowAGardenCalcs Team", url: "https://growagardencalcs.com/about" }],
     alternates: {
       // Aurora has a dedicated standalone authority page — point canonical there to consolidate signals
       canonical: mutation.id === "aurora" ? `/aurora-mutation` : `/mutation/${mutation.id}`,
@@ -68,9 +57,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: pageDesc,
       url: pageUrl,
       siteName: "Grow A Garden Calculator",
-      publishedTime: "2026-07-01T00:00:00.000Z",
       ...(mutationPageUpdatedAt ? { modifiedTime: mutationPageUpdatedAt.toISOString() } : {}),
-      authors: ["GrowAGardenCalcs Team"],
       images: [
         {
           url: '/og-image.jpg',
@@ -90,22 +77,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-const MUTATION_ANGLES: Record<string, string> = {
-  "golden": "The Gateway Mutation — When Golden Beats Rainbow in Practice",
-  "rainbow": "1 in 500 Crops Get This — Here's the Math That Proves Why",
-  "celestial": "Starlight Stacking — The Night Event 120x Multiplier",
-  "astral": "Cosmic Jackpot — Peak 365x Growth Boost",
-  "silver": "Starter Shine — Reliable Early Game 5x Multiplier",
-  "firework": "Explosive Stacking — Pyrotechnic Multiplier Boom",
-  "whimsical": "Enchanted Flora — Mystical Soil Catalyst",
-  "magma": "Volcanic Fusion — Thermal Soil Multiplier"
-};
-
-function getMutationAngle(mutation: any) {
-  if (MUTATION_ANGLES[mutation.id]) return MUTATION_ANGLES[mutation.id];
-  return `${mutation.name} Multiplier Analysis — ×${mutation.multiplier} Growth Mechanics`;
-}
-
 export default async function MutationPage({ params }: PageProps) {
   const { slug } = await params;
   const mutation = MUTATIONS.find(m => m.id === slug);
@@ -119,8 +90,6 @@ export default async function MutationPage({ params }: PageProps) {
       </div>
     );
   }
-
-  const angleTitle = getMutationAngle(mutation);
 
   // Same category mutations
   const sameCat = MUTATIONS.filter(m => m.category === mutation.category && m.id !== mutation.id).slice(0, 8);
@@ -220,7 +189,7 @@ export default async function MutationPage({ params }: PageProps) {
             </div>
             <div>
               <div className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: mutation.color }}>
-                🧬 {angleTitle}
+                🧬 Stored mutation data
               </div>
               <h1 className="text-3xl sm:text-4xl font-extrabold" style={{ fontFamily: 'var(--font-display)', color: mutation.color }}>
                 {mutation.name} Mutation Guide
@@ -247,10 +216,10 @@ export default async function MutationPage({ params }: PageProps) {
             <strong style={{ color: 'var(--foreground)' }}>Description:</strong> {mutation.description}
           </p>
           <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
-            <strong style={{ color: 'var(--foreground)' }}>How to Get:</strong> {mutation.howToGet}
+            <strong style={{ color: 'var(--foreground)' }}>How to Get (site record):</strong> {mutation.howToGet} Verify current game details before relying on this method.
           </p>
           <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
-            <strong style={{ color: 'var(--foreground)' }}>Multiplier Effect:</strong> The {mutation.name} mutation multiplies base crop selling value by <strong style={{ color: mutation.color }}>×{mutation.multiplier}</strong>. A crop worth 1,000 coins reaches <strong style={{ color: 'var(--primary)' }}>{(1000 * mutation.multiplier).toLocaleString()} coins</strong> before weight scaling.
+            <strong style={{ color: 'var(--foreground)' }}>Calculator example:</strong> The stored multiplier is <strong style={{ color: mutation.color }}>×{mutation.multiplier}</strong>. In this calculator&apos;s model, a 1,000-coin input becomes <strong style={{ color: 'var(--primary)' }}>{(1000 * mutation.multiplier).toLocaleString()} coins</strong> before other selected inputs.
           </p>
         </div>
       </div>
@@ -261,7 +230,7 @@ export default async function MutationPage({ params }: PageProps) {
           <span className="text-2xl">🧬</span>
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-[var(--primary)]">Stack Multipliers Live</h3>
-            <p className="text-xs text-[var(--muted)]">Test how {mutation.name} (×{mutation.multiplier}) stacks with Golden or Rainbow in real-time.</p>
+            <p className="text-xs text-[var(--muted)]">Try the stored {mutation.name} (×{mutation.multiplier}) multiplier with other selections in the site calculator.</p>
           </div>
         </div>
         <Link href="/mutation-calculator" className="btn-primary text-xs px-4 py-2 shrink-0">
@@ -273,18 +242,16 @@ export default async function MutationPage({ params }: PageProps) {
       <div className="glass-card-static p-6 mb-8 border-l-4" style={{ borderLeftColor: mutation.color }}>
         <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
           <h3 className="text-sm font-bold flex items-center gap-2" style={{ color: 'var(--foreground)' }}>
-            <span>⚡</span> In-Game Multiplier Impact ({mutation.name} ×{mutation.multiplier} Benchmark)
+            <span>⚡</span> {mutation.name} multiplier calculation example
           </h3>
           <span className="text-[10px] px-2 py-0.5 rounded-full font-semibold" style={{ background: 'rgba(34,197,94,0.15)', color: 'var(--primary)' }}>
             Calculated from stored mutation values
           </span>
         </div>
         <p className="text-xs leading-relaxed mb-3 text-left" style={{ color: 'var(--muted)' }}>
-          On a baseline 10 kg crop (100x weight multiplier), applying <strong>{mutation.name} (×{mutation.multiplier})</strong> increases a 100-coin base crop (e.g. Apple) from 10,000 base coins to{" "}
+          Using the stored 100-coin Apple base value and a 10 kg input (100× weight factor), this calculator model applies <strong>{mutation.name} (×{mutation.multiplier})</strong> to produce{" "}
           <strong style={{ color: mutation.color }}>{(100 * 100 * mutation.multiplier).toLocaleString()} coins</strong>. 
-          {mutation.multiplier >= 20 
-            ? ` This provides a high-tier ${((mutation.multiplier / 20) * 100).toFixed(0)}% return benchmark relative to standard Golden mutations.` 
-            : ` While an accessible mid-tier mutation, combining ${mutation.name} with secondary soil boosts exponentially elevates profit.`}
+          This is a formula illustration using the values stored on the site, not an in-game test or a trade-price ranking.
         </p>
         <div className="flex items-center gap-3 text-[11px] flex-wrap pt-2 border-t" style={{ borderColor: 'var(--glass-border)', color: 'var(--muted)' }}>
           <span>Multiplier data from the site&apos;s mutation table</span>
@@ -338,20 +305,20 @@ export default async function MutationPage({ params }: PageProps) {
       {/* 5. How to Get & Mutation Mechanics */}
       <div className="glass-card-static p-6 sm:p-8 mb-8">
         <h2 className="text-xl font-bold mb-3 text-left" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
-          🔍 How to Trigger &amp; Optimize {mutation.name}
+          🔍 How the site describes {mutation.name}
         </h2>
         <p className="text-sm leading-relaxed text-left" style={{ color: 'var(--muted)' }}>
-          To obtain the <strong>{mutation.name}</strong> mutation in Grow A Garden, {mutation.howToGet.toLowerCase()}. Because mutations stack multiplicatively, pairing {mutation.name} (×{mutation.multiplier}) with secondary soil fertilizers or friend boost multipliers yields exponential returns compared to unmutated plots.
+          The site&apos;s mutation record lists this method: <strong>{mutation.howToGet}</strong>. The record and multiplier may need checking against current in-game information. To see the site&apos;s calculated effect, enter the mutation in the <Link href="/mutation-calculator" className="text-[var(--primary)] hover:underline font-semibold">mutation calculator</Link>.
         </p>
       </div>
 
       {/* 6. Real Example / Case Study Box */}
       <div className="glass-card-static p-6 mb-8" style={{ background: 'rgba(34,197,94,0.03)', borderColor: 'rgba(34,197,94,0.2)' }}>
         <h2 className="text-lg font-bold mb-3 flex items-center gap-2" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
-          <span>🧪</span> Real Harvest Case Study: 10kg Harvest with {mutation.name}
+          <span>🧮</span> Worked calculation example: 10 kg with {mutation.name}
         </h2>
         <p className="text-xs leading-relaxed mb-4 text-left" style={{ color: 'var(--muted)' }}>
-          Here is a step-by-step breakdown of how a single 10 kg crop with <strong>{mutation.name} (×{mutation.multiplier})</strong> calculates using the stored crop and mutation values:
+          This example applies the stored crop and mutation values in the site&apos;s calculator model; it is not a measured harvest:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
           <div className="p-3 rounded-xl border" style={{ background: 'var(--surface-1)', borderColor: 'var(--glass-border)' }}>
@@ -372,14 +339,14 @@ export default async function MutationPage({ params }: PageProps) {
       {/* 7. Best Combination Strategy & Trading Advice */}
       <div className="glass-card-static p-6 mb-8">
         <h2 className="text-lg font-bold mb-4 text-left" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
-          💡 Strategy &amp; Contextual Stacking Advice
+          💡 Try related calculators
         </h2>
         <div className="space-y-3 text-xs leading-relaxed text-left" style={{ color: 'var(--muted)' }}>
           <p>
-            • <strong>Multiplicative Compounding:</strong> Stacking {mutation.name} (×{mutation.multiplier}) with Golden (×20) creates a <strong>{(mutation.multiplier * 20).toLocaleString()}×</strong> total multiplier before weight scaling. Test how this affects high-value crops like <Link href="/crop/mango-value" className="text-[var(--primary)] font-semibold hover:underline">Mango</Link> or <Link href="/crop/dragon-fruit-value" className="text-[var(--primary)] font-semibold hover:underline">Dragon Fruit</Link> on our main <Link href="/" className="text-[var(--primary)] font-semibold hover:underline">Grow A Garden Calculator</Link>.
+            • In the site&apos;s model, selecting {mutation.name} (×{mutation.multiplier}) and Golden (×20) multiplies the two stored values to <strong>{(mutation.multiplier * 20).toLocaleString()}×</strong>. Whether a specific pair can occur together in game requires current game confirmation. Try inputs with <Link href="/crop/mango-value" className="text-[var(--primary)] font-semibold hover:underline">Mango</Link> or <Link href="/crop/dragon-fruit-value" className="text-[var(--primary)] font-semibold hover:underline">Dragon Fruit</Link> in the <Link href="/" className="text-[var(--primary)] font-semibold hover:underline">Grow A Garden Calculator</Link>.
           </p>
           <p>
-            • <strong>Trade Net-Worth Ratio:</strong> Crops featuring {mutation.name} command higher value in player-to-player trade offers. Evaluate incoming trade offers using our <Link href="/trade-calculator" className="text-[var(--primary)] font-semibold hover:underline">GAG Trade Calculator</Link> before agreeing to a deal.
+            • A calculated value does not set a player-to-player trade price. You can compare the site&apos;s estimates with the <Link href="/trade-calculator" className="text-[var(--primary)] font-semibold hover:underline">GAG Trade Calculator</Link>, then consider current player offers separately.
           </p>
         </div>
       </div>

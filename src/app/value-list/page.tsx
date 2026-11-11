@@ -45,11 +45,11 @@ export const generateMetadata = async (): Promise<Metadata> => {
 const faqs = [
   {
     q: "What are Grow a Garden pet values?",
-    a: "Grow a Garden pet values are the base trading prices of every pet in the game, measured in coins. A pet's final worth depends on its base value, its weight or age, and any applied mutations. The most valuable pets right now are Divine-rarity pets like the Angelic Guardian (300,000 base), Sun God Bird (250,000) and Moon Rabbit (220,000). Use our pet calculator to get the exact value of your specific pet.",
+    a: "The pet values listed here are the base values stored in this site's data. A calculator estimate may also use pet stats and ability settings; player offers can differ. Use the pet calculator to explore how the stored inputs affect its estimate.",
   },
   {
     q: "How do I know if a trade is fair in Grow a Garden?",
-    a: "A trade is fair when both sides offer roughly equal total coin value. Add up the base values of every item on each side (including pet values and mutated crop values), then compare. Our trade calculator does this automatically and rates every deal as Win, Fair or Lose, so you never accept a bad trade again.",
+    a: "The trade calculator compares the values produced by this site's stored rules and labels the result Win, Fair or Lose. It is a reference estimate; player demand, item availability and individual offers can differ.",
   },
   {
     q: "What is the most valuable crop in Grow a Garden?",
@@ -74,7 +74,7 @@ export default function ValueListPage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "Complete Grow A Garden Values List",
-    "description": "Live market value database of all crops, seeds, and pets in Grow A Garden.",
+    "description": "Crop, seed and pet records currently stored on this site for Grow A Garden calculators.",
     "numberOfItems": CROPS.length,
     "itemListElement": CROPS.slice(0, 30).map((crop, index) => ({
       "@type": "ListItem",
@@ -109,7 +109,7 @@ export default function ValueListPage() {
           Grow a Garden <span style={{ background: 'var(--gradient-1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Pet & Crop Values</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
-          Welcome to the complete <strong>grow a garden pet values</strong> and <strong>gag values</strong> database for 2026.
+          Browse the <strong>Grow A Garden pet values</strong> and <strong>GAG values</strong> currently stored on this site.
           Below is the value directory for all crops, seeds, event fruits, and pets from the site&apos;s stored data.
           Whether you are comparing trading multipliers, checking <strong>gag pet values</strong>, or searching for fair <strong>gag trade values</strong>, this directory provides instant access to base prices and multiplier tables.
         </p>
@@ -117,7 +117,7 @@ export default function ValueListPage() {
           Crop data last updated: {formatDataUpdatedAt("crops")} · Pet data last updated: {formatDataUpdatedAt("pets")}
         </p>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
-          Use this value list to verify crop base values, or open our master <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">Grow A Garden Calculator</Link> to calculate weight and mutation values instantly. Click any item card to open its dedicated live calculator.
+          Use this directory to review the stored base values, or open our <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">Grow A Garden Calculator</Link> to estimate values using weight and mutations. Click an item to open its dedicated calculator.
         </p>
       </div>
 

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getCanonical } from "@/lib/canonical";
 
-const pageTitle = "GAG2 Codes – All Active Grow a Garden 2 Codes";
-const pageDesc = "All working Grow a Garden 2 codes for October 2026: FREESEED, TEAMGREENBEAN and more. Redeem free seeds and watering cans before they expire.";
+const pageTitle = "Grow a Garden 2 Codes: Listed Rewards & Redemption Help";
+const pageDesc = "A reference list of reported Grow a Garden 2 codes and their listed rewards. Codes can expire; confirm each one in-game before relying on it.";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     q: "Are there any expired Grow a Garden 2 codes?",
-    a: "Not yet. As of October 2026, no GAG2 code has expired — every code the developers have released still works. That will change eventually, so redeem new codes the day they drop.",
+    a: "Code availability changes. We cannot confirm that every code listed here is still redeemable, so check each code in-game and treat an error as possibly expired or requirement-limited.",
   },
   {
     q: "Where do new GAG2 codes come from?",
@@ -69,7 +69,7 @@ const faqs = [
   },
   {
     q: "Where is the safest place to find new GAG2 codes?",
-    a: "Stick to the official Discord server and X account, plus this page — we re-verify every code against multiple sources before listing it. Random code-aggregator sites often list fake or long-dead codes that waste your time; a code is only real if it actually redeems in-game.",
+    a: "Check the game's official announcements and test codes in-game. The entries on this page are reported codes and have not been independently confirmed as currently redeemable.",
   },
   {
     q: "What does the FREESEED friend requirement mean?",
@@ -99,10 +99,10 @@ export default function GAG2Codes() {
           Grow a Garden 2 <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Codes</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
-          This page lists every working <strong>Grow a Garden 2 code</strong>, verified in-game as of October 16, 2026:
-          FREESEED, TEAMGREENBEAN, WATERYOPLANTS, and REMEMBERTODRINKWATER. Redeem them through the Settings gear menu for
-          free seed packs and watering cans. No code has expired yet — but new codes drop roughly monthly, so claim these
-          before they stop working.
+          This reference lists four <strong>reported Grow a Garden 2 codes</strong>: FREESEED, TEAMGREENBEAN,
+          WATERYOPLANTS, and REMEMBERTODRINKWATER, with rewards previously associated with them. Code status and rewards
+          can change without notice; this page does not confirm that they currently work. Test codes in-game before
+          relying on the listed rewards.
         </p>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
           New to the sequel? The <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link> covers
@@ -117,9 +117,9 @@ export default function GAG2Codes() {
             🎟️ Which Grow a Garden 2 codes are working right now?
           </h2>
           <p className="mb-4">
-            Below is the complete list of GAG2 codes we have tested and confirmed working as of October 16, 2026. Copy each
-            code exactly as shown — codes are case-sensitive, and a single mistyped letter is the most common reason a
-            redeem fails.
+            These are reported codes and previously listed rewards, not a live or independently verified status feed.
+            Copy a code exactly as shown if you choose to test it; codes may be case-sensitive and can expire or have
+            redemption requirements.
           </p>
           <div className="space-y-4">
             {activeCodes.map((c) => (
@@ -140,9 +140,8 @@ export default function GAG2Codes() {
             ))}
           </div>
           <p className="mt-4 text-sm">
-            <strong>No expired codes yet.</strong> Every GAG2 code released so far still redeems — but Roblox codes are
-            time-limited by design and developers can retire them without warning, so claim these today rather than next
-            week. New codes almost always drop alongside game updates and player milestones, so check back after each patch.
+            We do not have a current in-game confirmation for these entries. Developers may retire codes or change
+            requirements without notice, so use the game's own response as the source of truth.
           </p>
         </section>
 

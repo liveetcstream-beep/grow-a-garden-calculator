@@ -5,8 +5,8 @@ import { CROPS } from "@/data/crops";
 import { formatDataUpdatedAt } from "@/lib/contentDates";
 import type { Metadata } from "next";
 
-const pageTitle = "Grow A Garden Calculator: Exact Values & Trades 2026";
-const pageDesc = "Use Our Free GAG Calculator For Crop Values, Pet Stats, Mutation Multipliers, And Fair Trades. No Signup Needed. Updated For 2026.";
+const pageTitle = "GAG Calculator | Grow A Garden Crop, Pet & Trade Values";
+const pageDesc = "Calculate Grow A Garden crop values by weight, stack mutation multipliers, estimate pet stats, and compare trades with our free GAG calculator.";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -77,11 +77,11 @@ const FAQ_DATA = [
     )
   },
   {
-    q: "What is the official formula used by the grow a garden calculator?",
-    aText: "The official GAG formula is: Final Value = Base Price × (Weight in kg)² × Mutation Multipliers × (1 + Friend Boost %) × Quantity. Our grow a garden calculator computes this instantly for any crop combination.",
+    q: "What formula does this Grow A Garden calculator use?",
+    aText: "This calculator uses the stored crop base price multiplied by weight squared, selected mutation multipliers, friend boost, and quantity. The result reflects this site's calculation model and is not an official price quote.",
     aRender: (
       <>
-        The official GAG formula is: <strong>Final Value = Base Price × Weight² × Mutation Multipliers × (1 + Friend Boost %) × Quantity</strong>. Our{" "}
+        This calculator uses: <strong>base price × weight² × selected mutation multipliers × (1 + friend boost ÷ 100) × quantity</strong>. It applies the rules stored on this site; it is not an official price quote. Use our{" "}
         <Link href="/crop-calculator" className="text-[var(--primary)] hover:underline font-semibold">
           calculator grow a garden
         </Link>{" "}
@@ -341,7 +341,7 @@ export default function HomePage() {
               The <strong>Grow A Garden Calculator</strong> (commonly known as the <strong>GAG calculator</strong>) is an all-in-one mathematical utility engine built specifically for Roblox <i>Grow A Garden</i> players. In the fast-moving economy of GAG, crop values are not static; they fluctuate exponentially depending on crop base price, logarithmic and quadratic weight scaling (weight in kg squared), stacked mutation multipliers, and friend boost bonuses.
             </p>
             <p className="leading-relaxed text-left" style={{ color: 'var(--muted)' }}>
-              Relying on outdated community spreadsheets or quick mental estimates often leads to underpricing your harvest or accepting unfair trades in public servers. Our <strong>calculator grow a garden</strong> portal solves this pain point by delivering real-time, zero-delay calculation algorithms. Whether you are figuring out your latest harvest earnings, determining pet market worth, or calculating seed ROI, our tool ensures you never lose coins.
+              Choose a crop and enter its weight and mutations to see a calculation from the values stored on this site. The calculator does not read live game data or current player offers, so use the result as a reference and compare trade demand before deciding.
             </p>
           </div>
 

@@ -17,7 +17,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
-              The most advanced calculator suite for Roblox Grow A Garden players. Fast, accurate, and always updated.
+              Free fan-made calculators and reference pages for Roblox Grow A Garden players, based on the data stored on this site.
             </p>
           </div>
 
@@ -32,7 +32,6 @@ export default function Footer() {
                 { href: "/elephant-calculator", label: "🐘 Elephant Calculator" },
                 { href: "/trade-calculator", label: "🤝 Trade Calculator" },
                 { href: "/seed-profit", label: "🌱 Seed Profit" },
-                { href: "/xp-calculator", label: "⭐ XP Calculator" },
               ].map(link => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm transition-colors hover:text-[var(--primary)]" style={{ color: 'var(--muted)' }}>
@@ -78,7 +77,7 @@ export default function Footer() {
               ))}
               <li className="pt-2">
                 <a href="https://discord.gg/growagarden" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold transition-colors hover:underline text-[var(--primary)] flex items-center gap-1">
-                  <span>💬 Join our Discord for real-time value updates →</span>
+                  <span>💬 Join the Grow A Garden community on Discord →</span>
                 </a>
               </li>
               <li className="pt-1">
