@@ -7,8 +7,8 @@ import { MUTATIONS } from "@/data/mutations";
 import { formatDataUpdatedAt } from "@/lib/contentDates";
 import type { Metadata } from "next";
 
-const pageTitle = "Grow A Garden Calculator (GAG) | Crop & Pet Values";
-const pageDesc = "Calculate Grow A Garden crop values by weight and mutation, estimate pet stats, and compare trades with free fan-made tools using site-stored data.";
+const pageTitle = "Grow a Garden Calculator: Crop, Pet & Trade Tools";
+const pageDesc = "Calculate crop values by weight and mutations, estimate pet stats, and compare trades using free fan-made tools. Results use data stored on this site.";
 
 export const metadata: Metadata = {
   title: pageTitle,
