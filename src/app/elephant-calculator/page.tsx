@@ -4,7 +4,6 @@ import { MUTATIONS } from "@/data/mutations";
 
 const elephantBaseValue = 2500;
 const elephantRarity = "Epic";
-const elephantAbility = "Trunk Splash (Wet Mutation)";
 const elephantEmoji = "🐘";
 const elephantCategory = "Savanna";
 
@@ -168,8 +167,8 @@ export default function ElephantCalculatorPage() {
         </div>
 
         <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--muted)" }}>
-          The <strong>Elephant</strong> is one of the most recognizable Epic-tier pets in <em>Grow A Garden</em>. If you've been
-          searching <strong>grow a garden elephant calculator</strong> or wondering <em>how much is the Elephant worth in GAG</em>, you're
+          The <strong>Elephant</strong> is one of the most recognizable Epic-tier pets in <em>Grow A Garden</em>. If you&apos;ve been
+          searching <strong>grow a garden elephant calculator</strong> or wondering <em>how much is the Elephant worth in GAG</em>, you&apos;re
           in the right place. This page gives you exact values at every weight and age, trading comparisons, and a full ability breakdown
           — no guesswork, no outdated spreadsheets.
         </p>
@@ -209,10 +208,10 @@ export default function ElephantCalculatorPage() {
               <strong style={{ color: "var(--foreground)" }}>Trunk Splash</strong>. When activated, the Elephant sprays water on
               nearby crops, applying the <strong>Wet mutation (×2)</strong>. This sounds modest at first — but Wet is a key trigger in
               temperature mutation combos. If your garden also has a snow weather event or a Chilled spray active, Wet + Chilled
-              automatically upgrades to <strong>Frozen (×10)</strong>. That's a 5x value jump from a single pet passive.
+              automatically upgrades to <strong>Frozen (×10)</strong>. That&apos;s a 5x value jump from a single pet passive.
             </p>
             <p>
-              For players building mutation chains, the Elephant is a legitimate farming tool, not just a collectible. It's one of the
+              For players building mutation chains, the Elephant is a legitimate farming tool, not just a collectible. It&apos;s one of the
               few Epic pets that has both solid base trade value <em>and</em> real in-game utility.
             </p>
 
@@ -253,9 +252,9 @@ export default function ElephantCalculatorPage() {
           <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--muted)" }}>
             Pet values in <em>Grow A Garden</em> are calculated using the formula:{" "}
             <strong style={{ color: "var(--primary)" }}>Pet Value = Base Value × Weight² × Age Modifier × Ability Multiplier</strong>.
-            The Elephant's base value is <strong>{elephantBaseValue.toLocaleString()} coins</strong> with an ability multiplier of{" "}
+            The Elephant&apos;s base value is <strong>{elephantBaseValue.toLocaleString()} coins</strong> with an ability multiplier of{" "}
             <strong>×5.5</strong>. Weight scales quadratically — a 10 kg Elephant is worth 100x more than a 1 kg Elephant before
-            any modifiers. For exact coin output at your pet's stats, use our{" "}
+            any modifiers. For exact coin output at your pet&apos;s stats, use our{" "}
             <Link href="/pet-calculator" className="text-[var(--primary)] hover:underline font-bold">
               Pet Calculator
             </Link>
@@ -317,7 +316,7 @@ export default function ElephantCalculatorPage() {
             🧬 Best Mutations to Stack with Elephant (Trunk Splash)
           </h2>
           <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--muted)" }}>
-            The Elephant's Trunk Splash applies Wet to crops. Wet pairs best with cold-weather mutations.
+            The Elephant&apos;s Trunk Splash applies Wet to crops. Wet pairs best with cold-weather mutations.
             Here are the top mutations to stack for maximum value when farming with an Elephant:
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
@@ -413,8 +412,8 @@ export default function ElephantCalculatorPage() {
           </h2>
           <div className="space-y-4 text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
             <p>
-              Trading an Elephant in GAG requires knowing exactly what it's worth relative to what you're being offered. Most scam
-              attempts in trading servers happen because one player doesn't know the base value math. Here's how to avoid getting burned:
+              Trading an Elephant in GAG requires knowing exactly what it&apos;s worth relative to what you&apos;re being offered. Most scam
+              attempts in trading servers happen because one player doesn&apos;t know the base value math. Here&apos;s how to avoid getting burned:
             </p>
 
             <div className="grid sm:grid-cols-3 gap-4">

@@ -76,13 +76,13 @@ export default function SunflowerGuide() {
           Sunflower <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Profit Guide</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-          <strong>Sunflower</strong> is Grow a Garden 2's most debated Legendary crop — a massive seed price, a disputed
+          <strong>Sunflower</strong> is Grow a Garden 2&apos;s most debated Legendary crop — a massive seed price, a disputed
           harvest type, and Tier A profit potential if the numbers land your way.
           Part of the <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link>.
         </p>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mt-4" style={{ color: "var(--muted)" }}>
           Sunflower is a <strong>Legendary crop</strong> in Grow a Garden 2. The majority of sources list its seed at
-          <strong> 5,000,000 sheckles</strong> at <strong>Sam's Seed Shop</strong> with base crop value around
+          <strong> 5,000,000 sheckles</strong> at <strong>Sam&apos;s Seed Shop</strong> with base crop value around
           <strong> 1,579–1,750 sheckles</strong> at ~5.75 kg. But two core facts are <strong>openly disputed across sources</strong> —
           the seed price and whether it is single- or multi-harvest — so verify in-game before committing millions.
         </p>
@@ -94,9 +94,9 @@ export default function SunflowerGuide() {
             🌻 How Do You Get Sunflower in Grow a Garden 2?
           </h2>
           <p className="mb-4">
-            Sunflower seeds come from <strong>Sam's Seed Shop</strong> at <strong>Legendary</strong> rarity, with roughly a
+            Sunflower seeds come from <strong>Sam&apos;s Seed Shop</strong> at <strong>Legendary</strong> rarity, with roughly a
             <strong> 1.6% chance per 5-minute restock</strong>. This is a genuine timer-camping seed — expect long waits, coordinate
-            with other players watching the shop, and never assume you'll see it in any given session. The Robux seed-roll option
+            with other players watching the shop, and never assume you&apos;ll see it in any given session. The Robux seed-roll option
             costs <strong>69 Robux per roll</strong>, but at this rarity the expected Robux cost is brutal; camp the restocks first
             and treat rolling as a last resort.
           </p>
@@ -119,7 +119,7 @@ export default function SunflowerGuide() {
             single-harvest means one payout and a rebuy, multi-harvest means compounding income from one plant.
           </p>
           <p className="mb-4">
-            <strong>Methodology note:</strong> this is exactly the kind of figure that shifts with update patches — a crop's harvest
+            <strong>Methodology note:</strong> this is exactly the kind of figure that shifts with update patches — a crop&apos;s harvest
             type can be retuned silently between patches, which is why half the sources now contradict the other half. Until you
             have tested it on your own live plant, <strong>do not commit 5 million sheckles</strong>. The five minutes it takes to
             verify in-game is worth more than any published number.
@@ -135,12 +135,12 @@ export default function SunflowerGuide() {
             <strong> one source claiming 3,160</strong>. As always in GAG2, treat these as ranges: fruit value scales with
             <strong>weight</strong>, and <strong>mutations</strong> like Golden and Rainbow from weather-system events are the
             main way individual Sunflowers beat their baseline. A heavy or mutated Sunflower is a different economic animal from a
-            base one — tested-value lists grade Sunflower <strong>Tier A with the note "early profit spike"</strong>, and some
+            base one — tested-value lists grade Sunflower <strong>Tier A with the note &quot;early profit spike&quot;</strong>, and some
             rank it among the highest-value single-harvest Legendaries.
           </p>
           <p className="mb-4">
             <strong>Disclaimer:</strong> with the seed price disputed (5M vs 500K) and the harvest type disputed (single vs multi),
-            any "profit" figure you see quoted for Sunflower rests on uncertain inputs. Always rerun the math with your own
+            any &quot;profit&quot; figure you see quoted for Sunflower rests on uncertain inputs. Always rerun the math with your own
             verified numbers on our
             <Link href="/crop-calculator" className="text-[var(--primary)] hover:underline font-semibold"> crop calculator</Link> —
             it is the only profit number you should trust.
@@ -170,12 +170,12 @@ export default function SunflowerGuide() {
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            🚫 Don't Apply GAG1 Sunflower Guides Here
+            🚫 Don&apos;t Apply GAG1 Sunflower Guides Here
           </h2>
           <p className="mb-4">
             Grow a Garden 1 has its own Sunflower — a <strong>Divine crop</strong> with completely different stats, price, and
             economics. GAG1 guides <strong>do not apply</strong> to the GAG2 Legendary Sunflower covered here. If a guide mentions
-            Divine rarity, a different seed shop structure, or GAG1 mechanics like codes and gear that don't exist in the sequel,
+            Divine rarity, a different seed shop structure, or GAG1 mechanics like codes and gear that don&apos;t exist in the sequel,
             it is a GAG1 guide — close that tab. This is one of the most common sources of confusion in GAG2 trading, because
             players quote GAG1 numbers at GAG2 prices.
           </p>

@@ -71,7 +71,6 @@ const TIER_GLOW: Record<string, string> = {
 const fracturedMutation = MUTATIONS.find((m) => m.id === "fractured");
 const auroraMutation = MUTATIONS.find((m) => m.id === "aurora");
 const astralMutation = MUTATIONS.find((m) => m.id === "astral");
-const goldSparkleMutation = MUTATIONS.find((m) => m.id === "goldsparkle");
 const enchantedMutation = MUTATIONS.find((m) => m.id === "enchanted");
 const grimMutation = MUTATIONS.find((m) => m.id === "grim");
 

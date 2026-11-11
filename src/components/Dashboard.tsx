@@ -1,10 +1,9 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { CROPS } from "@/data/crops";
-import { PETS } from "@/data/pets";
-import { MUTATIONS, Mutation } from "@/data/mutations";
-import { calculateCropValue, calculatePetValue, formatCurrency, formatNumber } from "@/lib/calculator";
+import { CROPS, type Crop } from "@/data/crops";
+import { PETS, type Pet } from "@/data/pets";
+import { formatCurrency, formatNumber } from "@/lib/calculator";
 import InlineCalculator from "./InlineCalculator";
 
 export interface InventoryItem {
@@ -16,11 +15,15 @@ export interface InventoryItem {
   details: string;
 }
 
+export type CalculatorItem =
+  | { type: "crops"; data: Crop }
+  | { type: "pets"; data: Pet };
+
 export default function Dashboard() {
   const [mode, setMode] = useState<"crops" | "pets">("crops");
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedItem, setSelectedItem] = useState<any | null>(null);
+  const [selectedItem, setSelectedItem] = useState<CalculatorItem | null>(null);
   
   const [inventory, setInventory] = useState<InventoryItem[]>([]);
   const [isInventoryOpen, setIsInventoryOpen] = useState(false);
@@ -29,8 +32,10 @@ export default function Dashboard() {
     const saved = localStorage.getItem("gag_inventory");
     if (saved) {
       try {
+        // Read browser-only saved state after hydration to keep the server render deterministic.
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setInventory(JSON.parse(saved));
-      } catch (e) {}
+      } catch {}
     }
   }, []);
 
@@ -46,9 +51,9 @@ export default function Dashboard() {
   const currentCategories = mode === "crops" ? cropCategories : petCategories;
 
   const displayedItems = useMemo(() => {
-    let items: any[] = mode === "crops" ? CROPS : PETS;
+    let items: Array<Crop | Pet> = mode === "crops" ? CROPS : PETS;
     if (activeCategory !== "All") {
-      items = items.filter(item => item.category === activeCategory || item.rarity === activeCategory);
+      items = items.filter(item => item.category === activeCategory || ("rarity" in item && item.rarity === activeCategory));
     }
     if (searchTerm) {
       const lowerSearch = searchTerm.toLowerCase();
@@ -143,7 +148,9 @@ export default function Dashboard() {
             <button
               key={item.id}
               onClick={() => {
-                setSelectedItem({ type: mode, data: item });
+                setSelectedItem(mode === "crops"
+                  ? { type: "crops", data: item as Crop }
+                  : { type: "pets", data: item as Pet });
                 window.scrollTo({ top: document.getElementById('inline-calc-trigger')?.offsetTop || 500, behavior: 'smooth' });
               }}
               className={`group flex flex-col items-center justify-center p-4 rounded-2xl transition-all relative overflow-hidden h-32 border-2 ${selectedItem?.data?.id === item.id ? 'border-primary shadow-glow scale-[1.02] bg-primary/10' : 'border-white/5 hover:border-white/10 bg-surface-1'}`}
@@ -155,7 +162,7 @@ export default function Dashboard() {
                <p className="text-[10px] font-black text-center text-white uppercase tracking-tighter" style={{ fontFamily: 'var(--font-display)' }}>
                   {item.name}
                </p>
-               {mode === "pets" && (
+               {mode === "pets" && "rarity" in item && (
                   <p className="text-[8px] uppercase mt-1 font-black opacity-60" style={{ color: item.rarity === 'Legendary' ? '#F59E0B' : 'white' }}>
                     {item.rarity}
                   </p>

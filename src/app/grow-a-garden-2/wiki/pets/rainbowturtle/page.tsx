@@ -120,7 +120,7 @@ export default function RainbowTurtleGuide() {
             mutation specifically: 30 slots from one pet slot is the strongest standard-Turtle roll in the game.
           </p>
           <p className="mb-4">
-            <strong>Methodology note:</strong> the +10/+20 split is verified from current live-server pet data, but GAG2's frequent
+            <strong>Methodology note:</strong> the +10/+20 split is verified from current live-server pet data, but GAG2&apos;s frequent
             update patches can retune pet abilities. If a patch lands and your in-game numbers differ, the patch notes are the
             authority — treat published guides as a baseline, not a contract.
           </p>
@@ -156,20 +156,20 @@ export default function RainbowTurtleGuide() {
             same <strong>+30 slots</strong> as one Rainbow Turtle. But they eat <strong>three of your six pet slots</strong> and
             stack <strong>−6 walk speed</strong>, while the Rainbow Turtle does the job in <strong>one slot with only −2 speed</strong>.
             For slot-farmers who want slots <em>and</em> speed in the same loadout, the Rainbow Turtle is clearly the better buy —
-            the question is whether the mutation's trade premium costs more than the freedom it buys.
+            the question is whether the mutation&apos;s trade premium costs more than the freedom it buys.
           </p>
           <p className="mb-4">
             Then there is the collector angle: the Rainbow mutation is <strong>color-shifting and cosmetic</strong>, so it commands
             a premium among traders that has nothing to do with slots. That premium swings with patch cycles and collector demand —
             check live prices on our
             <Link href="/value-list" className="text-[var(--primary)] hover:underline font-semibold"> value list</Link> before you
-            buy or sell a Rainbow Turtle, so you don't pay collector prices for a farmer's purchase.
+            buy or sell a Rainbow Turtle, so you don&apos;t pay collector prices for a farmer&apos;s purchase.
           </p>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            🚫 Don't Confuse It With the GAG1 Turtle
+            🚫 Don&apos;t Confuse It With the GAG1 Turtle
           </h2>
           <p className="mb-4">
             Grow a Garden 1 has its own Turtle — a <strong>Legendary egg pet</strong> with completely different mechanics and stats.

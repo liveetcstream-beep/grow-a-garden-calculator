@@ -72,7 +72,7 @@ export default function GAG2Trades() {
           GAG2 <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Trading Guide</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-          Everything about <strong>trading in Grow a Garden 2</strong>: tickets, the trade window, what's tradable, and how
+          Everything about <strong>trading in Grow a Garden 2</strong>: tickets, the trade window, what&apos;s tradable, and how
           to never get scammed. Part of the <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link>.
         </p>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mt-4" style={{ color: "var(--muted)" }}>
@@ -94,27 +94,27 @@ export default function GAG2Trades() {
             <li>Both players add pets, fruits, or sheckles, then press <strong>Accept → Confirm</strong>.</li>
           </ol>
           <p className="mb-4">
-            Only the <strong>requester needs a ticket</strong> — the other player trades free. Declined requests typically don't
+            Only the <strong>requester needs a ticket</strong> — the other player trades free. Declined requests typically don&apos;t
             consume the ticket, but treat it as precious anyway. At 100,000 sheckles a pop, the ticket is a real cost barrier
-            that keeps the trading plaza from being flooded with spam requests — one reason GAG2's trading economy is calmer
+            that keeps the trading plaza from being flooded with spam requests — one reason GAG2&apos;s trading economy is calmer
             than the anything-goes free trading of the original Grow a Garden.
           </p>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            📦 What Can You Trade in GAG2 (and What Can't You)?
+            📦 What Can You Trade in GAG2 (and What Can&apos;t You)?
           </h2>
           <p className="mb-4">
             <strong>Tradable:</strong> pets, fruits, and sheckles. <strong>Not tradable:</strong> seeds of any kind — seed trading
-            simply doesn't exist in GAG2 — and any item you've favorited. <strong>New accounts must wait 7 days</strong> before
+            simply doesn&apos;t exist in GAG2 — and any item you&apos;ve favorited. <strong>New accounts must wait 7 days</strong> before
             they can trade at all — a blanket anti-scam rule aimed at throwaway scam accounts.
           </p>
           <p className="mb-4">
-            The trade window shows each item's <strong>weight, age, mutations, and value</strong>, so you can verify exactly
-            what you're getting. This matters: a heavy, mutated fruit is worth far more than its base price suggests, and a pet's
+            The trade window shows each item&apos;s <strong>weight, age, mutations, and value</strong>, so you can verify exactly
+            what you&apos;re getting. This matters: a heavy, mutated fruit is worth far more than its base price suggests, and a pet&apos;s
             age tier changes its demand. Check both sides on our <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-semibold">trade calculator</Link> before
-            you hit Confirm — overpaying on a "cheap" trade because you ignored a Rainbow mutation is one of the most common
+            you hit Confirm — overpaying on a &quot;cheap&quot; trade because you ignored a Rainbow mutation is one of the most common
             ways new traders lose value.
           </p>
         </section>
@@ -130,10 +130,10 @@ export default function GAG2Trades() {
             live community prices for pets and crops so you always have a current reference point.
           </p>
           <p className="mb-4">
-            Be skeptical of <strong>"official" value lists on social media</strong> — a pain point veteran traders know well.
+            Be skeptical of <strong>&quot;official&quot; value lists on social media</strong> — a pain point veteran traders know well.
             Fake or outdated value lists are a classic scam setup: a scammer links you a doctored list that wildly overvalues
             their item so their lowball offer looks generous. Always cross-check with a live, community-updated source, and
-            don't carry over values from the original Grow a Garden (GAG1) — GAG2's economy, rarities, and mutation multipliers
+            don&apos;t carry over values from the original Grow a Garden (GAG1) — GAG2&apos;s economy, rarities, and mutation multipliers
             are different, so GAG1 prices are meaningless here. When in doubt, run both sides of any trade through the{" "}
             <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-semibold">trade calculator</Link>{" "}
             and only confirm when the numbers make sense.
@@ -151,10 +151,10 @@ export default function GAG2Trades() {
           </p>
           <p className="mb-4">
             Beyond the built-in protection, the golden rules still apply. <strong>Never drop items on the ground</strong> for a
-            "trade" — if it's not in the ticket window, it's not a trade, and anything on the ground can be picked up by
+            &quot;trade&quot; — if it&apos;s not in the ticket window, it&apos;s not a trade, and anything on the ground can be picked up by
             anyone. Never trade with a player pressuring you to hurry through the Accept → Confirm steps — rushing you is how
-            scammers hope you'll skip the cooldown check. And if a deal looks too good to be true (a rare pet for a common fruit),
-            it usually is: it's either a scam or the item is worth far less than you think.
+            scammers hope you&apos;ll skip the cooldown check. And if a deal looks too good to be true (a rare pet for a common fruit),
+            it usually is: it&apos;s either a scam or the item is worth far less than you think.
           </p>
         </section>
 

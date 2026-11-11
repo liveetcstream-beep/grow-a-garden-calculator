@@ -76,7 +76,7 @@ export default function CornGuide() {
           Corn <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Profit Guide</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-          <strong>Corn</strong> is Grow a Garden 2's workhorse Rare crop — cheap, multi-harvest, and always in the shop rotation.
+          <strong>Corn</strong> is Grow a Garden 2&apos;s workhorse Rare crop — cheap, multi-harvest, and always in the shop rotation.
           Part of the <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link>.
         </p>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mt-4" style={{ color: "var(--muted)" }}>
@@ -129,12 +129,12 @@ export default function CornGuide() {
             Yes — and that single trait is what makes Corn valuable. The Corn plant <strong>survives every harvest</strong> and keeps
             producing new fruit on the same plant, unlike single-harvest crops that vanish after one collection and force you to
             rebuy seeds. A field of Corn planted once keeps generating income for as long as you leave it running, which makes it
-            the classic "plant and forget" background earner of the early game.
+            the classic &quot;plant and forget&quot; background earner of the early game.
           </p>
           <p className="mb-4">
-            This is the detail new players most often miss: they compare Corn's 34-sheckle fruit to a pricier single-harvest crop,
+            This is the detail new players most often miss: they compare Corn&apos;s 34-sheckle fruit to a pricier single-harvest crop,
             buy the expensive seed, harvest once, and wonder where their money went. Multi-harvest crops win on <strong>lifetime
-            profit</strong>, not sticker price — the plant you don't have to rebuy is the plant that compounds.
+            profit</strong>, not sticker price — the plant you don&apos;t have to rebuy is the plant that compounds.
           </p>
         </section>
 
@@ -144,15 +144,15 @@ export default function CornGuide() {
           </h2>
           <p className="mb-4">
             The honest formula is: <strong>average fruit value × fruits per harvest × harvests per hour × hours planted</strong>.
-            Corn's per-fruit number looks unimpressive until you run that multiplication — because the plant never needs replanting,
+            Corn&apos;s per-fruit number looks unimpressive until you run that multiplication — because the plant never needs replanting,
             its lifetime profit beats many single-harvest crops with far higher sticker prices. Plug your own harvest rate into our
             <Link href="/crop-calculator" className="text-[var(--primary)] hover:underline font-semibold"> crop calculator</Link> to
             see exactly when a Corn field pays for itself and how it scales across a full play session.
           </p>
           <p className="mb-4">
-            This is why Corn grades as a <strong>C-tier money crop</strong> on tested-value lists with the note "better as
-            multi-harvest": planted early and left running, it compounds into serious capital while you chase rarer seeds. It will
-            never beat an <Link href="/grow-a-garden-2/wiki/plants/mushroom" className="text-[var(--primary)] hover:underline font-semibold">Epic Mushroom's</Link> per-fruit
+            This is why Corn grades as a <strong>C-tier money crop</strong> on tested-value lists with the note &quot;better as
+            multi-harvest&quot;: planted early and left running, it compounds into serious capital while you chase rarer seeds. It will
+            never beat an <Link href="/grow-a-garden-2/wiki/plants/mushroom" className="text-[var(--primary)] hover:underline font-semibold">Epic Mushroom&apos;s</Link> per-fruit
             value — but it costs 6× less and never stops producing. For trading context, compare live crop prices on our
             <Link href="/value-list" className="text-[var(--primary)] hover:underline font-semibold"> value list</Link> before
             offering Corn in any deal.

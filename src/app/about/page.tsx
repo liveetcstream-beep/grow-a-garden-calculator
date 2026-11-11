@@ -88,7 +88,7 @@ export default function AboutPage() {
             How the calculators work
           </h2>
           <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--muted)" }}>
-            Crop results use the base price stored for a crop, the weight entered by the visitor, the selected mutation multipliers, any friend boost entered, and quantity. The site's crop calculation is:
+            Crop results use the base price stored for a crop, the weight entered by the visitor, the selected mutation multipliers, any friend boost entered, and quantity. The site&apos;s crop calculation is:
           </p>
           <p className="text-sm font-bold leading-relaxed mb-4" style={{ color: "var(--primary)" }}>
             Base price × weight² × product of mutation multipliers × (1 + friend boost ÷ 100) × quantity
@@ -103,7 +103,7 @@ export default function AboutPage() {
             Data coverage and update dates
           </h2>
           <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--muted)" }}>
-            These counts come from the site's current datasets. Each date shows when its corresponding data file was last changed in the repository; it does not mean every value was independently verified in-game on that date or that a new patch was reviewed.
+            These counts come from the site&apos;s current datasets. Each date shows when its corresponding data file was last changed in the repository; it does not mean every value was independently verified in-game on that date or that a new patch was reviewed.
           </p>
           <div className="grid sm:grid-cols-3 gap-4">
             {datasets.map((dataset) => (

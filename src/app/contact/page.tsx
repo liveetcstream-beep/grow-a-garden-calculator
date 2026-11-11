@@ -49,7 +49,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-base max-w-xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-            Have a question, suggestion, or business inquiry? We'd love to hear from you. Fill out the form below or reach out directly.
+            Have a question, suggestion, or business inquiry? We&apos;d love to hear from you. Fill out the form below or reach out directly.
           </p>
         </div>
 

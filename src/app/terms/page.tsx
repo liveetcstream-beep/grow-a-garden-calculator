@@ -58,11 +58,11 @@ export default function TermsPage() {
         <div className="space-y-8">
 
           <Section title="1. Acceptance of Terms">
-            <p>By accessing or using <strong>{siteName}</strong> ("{siteUrl}"), you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.</p>
+            <p>By accessing or using <strong>{siteName}</strong> (&quot;{siteUrl}&quot;), you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.</p>
           </Section>
 
           <Section title="2. Description of Service">
-            <p>{siteName} is a free, fan-made calculator tool for the Roblox game "Grow A Garden." Our services include:</p>
+            <p>{siteName} is a free, fan-made calculator tool for the Roblox game &quot;Grow A Garden.&quot; Our services include:</p>
             <ul>
               <li>Crop value calculators</li>
               <li>Mutation multiplier tools</li>
@@ -75,9 +75,9 @@ export default function TermsPage() {
           </Section>
 
           <Section title="3. Disclaimer of Affiliation">
-            <p><strong>{siteName} is NOT affiliated with, endorsed by, or connected to Roblox Corporation or the official "Grow A Garden" game developers.</strong></p>
+            <p><strong>{siteName} is NOT affiliated with, endorsed by, or connected to Roblox Corporation or the official &quot;Grow A Garden&quot; game developers.</strong></p>
             <p>All game data, values, item names, and mechanics referenced on this website are the intellectual property of their respective owners. We use this information solely for educational and reference purposes under fair use.</p>
-            <p>"Roblox" and "Grow A Garden" are trademarks of their respective owners.</p>
+            <p>&quot;Roblox&quot; and &quot;Grow A Garden&quot; are trademarks of their respective owners.</p>
           </Section>
 
           <Section title="4. Accuracy of Information">
@@ -94,7 +94,7 @@ export default function TermsPage() {
             <p>The content, design, code, and features of {siteName} — including but not limited to text, graphics, logos, and software — are the property of {siteName} and are protected by applicable intellectual property laws.</p>
             <p>You may not:</p>
             <ul>
-              <li>Copy, reproduce, or redistribute our website's code without permission</li>
+              <li>Copy, reproduce, or redistribute our website&apos;s code without permission</li>
               <li>Use our brand name or logo without written consent</li>
               <li>Scrape our site for commercial purposes</li>
               <li>Create derivative works based on our tools without permission</li>
@@ -117,13 +117,13 @@ export default function TermsPage() {
               <li>Violate any applicable laws or regulations</li>
               <li>Attempt to gain unauthorized access to our systems</li>
               <li>Transmit any harmful, offensive, or disruptive content</li>
-              <li>Engage in any activity that interferes with or disrupts the site's functionality</li>
+              <li>Engage in any activity that interferes with or disrupts the site&apos;s functionality</li>
               <li>Use automated bots or scrapers without prior written permission</li>
             </ul>
           </Section>
 
           <Section title="8. Disclaimer of Warranties">
-            <p>This website is provided on an "as is" and "as available" basis without any warranties of any kind, either express or implied. We do not warrant that:</p>
+            <p>This website is provided on an &quot;as is&quot; and &quot;as available&quot; basis without any warranties of any kind, either express or implied. We do not warrant that:</p>
             <ul>
               <li>The site will be uninterrupted or error-free</li>
               <li>Defects will be corrected</li>

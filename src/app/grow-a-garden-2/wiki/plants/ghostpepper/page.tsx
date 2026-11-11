@@ -72,13 +72,13 @@ export default function GhostPepperGuide() {
           Ghost Pepper <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Plant Size Guide</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-          <strong>Ghost Pepper</strong> is GAG2's tall <strong>Mythic</strong> crop — obtainable only from its own limited-time <strong>Robux pack</strong>, never from Sam's Seed Shop.
+          <strong>Ghost Pepper</strong> is GAG2&apos;s tall <strong>Mythic</strong> crop — obtainable only from its own limited-time <strong>Robux pack</strong>, never from Sam&apos;s Seed Shop.
           Part of the <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link>.
         </p>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mt-4" style={{ color: "var(--muted)" }}>
           The Ghost Pepper is a <strong>tall, Mythic multi-harvest crop</strong> in Grow a Garden 2, obtainable only from the
-          limited-time <strong>Ghost Pepper Pack</strong> (Robux gacha) — never Sam's Seed Shop. It needs generous garden space:
-          it's a tall plant. With a <strong>1% drop rate</strong>, expect roughly 100 rolls to pull one, so set a Robux budget first.
+          limited-time <strong>Ghost Pepper Pack</strong> (Robux gacha) — never Sam&apos;s Seed Shop. It needs generous garden space:
+          it&apos;s a tall plant. With a <strong>1% drop rate</strong>, expect roughly 100 rolls to pull one, so set a Robux budget first.
         </p>
       </div>
 
@@ -88,13 +88,13 @@ export default function GhostPepperGuide() {
             📏 How Big Does the Ghost Pepper Plant Get?
           </h2>
           <p className="mb-4">
-            The direct answer to the keyword: <strong>it's a tall plant</strong> — one of the taller crops in GAG2. If you're planning
+            The direct answer to the keyword: <strong>it&apos;s a tall plant</strong> — one of the taller crops in GAG2. If you&apos;re planning
             a plot around it, give it real room. Tall crops can visually block or crowd smaller plants around them, and a Ghost Pepper
-            you fought a 1% gacha to win deserves a proper spot, not a squeezed corner where you can't harvest comfortably.
+            you fought a 1% gacha to win deserves a proper spot, not a squeezed corner where you can&apos;t harvest comfortably.
           </p>
           <p className="mb-4">
-            <strong>Garden-layout tip:</strong> place tall plants like Ghost Pepper along the back or edges of your plot so they don't
-            shadow shorter multi-harvest crops. If you're short on space, don't pull the pack yet — a tall crop with nowhere to live
+            <strong>Garden-layout tip:</strong> place tall plants like Ghost Pepper along the back or edges of your plot so they don&apos;t
+            shadow shorter multi-harvest crops. If you&apos;re short on space, don&apos;t pull the pack yet — a tall crop with nowhere to live
             is a wasted pull. Plan the plot first, gamble second.
           </p>
         </section>
@@ -105,7 +105,7 @@ export default function GhostPepperGuide() {
           </h2>
           <p className="mb-4">
             Ghost Pepper comes from <strong>exactly one place</strong>: the <strong>Ghost Pepper Pack</strong>, a limited-time Robux
-            gacha. It is <strong>never sold in Sam's Seed Shop</strong> — not in the rotation, not in restocks, not ever. If a guide
+            gacha. It is <strong>never sold in Sam&apos;s Seed Shop</strong> — not in the rotation, not in restocks, not ever. If a guide
             tells you to camp the Seed Shop for Ghost Pepper, stop reading that guide.
           </p>
           <p className="mb-4">
@@ -113,7 +113,7 @@ export default function GhostPepperGuide() {
             <strong> Baby Cactus 50%, Horned Melon 30%, Glow Mushroom 15%, Poison Ivy 4%, and Ghost Pepper 1%</strong>.
             <strong> Disclaimer:</strong> these are player-reported figures and sources disagree on exact Robux pricing (regional
             pricing and patches shift it), so confirm the in-game price before buying. The 1% drop rate is the number that matters:
-            on average, that's roughly <strong>100 rolls per Ghost Pepper</strong> — do the Robux math on that before your first pull.
+            on average, that&apos;s roughly <strong>100 rolls per Ghost Pepper</strong> — do the Robux math on that before your first pull.
           </p>
         </section>
 
@@ -122,17 +122,17 @@ export default function GhostPepperGuide() {
             💰 How Much Is Ghost Pepper Worth?
           </h2>
           <p className="mb-4">
-            Tested in-game harvests put the Ghost Pepper's base crop value around <strong>2,256–2,500 sheckles</strong> at roughly
-            <strong> 7.19 kg base weight</strong>. That's strong for a Mythic — and it's <strong>multi-harvest</strong>, so the plant
+            Tested in-game harvests put the Ghost Pepper&apos;s base crop value around <strong>2,256–2,500 sheckles</strong> at roughly
+            <strong> 7.19 kg base weight</strong>. That&apos;s strong for a Mythic — and it&apos;s <strong>multi-harvest</strong>, so the plant
             keeps producing instead of vanishing after one collection. That combination is exactly why tested-value lists grade it
-            <strong> Tier S</strong>, with the note "repeat harvesting."
+            <strong> Tier S</strong>, with the note &quot;repeat harvesting.&quot;
           </p>
           <p className="mb-4">
             <strong>Methodology note:</strong> base value is an average, not a fixed price. Fruit weight varies per harvest, and
             <strong>mutations</strong> (Golden at 15x, Rainbow, and weather-event rolls) can push individual fruit far above or below
             the range — run your own harvests through our
             <Link href="/crop-calculator" className="text-[var(--primary)] hover:underline font-semibold"> crop calculator</Link> to
-            see real per-hour numbers. It's also valued as a <strong>defensive plant</strong> for gardens, which adds utility beyond
+            see real per-hour numbers. It&apos;s also valued as a <strong>defensive plant</strong> for gardens, which adds utility beyond
             raw sheckles.
           </p>
         </section>
@@ -144,13 +144,13 @@ export default function GhostPepperGuide() {
           <p className="mb-4">
             <strong>Set a budget first — then respect it.</strong> A 1% drop rate means the expected cost of one Ghost Pepper is
             steep, and gacha variance means you can easily spend past the average with nothing to show. Decide your maximum Robux
-            spend <em>before</em> the first roll, not after the tenth. The pack is also <strong>limited-time</strong>: don't plan
-            your garden's future around a pack that may rotate out — and never pay a premium to someone "selling" a limited pack's
+            spend <em>before</em> the first roll, not after the tenth. The pack is also <strong>limited-time</strong>: don&apos;t plan
+            your garden&apos;s future around a pack that may rotate out — and never pay a premium to someone &quot;selling&quot; a limited pack&apos;s
             contents outside the game.
           </p>
           <p className="mb-4">
-            <strong>Scam warning:</strong> "free Ghost Pepper" offers are always scams — account theft or Robux theft, sometimes both.
-            There is no legitimate free route; the pack is the only source. If you're free-to-play, skip the pack entirely and chase
+            <strong>Scam warning:</strong> &quot;free Ghost Pepper&quot; offers are always scams — account theft or Robux theft, sometimes both.
+            There is no legitimate free route; the pack is the only source. If you&apos;re free-to-play, skip the pack entirely and chase
             free seeds through our <Link href="/grow-a-garden-2/wiki/codes" className="text-[var(--primary)] hover:underline font-semibold">GAG2 codes page</Link> instead.
             And if you do trade Ghost Pepper fruit, compare prices on our
             <Link href="/grow-a-garden-2/trades" className="text-[var(--primary)] hover:underline font-semibold"> trades page</Link> first.

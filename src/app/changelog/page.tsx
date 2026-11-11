@@ -53,7 +53,7 @@ export default function ChangelogPage() {
             Data update dates
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            The dates below show when the corresponding data files were last changed in the site's repository. They do not claim that a Roblox patch was tested, that every value was independently verified, or that player trading prices are current.
+            The dates below show when the corresponding data files were last changed in the site&apos;s repository. They do not claim that a Roblox patch was tested, that every value was independently verified, or that player trading prices are current.
           </p>
         </header>
 

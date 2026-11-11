@@ -102,7 +102,7 @@ export default function GAG2StockPredictor() {
           <p className="mb-4">
             The key skill is <strong>prediction</strong>: learn the rotation rhythm, keep coins liquid before a restock, and
             be standing in the shop when the timer hits zero. Players who check the shop casually get leftovers; players who
-            track restocks get the rare seeds that drive the game's economy.
+            track restocks get the rare seeds that drive the game&apos;s economy.
           </p>
         </section>
 

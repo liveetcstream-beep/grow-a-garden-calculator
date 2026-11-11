@@ -3,7 +3,7 @@
 import { useState, useMemo, useCallback } from "react";
 import { CROPS } from "@/data/crops";
 import { MUTATIONS, Mutation } from "@/data/mutations";
-import { calculateTrade, TradeItem, formatNumber, formatCurrency } from "@/lib/calculator";
+import { calculateTrade, TradeItem, formatCurrency } from "@/lib/calculator";
 
 interface TradeItemUI extends TradeItem {
   selectedMutationIds: string[];

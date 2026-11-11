@@ -72,7 +72,7 @@ export default function RaccoonGuide() {
           Raccoon <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Pet Guide</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-          The <strong>Raccoon</strong> is Grow a Garden 2's infamous thief pet — a Super-rarity night raider that steals for
+          The <strong>Raccoon</strong> is Grow a Garden 2&apos;s infamous thief pet — a Super-rarity night raider that steals for
           you while you sleep. Part of the <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link>.
         </p>
       </div>
@@ -101,7 +101,7 @@ export default function RaccoonGuide() {
           <p className="mb-4">
             <strong>Price note:</strong> sheckle listings disagree — some sources say <strong>5,000,000</strong>, others
             <strong> 15,000,000</strong>. Treat any listing in that range as plausible and check our <Link href="/value-list" className="text-[var(--primary)] hover:underline font-semibold">value list</Link> for
-            the current going rate before trading. This price disagreement is the Raccoon's biggest trap: it is the pet
+            the current going rate before trading. This price disagreement is the Raccoon&apos;s biggest trap: it is the pet
             players most often overpay for, so verify the market every time. Our <Link href="/grow-a-garden-2/trades" className="text-[var(--primary)] hover:underline font-semibold">trades guide</Link> covers
             how to read live demand before you commit.
           </p>
@@ -133,7 +133,7 @@ export default function RaccoonGuide() {
           <p className="mb-4">
             Raccoons only hit <strong>empty or unlocked gardens</strong> — simply staying inside your garden locks it. For
             times you are away, the counters are <strong>Bee</strong> (swarms raiders), <strong>Ice Serpent</strong> (freezes
-            intruders) and <strong>Black Dragon</strong> (burns them). Layer these with walls and traps from our <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">wiki's
+            intruders) and <strong>Black Dragon</strong> (burns them). Layer these with walls and traps from our <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">wiki&apos;s
             defense guide</Link>, and harvest valuables before dusk. Losing a full harvest of high-value crops to a night
             raid is one of the most frustrating setbacks in GAG2 — a defensive pet like the Bee costs far less than one
             stolen Super-crop harvest.
@@ -153,7 +153,7 @@ export default function RaccoonGuide() {
             trading. The variant drives the price: a base Raccoon sits near the bottom of the range, while Huge and Rainbow
             variants command the top. Before any trade, value your pet with our <Link href="/pet-calculator" className="text-[var(--primary)] hover:underline font-semibold">pet calculator</Link>,
             cross-check the <Link href="/value-list" className="text-[var(--primary)] hover:underline font-semibold">value list</Link>, and
-            confirm the exact variant — "Raccoon for sale" with no variant named is how overpayments happen. Never rush a
+            confirm the exact variant — &quot;Raccoon for sale&quot; with no variant named is how overpayments happen. Never rush a
             Raccoon trade because the seller claims another buyer is waiting; that pressure is the oldest trick in the book.
           </p>
         </section>

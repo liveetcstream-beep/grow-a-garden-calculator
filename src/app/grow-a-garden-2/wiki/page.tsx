@@ -217,7 +217,7 @@ export default function GAG2Wiki() {
           </h2>
           <p className="mb-4">
             The defining mechanic of the sequel. When night falls, the game becomes competitive: you can travel to other
-            players' gardens and <strong>steal their crops</strong>. Theft is not free — gardens can be fortified, and
+            players&apos; gardens and <strong>steal their crops</strong>. Theft is not free — gardens can be fortified, and
             defensive plants fight back. The meta revolves around a simple question: <em>is this harvest worth more in my
             inventory tonight, or in the ground until morning?</em>
           </p>
@@ -225,7 +225,7 @@ export default function GAG2Wiki() {
             <strong>Raiding tips:</strong> scout during the day for gardens with visible high-value crops and weak walls;
             raid with guildmates so one player can distract defenses; prioritize mutated crops, which carry the biggest
             multipliers. <strong>Defense tips:</strong> harvest everything valuable before dusk; ring your best plots with
-            traps; plant defensive crops along likely entry paths; invest in gear that boosts your garden's security rating.
+            traps; plant defensive crops along likely entry paths; invest in gear that boosts your garden&apos;s security rating.
           </p>
           <p className="mb-4">
             <strong>Is stealing griefing, or part of the game?</strong> It is part of the game by design — the entire
@@ -242,7 +242,7 @@ export default function GAG2Wiki() {
           <p className="mb-4">
             Defense in GAG2 is layered. <strong>Walls</strong> slow intruders and funnel them into kill zones.
             <strong> Traps</strong> punish anyone crossing your best plots. <strong>Defensive plants</strong> are the
-            sequel's signature addition — living crops that actively attack thieves. And some regular crops double as
+            sequel&apos;s signature addition — living crops that actively attack thieves. And some regular crops double as
             defensive tools, so farm layout is a strategic choice, not decoration.
           </p>
           <p className="mb-4">
@@ -259,7 +259,7 @@ export default function GAG2Wiki() {
           </h2>
           <p className="mb-4">
             Weather effects and <strong>plant mutations</strong> return from the original and work the same way: mutations
-            multiply a crop's base value and <strong>stack multiplicatively</strong>. A ×20 and a ×50 mutation on one crop
+            multiply a crop&apos;s base value and <strong>stack multiplicatively</strong>. A ×20 and a ×50 mutation on one crop
             means ×1,000 value. High-tier mutations like Golden and Rainbow are the biggest value levers in the game — and
             the biggest theft magnets. The full multiplier list lives in our <Link href="/mutation-guide" className="text-[var(--primary)] hover:underline font-semibold">mutation guide</Link>.
           </p>
@@ -283,13 +283,13 @@ export default function GAG2Wiki() {
           </p>
           <p className="mb-4">
             What you plant matters as much as when. <strong>Moon Bloom</strong> and <strong>Sun Bloom</strong> are the
-            sequel's headline Super crops — Sun Bloom sits at the 110M tier — and the two can merge into Eclipse Bloom.
+            sequel&apos;s headline Super crops — Sun Bloom sits at the 110M tier — and the two can merge into Eclipse Bloom.
             <strong> Mushroom</strong> is an Epic S-tier money crop (15K seed, ~13K per fruit), while <strong>Corn</strong> is
             the reliable Rare multi-harvest workhorse that pays you back again and again. Read the individual guides — <Link href="/grow-a-garden-2/wiki/plants/moonbloom" className="text-[var(--primary)] hover:underline font-semibold">Moon Bloom</Link>, <Link href="/grow-a-garden-2/wiki/plants/sunbloom" className="text-[var(--primary)] hover:underline font-semibold">Sun Bloom</Link>, <Link href="/grow-a-garden-2/wiki/plants/mushroom" className="text-[var(--primary)] hover:underline font-semibold">Mushroom</Link>, <Link href="/grow-a-garden-2/wiki/plants/corn" className="text-[var(--primary)] hover:underline font-semibold">Corn</Link> —
             before committing your sheckles.
           </p>
           <p className="mb-4">
-            Multi-harvest crops are a beginner's best friend: one planting, many payouts. Price every harvest against its
+            Multi-harvest crops are a beginner&apos;s best friend: one planting, many payouts. Price every harvest against its
             seed cost with our <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">crop calculator</Link> before
             expanding your farm.
           </p>
@@ -320,7 +320,7 @@ export default function GAG2Wiki() {
           </h2>
           <p className="mb-4">
             Gardens now <strong>surround a central hub</strong> holding the important shops and services — a big change from
-            the original's row layout. Learn the hub layout early: fast access to the seed shop during restocks and the gear
+            the original&apos;s row layout. Learn the hub layout early: fast access to the seed shop during restocks and the gear
             shop before nightfall wins games.
           </p>
           <p className="mb-4">
@@ -355,7 +355,7 @@ export default function GAG2Wiki() {
           <p className="mb-4">
             Developers drop <strong>monthly redeem codes</strong> for free seeds, watering cans and crates — redeem them
             immediately, as they expire. Weekly <strong>admin abuse events</strong> (staff-run item drops) carry over from
-            the original game's community tradition and are the best source of free premium items. Our <Link href="/grow-a-garden-2/wiki/codes" className="text-[var(--primary)] hover:underline font-semibold">GAG2 codes page</Link> tracks
+            the original game&apos;s community tradition and are the best source of free premium items. Our <Link href="/grow-a-garden-2/wiki/codes" className="text-[var(--primary)] hover:underline font-semibold">GAG2 codes page</Link> tracks
             every active code so you never miss one.
           </p>
         </section>
@@ -387,8 +387,8 @@ export default function GAG2Wiki() {
             guide does not mention night stealing, it is not a GAG2 guide.
           </p>
           <p className="mb-4">
-            The second trap is <strong>expired codes and stale value lists</strong>. Redeem codes die fast, and many "value
-            list" sites copy each other without testing — which is how players overpay for pets and crops. Use this wiki's
+            The second trap is <strong>expired codes and stale value lists</strong>. Redeem codes die fast, and many &quot;value
+            list&quot; sites copy each other without testing — which is how players overpay for pets and crops. Use this wiki&apos;s
             <Link href="/grow-a-garden-2/wiki/codes" className="text-[var(--primary)] hover:underline font-semibold"> codes page</Link> for codes that are
             actually live, and the <Link href="/value-list" className="text-[var(--primary)] hover:underline font-semibold">value list</Link> plus <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-semibold">trade calculator</Link> for
             trades — and never spend sheckles based on a screenshot someone posted in a trading server.

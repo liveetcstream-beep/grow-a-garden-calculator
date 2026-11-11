@@ -72,7 +72,7 @@ export default function GrowAGarden2Hub() {
           Grow a Garden 2 <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Guide 2026</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-          <strong>Grow a Garden 2</strong> (GAG2) is the official sequel to Roblox's biggest farming hit — and it changes the rules. It keeps
+          <strong>Grow a Garden 2</strong> (GAG2) is the official sequel to Roblox&apos;s biggest farming hit — and it changes the rules. It keeps
           the plant-grow-sell loop you know, then bolts on <strong>nighttime PVP stealing</strong>, a central-hub map, defensive
           plants, guilds and a full day-and-night cycle. This hub covers everything: mechanics, strategy, codes and values.
         </p>
@@ -111,7 +111,7 @@ export default function GrowAGarden2Hub() {
             own gardens, sneak into others, and <strong>attempt to steal valuable crops</strong>, alone or with a guild.
           </p>
           <p className="mb-4">
-            This risk-reward rhythm is the heart of the sequel's strategy. The smartest players harvest high-value crops before
+            This risk-reward rhythm is the heart of the sequel&apos;s strategy. The smartest players harvest high-value crops before
             nightfall, invest in <strong>defensive plants, traps, walls and gear</strong>, and only leave their most replaceable
             crops exposed overnight. Our <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link> breaks
             down every defensive option and raiding tactic in detail.
@@ -120,10 +120,10 @@ export default function GrowAGarden2Hub() {
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            🗺️ What's New in GAG2 Compared to the Original Game?
+            🗺️ What&apos;s New in GAG2 Compared to the Original Game?
           </h2>
           <p className="mb-4">
-            Instead of the original's rows-based layout, gardens in the sequel <strong>surround a central hub</strong> packed with
+            Instead of the original&apos;s rows-based layout, gardens in the sequel <strong>surround a central hub</strong> packed with
             shops and services. The sequel ships a new selection of seeds and crops — and some crops double as <strong>defensive
             tools</strong>, with dangerous plants that actively protect your property. <strong>Weather effects and plant
             mutations</strong> return, so the multiplier-stacking strategies from the original still apply, now with theft risk
@@ -132,7 +132,7 @@ export default function GrowAGarden2Hub() {
           <p className="mb-4">
             Other returning and new systems: <strong>offline progression</strong> (crops grow while you are away),
             <strong> guilds with weekly rewards</strong>, and weekly <strong>admin abuse events</strong> where staff drop
-            free items — a tradition carried over from the original game's community.
+            free items — a tradition carried over from the original game&apos;s community.
           </p>
         </section>
 
@@ -191,7 +191,7 @@ export default function GrowAGarden2Hub() {
             overnight for thieves. If a guide never mentions night stealing, treat it as outdated.
           </p>
           <p className="mb-4">
-            <strong>Fake value lists and expired codes:</strong> many "value list" sites copy each other's numbers without
+            <strong>Fake value lists and expired codes:</strong> many &quot;value list&quot; sites copy each other&apos;s numbers without
             testing, and old articles keep listing dead codes. Always check trades against our <Link href="/value-list" className="text-[var(--primary)] hover:underline font-semibold">live value list</Link>,
             price the deal in the <Link href="/trade-calculator" className="text-[var(--primary)] hover:underline font-semibold">trade calculator</Link> before
             accepting, and only trust codes from our live <Link href="/grow-a-garden-2/wiki/codes" className="text-[var(--primary)] hover:underline font-semibold">GAG2 codes page</Link>.
