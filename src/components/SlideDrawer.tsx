@@ -3,10 +3,10 @@
 import { useState, useMemo, useEffect } from "react";
 import { MUTATIONS, Mutation, MUTATION_CATEGORIES } from "@/data/mutations";
 import { calculateCropValue, calculatePetValue, formatCurrency, formatNumber } from "@/lib/calculator";
-import { InventoryItem } from "./Dashboard";
+import type { InventoryItem, CalculatorItem } from "./Dashboard";
 
 interface SlideDrawerProps {
-  item: { type: "crops" | "pets"; data: any };
+  item: CalculatorItem;
   onClose: () => void;
   onAddToInventory: (item: InventoryItem) => void;
 }
@@ -14,6 +14,7 @@ interface SlideDrawerProps {
 export default function SlideDrawer({ item, onClose, onAddToInventory }: SlideDrawerProps) {
   const isCrop = item.type === "crops";
   const data = item.data;
+  const baseValueLabel = item.type === "crops" ? item.data.basePrice : item.data.baseValue;
 
   // Generic form state
   const [weight, setWeight] = useState(isCrop ? 1 : 10);
@@ -41,27 +42,29 @@ export default function SlideDrawer({ item, onClose, onAddToInventory }: SlideDr
   };
 
   const calculateResult = useMemo(() => {
-    if (isCrop) {
-      return calculateCropValue({
-        basePrice: data.basePrice,
+    if (item.type === "crops") {
+      const crop = item.data;
+      return { type: "crop" as const, value: calculateCropValue({
+        basePrice: crop.basePrice,
         weight,
         mutations: selectedMutations,
         friendBoost: 0,
         quantity,
-      });
+      }) };
     } else {
-      return calculatePetValue({
-        baseValue: data.baseValue,
+      const pet = item.data;
+      return { type: "pet" as const, value: calculatePetValue({
+        baseValue: pet.baseValue,
         weight,
         age,
-        abilityMultiplier: data.abilityMultiplier,
-      });
+        abilityMultiplier: pet.abilityMultiplier,
+      }) };
     }
-  }, [isCrop, data, weight, quantity, selectedMutations, age]);
+  }, [item, weight, quantity, selectedMutations, age]);
 
-  const finalValue = isCrop 
-    ? (calculateResult as any).finalValue 
-    : (calculateResult as any).estimatedValue;
+  const finalValue = calculateResult.type === "crop"
+    ? calculateResult.value.finalValue
+    : calculateResult.value.estimatedValue;
 
   const handleCopyDiscord = () => {
     let text = "";
@@ -69,7 +72,9 @@ export default function SlideDrawer({ item, onClose, onAddToInventory }: SlideDr
       const muts = selectedMutations.length > 0 ? ` with [${selectedMutations.map(m=>m.name).join(", ")}]` : "";
       text = `\`🌾\` **${data.name}** (${weight}kg)${muts}\n\`💰\` **Est. Value:** ${formatNumber(finalValue)}`;
     } else {
-      text = `\`🐾\` **${data.name}** (${weight}kg, ${age} days old)\n\`🌟\` **Rarity:** ${data.rarity}\n\`💰\` **Est. Value:** ${formatNumber(finalValue)}`;
+      if (item.type === "pets") {
+        text = `\`🐾\` **${data.name}** (${weight}kg, ${age} days old)\n\`🌟\` **Rarity:** ${item.data.rarity}\n\`💰\` **Est. Value:** ${formatNumber(finalValue)}`;
+      }
     }
     
     navigator.clipboard.writeText(text);
@@ -120,7 +125,7 @@ export default function SlideDrawer({ item, onClose, onAddToInventory }: SlideDr
                  {data.name}
                </h2>
                <p className="text-xs font-semibold mt-1" style={{ color: isCrop ? 'var(--primary)' : 'var(--warning)' }}>
-                 {isCrop ? `Base Price:  ${data.basePrice}` : `Base Value:  ${data.baseValue}`}
+                 {isCrop ? `Base Price:  ${baseValueLabel}` : `Base Value:  ${baseValueLabel}`}
                </p>
              </div>
            </div>
@@ -157,7 +162,7 @@ export default function SlideDrawer({ item, onClose, onAddToInventory }: SlideDr
              <div className="mb-6">
                 <div className="flex justify-between items-center mb-2">
                   <label className="text-xs font-bold text-[var(--muted)]">Mutations ({selectedMutations.length})</label>
-                  {selectedMutations.length > 0 && <span className="text-xs text-[var(--primary)] font-bold">= ×{formatNumber((calculateResult as any).mutationMultiplier)}</span>}
+                  {selectedMutations.length > 0 && calculateResult.type === "crop" && <span className="text-xs text-[var(--primary)] font-bold">= ×{formatNumber(calculateResult.value.mutationMultiplier)}</span>}
                 </div>
                 
                 <div className="flex gap-2 overflow-x-auto pb-2 mb-2 no-scrollbar">

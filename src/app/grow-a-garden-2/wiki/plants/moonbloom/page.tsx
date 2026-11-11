@@ -72,7 +72,7 @@ export default function MoonbloomGuide() {
           Moon <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Bloom</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-          The <strong>Moon Bloom</strong> is one of Grow a Garden 2's Super-rarity crops — a multi-harvest money-maker and
+          The <strong>Moon Bloom</strong> is one of Grow a Garden 2&apos;s Super-rarity crops — a multi-harvest money-maker and
           half of the Eclipse Bloom merge. Part of the <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link>.
         </p>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mt-4" style={{ color: "var(--muted)" }}>
@@ -97,7 +97,7 @@ export default function MoonbloomGuide() {
           <p className="mb-4">
             <strong>Price:</strong> expect to pay around <strong>65–85 million sheckles</strong>. Launch-era guides listed
             65M, but current sources list 85M — the developers rebalanced several Super seed prices upward after release,
-            so budget for the higher number. That's a massive outlay for most players, so farm up your sheckle reserves
+            so budget for the higher number. That&apos;s a massive outlay for most players, so farm up your sheckle reserves
             before you start camping the shop.
           </p>
         </section>
@@ -116,7 +116,7 @@ export default function MoonbloomGuide() {
             unmutated fruit. Your actual sale price swings with <strong>weight and mutations</strong> — a Golden or Rainbow
             Moon Bloom sells far above the base average, while a light fruit sells below it. Price any harvest precisely with
             our <Link href="/" className="text-[var(--primary)] hover:underline font-semibold">crop calculator</Link> rather
-            than assuming the flat 9,000. If you're collecting mutated Super crops, the{" "}
+            than assuming the flat 9,000. If you&apos;re collecting mutated Super crops, the{" "}
             <Link href="/mutation-calculator" className="text-[var(--primary)] hover:underline font-semibold">mutation calculator</Link>{" "}
             shows exactly what each mutation adds.
           </p>
@@ -127,9 +127,9 @@ export default function MoonbloomGuide() {
             🌒 How Does the Moon Bloom Merge Into the Eclipse Bloom?
           </h2>
           <p className="mb-4">
-            The Moon Bloom's true purpose is the merge: grow a <strong>fully-mature Moon Bloom</strong> and a <strong>fully-mature
+            The Moon Bloom&apos;s true purpose is the merge: grow a <strong>fully-mature Moon Bloom</strong> and a <strong>fully-mature
             Sun Bloom</strong> next to each other and a merge prompt appears. Accept it to create the <strong>Eclipse Bloom</strong> —
-            Secret rarity, averaging ~12,000 sheckles per fruit. The Sun Bloom is the Moon Bloom's other half, so plan for both:
+            Secret rarity, averaging ~12,000 sheckles per fruit. The Sun Bloom is the Moon Bloom&apos;s other half, so plan for both:
             read our <Link href="/grow-a-garden-2/wiki/plants/sunbloom" className="text-[var(--primary)] hover:underline font-semibold">Sun Bloom guide</Link> to
             understand what getting it takes.
           </p>
@@ -154,11 +154,11 @@ export default function MoonbloomGuide() {
             It depends on your sheckle situation. Keeping the Moon Bloom means steady, repeatable income from its multi-harvest
             fruit (~9,000 sheckles a round) — plus its harvests are tradable fruit, so surplus can move through the{" "}
             <Link href="/grow-a-garden-2/trades" className="text-[var(--primary)] hover:underline font-semibold">trading system</Link>.
-            Merging means giving up two permanent income plants for the Eclipse Bloom's higher per-fruit average and the Eclipse
-            weather event's ×80 Eclipsed mutations.
+            Merging means giving up two permanent income plants for the Eclipse Bloom&apos;s higher per-fruit average and the Eclipse
+            weather event&apos;s ×80 Eclipsed mutations.
           </p>
           <p className="mb-4">
-            The safe play: only merge once you've already rebuilt your farming base and can absorb losing both Super crops.
+            The safe play: only merge once you&apos;ve already rebuilt your farming base and can absorb losing both Super crops.
             If the 65–85M seed cost nearly wiped your reserves, keep farming the Moon Bloom first and merge later.
           </p>
         </section>

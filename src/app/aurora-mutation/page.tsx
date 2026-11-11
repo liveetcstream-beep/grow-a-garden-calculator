@@ -14,9 +14,6 @@ const rainbowMut = MUTATIONS.find((m) => m.id === "rainbow")!;
 const moonlitMut = MUTATIONS.find((m) => m.id === "moonlit")!;
 const bloodlitMut = MUTATIONS.find((m) => m.id === "bloodlit")!;
 
-// Other event mutations for comparison
-const eventMutations = [auroraMut, celestialMut, moonlitMut, bloodlitMut].filter(Boolean);
-
 // High-value crops to pair with Aurora
 const featuredCrops = ["dragon-fruit", "mango", "starfruit", "watermelon", "blueberry", "pumpkin"]
   .map((id) => CROPS.find((c) => c.id === id))
@@ -206,7 +203,7 @@ export default function AuroraMutationPage() {
 
         <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--muted)" }}>
           The <strong>Aurora mutation</strong> is one of the most wanted Environmental mutations in{" "}
-          <em>Grow A Garden</em>. If you've been hunting this mutation or you're searching{" "}
+          <em>Grow A Garden</em>. If you&apos;ve been hunting this mutation or you&apos;re searching{" "}
           <em>how to get aurora mutation grow a garden</em>, this guide covers everything — exact trigger conditions,
           the Cosmic combo chain, best crop pairings, and real value examples. No filler, just the facts.
         </p>
@@ -242,19 +239,19 @@ export default function AuroraMutationPage() {
             </p>
             <p>
               Visually, Aurora-mutated crops display a soft green-teal glowing aura effect around them — similar to the way the
-              northern lights shimmer. You'll know immediately when a crop gets it because the glow stands out clearly against the
+              northern lights shimmer. You&apos;ll know immediately when a crop gets it because the glow stands out clearly against the
               garden background, especially at night.
             </p>
             <p>
               What makes Aurora genuinely special beyond its ×90 multiplier is its role in the{" "}
               <strong>Cosmic chain</strong> — the highest-tier combo sequence in Grow A Garden. Aurora + Celestial = Cosmic (×240),
               and Cosmic + Galactic = Astral (×365). No other single Environmental mutation sits at the beginning of such a powerful
-              chain. If you're serious about max-value harvests, Aurora is the mutation to farm.
+              chain. If you&apos;re serious about max-value harvests, Aurora is the mutation to farm.
             </p>
 
             {/* Rarity context box */}
             <div className="p-4 rounded-2xl border" style={{ background: `${auroraColor}08`, borderColor: `${auroraColor}25` }}>
-              <h3 className="text-sm font-bold mb-2" style={{ color: "var(--foreground)" }}>🎯 Aurora's Place in the Tier System</h3>
+              <h3 className="text-sm font-bold mb-2" style={{ color: "var(--foreground)" }}>🎯 Aurora&apos;s Place in the Tier System</h3>
               <div className="grid grid-cols-3 gap-2 text-xs text-center">
                 {[
                   { tier: "Legendary", range: "×50–×99", examples: "Aurora (×90), Rainbow (×50)", current: true },
@@ -283,8 +280,8 @@ export default function AuroraMutationPage() {
             ⚡ How to Get the Aurora Mutation — Step by Step
           </h2>
           <p className="text-sm mb-6" style={{ color: "var(--muted)" }}>
-            This is the part most players get wrong. Aurora <em>cannot</em> be forced — it's a weather event mutation.
-            Here's exactly what you need to do:
+            This is the part most players get wrong. Aurora <em>cannot</em> be forced — it&apos;s a weather event mutation.
+            Here&apos;s exactly what you need to do:
           </p>
 
           <ol className="space-y-5">
@@ -399,8 +396,8 @@ export default function AuroraMutationPage() {
             🔗 Aurora Mutation Combinations — The Cosmic Chain
           </h2>
           <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--muted)" }}>
-            Aurora's most powerful feature is not just its ×90 multiplier — it's what it <em>becomes</em> when combined with the
-            right mutations. Here's the full Cosmic chain that Aurora unlocks:
+            Aurora&apos;s most powerful feature is not just its ×90 multiplier — it&apos;s what it <em>becomes</em> when combined with the
+            right mutations. Here&apos;s the full Cosmic chain that Aurora unlocks:
           </p>
 
           {/* Chain visualization */}
@@ -482,7 +479,6 @@ export default function AuroraMutationPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {featuredCrops.map((crop) => {
               if (!crop) return null;
-              const auroraVal = Math.round(crop.basePrice * 100 * (auroraMut?.multiplier ?? 90));
               return (
                 <Link key={crop.id} href={`/crop/${crop.id}-value`}
                   className="p-4 rounded-xl transition-all hover:scale-105"
@@ -546,7 +542,7 @@ export default function AuroraMutationPage() {
             </table>
           </div>
           <p className="text-xs mt-3" style={{ color: "var(--muted)" }}>
-            Aurora wins for combo chain potential — it's the only ×90 mutation that leads directly into ×240 Cosmic.{" "}
+            Aurora wins for combo chain potential — it&apos;s the only ×90 mutation that leads directly into ×240 Cosmic.{" "}
             <Link href="/mutation-guide" className="text-[var(--primary)] hover:underline">View all mutations in the full Guide →</Link>
           </p>
         </div>

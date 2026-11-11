@@ -89,7 +89,7 @@ export default function ReverseCalculatorPage() {
           The key insight is the trade-off between <strong style={{ color: 'var(--foreground)' }}>weight and mutations</strong>. Because weight scaling diminishes while mutations multiply, one strong mutation often replaces an impossible weight target with an easy one. The auto-suggestions above find that sweet spot for you — for example, showing which single mutation makes your goal reachable at a realistic 50kg harvest.
         </p>
         <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
-          Once you know the required setup, plan the grow: check <Link href="/mutation-guide" className="text-[var(--primary)] hover:underline font-bold">how to trigger each mutation</Link>, verify the crop's economics on the <Link href="/value-list" className="text-[var(--primary)] hover:underline font-bold">value list</Link>, and test forward pricing in the <Link href="/crop-calculator" className="text-[var(--primary)] hover:underline font-bold">crop calculator</Link>.
+          Once you know the required setup, plan the grow: check <Link href="/mutation-guide" className="text-[var(--primary)] hover:underline font-bold">how to trigger each mutation</Link>, verify the crop&apos;s economics on the <Link href="/value-list" className="text-[var(--primary)] hover:underline font-bold">value list</Link>, and test forward pricing in the <Link href="/crop-calculator" className="text-[var(--primary)] hover:underline font-bold">crop calculator</Link>.
         </p>
       </div>
 

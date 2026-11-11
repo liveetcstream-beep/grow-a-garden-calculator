@@ -72,13 +72,13 @@ export default function DragonflyGuide() {
           Golden Dragonfly <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Value Guide</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-          <strong>Read this first:</strong> in Grow a Garden 2 the pet is the <strong>Golden Dragonfly</strong> — a <strong>Mythic</strong> pet that is NOT the same as the original game's Dragonfly.
+          <strong>Read this first:</strong> in Grow a Garden 2 the pet is the <strong>Golden Dragonfly</strong> — a <strong>Mythic</strong> pet that is NOT the same as the original game&apos;s Dragonfly.
           Part of the <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link>.
         </p>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mt-4" style={{ color: "var(--muted)" }}>
           The Golden Dragonfly is a <strong>Mythic pet</strong> in Grow a Garden 2 costing <strong>9,000,000 sheckles</strong>. It passively
           doubles (2x) the chance for your fruits and plants to naturally gain the <strong>Gold mutation</strong>, which is worth 15x base
-          value. It is NOT the same as GAG1's Dragonfly from the Bug Egg — a different pet with a different ability.
+          value. It is NOT the same as GAG1&apos;s Dragonfly from the Bug Egg — a different pet with a different ability.
         </p>
       </div>
 
@@ -89,15 +89,15 @@ export default function DragonflyGuide() {
           </h2>
           <p className="mb-4">
             No — and getting this wrong is the <strong>single most common mistake</strong> players make with this keyword. The original
-            game's Dragonfly is a <strong>Divine</strong> pet hatched from the <strong>Bug Egg</strong>, and its ability turns a random
-            fruit Gold roughly every 5 minutes. Grow a Garden 2's <strong>Golden Dragonfly</strong> is a <strong>Mythic</strong> pet with
+            game&apos;s Dragonfly is a <strong>Divine</strong> pet hatched from the <strong>Bug Egg</strong>, and its ability turns a random
+            fruit Gold roughly every 5 minutes. Grow a Garden 2&apos;s <strong>Golden Dragonfly</strong> is a <strong>Mythic</strong> pet with
             a completely different mechanic: a <strong>passive 2x chance</strong> for fruits and plants to naturally roll the Gold mutation,
             with no activation and no timer.
           </p>
           <p className="mb-4">
             <strong>Why it matters:</strong> GAG1 value lists, GAG1 Discord prices, and GAG1 YouTube guides do not apply to this pet.
-            Players who price the Golden Dragonfly using old-game numbers either overpay or get scammed. When you see "Dragonfly value"
-            anywhere, check which game it refers to first — if it mentions the Bug Egg, it's the wrong pet.
+            Players who price the Golden Dragonfly using old-game numbers either overpay or get scammed. When you see &quot;Dragonfly value&quot;
+            anywhere, check which game it refers to first — if it mentions the Bug Egg, it&apos;s the wrong pet.
           </p>
         </section>
 
@@ -124,7 +124,7 @@ export default function DragonflyGuide() {
           </h2>
           <p className="mb-4">
             The ability is simple and strong: it <strong>doubles (2x) the chance</strong> for your fruits and plants to naturally gain
-            the <strong>Gold mutation</strong>. Gold multiplies a fruit's value by <strong>15x</strong>, so doubling its roll chance
+            the <strong>Gold mutation</strong>. Gold multiplies a fruit&apos;s value by <strong>15x</strong>, so doubling its roll chance
             across your entire garden is one of the best passive income boosts in the game. It requires <strong>no activation</strong> —
             equip the pet and the bonus applies continuously.
           </p>
@@ -133,7 +133,7 @@ export default function DragonflyGuide() {
             exact decimals — treat these as approximate. A <strong>Big</strong> Golden Dragonfly scales the bonus to about <strong>3x</strong>,
             a <strong>Mega</strong> to about <strong>4x</strong>, and <strong>Rainbow</strong> adds roughly 1.25x on top
             (~x2.25 / ~x3.5 / ~x4.75 depending on size). Size and Rainbow roll separately from the base pet, so check any traded
-            Dragonfly's traits before agreeing on a price. To model what the bonus does for your garden, use our
+            Dragonfly&apos;s traits before agreeing on a price. To model what the bonus does for your garden, use our
             <Link href="/pet-calculator" className="text-[var(--primary)] hover:underline font-semibold"> pet calculator</Link>.
           </p>
         </section>
@@ -146,7 +146,7 @@ export default function DragonflyGuide() {
             The <strong>shop anchor is 9,000,000 sheckles</strong>, and trade value is <strong>high</strong>: Mythic rarity, a huge
             price tag, and real demand from mutation farmers all keep demand strong. Like the
             <Link href="/grow-a-garden-2/wiki/pets/raccoon" className="text-[var(--primary)] hover:underline font-semibold"> Raccoon</Link>,
-            it's one of the few pets that holds serious trade value rather than depreciating like common hatch fodder.
+            it&apos;s one of the few pets that holds serious trade value rather than depreciating like common hatch fodder.
           </p>
           <p className="mb-4">
             But never treat 9M as a fixed trade price. Pet values shift with patches, egg availability, and demand waves — verify
@@ -164,14 +164,14 @@ export default function DragonflyGuide() {
           </h2>
           <p className="mb-4">
             <strong>The honest answer: not first.</strong> 9 million sheckles is a huge spend, and the doubled Gold rolls only pay
-            off when you have a large garden producing enough fruit for the bonus to compound. If you're still building, that 9M goes
-            much further in multi-harvest Epic and Legendary crops. Buy the Dragonfly once your garden's output justifies it — it's a
+            off when you have a large garden producing enough fruit for the bonus to compound. If you&apos;re still building, that 9M goes
+            much further in multi-harvest Epic and Legendary crops. Buy the Dragonfly once your garden&apos;s output justifies it — it&apos;s a
             multiplier on an existing operation, not a starter pet.
           </p>
           <p className="mb-4">
             <strong>Scam protection:</strong> this pet is worth enough to be a scam target. Never trade outside the official in-game
-            trade window — "middleman" offers and off-window deals are how Dragonfly owners lose their pets. Ignore "free dragonfly"
-            links and giveaways (they're credential phishing), and if a trade offer feels too good, it is. The 9M anchor is public
+            trade window — &quot;middleman&quot; offers and off-window deals are how Dragonfly owners lose their pets. Ignore &quot;free dragonfly&quot;
+            links and giveaways (they&apos;re credential phishing), and if a trade offer feels too good, it is. The 9M anchor is public
             knowledge; anyone drastically undercutting it is baiting you.
           </p>
         </section>

@@ -72,7 +72,7 @@ export default function MushroomGuide() {
           Mushroom <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Value Guide</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-          The <strong>Mushroom</strong> is Grow a Garden 2's best value-per-seed crop — Epic rarity, ~13K per fruit, S-tier money maker.
+          The <strong>Mushroom</strong> is Grow a Garden 2&apos;s best value-per-seed crop — Epic rarity, ~13K per fruit, S-tier money maker.
           Part of the <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link>.
         </p>
       </div>
@@ -98,7 +98,7 @@ export default function MushroomGuide() {
             top up your funds with the freebies on our <Link href="/grow-a-garden-2/wiki/codes" className="text-[var(--primary)] hover:underline font-semibold">GAG2 codes page</Link>.
           </p>
           <p className="mb-4">
-            <strong>Note:</strong> this is the GAG2 Mushroom (Epic, 15K). The original game's Mushroom is a completely different
+            <strong>Note:</strong> this is the GAG2 Mushroom (Epic, 15K). The original game&apos;s Mushroom is a completely different
             crop (Divine, 150K) — search results mix them up constantly, so make sure any guide you read is about the sequel.
             GAG1 vs GAG2 confusion is one of the most common ways players misjudge seed value, since the two games share crop
             names but not stats, rarity tiers, or prices.

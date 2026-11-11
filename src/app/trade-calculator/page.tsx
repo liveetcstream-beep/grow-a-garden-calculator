@@ -71,7 +71,7 @@ export default function TradeCalculatorPage() {
             <div>
               <h3 className="text-lg font-bold mb-3 text-[var(--primary)]">How the Trade Calculator Works</h3>
               <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
-                Our <strong>Grow A Garden trade calculator</strong> compares the item values produced by this site's stored calculation rules and displays a
+                Our <strong>Grow A Garden trade calculator</strong> compares the item values produced by this site&apos;s stored calculation rules and displays a
                 <strong> Win / Fair / Lose (W/F/L)</strong> estimate. Player demand, item availability and individual offers can differ, so use the result as a reference when reviewing a trade.
               </p>
             </div>

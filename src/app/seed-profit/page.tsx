@@ -89,7 +89,7 @@ export default function SeedProfitPage() {
           Every seed in Grow A Garden is an investment: you pay a seed cost up front, wait through the growth time, then harvest crops you can sell. Profit is simply <strong style={{ color: 'var(--foreground)' }}>harvest revenue minus seed cost</strong> — and ROI expresses that profit as a percentage of what you spent. The calculator above runs this math for all 99 crops at once, ranking them in the Top 10 Crops by ROI table so you can see the best seeds for your settings instantly.
         </p>
         <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
-          Harvest revenue itself is not a fixed number. A crop's base value is scaled by its harvest weight and multiplied by every active <Link href="/mutation-guide" className="text-[var(--primary)] hover:underline font-bold">mutation multiplier</Link> — which is why the calculator lets you set expected weight, growth time and mutations before comparing. Change any input and the rankings update live.
+          Harvest revenue itself is not a fixed number. A crop&apos;s base value is scaled by its harvest weight and multiplied by every active <Link href="/mutation-guide" className="text-[var(--primary)] hover:underline font-bold">mutation multiplier</Link> — which is why the calculator lets you set expected weight, growth time and mutations before comparing. Change any input and the rankings update live.
         </p>
       </div>
 
@@ -110,7 +110,7 @@ export default function SeedProfitPage() {
         <div className="glass-card-static p-6">
           <h2 className="text-xl font-bold mb-3" style={{ color: 'var(--foreground)' }}>🧬 Mutations</h2>
           <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
-            Mutations are the biggest profit lever in the game. Even a single strong mutation can multiply a harvest's value many times over, flipping a mediocre ROI into the best on the board. Test stacks in the <Link href="/mutation-calculator" className="text-[var(--primary)] hover:underline font-bold">mutation calculator</Link>, then bring the multipliers back here.
+            Mutations are the biggest profit lever in the game. Even a single strong mutation can multiply a harvest&apos;s value many times over, flipping a mediocre ROI into the best on the board. Test stacks in the <Link href="/mutation-calculator" className="text-[var(--primary)] hover:underline font-bold">mutation calculator</Link>, then bring the multipliers back here.
           </p>
         </div>
         <div className="glass-card-static p-6">

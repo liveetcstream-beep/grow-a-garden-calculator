@@ -1,18 +1,22 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { MUTATIONS, Mutation } from "@/data/mutations";
-import { calculateCropValue, calculatePetValue, formatCurrency, formatNumber } from "@/lib/calculator";
-import { InventoryItem } from "./Dashboard";
+import { calculatePetValue, formatCurrency, formatNumber } from "@/lib/calculator";
+import type { InventoryItem, CalculatorItem } from "./Dashboard";
 
 interface InlineCalculatorProps {
-  item: { type: "crops" | "pets"; data: any };
+  item: CalculatorItem;
   onAddToInventory: (item: InventoryItem) => void;
 }
+
+type CropEstimate = { type: "crop"; total: number; modifier: number; formula: string };
 
 export default function InlineCalculator({ item, onAddToInventory }: InlineCalculatorProps) {
   const isCrop = item.type === "crops";
   const data = item.data;
+  const categoryLabel = item.type === "crops" ? item.data.category : item.data.rarity;
+  const baseValue = item.type === "crops" ? item.data.basePrice : item.data.baseValue;
 
   const [weight, setWeight] = useState(isCrop ? 5.22 : 10);
   const [quantity, setQuantity] = useState(1);
@@ -28,7 +32,8 @@ export default function InlineCalculator({ item, onAddToInventory }: InlineCalcu
   };
 
   const calculateResult = useMemo(() => {
-    if (isCrop) {
+    if (item.type === "crops") {
+      const crop = item.data;
       let baseMult = 1;
       let otherMultsSum = 0;
       let count = 0;
@@ -50,24 +55,26 @@ export default function InlineCalculator({ item, onAddToInventory }: InlineCalcu
       
       const mutationModifier = baseMult * (1 + otherMultsSum - (count > 0 ? count : 0));
       const friendMultiplier = 1 + (friendBoost / 100);
-      const val = data.basePrice * Math.pow(weight, 2) * (mutationModifier || 1) * friendMultiplier * quantity;
+      const val = crop.basePrice * Math.pow(weight, 2) * (mutationModifier || 1) * friendMultiplier * quantity;
       
       return { 
+        type: "crop" as const,
         total: val,
         modifier: mutationModifier,
         formula: count > 0 || baseMult > 1 ? `(${baseMult}X) × (1 + ${otherMultsSum} - ${count}) = X${mutationModifier.toLocaleString()}` : `X1`
       };
     } else {
-      return calculatePetValue({
-        baseValue: data.baseValue,
+      const pet = item.data;
+      return { type: "pet" as const, ...calculatePetValue({
+        baseValue: pet.baseValue,
         weight,
         age,
-        abilityMultiplier: data.abilityMultiplier,
-      });
+        abilityMultiplier: pet.abilityMultiplier,
+      }) };
     }
-  }, [isCrop, data, weight, quantity, selectedMutations, age, friendBoost]);
+  }, [item, weight, quantity, selectedMutations, age, friendBoost]);
 
-  const finalValue = isCrop ? (calculateResult as any).total : (calculateResult as any).estimatedValue;
+  const finalValue = calculateResult.type === "crop" ? calculateResult.total : calculateResult.estimatedValue;
 
   return (
     <div className="mt-8 p-6 sm:p-10 rounded-[2.5rem] animate-slideUp overflow-hidden" 
@@ -83,10 +90,10 @@ export default function InlineCalculator({ item, onAddToInventory }: InlineCalcu
             <h2 className="text-4xl font-black text-white" style={{ fontFamily: 'var(--font-display)' }}>{data.name}</h2>
             <div className="flex flex-wrap justify-center sm:justify-start gap-4 mt-1">
               <span className="text-[10px] px-3 py-1 rounded-lg font-black bg-white/5 border border-white/10 text-muted uppercase tracking-widest leading-none">
-                {data.category || data.rarity}
+                {categoryLabel}
               </span>
               <p className="text-sm font-black text-primary uppercase tracking-tighter">
-                Base Value: {isCrop ? data.basePrice : data.baseValue}
+                Base Value: {baseValue}
               </p>
             </div>
           </div>
@@ -168,7 +175,7 @@ export default function InlineCalculator({ item, onAddToInventory }: InlineCalcu
             </div>
             {isCrop && (
               <p className="text-[11px] font-black text-primary tracking-widest mt-4 uppercase bg-primary/10 px-4 py-1.5 rounded-lg border border-primary/20">
-                Modifier: {(calculateResult as any).formula}
+                Modifier: {(calculateResult as CropEstimate).formula}
               </p>
             )}
          </div>

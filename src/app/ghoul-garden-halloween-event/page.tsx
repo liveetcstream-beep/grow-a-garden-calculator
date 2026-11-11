@@ -138,7 +138,7 @@ export default function GhoulGardenPage() {
         </h1>
         <p className="text-sm sm:text-base max-w-3xl mx-auto leading-relaxed mb-6" style={{ color: "var(--muted)" }}>
           An archive of the <strong>Ghoul Garden Halloween event</strong> (<strong>October 11–25, 2026</strong>),
-          including the Candy Corn activities, Witch's Cauldron, event pets and seeds, and Halloween Market described
+          including the Candy Corn activities, Witch&apos;s Cauldron, event pets and seeds, and Halloween Market described
           during the event. It has ended; current availability is not implied.
         </p>
         <div className="flex flex-wrap gap-3 justify-center">
@@ -190,7 +190,7 @@ export default function GhoulGardenPage() {
           </h2>
           <div className="text-sm leading-relaxed space-y-3" style={{ color: "var(--muted)" }}>
             <p>
-              <strong>Witch's Cauldron</strong> is your main income: fill it with plants to earn Candy Corn and
+              <strong>Witch&apos;s Cauldron</strong> is your main income: fill it with plants to earn Candy Corn and
               rewards, with a short cooldown after each fill. <strong>Save your rarest plants for the cauldron</strong> —
               rare plants earn significantly more Candy Corn than commons, and top contributors get bonus rewards.
             </p>

@@ -76,13 +76,13 @@ export default function BambooGuide() {
           Bamboo <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Profit Guide</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-          <strong>Bamboo</strong> is Grow a Garden 2's classic beginner trap — a cheap Rare crop whose single-harvest design
+          <strong>Bamboo</strong> is Grow a Garden 2&apos;s classic beginner trap — a cheap Rare crop whose single-harvest design
           hides its real cost. Its true value is as cheap mutation-farming fodder.
           Part of the <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link>.
         </p>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mt-4" style={{ color: "var(--muted)" }}>
           Bamboo is a <strong>Rare, single-harvest crop</strong> in Grow a Garden 2. Its seed costs
-          <strong> 700 sheckles</strong> at <strong>Sam's Seed Shop</strong>, and the crop sells for roughly
+          <strong> 700 sheckles</strong> at <strong>Sam&apos;s Seed Shop</strong>, and the crop sells for roughly
           <strong> 722–800 sheckles</strong> at ~3.77 kg base weight. The plant vanishes after one harvest, so base-profit is
           razor thin — but cheap seeds make it one of the best <strong>mutation-farming</strong> targets in the game.
         </p>
@@ -94,7 +94,7 @@ export default function BambooGuide() {
             🎋 How Do You Get Bamboo in Grow a Garden 2?
           </h2>
           <p className="mb-4">
-            Bamboo seeds cost <strong>700 sheckles</strong> from <strong>Sam's Seed Shop</strong>. At <strong>Rare</strong> rarity,
+            Bamboo seeds cost <strong>700 sheckles</strong> from <strong>Sam&apos;s Seed Shop</strong>. At <strong>Rare</strong> rarity,
             Bamboo appears frequently in the Rare rotation — published stock figures disagree, with sources reporting anywhere from
             <strong> ~25% to ~80% per 5-minute restock</strong>, but every source agrees it shows up often. You will not be camping
             the timer for this one. No quest, no event, no unlock — if it is in stock, you can buy it.
@@ -114,14 +114,14 @@ export default function BambooGuide() {
           </h2>
           <p className="mb-4">
             Base Bamboo sells for roughly <strong>722–800 sheckles</strong> at ~3.77 kg base weight — barely above the 700-sheckle
-            seed. That is the pain point new players hit first: they see "700 seed, ~800 crop" and think profit, then discover the
+            seed. That is the pain point new players hit first: they see &quot;700 seed, ~800 crop&quot; and think profit, then discover the
             plant is <strong>single-harvest and gone</strong>, forcing a rebuy every cycle. After replanting costs, base Bamboo is
             essentially a break-even crop with wasted garden space.
           </p>
           <p className="mb-4">
-            The real money is in <strong>mutations</strong>. Like every crop in GAG2, Bamboo's value scales with weight, and
+            The real money is in <strong>mutations</strong>. Like every crop in GAG2, Bamboo&apos;s value scales with weight, and
             weather-system mutations such as Golden and Rainbow push individual crops far above baseline. Because seeds are cheap
-            and cycles are short, Bamboo is graded <strong>Tier B on tested lists with the note "mutation farming"</strong> —
+            and cycles are short, Bamboo is graded <strong>Tier B on tested lists with the note &quot;mutation farming&quot;</strong> —
             farmers plant it specifically to roll mutations cheaply, not to sell base fruit.
           </p>
         </section>
@@ -132,10 +132,10 @@ export default function BambooGuide() {
           </h2>
           <p className="mb-4">
             This is the detail that separates GAG2 farmers from beginners: <strong>harvest type beats sticker price</strong>.
-            Bamboo's 700→~800 looks profitable until you realize the plant disappears after one collection. Compare that to
+            Bamboo&apos;s 700→~800 looks profitable until you realize the plant disappears after one collection. Compare that to
             <Link href="/grow-a-garden-2/wiki/plants/corn" className="text-[var(--primary)] hover:underline font-semibold"> Corn</Link> —
-            a 2,500-sheckle seed whose plant <strong>keeps producing after every harvest</strong>. Over the same play session, Corn's
-            lifetime profit crushes Bamboo's, even though Corn's per-fruit number is smaller. Multi-harvest crops win on
+            a 2,500-sheckle seed whose plant <strong>keeps producing after every harvest</strong>. Over the same play session, Corn&apos;s
+            lifetime profit crushes Bamboo&apos;s, even though Corn&apos;s per-fruit number is smaller. Multi-harvest crops win on
             <strong> lifetime profit</strong>; single-harvest crops win only when their per-harvest value is high enough to cover
             constant replanting.
           </p>
@@ -148,7 +148,7 @@ export default function BambooGuide() {
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-left" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            🧮 What Is Bamboo's Actual Best Use?
+            🧮 What Is Bamboo&apos;s Actual Best Use?
           </h2>
           <p className="mb-4">
             <strong>Mutation farming.</strong> Treat Bamboo as lottery tickets, not income: plant cheap, grow fast, harvest, and
@@ -159,7 +159,7 @@ export default function BambooGuide() {
           <p className="mb-4">
             Run your own numbers on our
             <Link href="/crop-calculator" className="text-[var(--primary)] hover:underline font-semibold"> crop calculator</Link>:
-            model Bamboo's per-cycle profit against a multi-harvest alternative over your actual session length, then factor in your
+            model Bamboo&apos;s per-cycle profit against a multi-harvest alternative over your actual session length, then factor in your
             mutation luck. The calculator settles the Bamboo-vs-Corn argument in about thirty seconds — spoiler: Corn wins on
             reliable income, Bamboo wins only on mutation lottery odds.
           </p>
@@ -171,11 +171,11 @@ export default function BambooGuide() {
           </h2>
           <p className="mb-4">
             Three common traps: <strong>one</strong>, never spend <strong>69-Robux seed rolls</strong> on a 700-sheckle seed that
-            appears constantly in the shop — that is among the worst Robux spends in the game. <strong>Two</strong>, don't trade
-            base Bamboo — it has near-zero demand since it's permanently in rotation and barely clears its seed price; only mutated
+            appears constantly in the shop — that is among the worst Robux spends in the game. <strong>Two</strong>, don&apos;t trade
+            base Bamboo — it has near-zero demand since it&apos;s permanently in rotation and barely clears its seed price; only mutated
             Bamboo is trade-worthy, and even then check live mutation prices on our
             <Link href="/value-list" className="text-[var(--primary)] hover:underline font-semibold"> value list</Link> first.
-            <strong> Three</strong>, don't judge Bamboo by its sticker price — judge it by lifetime profit after replant costs.
+            <strong> Three</strong>, don&apos;t judge Bamboo by its sticker price — judge it by lifetime profit after replant costs.
           </p>
         </section>
 

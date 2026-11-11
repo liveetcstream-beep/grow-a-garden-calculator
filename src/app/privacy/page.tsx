@@ -58,7 +58,7 @@ export default function PrivacyPage() {
         <div className="space-y-8 prose-custom">
 
           <Section title="1. Introduction">
-            <p>Welcome to <strong>{siteName}</strong> ("{siteUrl}"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.</p>
+            <p>Welcome to <strong>{siteName}</strong> (&quot;{siteUrl}&quot;). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.</p>
             <p>Please read this policy carefully. If you disagree with its terms, please discontinue use of the site.</p>
           </Section>
 
@@ -73,14 +73,14 @@ export default function PrivacyPage() {
 
           <Section title="3. Google AdSense & Advertising">
             <p>We use <strong>Google AdSense</strong> to display advertisements on our website. Google, as a third-party vendor, uses cookies to serve ads based on your prior visits to our site or other websites on the Internet.</p>
-            <p>Google's use of advertising cookies enables it and its partners to serve ads based on your visit to our site and/or other sites. You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary)" }}>Google Ads Settings</a>.</p>
-            <p>For more information about Google's privacy practices, please review the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary)" }}>Google Privacy Policy</a>.</p>
+            <p>Google&apos;s use of advertising cookies enables it and its partners to serve ads based on your visit to our site and/or other sites. You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary)" }}>Google Ads Settings</a>.</p>
+            <p>For more information about Google&apos;s privacy practices, please review the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary)" }}>Google Privacy Policy</a>.</p>
             <p>We also participate in the <strong>Google AdSense program</strong> and comply with the <a href="https://support.google.com/adsense/answer/48182" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary)" }}>Google Publisher Policies</a>.</p>
           </Section>
 
           <Section title="4. Google Analytics">
             <p>We use <strong>Google Analytics</strong> to analyze the use of our website. Google Analytics gathers information about website use by means of cookies. The information gathered is used to create reports about the use of our website.</p>
-            <p>Google's privacy policy is available at: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary)" }}>https://policies.google.com/privacy</a></p>
+            <p>Google&apos;s privacy policy is available at: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary)" }}>https://policies.google.com/privacy</a></p>
             <p>You can opt out of Google Analytics tracking by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary)" }}>Google Analytics Opt-out Browser Add-on</a>.</p>
           </Section>
 
@@ -100,7 +100,7 @@ export default function PrivacyPage() {
 
           <Section title="7. Children's Privacy">
             <p>Our website is intended for general audiences and may be used by children under the age of 13. We do not knowingly collect personally identifiable information from children. If you are a parent or guardian and believe your child has provided us with personal information, please contact us so we can delete the information.</p>
-            <p>We comply with the <strong>Children's Online Privacy Protection Act (COPPA)</strong>. Our site does not target advertising to children under 13.</p>
+            <p>We comply with the <strong>Children&apos;s Online Privacy Protection Act (COPPA)</strong>. Our site does not target advertising to children under 13.</p>
           </Section>
 
           <Section title="8. Data Retention">
@@ -119,7 +119,7 @@ export default function PrivacyPage() {
           </Section>
 
           <Section title="10. Changes to This Policy">
-            <p>We reserve the right to update this Privacy Policy at any time. We will notify you of any changes by updating the "Last updated" date at the top of this page. Continued use of the site after changes constitutes your acceptance of the updated policy.</p>
+            <p>We reserve the right to update this Privacy Policy at any time. We will notify you of any changes by updating the &quot;Last updated&quot; date at the top of this page. Continued use of the site after changes constitutes your acceptance of the updated policy.</p>
           </Section>
 
           <Section title="11. Contact Us">

@@ -20,7 +20,7 @@ export default function XpCalculatorPage() {
         Grow A Garden XP Calculator
       </h1>
       <p className="text-base leading-relaxed max-w-2xl mx-auto mb-8" style={{ color: "var(--muted)" }}>
-        This page does not currently calculate XP. We do not have verified level thresholds and XP rules in the site's data, so it would be misleading to estimate how many harvests you need.
+        This page does not currently calculate XP. We do not have verified level thresholds and XP rules in the site&apos;s data, so it would be misleading to estimate how many harvests you need.
       </p>
       <Link href="/" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-white"
         style={{ background: "var(--gradient-1)" }}>

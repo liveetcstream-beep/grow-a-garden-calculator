@@ -141,7 +141,7 @@ export default function GAG2Codes() {
           </div>
           <p className="mt-4 text-sm">
             We do not have a current in-game confirmation for these entries. Developers may retire codes or change
-            requirements without notice, so use the game's own response as the source of truth.
+            requirements without notice, so use the game&apos;s own response as the source of truth.
           </p>
         </section>
 
@@ -181,8 +181,8 @@ export default function GAG2Codes() {
           </p>
           <p className="mb-4">
             Even established players should claim every code. They cost nothing, take seconds to redeem, and watering cans
-            stay useful no matter how developed your plot is. Think of codes as the sequel's free sample economy — the
-            developers use them to pull players back for each update, and there is no reason not to take what's offered.
+            stay useful no matter how developed your plot is. Think of codes as the sequel&apos;s free sample economy — the
+            developers use them to pull players back for each update, and there is no reason not to take what&apos;s offered.
           </p>
         </section>
 

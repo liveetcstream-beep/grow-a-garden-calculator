@@ -86,7 +86,7 @@ export default function GAG2WeatherTracker() {
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
           Weather events in <strong>Grow a Garden 2</strong> strike every server at once and last only a few minutes. Ripe
-          crops caught in an event can gain a weather mutation — from Rain's 2× growth speed to the ×80 Eclipsed mutation —
+          crops caught in an event can gain a weather mutation — from Rain&apos;s 2× growth speed to the ×80 Eclipsed mutation —
           that boosts their sell price. Only ripe crops are affected, so players track events and stay online with
           harvestable fields.
         </p>
@@ -111,11 +111,11 @@ export default function GAG2WeatherTracker() {
             a field of ripe premium crops, not the ones who logged in five minutes late.
           </p>
           <p className="mb-4">
-            One weather mutation per fruit does not mean weather gains are small. Weather mutations combine with the game's
+            One weather mutation per fruit does not mean weather gains are small. Weather mutations combine with the game&apos;s
             normal <strong>multiplicative stacking</strong> of other mutation types, so a weather-mutated crop that already
             carries extra mutations multiplies out fast — which is exactly why veteran players plant around forecasted
-            events instead of harvesting on a whim. Note this is the sequel's own weather set — it is separate from the
-            original game's Wet, Shocked and Celestial lineup, and event effects can shift between patches, so treat any
+            events instead of harvesting on a whim. Note this is the sequel&apos;s own weather set — it is separate from the
+            original game&apos;s Wet, Shocked and Celestial lineup, and event effects can shift between patches, so treat any
             multiplier as current-patch data.
           </p>
         </section>
@@ -125,8 +125,8 @@ export default function GAG2WeatherTracker() {
             📋 What does each weather event do in Grow a Garden 2?
           </h2>
           <p className="mb-4">
-            The full event lineup, with each event's weather mutation and sell-price multiplier. Multipliers apply to the
-            crop's value at harvest — verify effects against the current patch, since event tuning can change with updates.
+            The full event lineup, with each event&apos;s weather mutation and sell-price multiplier. Multipliers apply to the
+            crop&apos;s value at harvest — verify effects against the current patch, since event tuning can change with updates.
           </p>
           <div className="space-y-4">
             {weatherEvents.map((w) => (
@@ -176,12 +176,12 @@ export default function GAG2WeatherTracker() {
           <p className="mb-4">
             <strong>Plant around forecasts:</strong> time your planting so premium crops ripen just before high-value events are
             due. <strong>Use Rain deliberately:</strong> its 2× growth speed (no mutation) is perfect for rushing a field to ripe
-            right before a Blood Moon or Starfall window. <strong>Stack smart:</strong> weather mutations don't stack with each
-            other, but they multiply with your crop's other mutations — a Starstruck (×50) crop with existing mutations is where
+            right before a Blood Moon or Starfall window. <strong>Stack smart:</strong> weather mutations don&apos;t stack with each
+            other, but they multiply with your crop&apos;s other mutations — a Starstruck (×50) crop with existing mutations is where
             the real money is. Check the math on our <Link href="/mutation-guide" className="text-[var(--primary)] hover:underline font-semibold">mutation guide</Link>.
           </p>
           <p className="mb-4">
-            <strong>Respect the night risk:</strong> the sequel's PVP stealing means a freshly-mutated field is also a target —
+            <strong>Respect the night risk:</strong> the sequel&apos;s PVP stealing means a freshly-mutated field is also a target —
             the most common pain point in weather play is logging back in to find your jackpot crops gone. The standard pro
             move is mutate-in-waves and harvest immediately — never leave jackpot crops sitting through a night cycle. Our
             <Link href="/grow-a-garden-2/stock-predictor" className="text-[var(--primary)] hover:underline font-semibold"> stock predictor</Link> pairs

@@ -206,7 +206,7 @@ export default function FairyUpdatePage() {
             </p>
             <p>
               There are <strong>five reward tiers</strong>. Completing a favor lets you pick one of three rewards
-              from the current tier's pool. Higher tiers offer better rewards and a better shot at a Fairy Chest —
+              from the current tier&apos;s pool. Higher tiers offer better rewards and a better shot at a Fairy Chest —
               reported chest appearance rates run from roughly 7.7% at Tier 2 up to about 27% at Tier 5
               (player-reported figures, treat as approximate).
             </p>
@@ -229,7 +229,7 @@ export default function FairyUpdatePage() {
             <li>Bank high-rarity Glimmering crops (Beanstalk, Ember Lily, Sugar Apple) to clear Tier 5 favors fast.</li>
             <li>Chasing Manticore? Budget for a long grind — a reported 0.5% drop rate means hundreds of chests on average.</li>
             <li>Got Mimic? Test Red Cap + Mimic yourself before investing — the aging interaction is player-reported and may be unintended.</li>
-            <li>Don't feed Manticore a fruit you'd miss: Beast of Omen consumes a fruit with 8+ mutations every activation.</li>
+            <li>Don&apos;t feed Manticore a fruit you&apos;d miss: Beast of Omen consumes a fruit with 8+ mutations every activation.</li>
             <li>Wolpertinger scales with magical plants — the more you have, the more each ~9.5-minute activation is worth.</li>
           </ul>
         </div>

@@ -104,7 +104,7 @@ export default function BunnyGuide() {
             💰 How Much Is the Bunny Worth?
           </h2>
           <p className="mb-4">
-            The Bunny's worth is simple: <strong>20,000 sheckles</strong>, its fixed map-spawn price. On trading value lists it
+            The Bunny&apos;s worth is simple: <strong>20,000 sheckles</strong>, its fixed map-spawn price. On trading value lists it
             rates <strong>Low</strong> — it is a Common early-game utility pet with uncapped supply, not a trade asset. Because
             anyone can walk up to a spawn and buy one at face value, there is no scarcity premium and none will develop: its
             trade value stays low permanently.
@@ -123,7 +123,7 @@ export default function BunnyGuide() {
             ⚡ What Does the Bunny Do?
           </h2>
           <p className="mb-4">
-            The Bunny's entire ability is <strong>+5 walk speed while equipped</strong> — and it <strong>stacks</strong> with
+            The Bunny&apos;s entire ability is <strong>+5 walk speed while equipped</strong> — and it <strong>stacks</strong> with
             multiple Bunnies equipped, so running several at once multiplies the effect. No income, no defense, no tricks. But in
             a game with <strong>nighttime PVP stealing</strong>, walk speed is genuinely useful: faster raids on other gardens,
             faster escapes when you are the target, and faster traversal across the map between shop restocks.
@@ -147,8 +147,8 @@ export default function BunnyGuide() {
             mobility pet, not as your first flip.
           </p>
           <p className="mb-4">
-            <strong>Don't confuse it</strong> with the original game's Bunny (hatches from the Common Egg, eats carrots for 1.5×
-            crop value). GAG2's Bunny is a completely different pet — a Common map-spawn that grants walk speed. This is the
+            <strong>Don&apos;t confuse it</strong> with the original game&apos;s Bunny (hatches from the Common Egg, eats carrots for 1.5×
+            crop value). GAG2&apos;s Bunny is a completely different pet — a Common map-spawn that grants walk speed. This is the
             single biggest source of confusion for players coming from the original game, so make sure any guide you follow is
             about the sequel before spending sheckles on the wrong strategy.
           </p>

@@ -72,7 +72,7 @@ export default function SunbloomGuide() {
           Sun <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Bloom</span>
         </h1>
         <p className="text-sm max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-          The <strong>Sun Bloom</strong> is Grow a Garden 2's priciest Super crop — and the second half of the Eclipse Bloom
+          The <strong>Sun Bloom</strong> is Grow a Garden 2&apos;s priciest Super crop — and the second half of the Eclipse Bloom
           merge. Part of the <Link href="/grow-a-garden-2/wiki" className="text-[var(--primary)] hover:underline font-semibold">GAG2 wiki</Link>.
         </p>
       </div>
@@ -102,7 +102,7 @@ export default function SunbloomGuide() {
           <p className="mb-4">
             Do not confuse shop scarcity with trade scarcity: Sun Blooms move regularly on the <Link href="/grow-a-garden-2/trades" className="text-[var(--primary)] hover:underline font-semibold">trading market</Link>,
             where patient buyers sometimes pay less than the sticker price. Compare the shop cost against live trade listings
-            before committing 110M — overpaying for a "rare" seed is the classic way players waste endgame sheckles.
+            before committing 110M — overpaying for a &quot;rare&quot; seed is the classic way players waste endgame sheckles.
           </p>
         </section>
 
@@ -113,7 +113,7 @@ export default function SunbloomGuide() {
           <p className="mb-4">
             Fruit averages ~9 kg and <strong>~9,000 sheckles</strong>, and the plant is <strong>multi-harvest</strong> — solid
             passive income for a Super crop. But like its twin the <Link href="/grow-a-garden-2/wiki/plants/moonbloom" className="text-[var(--primary)] hover:underline font-semibold">Moon Bloom</Link>,
-            the Sun Bloom's destiny is the merge table, not the sell bin. These figures are averages verified across multiple
+            the Sun Bloom&apos;s destiny is the merge table, not the sell bin. These figures are averages verified across multiple
             in-game harvests and community trade listings; individual fruit sells higher or lower depending on weight and
             mutations like Golden or Rainbow.
           </p>
@@ -153,7 +153,7 @@ export default function SunbloomGuide() {
             Also plan your acquisition order. You need one Sun Bloom AND one Moon Bloom, and the Sun Bloom is the harder pull
             (0.125% vs 0.35% stock chance). Most players secure the Moon Bloom first since it appears more often, then hunt the Sun
             Bloom — but if a Sun Bloom appears in the shop or at a fair trade price first, take it. A merge-ready pair sitting in
-            your garden is worth more than a "perfect order" you never complete.
+            your garden is worth more than a &quot;perfect order&quot; you never complete.
           </p>
         </section>
 

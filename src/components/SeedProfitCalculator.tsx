@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import { CROPS } from "@/data/crops";
 import { MUTATIONS, Mutation } from "@/data/mutations";
-import { calculateSeedProfit, formatNumber, formatCurrency } from "@/lib/calculator";
+import { calculateSeedProfit, formatCurrency } from "@/lib/calculator";
 
 export default function SeedProfitCalculator() {
   const [selectedCrop, setSelectedCrop] = useState(CROPS[0]);
