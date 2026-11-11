@@ -580,7 +580,6 @@ export default function MutationGuidePage() {
               { href: "/trade-calculator", label: "🤝 Trade Calculator", desc: "Win/Fair/Lose checker" },
               { href: "/seed-combiner", label: "🔧 Seed Combiner", desc: "Seed fusion simulator" },
               { href: "/seed-profit", label: "📈 Seed ROI", desc: "Seed profit calculator" },
-              { href: "/xp-calculator", label: "⭐ XP Calculator", desc: "Experience tracker" },
             ].map((link) => (
               <Link key={link.href} href={link.href}
                 className="p-3 rounded-xl transition-all hover:scale-105 flex flex-col gap-1"

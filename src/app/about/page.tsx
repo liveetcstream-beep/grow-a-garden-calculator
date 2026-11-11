@@ -1,14 +1,17 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
+import { CROPS } from "@/data/crops";
+import { MUTATIONS } from "@/data/mutations";
+import { PETS } from "@/data/pets";
+import { formatDataUpdatedAt } from "@/lib/contentDates";
 
-const aboutTitle = "About Us";
-const aboutDesc = "Learn about Grow A Garden Calculator — built by active Roblox GAG players to provide verified crop values, trade calculations, and pet stats.";
+const aboutTitle = "About Grow A Garden Calculator | Data & Method";
+const aboutDesc = "See how this independent Grow A Garden calculator uses stored crop, mutation and pet data, how its calculations work, and how to report a correction.";
 const aboutUrl = "https://growagardencalcs.com/about";
 
 export const metadata: Metadata = {
-  title: "About Us — Verified GAG Player Tool & Value Hub",
+  title: aboutTitle,
   description: aboutDesc,
-  authors: [{ name: "GrowAGardenCalcs Team", url: aboutUrl }],
   alternates: { canonical: "/about" },
   robots: { index: true, follow: true },
   openGraph: {
@@ -16,284 +19,129 @@ export const metadata: Metadata = {
     description: aboutDesc,
     url: aboutUrl,
     siteName: "Grow A Garden Calculator",
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: aboutTitle }],
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: aboutTitle }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: aboutTitle,
     description: aboutDesc,
-    images: ['/og-image.jpg'],
+    images: ["/og-image.jpg"],
   },
 };
 
-const TEAM_MEMBERS = [
-  {
-    username: "GardenMaster_PK",
-    role: "Lead Developer & Data Analyst",
-    hours: "2,400+",
-    bio: "Veteran GAG player since launch. Developed the core Weight² formula engine and benchmark testing methodology used across all 350+ calculator pages.",
-    speciality: "Crop Value Math & Patch Analysis",
-    emoji: "🌾",
-  },
-  {
-    username: "MutationHunter_X",
-    role: "Mutation Database & Testing Lead",
-    hours: "1,800+",
-    bio: "Responsible for cataloguing all 174+ mutation entries, verifying each multiplier through 5+ repeat in-game harvest tests across public and private servers.",
-    speciality: "Mutation Stack Verification",
-    emoji: "🧬",
-  },
-  {
-    username: "TradeWizard_GAG",
-    role: "Trade Valuation & Community Manager",
-    hours: "1,200+",
-    bio: "Active in 10+ GAG Discord trading servers daily. Cross-checks market pricing trends and community-reported values to keep our trade calculator accurate.",
-    speciality: "Trade Market & Pet Values",
-    emoji: "🤝",
-  },
-];
-
-const SITE_STATS = [
-  { value: "99+", label: "Crops Catalogued" },
-  { value: "174+", label: "Mutation Formulas" },
-  { value: "350+", label: "Verified Pages" },
-  { value: "24h", label: "Patch Update SLA" },
-];
-
-const UPDATE_LOG = [
-  { date: "July 27, 2026", event: "Beanstalk Event v2.4 — All crop prices and mutation values re-verified" },
-  { date: "July 14, 2026", event: "Summer Event patch — Mango, Dragon Fruit, Starfruit base prices confirmed" },
-  { date: "June 30, 2026", event: "Aurora Mutation category fully catalogued — 12 new mutations added" },
-  { date: "June 15, 2026", event: "Pet Calculator updated with Mythic tier pricing formulas" },
-  { date: "May 28, 2026", event: "Zen Update — Bamboo, Bonsai, Sakura Cherry pages added and verified" },
-];
-
-const features = [
-  { emoji: "🌾", title: "Crop Value Calculator", desc: "Instantly calculate the exact coin value of any crop based on weight and mutations.", href: "/crop-calculator" },
-  { emoji: "🧬", title: "Mutation Calculator", desc: "See how every mutation multiplier stacks to dramatically increase your crop's worth.", href: "/mutation-calculator" },
-  { emoji: "🐾", title: "Pet Calculator", desc: "Calculate the value of your pets based on their rarity, type, and special abilities.", href: "/pet-calculator" },
-  { emoji: "🤝", title: "Trade Calculator", desc: "Compare trade offers side-by-side and export them directly to Discord with one click.", href: "/trade-calculator" },
-  { emoji: "🌱", title: "Seed Profit Calculator", desc: "Find out which seeds give the best return on investment per grow cycle.", href: "/seed-profit" },
-  { emoji: "🎯", title: "Reverse Calculator", desc: "Set a coin goal and we'll tell you exactly which crop & mutation combo gets you there.", href: "/reverse-calculator" },
+const calculators = [
+  { title: "Crop value calculator", description: "Calculate crop values by base price, weight and selected mutations.", href: "/crop-calculator" },
+  { title: "Mutation calculator", description: "Multiply selected mutation values and compare crop combinations.", href: "/mutation-calculator" },
+  { title: "Pet calculator", description: "Explore pet values using the stats stored in the site's pet dataset.", href: "/pet-calculator" },
+  { title: "Trade calculator", description: "Compare two offers using the values available in the calculators.", href: "/trade-calculator" },
+  { title: "Grow A Garden values list", description: "Browse the crop and pet records currently stored on the site.", href: "/value-list" },
+  { title: "Mutation guide", description: "Browse listed mutations, multipliers and the site's descriptions.", href: "/mutation-guide" },
 ];
 
 export default function AboutPage() {
-  // Organization schema
-  const orgSchema = {
+  const aboutSchema = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "name": "About Grow A Garden Calculator",
-    "url": aboutUrl,
-    "description": aboutDesc,
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "Grow A Garden Calculator Team",
-      "url": "https://growagardencalcs.com",
-      "logo": "https://growagardencalcs.com/icon.svg",
-      "foundingDate": "2024",
-      "knowsAbout": ["Roblox Grow A Garden", "Crop Value Calculation", "Pet Weight Math", "Trade Evaluation", "Game Economy Analysis"],
-      "publishingPrinciples": "https://growagardencalcs.com/about#methodology",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "contact@growagardencalcs.com",
-        "contactType": "customer support",
-        "availableLanguage": ["English", "Indonesian"]
-      }
-    }
+    name: aboutTitle,
+    url: aboutUrl,
+    description: aboutDesc,
+    mainEntity: {
+      "@type": "WebSite",
+      name: "Grow A Garden Calculator",
+      url: "https://growagardencalcs.com",
+    },
   };
 
-  // Person schema for each named contributor
-  const personSchemas = TEAM_MEMBERS.map(m => ({
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": m.username,
-    "jobTitle": m.role,
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Grow A Garden Calculator",
-      "url": "https://growagardencalcs.com"
-    },
-    "knowsAbout": ["Roblox", "Grow A Garden", m.speciality],
-    "url": "https://growagardencalcs.com/about"
-  }));
+  const datasets = [
+    { label: "Crop records", count: CROPS.length, updated: formatDataUpdatedAt("crops") },
+    { label: "Mutation records", count: MUTATIONS.length, updated: formatDataUpdatedAt("mutations") },
+    { label: "Pet records", count: PETS.length, updated: formatDataUpdatedAt("pets") },
+  ];
 
   return (
-    <div className="min-h-screen py-16 px-4 sm:px-6" style={{ background: "var(--background)" }}>
-      {/* Schemas */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
-      {personSchemas.map((ps, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ps) }} />
-      ))}
+    <main className="min-h-screen py-16 px-4 sm:px-6" style={{ background: "var(--background)" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }} />
 
       <div className="max-w-4xl mx-auto">
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs mb-8" style={{ color: "var(--muted)" }}>
+          <Link href="/" className="hover:text-[var(--primary)] transition-colors">Home</Link>
+          <span aria-hidden="true">/</span>
+          <span style={{ color: "var(--foreground)" }}>About</span>
+        </nav>
 
-        {/* Header */}
-        <div className="mb-12 text-center">
+        <header className="mb-12 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-6 border"
             style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)", color: "var(--muted)" }}>
-            🌱 Transparency & Verification
+            Independent fan-made calculator
           </div>
           <h1 className="text-4xl sm:text-5xl font-black mb-6" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-            About{" "}
-            <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              GrowAGardenCalcs
-            </span>
+            About Grow A Garden Calculator
           </h1>
           <p className="text-base max-w-2xl mx-auto leading-relaxed" style={{ color: "var(--muted)" }}>
-            Built by active Roblox Grow A Garden players, traders, and data analysts — delivering empirical, in-game verified crop and pet calculation tools across 350+ dedicated calculator pages.
+            This site provides calculators and reference tables for Roblox Grow A Garden. It is an independent fan-made resource and is not affiliated with Roblox or the game developers.
           </p>
-        </div>
+        </header>
 
-        {/* Site Stats Banner */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
-          {SITE_STATS.map(stat => (
-            <div key={stat.label} className="p-5 rounded-2xl border text-center" style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
-              <p className="text-2xl font-black" style={{ fontFamily: "var(--font-display)", color: "var(--primary)" }}>{stat.value}</p>
-              <p className="text-xs font-semibold mt-1" style={{ color: "var(--muted)" }}>{stat.label}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Section 1: Our Story */}
-        <div className="p-8 rounded-3xl border mb-8 text-left" style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-3xl">📖</span>
-            <h2 className="text-2xl font-black" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>Our Story</h2>
-          </div>
+        <section id="methodology" className="p-8 rounded-3xl border mb-8 text-left" style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
+          <h2 className="text-2xl font-black mb-4" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+            How the calculators work
+          </h2>
           <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--muted)" }}>
-            We are a team of active Roblox <i>Grow A Garden</i> players who built this calculator because we were tired of losing trades due to bad mental math and relying on slow, outdated community spreadsheets.
+            Crop results use the base price stored for a crop, the weight entered by the visitor, the selected mutation multipliers, any friend boost entered, and quantity. The site's crop calculation is:
+          </p>
+          <p className="text-sm font-bold leading-relaxed mb-4" style={{ color: "var(--primary)" }}>
+            Base price × weight² × product of mutation multipliers × (1 + friend boost ÷ 100) × quantity
           </p>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            Having played GAG through every major update — from the Night Event and Zen Update to the Beanstalk and Summer Event patches — we experienced firsthand how quickly crop values shift when new mutations and weight scaling mechanics drop. What started as an internal calculator script for our trading guild evolved into <strong>growagardencalcs.com</strong> — a free, public resource built to empower every player with instant, accurate numbers.
+            The result reflects the inputs and records stored on this site. It is a calculator estimate, not a live game reading, an official price, or a guarantee of what another player will offer in a trade.
           </p>
-        </div>
+        </section>
 
-        {/* Section 2: How We Calculate Values */}
-        <div id="methodology" className="p-8 rounded-3xl border mb-8 text-left" style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-3xl">🔬</span>
-            <h2 className="text-2xl font-black" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>Our Testing Methodology</h2>
-          </div>
-          <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--muted)" }}>
-            Our base price data and mathematical algorithms are sourced directly from official game patch notes and verified through empirical in-game testing across public and private Roblox servers.
-          </p>
-          <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--muted)" }}>
-            We calculate final crop values using the official GAG formula: <strong style={{ color: "var(--primary)" }}>Final Coin Value = Base Price × Weight² × Mutation Stacks × (1 + Friend Boost %) × Quantity</strong>. Every formula is benchmarked against real inventory sell values in live servers before publishing.
-          </p>
-          {/* External citation sources */}
-          <div className="p-4 rounded-xl border text-xs" style={{ background: "rgba(34,197,94,0.05)", borderColor: "rgba(34,197,94,0.2)", color: "var(--muted)" }}>
-            <p className="font-bold text-[var(--primary)] mb-2">📚 Data Sources & References:</p>
-            <ul className="space-y-1">
-              <li>• Official Roblox patch update logs for each game version</li>
-              <li>• Community-submitted test data from verified GAG Discord servers</li>
-              <li>• Direct in-game sell verification on Roblox public servers</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Section 3: Our Update Process */}
-        <div className="p-8 rounded-3xl border mb-8 text-left" style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-3xl">⚡</span>
-            <h2 className="text-2xl font-black" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>Our Update Process</h2>
-          </div>
-          <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--muted)" }}>
-            When a new GAG event launches, our testing team immediately conducts live harvest tests across 5+ server runs to record baseline prices, weight growth curves, and new mutation multipliers before pushing updates to our production database.
-          </p>
+        <section className="p-8 rounded-3xl border mb-8 text-left" style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
+          <h2 className="text-2xl font-black mb-2" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+            Data coverage and update dates
+          </h2>
           <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--muted)" }}>
-            All values are community-verified through our GAG trading network. Our SLA is 24 hours — if a hidden patch modifies mutation stacking or weight formulas, our team detects and corrects values within one day.
+            These counts come from the site's current datasets. Each date shows when its corresponding data file was last changed in the repository; it does not mean every value was independently verified in-game on that date or that a new patch was reviewed.
           </p>
-
-          {/* Update Log */}
-          <h3 className="text-sm font-bold mb-3" style={{ color: "var(--foreground)" }}>📅 Recent Update History:</h3>
-          <div className="space-y-2">
-            {UPDATE_LOG.map(log => (
-              <div key={log.date} className="flex items-start gap-3 p-3 rounded-xl" style={{ background: "var(--surface-2)" }}>
-                <span className="text-xs font-bold shrink-0 pt-0.5" style={{ color: "var(--primary)" }}>{log.date}</span>
-                <p className="text-xs leading-relaxed" style={{ color: "var(--muted)" }}>{log.event}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-xs mt-3" style={{ color: "var(--muted)" }}>
-            See full changelog: <Link href="/changelog" className="text-[var(--primary)] hover:underline font-semibold">View Complete Update Log →</Link>
-          </p>
-        </div>
-
-        {/* Section 4: Meet the Team — Named Contributors */}
-        <div className="p-8 rounded-3xl border mb-8 text-left" style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
-          <div className="flex items-center gap-3 mb-2">
-            <span className="text-3xl">👥</span>
-            <h2 className="text-2xl font-black" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>Meet the Team</h2>
-          </div>
-          <p className="text-xs mb-6" style={{ color: "var(--muted)" }}>Built by GAG players, for GAG players. Real usernames, real hours, real in-game testing.</p>
-
           <div className="grid sm:grid-cols-3 gap-4">
-            {TEAM_MEMBERS.map(member => (
-              <div key={member.username} className="p-5 rounded-2xl border text-left" style={{ background: "var(--surface-2)", borderColor: "var(--glass-border)" }}>
-                <div className="text-3xl mb-3">{member.emoji}</div>
-                <p className="text-sm font-black mb-0.5" style={{ color: "var(--foreground)" }}>{member.username}</p>
-                <p className="text-[10px] font-bold uppercase tracking-wider mb-3" style={{ color: "var(--primary)" }}>{member.role}</p>
-                <p className="text-xs leading-relaxed mb-3" style={{ color: "var(--muted)" }}>{member.bio}</p>
-                <div className="flex items-center justify-between text-[10px]" style={{ color: "var(--muted)" }}>
-                  <span>⏱️ <strong>{member.hours} hours</strong></span>
-                  <span className="px-2 py-0.5 rounded-full" style={{ background: "rgba(34,197,94,0.1)", color: "var(--primary)" }}>{member.speciality}</span>
-                </div>
+            {datasets.map((dataset) => (
+              <div key={dataset.label} className="p-5 rounded-2xl border" style={{ background: "var(--surface-2)", borderColor: "var(--glass-border)" }}>
+                <p className="text-2xl font-black" style={{ fontFamily: "var(--font-display)", color: "var(--primary)" }}>{dataset.count}</p>
+                <p className="text-sm font-semibold mb-2" style={{ color: "var(--foreground)" }}>{dataset.label}</p>
+                <p className="text-xs" style={{ color: "var(--muted)" }}>Data file last changed: {dataset.updated}</p>
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* Features Grid */}
-        <h2 className="text-2xl font-black mb-6 text-center" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
-          Explore Our Tested Tools
-        </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {features.map((f) => (
-            <Link key={f.href} href={f.href}
-              className="group p-6 rounded-2xl border transition-all duration-200 hover:scale-[1.02] hover:shadow-xl block"
-              style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
-              <div className="text-3xl mb-3">{f.emoji}</div>
-              <h3 className="font-bold text-sm mb-2 group-hover:text-[var(--primary)] transition-colors" style={{ color: "var(--foreground)" }}>
-                {f.title}
-              </h3>
-              <p className="text-xs leading-relaxed" style={{ color: "var(--muted)" }}>{f.desc}</p>
-            </Link>
-          ))}
-        </div>
+        <section className="p-8 rounded-3xl border mb-8 text-left" style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
+          <h2 className="text-2xl font-black mb-4" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
+            Browse the tools and reference pages
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {calculators.map((calculator) => (
+              <Link key={calculator.href} href={calculator.href} className="p-5 rounded-2xl border hover:border-[var(--primary)] transition-colors"
+                style={{ background: "var(--surface-2)", borderColor: "var(--glass-border)" }}>
+                <h3 className="font-bold mb-2" style={{ color: "var(--foreground)" }}>{calculator.title}</h3>
+                <p className="text-xs leading-relaxed" style={{ color: "var(--muted)" }}>{calculator.description}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
 
-        {/* Trust Badges */}
-        <div className="grid sm:grid-cols-3 gap-6 mb-10">
-          {[
-            { emoji: "⚡", title: "Instant Engine", desc: "Calculations run client-side in milliseconds as you slide weights or select mutations." },
-            { emoji: "🔄", title: "24h Patch Refresh", desc: "Data is re-verified and updated within 24 hours of every official Roblox update." },
-            { emoji: "🛡️", title: "100% Free & Fan-Made", desc: "No paywalls, no subscriptions. Built for the global GAG trading community." },
-          ].map((item) => (
-            <div key={item.title} className="p-6 rounded-2xl border text-center" style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
-              <div className="text-3xl mb-3">{item.emoji}</div>
-              <h3 className="font-bold text-sm mb-2" style={{ color: "var(--foreground)" }}>{item.title}</h3>
-              <p className="text-xs" style={{ color: "var(--muted)" }}>{item.desc}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Section 5: Disclaimer */}
-        <div className="p-6 rounded-2xl border mb-10 text-center" style={{ background: "rgba(255,165,0,0.05)", borderColor: "rgba(255,165,0,0.2)" }}>
-          <h3 className="font-bold text-xs uppercase tracking-wider mb-2" style={{ color: "var(--foreground)" }}>Legal Disclaimer</h3>
-          <p className="text-xs leading-relaxed" style={{ color: "var(--muted)" }}>
-            Grow A Garden Calculator (growagardencalcs.com) is an independent, fan-made educational utility and is NOT affiliated with, endorsed by, or connected to Roblox Corporation or the official developers of Grow A Garden. All game trademarks, crop names, and pet visual assets belong to their respective owners and are used strictly for reference and calculation purposes under fair use guidelines.
+        <section className="p-6 rounded-2xl border mb-8 text-left" style={{ background: "var(--surface-1)", borderColor: "var(--glass-border)" }}>
+          <h2 className="text-xl font-bold mb-3" style={{ color: "var(--foreground)" }}>Found an incorrect value?</h2>
+          <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
+            Send the page URL, the value shown, and a source or screenshot that helps us review it through the <Link href="/contact" className="text-[var(--primary)] hover:underline font-semibold">contact page</Link>.
           </p>
-        </div>
+        </section>
 
-        {/* CTA */}
-        <div className="text-center">
-          <Link href="/" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-bold text-white transition-all hover:scale-105 hover:shadow-xl"
-            style={{ background: "var(--gradient-1)" }}>
-            🌱 Try The GAG Calculator
-          </Link>
-        </div>
-
+        <p className="text-xs leading-relaxed text-center" style={{ color: "var(--muted)" }}>
+          Grow A Garden Calculator is a fan-made educational utility. Roblox and Grow A Garden are trademarks of their respective owners.
+        </p>
       </div>
-    </div>
+    </main>
   );
 }

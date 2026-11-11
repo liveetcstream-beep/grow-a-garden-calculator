@@ -71,9 +71,8 @@ export default function TradeCalculatorPage() {
             <div>
               <h3 className="text-lg font-bold mb-3 text-[var(--primary)]">How the Trade Calculator Works</h3>
               <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
-                Our <strong>grow a garden trade calculator</strong> uses the official formula to calculate the exact coin value of all crops and pets on both sides of a trade. 
-                By factoring in crop weight scales (which scale quadratically as Weight²), mutation multipliers, and pet rarity tiers, the engine delivers a transparent 
-                <strong>Win / Fair / Lose (W/F/L)</strong> output. This ensures you never execute bad trades.
+                Our <strong>Grow A Garden trade calculator</strong> compares the item values produced by this site's stored calculation rules and displays a
+                <strong> Win / Fair / Lose (W/F/L)</strong> estimate. Player demand, item availability and individual offers can differ, so use the result as a reference when reviewing a trade.
               </p>
             </div>
             <div>
@@ -98,9 +97,9 @@ export default function TradeCalculatorPage() {
               <li>
                 <strong>Check the Value List:</strong> Before locking in a trade offer, cross-reference base values on our complete{" "}
                 <Link href="/value-list" className="text-[var(--primary)] hover:underline font-semibold">
-                  Grow A Garden Value List
+                  Grow A Garden stored values list
                 </Link>{" "}
-                to check real-time changes in item rankings.
+                to review the crop and pet values currently stored on this site.
               </li>
             </ul>
           </div>

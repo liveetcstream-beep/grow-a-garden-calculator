@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const pageTitle = "Grow A Garden Ghoul Garden Halloween Event Guide";
+const pageTitle = "Ghoul Garden Halloween Event Archive | Grow A Garden";
 const pageDesc =
-  "Ghoul Garden Halloween event guide (Oct 11–25): Candy Corn farming, Witch's Cauldron, event pets, seeds, shops, and rewards in Grow A Garden.";
+  "Archive of the Grow A Garden Ghoul Garden Halloween event (October 11–25, 2026), including its reported Candy Corn, event pets, seeds, shops, and rewards.";
 const pageUrl = "https://growagardencalcs.com/ghoul-garden-halloween-event";
 
 export const metadata: Metadata = {
@@ -42,11 +42,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "When is the Grow A Garden Ghoul Garden Halloween event?",
-    a: "The Ghoul Garden Halloween event runs from October 11 to October 25, 2026, as a single phase. Note: \u201cGhoul Garden 2\u201d was the 2025 second-week expansion (October 18\u201325, 2025) \u2014 no second phase has been announced for the 2026 event.",
+    a: "The Ghoul Garden Halloween event ran from October 11 to October 25, 2026, according to the dates recorded for this event. This page is an archive; check current in-game announcements for later events.",
   },
   {
     q: "How do you get Candy Corn in Grow A Garden?",
-    a: "Candy Corn is the Ghoul Garden event currency. Earn it by contributing fruits to the Witch's Cauldron (10–100+ per fill, top contributors earn bonuses) and by submitting Halloween plants to the Jack-O-Lantern NPC, which spawns every 2 hours.",
+    a: "During the archived event, Candy Corn was described as its event currency, earned through the Witch's Cauldron and other event activities. Availability and mechanics may no longer apply after the event ended.",
   },
   {
     q: "What is the Witch's Cauldron in Grow A Garden?",
@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     q: "What is the Halloween Market in Grow A Garden?",
-    a: "The Halloween Market appears hourly for 15 minutes during the Ghoul Garden event and hosts four shops: Spooky Seeds, Creepy Critters (pets), Devilish Decor, and Ghostly Gadgets. Spend Candy Corn here on limited-time seeds, pets, and cosmetics before the event ends on October 25.",
+    a: "The archived guide describes a Halloween Market with event shops. The event ended October 25, 2026, so these shops and rewards may no longer be available.",
   },
 ];
 
@@ -124,7 +124,7 @@ export default function GhoulGardenPage() {
       <nav className="flex items-center gap-2 text-xs mb-6" style={{ color: "var(--muted)" }}>
         <Link href="/" className="hover:text-[var(--primary)] transition-colors">Home</Link>
         <span>/</span>
-        <span style={{ color: "var(--foreground)" }}>Ghoul Garden Halloween Event</span>
+          <span style={{ color: "var(--foreground)" }}>Ghoul Garden Halloween Event Archive</span>
       </nav>
 
       {/* Hero Header */}
@@ -133,13 +133,13 @@ export default function GhoulGardenPage() {
         <h1 className="text-3xl sm:text-5xl font-black mb-4" style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}>
           Grow A Garden{" "}
           <span style={{ background: "var(--gradient-1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-            Ghoul Garden Halloween Event
+            Ghoul Garden Halloween Event Archive
           </span>
         </h1>
         <p className="text-sm sm:text-base max-w-3xl mx-auto leading-relaxed mb-6" style={{ color: "var(--muted)" }}>
-          The complete <strong>Ghoul Garden Halloween event</strong> guide (<strong>October 11–25, 2026</strong>):
-          Candy Corn farming, the Witch's Cauldron, event pets and seeds, Halloween Market shops, and every
-          limited-time reward — before it all disappears.
+          An archive of the <strong>Ghoul Garden Halloween event</strong> (<strong>October 11–25, 2026</strong>),
+          including the Candy Corn activities, Witch's Cauldron, event pets and seeds, and Halloween Market described
+          during the event. It has ended; current availability is not implied.
         </p>
         <div className="flex flex-wrap gap-3 justify-center">
           <Link href="#candy-corn" className="px-5 py-2.5 rounded-xl text-sm font-bold transition-all hover:scale-105" style={{ background: "var(--primary)", color: "#0a0e17" }}>
@@ -296,7 +296,6 @@ export default function GhoulGardenPage() {
               { href: "/mutation-guide", label: "🧬 Mutation Guide", desc: "All mutations & multipliers" },
               { href: "/seed-profit", label: "📈 Seed ROI", desc: "Seed profit calculator" },
               { href: "/trade-calculator", label: "🤝 Trade Calculator", desc: "Win/Fair/Lose checker" },
-              { href: "/xp-calculator", label: "⭐ XP Calculator", desc: "Experience tracker" },
             ].map((link) => (
               <Link key={link.href} href={link.href}
                 className="p-3 rounded-xl transition-all hover:scale-105 flex flex-col gap-1"
