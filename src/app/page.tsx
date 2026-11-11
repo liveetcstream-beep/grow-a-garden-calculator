@@ -59,7 +59,6 @@ export default function HomePage() {
 
   return (
     <div>
-    <div>
       {/* Main Interactive App Section */}
       <section className="min-h-screen pt-8 pb-16 px-4 sm:px-6 relative overflow-hidden" style={{ background: 'var(--background)' }}>
         
@@ -82,7 +81,7 @@ export default function HomePage() {
               Fruit values, pet stats & mutation multipliers — free, no signup
             </p>
             <p className="text-sm sm:text-base font-medium max-w-2xl mx-auto mb-6" style={{ color: 'var(--muted)' }}>
-              Estimate crop values from weight and selected mutations, inspect pet calculator inputs, and compare item totals before a trade. Results use this site&apos;s stored data and calculation rules; they are not live market quotes.
+              Estimate crop values from weight and selected mutations, inspect pet calculator inputs, and compare crop totals before a trade. Results use this site&apos;s stored data and calculation rules; they are not live market quotes.
             </p>
             <h2 className="text-xl sm:text-2xl font-bold text-center" style={{ fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
               How to Use the GAG Calculator
