@@ -1,0 +1,18 @@
+# Grow a Garden Calculator
+
+> Calculate crop values by weight and mutations, estimate pet stats, and compare trades using free fan-made tools. Results use data stored on this site.
+
+Grow a Garden Calculator is a Productivity tool. Homepage: https://growagardencalcs.com/
+
+## Key pages
+
+- [Grow a Garden Calculator homepage](https://growagardencalcs.com/): what Grow a Garden Calculator does and how to start
+- [Docs](https://growagardencalcs.com/mutation-guide)
+- [About](https://growagardencalcs.com/about)
+- [Changelog](https://growagardencalcs.com/changelog)
+
+## Elsewhere
+
+- https://discord.gg/growagarden
+- https://www.facebook.com/growagardencalc
+- https://www.youtube.com/@GrowAGardenCalcs
