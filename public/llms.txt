@@ -1,18 +1,416 @@
 # Grow a Garden Calculator
 
-> Calculate crop values by weight and mutations, estimate pet stats, and compare trades using free fan-made tools. Results use data stored on this site.
+> Free fan-made calculators, value lists and guides for the Roblox game Grow a Garden: exact crop values by weight, pet values by weight and age, mutation multipliers, trade checks and seed-profit tools. Data comes from the site's own stored data files, not from live game readings.
 
-Grow a Garden Calculator is a Productivity tool. Homepage: https://growagardencalcs.com/
+## Notes for AI assistants
 
-## Key pages
+- Values on this site are estimates. Each crop page states its stored base price and the date its data file last changed; the estimate formula is base price x weight squared x mutation multipliers x (1 + friend boost) x quantity.
+- Mutation multipliers combine multiplicatively (for example, Golden x20 and Rainbow x50 combine to x1,000). The mutation stacking guide explains the full method.
+- This is a fan-made tool. It is not affiliated with Roblox or the makers of Grow a Garden, and its values are not live in-game prices or player trade prices.
+- The canonical entry point is the homepage. Calculators are interactive tools; value, pet and mutation pages are the reference data behind them.
 
-- [Grow a Garden Calculator homepage](https://growagardencalcs.com/): what Grow a Garden Calculator does and how to start
-- [Docs](https://growagardencalcs.com/mutation-guide)
-- [About](https://growagardencalcs.com/about)
-- [Changelog](https://growagardencalcs.com/changelog)
+## Calculators
+
+Interactive tools. Each one uses the site's stored data and shows its working.
+
+- [Grow a Garden Calculator](https://growagardencalcs.com): Free Grow a Garden calculators: crop values by weight, pet values, mutation multipliers and trade checks.
+- [Crop Calculator](https://growagardencalcs.com/crop-calculator): Crop value calculator: exact crop values by weight, mutations and friend boost.
+- [Pet Calculator](https://growagardencalcs.com/pet-calculator): Pet calculator: estimate pet values by weight and age.
+- [Trade Calculator](https://growagardencalcs.com/trade-calculator): Trade calculator: check whether a trade is a win, fair or a loss.
+- [Mutation Calculator](https://growagardencalcs.com/mutation-calculator): Mutation calculator: stack mutation multipliers on a crop value.
+- [Reverse Goal Calculator](https://growagardencalcs.com/reverse-calculator): Reverse goal calculator: work out the weight needed to hit a target coin amount.
+- [Seed Combiner](https://growagardencalcs.com/seed-combiner): Seed combiner: calculator and fruit mechanics.
+- [Seed Profit Calculator](https://growagardencalcs.com/seed-profit): Seed profit calculator: best crops by return on investment.
+- [Elephant Calculator](https://growagardencalcs.com/elephant-calculator): Elephant value calculator: estimate an elephant pet's value.
+- [Value List](https://growagardencalcs.com/value-list): Full pet and crop values list.
+
+## Guides
+
+Reference guides for mutations, updates and events.
+
+- [Mutation Guide](https://growagardencalcs.com/mutation-guide): Mutations guide: 172+ mutation multipliers explained.
+- [Mutation Stacking Guide](https://growagardencalcs.com/mutation-stacking-guide): Mutation stacking guide: how multipliers combine, with worked examples.
+- [Aurora Mutation](https://growagardencalcs.com/aurora-mutation): Aurora mutation guide: ×90 multiplier.
+- [Fairy Update](https://growagardencalcs.com/fairy-update): Fairy update guide: pets, chests and rewards.
+- [Ghoul Garden Halloween Event](https://growagardencalcs.com/ghoul-garden-halloween-event): Ghoul Garden Halloween event archive.
+
+## Crop values
+
+One page per crop: stored base price, value by weight, and mutation multipliers. 99 crops.
+
+- [Aloe Vera Value](https://growagardencalcs.com/crop/aloe-vera-value): Aloe Vera crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Amber Heart Value](https://growagardencalcs.com/crop/amber-heart-value): Amber Heart crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Amber Spine Value](https://growagardencalcs.com/crop/amber-spine-value): Amber Spine crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Apple Value](https://growagardencalcs.com/crop/apple-value): Apple crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Artichoke Value](https://growagardencalcs.com/crop/artichoke-value): Artichoke crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Aurora Vine Value](https://growagardencalcs.com/crop/aurora-vine-value): Aurora Vine crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Avocado Value](https://growagardencalcs.com/crop/avocado-value): Avocado crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Badland Pepper Value](https://growagardencalcs.com/crop/badland-pepper-value): Badland Pepper crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Bamboo Value](https://growagardencalcs.com/crop/bamboo-value): Bamboo crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Banana Value](https://growagardencalcs.com/crop/banana-value): Banana crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Basil Value](https://growagardencalcs.com/crop/basil-value): Basil crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Beanstalk Value](https://growagardencalcs.com/crop/beanstalk-value): Beanstalk crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Beebalm Value](https://growagardencalcs.com/crop/beebalm-value): Beebalm crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Bell Pepper Value](https://growagardencalcs.com/crop/bell-pepper-value): Bell Pepper crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Bendboo Value](https://growagardencalcs.com/crop/bendboo-value): Bendboo crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Bitter Melon Value](https://growagardencalcs.com/crop/bitter-melon-value): Bitter Melon crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Blood Banana Value](https://growagardencalcs.com/crop/blood-banana-value): Blood Banana crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Blueberry Value](https://growagardencalcs.com/crop/blueberry-value): Blueberry crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Bone Blossom Value](https://growagardencalcs.com/crop/bone-blossom-value): Bone Blossom crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Boneboo Value](https://growagardencalcs.com/crop/boneboo-value): Boneboo crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Bonsai Tree Value](https://growagardencalcs.com/crop/bonsai-tree-value): Bonsai Tree crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Briar Rose Value](https://growagardencalcs.com/crop/briar-rose-value): Briar Rose crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Broccoli Value](https://growagardencalcs.com/crop/broccoli-value): Broccoli crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Brussel Sprouts Value](https://growagardencalcs.com/crop/brussel-sprouts-value): Brussel Sprouts crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Bunny Bloom Value](https://growagardencalcs.com/crop/bunny-bloom-value): Bunny Bloom crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Burning Bud Value](https://growagardencalcs.com/crop/burning-bud-value): Burning Bud crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Butternut Squash Value](https://growagardencalcs.com/crop/butternut-squash-value): Butternut Squash crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Cabbage Value](https://growagardencalcs.com/crop/cabbage-value): Cabbage crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Cacao Value](https://growagardencalcs.com/crop/cacao-value): Cacao crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Candy Blossom Value](https://growagardencalcs.com/crop/candy-blossom-value): Candy Blossom crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Carrot Value](https://growagardencalcs.com/crop/carrot-value): Carrot crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Cherry Value](https://growagardencalcs.com/crop/cherry-value): Cherry crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Chocolate Carrot Value](https://growagardencalcs.com/crop/chocolate-carrot-value): Chocolate Carrot crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Cloud Berry Value](https://growagardencalcs.com/crop/cloud-berry-value): Cloud Berry crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Coconut Value](https://growagardencalcs.com/crop/coconut-value): Coconut crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Coral Shroom Value](https://growagardencalcs.com/crop/coral-shroom-value): Coral Shroom crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Corn Value](https://growagardencalcs.com/crop/corn-value): Corn crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Crystal Lotus Value](https://growagardencalcs.com/crop/crystal-lotus-value): Crystal Lotus crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Diamond Fruit Value](https://growagardencalcs.com/crop/diamond-fruit-value): Diamond Fruit crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Dino Egg Plant Value](https://growagardencalcs.com/crop/dino-egg-plant-value): Dino Egg Plant crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Dragon Fruit Value](https://growagardencalcs.com/crop/dragon-fruit-value): Dragon Fruit crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Easter Egg Value](https://growagardencalcs.com/crop/easter-egg-value): Easter Egg crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Eggplant Value](https://growagardencalcs.com/crop/eggplant-value): Eggplant crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Emerald Leaf Value](https://growagardencalcs.com/crop/emerald-leaf-value): Emerald Leaf crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Enchanted Twig Value](https://growagardencalcs.com/crop/enchanted-twig-value): Enchanted Twig crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Fairy Rose Value](https://growagardencalcs.com/crop/fairy-rose-value): Fairy Rose crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Fossil Fern Value](https://growagardencalcs.com/crop/fossil-fern-value): Fossil Fern crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Garlic Value](https://growagardencalcs.com/crop/garlic-value): Garlic crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Giant Vine Value](https://growagardencalcs.com/crop/giant-vine-value): Giant Vine crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Ginger Root Value](https://growagardencalcs.com/crop/ginger-root-value): Ginger Root crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Glow Shroom Value](https://growagardencalcs.com/crop/glow-shroom-value): Glow Shroom crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Gold Bar Plant Value](https://growagardencalcs.com/crop/gold-bar-plant-value): Gold Bar Plant crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Golden Apple Value](https://growagardencalcs.com/crop/golden-apple-value): Golden Apple crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Grapes Value](https://growagardencalcs.com/crop/grapes-value): Grapes crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Green Apple Value](https://growagardencalcs.com/crop/green-apple-value): Green Apple crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Honeycomb Value](https://growagardencalcs.com/crop/honeycomb-value): Honeycomb crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Jellybean Plant Value](https://growagardencalcs.com/crop/jellybean-plant-value): Jellybean Plant crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Kiwi Value](https://growagardencalcs.com/crop/kiwi-value): Kiwi crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Lava Lotus Value](https://growagardencalcs.com/crop/lava-lotus-value): Lava Lotus crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Lemon Value](https://growagardencalcs.com/crop/lemon-value): Lemon crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Lotus Value](https://growagardencalcs.com/crop/lotus-value): Lotus crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Magic Bean Value](https://growagardencalcs.com/crop/magic-bean-value): Magic Bean crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Magic Mushroom Value](https://growagardencalcs.com/crop/magic-mushroom-value): Magic Mushroom crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Mango Value](https://growagardencalcs.com/crop/mango-value): Mango crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Marshmallow Shroom Value](https://growagardencalcs.com/crop/marshmallow-shroom-value): Marshmallow Shroom crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Mint Value](https://growagardencalcs.com/crop/mint-value): Mint crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Moon Flower Value](https://growagardencalcs.com/crop/moon-flower-value): Moon Flower crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Moon Melon Value](https://growagardencalcs.com/crop/moon-melon-value): Moon Melon crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Nectar Bloom Value](https://growagardencalcs.com/crop/nectar-bloom-value): Nectar Bloom crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Nightshade Value](https://growagardencalcs.com/crop/nightshade-value): Nightshade crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Obsidian Onion Value](https://growagardencalcs.com/crop/obsidian-onion-value): Obsidian Onion crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Ocean Kelp Value](https://growagardencalcs.com/crop/ocean-kelp-value): Ocean Kelp crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Onion Value](https://growagardencalcs.com/crop/onion-value): Onion crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Orange Value](https://growagardencalcs.com/crop/orange-value): Orange crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Oregano Value](https://growagardencalcs.com/crop/oregano-value): Oregano crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Papaya Value](https://growagardencalcs.com/crop/papaya-value): Papaya crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Passionfruit Value](https://growagardencalcs.com/crop/passionfruit-value): Passionfruit crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Peach Value](https://growagardencalcs.com/crop/peach-value): Peach crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Pear Value](https://growagardencalcs.com/crop/pear-value): Pear crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Hot Pepper Value](https://growagardencalcs.com/crop/pepper-value): Hot Pepper crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Phantom Pepper Value](https://growagardencalcs.com/crop/phantom-pepper-value): Phantom Pepper crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Pineapple Value](https://growagardencalcs.com/crop/pineapple-value): Pineapple crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Pixie Dust Flower Value](https://growagardencalcs.com/crop/pixie-dust-flower-value): Pixie Dust Flower crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Pollen Flower Value](https://growagardencalcs.com/crop/pollen-flower-value): Pollen Flower crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Potato Value](https://growagardencalcs.com/crop/potato-value): Potato crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Pumpkin Value](https://growagardencalcs.com/crop/pumpkin-value): Pumpkin crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Royal Jelly Plant Value](https://growagardencalcs.com/crop/royal-jelly-plant-value): Royal Jelly Plant crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Ruby Rose Value](https://growagardencalcs.com/crop/ruby-rose-value): Ruby Rose crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Sakura Cherry Value](https://growagardencalcs.com/crop/sakura-cherry-value): Sakura Cherry crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Sapphire Vine Value](https://growagardencalcs.com/crop/sapphire-vine-value): Sapphire Vine crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Shadow Bean Value](https://growagardencalcs.com/crop/shadow-bean-value): Shadow Bean crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Starfruit Value](https://growagardencalcs.com/crop/starfruit-value): Starfruit crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Strawberry Value](https://growagardencalcs.com/crop/strawberry-value): Strawberry crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Sunflower Value](https://growagardencalcs.com/crop/sunflower-value): Sunflower crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Tomato Value](https://growagardencalcs.com/crop/tomato-value): Tomato crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Vanilla Bean Value](https://growagardencalcs.com/crop/vanilla-bean-value): Vanilla Bean crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Void Berry Value](https://growagardencalcs.com/crop/void-berry-value): Void Berry crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Watermelon Value](https://growagardencalcs.com/crop/watermelon-value): Watermelon crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+- [Zen Lily Value](https://growagardencalcs.com/crop/zen-lily-value): Zen Lily crop value calculator: base price, weight scaling, mutation multipliers and trade estimate.
+
+## Pet values
+
+One page per pet: stats and value estimate by weight and age. 59 pets.
+
+- [Angelic Guardian Stats](https://growagardencalcs.com/pet/angelic-guardian-stats): Angelic Guardian pet stats and value estimate.
+- [Apple Gazelle Stats](https://growagardencalcs.com/pet/apple-gazelle-stats): Apple Gazelle pet stats and value estimate.
+- [Bald Eagle Stats](https://growagardencalcs.com/pet/bald-eagle-stats): Bald Eagle pet stats and value estimate.
+- [Bear Stats](https://growagardencalcs.com/pet/bear-stats): Bear pet stats and value estimate.
+- [Bee Stats](https://growagardencalcs.com/pet/bee-stats): Bee pet stats and value estimate.
+- [Blood Kiwi Stats](https://growagardencalcs.com/pet/blood-kiwi-stats): Blood Kiwi pet stats and value estimate.
+- [Blood Owl Stats](https://growagardencalcs.com/pet/blood-owl-stats): Blood Owl pet stats and value estimate.
+- [Brontosaurus Stats](https://growagardencalcs.com/pet/brontosaurus-stats): Brontosaurus pet stats and value estimate.
+- [Bunny Stats](https://growagardencalcs.com/pet/bunny-stats): Bunny pet stats and value estimate.
+- [Butterfly Stats](https://growagardencalcs.com/pet/butterfly-stats): Butterfly pet stats and value estimate.
+- [Capybara Stats](https://growagardencalcs.com/pet/capybara-stats): Capybara pet stats and value estimate.
+- [Cat Stats](https://growagardencalcs.com/pet/cat-stats): Cat pet stats and value estimate.
+- [Celestial Dragon Stats](https://growagardencalcs.com/pet/celestial-dragon-stats): Celestial Dragon pet stats and value estimate.
+- [Cerberus Stats](https://growagardencalcs.com/pet/cerberus-stats): Cerberus pet stats and value estimate.
+- [Chicken Stats](https://growagardencalcs.com/pet/chicken-stats): Chicken pet stats and value estimate.
+- [Chicken Zombie Stats](https://growagardencalcs.com/pet/chicken-zombie-stats): Chicken Zombie pet stats and value estimate.
+- [Cockatrice Stats](https://growagardencalcs.com/pet/cockatrice-stats): Cockatrice pet stats and value estimate.
+- [Cow Stats](https://growagardencalcs.com/pet/cow-stats): Cow pet stats and value estimate.
+- [Deer Stats](https://growagardencalcs.com/pet/deer-stats): Deer pet stats and value estimate.
+- [Dog Stats](https://growagardencalcs.com/pet/dog-stats): Dog pet stats and value estimate.
+- [Dragon Stats](https://growagardencalcs.com/pet/dragon-stats): Dragon pet stats and value estimate.
+- [Dragonfly Stats](https://growagardencalcs.com/pet/dragonfly-stats): Dragonfly pet stats and value estimate.
+- [Duck Stats](https://growagardencalcs.com/pet/duck-stats): Duck pet stats and value estimate.
+- [Elephant Stats](https://growagardencalcs.com/pet/elephant-stats): Elephant pet stats and value estimate.
+- [Fox Stats](https://growagardencalcs.com/pet/fox-stats): Fox pet stats and value estimate.
+- [Frog Stats](https://growagardencalcs.com/pet/frog-stats): Frog pet stats and value estimate.
+- [Goat Stats](https://growagardencalcs.com/pet/goat-stats): Goat pet stats and value estimate.
+- [Gorilla Stats](https://growagardencalcs.com/pet/gorilla-stats): Gorilla pet stats and value estimate.
+- [Griffin Stats](https://growagardencalcs.com/pet/griffin-stats): Griffin pet stats and value estimate.
+- [Horse Stats](https://growagardencalcs.com/pet/horse-stats): Horse pet stats and value estimate.
+- [Kitsune Stats](https://growagardencalcs.com/pet/kitsune-stats): Kitsune pet stats and value estimate.
+- [Kraken Stats](https://growagardencalcs.com/pet/kraken-stats): Kraken pet stats and value estimate.
+- [Leviathan Stats](https://growagardencalcs.com/pet/leviathan-stats): Leviathan pet stats and value estimate.
+- [Lion Stats](https://growagardencalcs.com/pet/lion-stats): Lion pet stats and value estimate.
+- [Llama Stats](https://growagardencalcs.com/pet/llama-stats): Llama pet stats and value estimate.
+- [Manticore Stats](https://growagardencalcs.com/pet/manticore-stats): Manticore pet stats and value estimate.
+- [Moon Rabbit Stats](https://growagardencalcs.com/pet/moon-rabbit-stats): Moon Rabbit pet stats and value estimate.
+- [Mouse Stats](https://growagardencalcs.com/pet/mouse-stats): Mouse pet stats and value estimate.
+- [Owl Stats](https://growagardencalcs.com/pet/owl-stats): Owl pet stats and value estimate.
+- [Pegasus Stats](https://growagardencalcs.com/pet/pegasus-stats): Pegasus pet stats and value estimate.
+- [Penguin Stats](https://growagardencalcs.com/pet/penguin-stats): Penguin pet stats and value estimate.
+- [Phoenix Stats](https://growagardencalcs.com/pet/phoenix-stats): Phoenix pet stats and value estimate.
+- [Pig Stats](https://growagardencalcs.com/pet/pig-stats): Pig pet stats and value estimate.
+- [Pigeon Stats](https://growagardencalcs.com/pet/pigeon-stats): Pigeon pet stats and value estimate.
+- [Platypus Stats](https://growagardencalcs.com/pet/platypus-stats): Platypus pet stats and value estimate.
+- [Polar Bear Stats](https://growagardencalcs.com/pet/polar-bear-stats): Polar Bear pet stats and value estimate.
+- [Raccoon Stats](https://growagardencalcs.com/pet/raccoon-stats): Raccoon pet stats and value estimate.
+- [Red Cap Stats](https://growagardencalcs.com/pet/red-cap-stats): Red Cap pet stats and value estimate.
+- [Rhino Stats](https://growagardencalcs.com/pet/rhino-stats): Rhino pet stats and value estimate.
+- [Scarecrow Stats](https://growagardencalcs.com/pet/scarecrow-stats): Scarecrow pet stats and value estimate.
+- [Sheep Stats](https://growagardencalcs.com/pet/sheep-stats): Sheep pet stats and value estimate.
+- [Sun God Bird Stats](https://growagardencalcs.com/pet/sun-god-bird-stats): Sun God Bird pet stats and value estimate.
+- [T-Rex Stats](https://growagardencalcs.com/pet/t-rex-stats): T-Rex pet stats and value estimate.
+- [Tiger Stats](https://growagardencalcs.com/pet/tiger-stats): Tiger pet stats and value estimate.
+- [Turkey Stats](https://growagardencalcs.com/pet/turkey-stats): Turkey pet stats and value estimate.
+- [Turtle Stats](https://growagardencalcs.com/pet/turtle-stats): Turtle pet stats and value estimate.
+- [Unicorn Stats](https://growagardencalcs.com/pet/unicorn-stats): Unicorn pet stats and value estimate.
+- [Wolf Stats](https://growagardencalcs.com/pet/wolf-stats): Wolf pet stats and value estimate.
+- [Wolpertinger Stats](https://growagardencalcs.com/pet/wolpertinger-stats): Wolpertinger pet stats and value estimate.
+
+## Mutations
+
+One page per mutation: multiplier, how to get it and value impact. 171 mutations.
+
+- [Abyssal Mutation](https://growagardencalcs.com/mutation/abyssal): Abyssal mutation (×240): how to get it, value multiplier and stacking.
+- [Acidic Mutation](https://growagardencalcs.com/mutation/acidic): Acidic mutation (×15): how to get it, value multiplier and stacking.
+- [Alienated Mutation](https://growagardencalcs.com/mutation/alienated): Alienated mutation (×25): how to get it, value multiplier and stacking.
+- [Alienlike Mutation](https://growagardencalcs.com/mutation/alienlike): Alienlike mutation (×100): how to get it, value multiplier and stacking.
+- [Amber Mutation](https://growagardencalcs.com/mutation/amber): Amber mutation (×10): how to get it, value multiplier and stacking.
+- [AncientAmber Mutation](https://growagardencalcs.com/mutation/ancientamber): AncientAmber mutation (×50): how to get it, value multiplier and stacking.
+- [Arctic Mutation](https://growagardencalcs.com/mutation/arctic): Arctic mutation (×12): how to get it, value multiplier and stacking.
+- [Arid Mutation](https://growagardencalcs.com/mutation/arid): Arid mutation (×6): how to get it, value multiplier and stacking.
+- [Aromatic Mutation](https://growagardencalcs.com/mutation/aromatic): Aromatic mutation (×3): how to get it, value multiplier and stacking.
+- [AscendedChakra Mutation](https://growagardencalcs.com/mutation/ascendedchakra): AscendedChakra mutation (×230): how to get it, value multiplier and stacking.
+- [Astral Mutation](https://growagardencalcs.com/mutation/astral): Astral mutation (×365): how to get it, value multiplier and stacking.
+- [Azure Mutation](https://growagardencalcs.com/mutation/azure): Azure mutation (×75): how to get it, value multiplier and stacking.
+- [Batty Mutation](https://growagardencalcs.com/mutation/batty): Batty mutation (×45): how to get it, value multiplier and stacking.
+- [Beanbound Mutation](https://growagardencalcs.com/mutation/beanbound): Beanbound mutation (×100): how to get it, value multiplier and stacking.
+- [Biohazard Mutation](https://growagardencalcs.com/mutation/biohazard): Biohazard mutation (×157): how to get it, value multiplier and stacking.
+- [Blackout Mutation](https://growagardencalcs.com/mutation/blackout): Blackout mutation (×95): how to get it, value multiplier and stacking.
+- [Blazing Mutation](https://growagardencalcs.com/mutation/blazing): Blazing mutation (×52): how to get it, value multiplier and stacking.
+- [Blight Mutation](https://growagardencalcs.com/mutation/blight): Blight mutation (×8): how to get it, value multiplier and stacking.
+- [Blitzshock Mutation](https://growagardencalcs.com/mutation/blitzshock): Blitzshock mutation (×50): how to get it, value multiplier and stacking.
+- [Blizzard Mutation](https://growagardencalcs.com/mutation/blizzard): Blizzard mutation (×40): how to get it, value multiplier and stacking.
+- [Bloodlit Mutation](https://growagardencalcs.com/mutation/bloodlit): Bloodlit mutation (×25): how to get it, value multiplier and stacking.
+- [Bloom Mutation](https://growagardencalcs.com/mutation/bloom): Bloom mutation (×8): how to get it, value multiplier and stacking.
+- [Boil Mutation](https://growagardencalcs.com/mutation/boil): Boil mutation (×15): how to get it, value multiplier and stacking.
+- [Brainrot Mutation](https://growagardencalcs.com/mutation/brainrot): Brainrot mutation (×100): how to get it, value multiplier and stacking.
+- [Brewed Mutation](https://growagardencalcs.com/mutation/brewed): Brewed mutation (×7): how to get it, value multiplier and stacking.
+- [Burnt Mutation](https://growagardencalcs.com/mutation/burnt): Burnt mutation (×4): how to get it, value multiplier and stacking.
+- [Celestial Mutation](https://growagardencalcs.com/mutation/celestial): Celestial mutation (×120): how to get it, value multiplier and stacking.
+- [Ceramic Mutation](https://growagardencalcs.com/mutation/ceramic): Ceramic mutation (×32): how to get it, value multiplier and stacking.
+- [Chakra Mutation](https://growagardencalcs.com/mutation/chakra): Chakra mutation (×15): how to get it, value multiplier and stacking.
+- [Charcoal Mutation](https://growagardencalcs.com/mutation/charcoal): Charcoal mutation (×6): how to get it, value multiplier and stacking.
+- [Chilled Mutation](https://growagardencalcs.com/mutation/chilled): Chilled mutation (×2): how to get it, value multiplier and stacking.
+- [Choc Mutation](https://growagardencalcs.com/mutation/choc): Choc mutation (×2): how to get it, value multiplier and stacking.
+- [Clay Mutation](https://growagardencalcs.com/mutation/clay): Clay mutation (×5): how to get it, value multiplier and stacking.
+- [Clockwork Mutation](https://growagardencalcs.com/mutation/clockwork): Clockwork mutation (×15): how to get it, value multiplier and stacking.
+- [Cloudtouched Mutation](https://growagardencalcs.com/mutation/cloudtouched): Cloudtouched mutation (×5): how to get it, value multiplier and stacking.
+- [Coin Mutation](https://growagardencalcs.com/mutation/coin): Coin mutation (×3): how to get it, value multiplier and stacking.
+- [Contagion Mutation](https://growagardencalcs.com/mutation/contagion): Contagion mutation (×205): how to get it, value multiplier and stacking.
+- [Cooked Mutation](https://growagardencalcs.com/mutation/cooked_mut): Cooked mutation (×10): how to get it, value multiplier and stacking.
+- [Corrosive Mutation](https://growagardencalcs.com/mutation/corrosive): Corrosive mutation (×40): how to get it, value multiplier and stacking.
+- [Corrupt Mutation](https://growagardencalcs.com/mutation/corrupt): Corrupt mutation (×20): how to get it, value multiplier and stacking.
+- [Cosmic Mutation](https://growagardencalcs.com/mutation/cosmic): Cosmic mutation (×240): how to get it, value multiplier and stacking.
+- [Cracked Mutation](https://growagardencalcs.com/mutation/cracked): Cracked mutation (×4): how to get it, value multiplier and stacking.
+- [Crystalized Mutation](https://growagardencalcs.com/mutation/crystalized): Crystalized mutation (×25): how to get it, value multiplier and stacking.
+- [Cute Mutation](https://growagardencalcs.com/mutation/cute): Cute mutation (×10): how to get it, value multiplier and stacking.
+- [Cyclonic Mutation](https://growagardencalcs.com/mutation/cyclonic): Cyclonic mutation (×50): how to get it, value multiplier and stacking.
+- [Dawnbound Mutation](https://growagardencalcs.com/mutation/dawnbound): Dawnbound mutation (×150): how to get it, value multiplier and stacking.
+- [Desolate Mutation](https://growagardencalcs.com/mutation/desolate): Desolate mutation (×50): how to get it, value multiplier and stacking.
+- [Disco Mutation](https://growagardencalcs.com/mutation/disco): Disco mutation (×125): how to get it, value multiplier and stacking.
+- [Drenched Mutation](https://growagardencalcs.com/mutation/drenched): Drenched mutation (×5): how to get it, value multiplier and stacking.
+- [Eclipsed Mutation](https://growagardencalcs.com/mutation/eclipsed): Eclipsed mutation (×20): how to get it, value multiplier and stacking.
+- [Eggnog Mutation](https://growagardencalcs.com/mutation/eggnog): Eggnog mutation (×6): how to get it, value multiplier and stacking.
+- [Enchanted Mutation](https://growagardencalcs.com/mutation/enchanted): Enchanted mutation (×50): how to get it, value multiplier and stacking.
+- [Enlightened Mutation](https://growagardencalcs.com/mutation/enlightened): Enlightened mutation (×35): how to get it, value multiplier and stacking.
+- [Extraterrestrial Mutation](https://growagardencalcs.com/mutation/extraterrestrial): Extraterrestrial mutation (×130): how to get it, value multiplier and stacking.
+- [Fall Mutation](https://growagardencalcs.com/mutation/fall): Fall mutation (×4): how to get it, value multiplier and stacking.
+- [Festive Mutation](https://growagardencalcs.com/mutation/festive): Festive mutation (×24): how to get it, value multiplier and stacking.
+- [Fierywork Mutation](https://growagardencalcs.com/mutation/fierywork): Fierywork mutation (×30): how to get it, value multiplier and stacking.
+- [Firework Mutation](https://growagardencalcs.com/mutation/firework): Firework mutation (×26): how to get it, value multiplier and stacking.
+- [Flaming Mutation](https://growagardencalcs.com/mutation/flaming): Flaming mutation (×25): how to get it, value multiplier and stacking.
+- [Fortune Mutation](https://growagardencalcs.com/mutation/fortune): Fortune mutation (×50): how to get it, value multiplier and stacking.
+- [FoxfireChakra Mutation](https://growagardencalcs.com/mutation/foxfirechakra): FoxfireChakra mutation (×90): how to get it, value multiplier and stacking.
+- [Fractured Mutation](https://growagardencalcs.com/mutation/fractured): Fractured mutation (×92): how to get it, value multiplier and stacking.
+- [Fried Mutation](https://growagardencalcs.com/mutation/fried): Fried mutation (×8): how to get it, value multiplier and stacking.
+- [Friendbound Mutation](https://growagardencalcs.com/mutation/friendbound): Friendbound mutation (×70): how to get it, value multiplier and stacking.
+- [Frozen Mutation](https://growagardencalcs.com/mutation/frozen): Frozen mutation (×10): how to get it, value multiplier and stacking.
+- [Galactic Mutation](https://growagardencalcs.com/mutation/galactic): Galactic mutation (×120): how to get it, value multiplier and stacking.
+- [Gale Mutation](https://growagardencalcs.com/mutation/gale): Gale mutation (×25): how to get it, value multiplier and stacking.
+- [Geode Mutation](https://growagardencalcs.com/mutation/geode): Geode mutation (×5): how to get it, value multiplier and stacking.
+- [Ghostly Mutation](https://growagardencalcs.com/mutation/ghostly): Ghostly mutation (×25): how to get it, value multiplier and stacking.
+- [Gilded Mutation](https://growagardencalcs.com/mutation/gilded): Gilded mutation (×15): how to get it, value multiplier and stacking.
+- [Glacial Mutation](https://growagardencalcs.com/mutation/glacial): Glacial mutation (×25): how to get it, value multiplier and stacking.
+- [Glimmering Mutation](https://growagardencalcs.com/mutation/glimmering): Glimmering mutation (×2): how to get it, value multiplier and stacking.
+- [Glitched Mutation](https://growagardencalcs.com/mutation/glitched): Glitched mutation (×85): how to get it, value multiplier and stacking.
+- [Gloom Mutation](https://growagardencalcs.com/mutation/gloom): Gloom mutation (×30): how to get it, value multiplier and stacking.
+- [Gnomed Mutation](https://growagardencalcs.com/mutation/gnomed): Gnomed mutation (×15): how to get it, value multiplier and stacking.
+- [Golden Mutation](https://growagardencalcs.com/mutation/golden): Golden mutation (×20): how to get it, value multiplier and stacking.
+- [Goldsparkle Mutation](https://growagardencalcs.com/mutation/goldsparkle): Goldsparkle mutation (×500): how to get it, value multiplier and stacking.
+- [Gourmet Mutation](https://growagardencalcs.com/mutation/gourmet): Gourmet mutation (×37): how to get it, value multiplier and stacking.
+- [Graceful Mutation](https://growagardencalcs.com/mutation/graceful): Graceful mutation (×77): how to get it, value multiplier and stacking.
+- [Grim Mutation](https://growagardencalcs.com/mutation/grim): Grim mutation (×170): how to get it, value multiplier and stacking.
+- [HarmonisedChakra Mutation](https://growagardencalcs.com/mutation/harmonisedchakra): HarmonisedChakra mutation (×35): how to get it, value multiplier and stacking.
+- [HarmonisedFoxfireChakra Mutation](https://growagardencalcs.com/mutation/harmonisedfoxfirechakra): HarmonisedFoxfireChakra mutation (×190): how to get it, value multiplier and stacking.
+- [Heartstruck Mutation](https://growagardencalcs.com/mutation/heartStruck): Heartstruck mutation (×3): how to get it, value multiplier and stacking.
+- [Heartbound Mutation](https://growagardencalcs.com/mutation/heartbound): Heartbound mutation (×50): how to get it, value multiplier and stacking.
+- [Heavenly Mutation](https://growagardencalcs.com/mutation/heavenly): Heavenly mutation (×5): how to get it, value multiplier and stacking.
+- [HoneyGlazed Mutation](https://growagardencalcs.com/mutation/honeyglazed): HoneyGlazed mutation (×5): how to get it, value multiplier and stacking.
+- [Infected Mutation](https://growagardencalcs.com/mutation/infected): Infected mutation (×75): how to get it, value multiplier and stacking.
+- [Plagued (combo) Mutation](https://growagardencalcs.com/mutation/infected_special): Plagued (combo) mutation (×102): how to get it, value multiplier and stacking.
+- [Infernal Mutation](https://growagardencalcs.com/mutation/infernal): Infernal mutation (×180): how to get it, value multiplier and stacking.
+- [Jackpot Mutation](https://growagardencalcs.com/mutation/jackpot): Jackpot mutation (×15): how to get it, value multiplier and stacking.
+- [Junkshock Mutation](https://growagardencalcs.com/mutation/junkshock): Junkshock mutation (×45): how to get it, value multiplier and stacking.
+- [Leeched Mutation](https://growagardencalcs.com/mutation/leeched): Leeched mutation (×70): how to get it, value multiplier and stacking.
+- [Lightcycle Mutation](https://growagardencalcs.com/mutation/lightcycle): Lightcycle mutation (×50): how to get it, value multiplier and stacking.
+- [Luck Mutation](https://growagardencalcs.com/mutation/luck): Luck mutation (×3): how to get it, value multiplier and stacking.
+- [Luminous Mutation](https://growagardencalcs.com/mutation/luminous): Luminous mutation (×50): how to get it, value multiplier and stacking.
+- [Lush Mutation](https://growagardencalcs.com/mutation/lush): Lush mutation (×3): how to get it, value multiplier and stacking.
+- [Maelstrom Mutation](https://growagardencalcs.com/mutation/maelstrom): Maelstrom mutation (×100): how to get it, value multiplier and stacking.
+- [Meatball Mutation](https://growagardencalcs.com/mutation/meatball): Meatball mutation (×3): how to get it, value multiplier and stacking.
+- [Meteoric Mutation](https://growagardencalcs.com/mutation/meteoric): Meteoric mutation (×125): how to get it, value multiplier and stacking.
+- [Mineral Mutation](https://growagardencalcs.com/mutation/mineral): Mineral mutation (×18): how to get it, value multiplier and stacking.
+- [Mirage Mutation](https://growagardencalcs.com/mutation/mirage): Mirage mutation (×25): how to get it, value multiplier and stacking.
+- [Moist Mutation](https://growagardencalcs.com/mutation/moist): Moist mutation (×3): how to get it, value multiplier and stacking.
+- [Molten Mutation](https://growagardencalcs.com/mutation/molten): Molten mutation (×25): how to get it, value multiplier and stacking.
+- [Monsoon Mutation](https://growagardencalcs.com/mutation/monsoon): Monsoon mutation (×50): how to get it, value multiplier and stacking.
+- [Moonbled Mutation](https://growagardencalcs.com/mutation/moonbled): Moonbled mutation (×25): how to get it, value multiplier and stacking.
+- [Moonlit Mutation](https://growagardencalcs.com/mutation/moonlit): Moonlit mutation (×40): how to get it, value multiplier and stacking.
+- [Necrotic Mutation](https://growagardencalcs.com/mutation/necrotic): Necrotic mutation (×8): how to get it, value multiplier and stacking.
+- [Nocturnal Mutation](https://growagardencalcs.com/mutation/nocturnal): Nocturnal mutation (×4): how to get it, value multiplier and stacking.
+- [Oil Mutation](https://growagardencalcs.com/mutation/oil): Oil mutation (×15): how to get it, value multiplier and stacking.
+- [Oilboil Mutation](https://growagardencalcs.com/mutation/oilboil): Oilboil mutation (×30): how to get it, value multiplier and stacking.
+- [OldAmber Mutation](https://growagardencalcs.com/mutation/oldamber): OldAmber mutation (×20): how to get it, value multiplier and stacking.
+- [Opulent Mutation](https://growagardencalcs.com/mutation/opulent): Opulent mutation (×5): how to get it, value multiplier and stacking.
+- [Ornamented Mutation](https://growagardencalcs.com/mutation/ornamented): Ornamented mutation (×10): how to get it, value multiplier and stacking.
+- [Paradisal Mutation](https://growagardencalcs.com/mutation/paradisal): Paradisal mutation (×100): how to get it, value multiplier and stacking.
+- [Pasta Mutation](https://growagardencalcs.com/mutation/pasta): Pasta mutation (×3): how to get it, value multiplier and stacking.
+- [Peppermint Mutation](https://growagardencalcs.com/mutation/peppermint): Peppermint mutation (×4): how to get it, value multiplier and stacking.
+- [Pestilent Mutation](https://growagardencalcs.com/mutation/pestilent): Pestilent mutation (×8): how to get it, value multiplier and stacking.
+- [Plagued Mutation](https://growagardencalcs.com/mutation/plagued): Plagued mutation (×102): how to get it, value multiplier and stacking.
+- [Plasma Mutation](https://growagardencalcs.com/mutation/plasma): Plasma mutation (×5): how to get it, value multiplier and stacking.
+- [Pollinated Mutation](https://growagardencalcs.com/mutation/pollinated): Pollinated mutation (×30): how to get it, value multiplier and stacking.
+- [Radioactive Mutation](https://growagardencalcs.com/mutation/radioactive): Radioactive mutation (×55): how to get it, value multiplier and stacking.
+- [Rainbow Mutation](https://growagardencalcs.com/mutation/rainbow): Rainbow mutation (×50): how to get it, value multiplier and stacking.
+- [Riptide Mutation](https://growagardencalcs.com/mutation/riptide): Riptide mutation (×80): how to get it, value multiplier and stacking.
+- [Rotting Mutation](https://growagardencalcs.com/mutation/rot): Rotting mutation (×8): how to get it, value multiplier and stacking.
+- [Sandy Mutation](https://growagardencalcs.com/mutation/sandy): Sandy mutation (×3): how to get it, value multiplier and stacking.
+- [Sauce Mutation](https://growagardencalcs.com/mutation/sauce): Sauce mutation (×3): how to get it, value multiplier and stacking.
+- [Severed Mutation](https://growagardencalcs.com/mutation/severed): Severed mutation (×40): how to get it, value multiplier and stacking.
+- [Shadow Mutation](https://growagardencalcs.com/mutation/shadow): Shadow mutation (×70): how to get it, value multiplier and stacking.
+- [Shocked Mutation](https://growagardencalcs.com/mutation/shocked): Shocked mutation (×100): how to get it, value multiplier and stacking.
+- [Silver Mutation](https://growagardencalcs.com/mutation/silver): Silver mutation (×5): how to get it, value multiplier and stacking.
+- [Sizzled Mutation](https://growagardencalcs.com/mutation/sizzled): Sizzled mutation (×18): how to get it, value multiplier and stacking.
+- [Slashbound Mutation](https://growagardencalcs.com/mutation/slashbound): Slashbound mutation (×95): how to get it, value multiplier and stacking.
+- [Sleepy Mutation](https://growagardencalcs.com/mutation/sleepy): Sleepy mutation (×3): how to get it, value multiplier and stacking.
+- [Sliced Mutation](https://growagardencalcs.com/mutation/sliced): Sliced mutation (×50): how to get it, value multiplier and stacking.
+- [Snowtouched Mutation](https://growagardencalcs.com/mutation/snowtouched): Snowtouched mutation (×5): how to get it, value multiplier and stacking.
+- [Snowy Mutation](https://growagardencalcs.com/mutation/snowy): Snowy mutation (×2): how to get it, value multiplier and stacking.
+- [Spaghetti Mutation](https://growagardencalcs.com/mutation/spaghetti): Spaghetti mutation (×15): how to get it, value multiplier and stacking.
+- [Spooky Mutation](https://growagardencalcs.com/mutation/spooky): Spooky mutation (×8): how to get it, value multiplier and stacking.
+- [Stampede Mutation](https://growagardencalcs.com/mutation/stampede): Stampede mutation (×50): how to get it, value multiplier and stacking.
+- [Static Mutation](https://growagardencalcs.com/mutation/static): Static mutation (×8): how to get it, value multiplier and stacking.
+- [Stormbound Mutation](https://growagardencalcs.com/mutation/stormbound): Stormbound mutation (×270): how to get it, value multiplier and stacking.
+- [Stormcharged Mutation](https://growagardencalcs.com/mutation/stormcharged): Stormcharged mutation (×180): how to get it, value multiplier and stacking.
+- [Subzero Mutation](https://growagardencalcs.com/mutation/subzero): Subzero mutation (×40): how to get it, value multiplier and stacking.
+- [Sundried Mutation](https://growagardencalcs.com/mutation/sundried): Sundried mutation (×85): how to get it, value multiplier and stacking.
+- [Sunscorched Mutation](https://growagardencalcs.com/mutation/sunscorched): Sunscorched mutation (×32): how to get it, value multiplier and stacking.
+- [Supernatural Mutation](https://growagardencalcs.com/mutation/supernatural): Supernatural mutation (×37): how to get it, value multiplier and stacking.
+- [Tempered Mutation](https://growagardencalcs.com/mutation/tempered): Tempered mutation (×6): how to get it, value multiplier and stacking.
+- [Tempestous Mutation](https://growagardencalcs.com/mutation/tempestous): Tempestous mutation (×12): how to get it, value multiplier and stacking.
+- [Terran Mutation](https://growagardencalcs.com/mutation/terran): Terran mutation (×75): how to get it, value multiplier and stacking.
+- [Touchdown Mutation](https://growagardencalcs.com/mutation/touchdown): Touchdown mutation (×105): how to get it, value multiplier and stacking.
+- [Toxic Mutation](https://growagardencalcs.com/mutation/toxic): Toxic mutation (×15): how to get it, value multiplier and stacking.
+- [Twilight Mutation](https://growagardencalcs.com/mutation/twilight): Twilight mutation (×4): how to get it, value multiplier and stacking.
+- [Twisted Mutation](https://growagardencalcs.com/mutation/twisted): Twisted mutation (×5): how to get it, value multiplier and stacking.
+- [Umbral Mutation](https://growagardencalcs.com/mutation/umbral): Umbral mutation (×30): how to get it, value multiplier and stacking.
+- [Vamp Mutation](https://growagardencalcs.com/mutation/vamp): Vamp mutation (×3): how to get it, value multiplier and stacking.
+- [Verdant Mutation](https://growagardencalcs.com/mutation/verdant): Verdant mutation (×4): how to get it, value multiplier and stacking.
+- [Void Touched Mutation](https://growagardencalcs.com/mutation/voidtouched): Void Touched mutation (×135): how to get it, value multiplier and stacking.
+- [Warped Mutation](https://growagardencalcs.com/mutation/warped): Warped mutation (×75): how to get it, value multiplier and stacking.
+- [Glitched+Plasma Mutation](https://growagardencalcs.com/mutation/warped_dark): Glitched+Plasma mutation (×92): how to get it, value multiplier and stacking.
+- [Mindbender Mutation](https://growagardencalcs.com/mutation/warped_special): Mindbender mutation (×175): how to get it, value multiplier and stacking.
+- [Webbed Mutation](https://growagardencalcs.com/mutation/webbed): Webbed mutation (×8): how to get it, value multiplier and stacking.
+- [Wet Mutation](https://growagardencalcs.com/mutation/wet): Wet mutation (×2): how to get it, value multiplier and stacking.
+- [Whalebound Mutation](https://growagardencalcs.com/mutation/whalebound): Whalebound mutation (×50): how to get it, value multiplier and stacking.
+- [Whimsical Mutation](https://growagardencalcs.com/mutation/whimsical): Whimsical mutation (×6): how to get it, value multiplier and stacking.
+- [Wildfast Mutation](https://growagardencalcs.com/mutation/wildfast): Wildfast mutation (×5): how to get it, value multiplier and stacking.
+- [Wilted Mutation](https://growagardencalcs.com/mutation/wilted): Wilted mutation (×10): how to get it, value multiplier and stacking.
+- [Wiltproof Mutation](https://growagardencalcs.com/mutation/wiltproof): Wiltproof mutation (×4): how to get it, value multiplier and stacking.
+- [Windstruck Mutation](https://growagardencalcs.com/mutation/windstruck): Windstruck mutation (×2): how to get it, value multiplier and stacking.
+- [Withered Mutation](https://growagardencalcs.com/mutation/withered): Withered mutation (×20): how to get it, value multiplier and stacking.
+- [Tranquil Mutation](https://growagardencalcs.com/mutation/zenlike): Tranquil mutation (×20): how to get it, value multiplier and stacking.
+- [Zombified Mutation](https://growagardencalcs.com/mutation/zombified): Zombified mutation (×25): how to get it, value multiplier and stacking.
+
+## Grow a Garden 2
+
+Guides, wiki and tools for Grow a Garden 2.
+
+- [Grow a Garden 2](https://growagardencalcs.com/grow-a-garden-2): Grow a Garden 2 guide 2026: wiki, tools, codes, weather and trades.
+- [Grow a Garden 2 Wiki](https://growagardencalcs.com/grow-a-garden-2/wiki): Grow a Garden 2 wiki: codes, plants, pets and guides.
+- [Grow a Garden 2 Codes](https://growagardencalcs.com/grow-a-garden-2/wiki/codes): Grow a Garden 2 codes: listed rewards and redemption help.
+- [Weather Tracker](https://growagardencalcs.com/grow-a-garden-2/weather-tracker): Grow a Garden 2 weather tracker and event guide.
+- [Trading Guide](https://growagardencalcs.com/grow-a-garden-2/trades): Grow a Garden 2 trading guide: how trades work.
+- [Stock Predictor](https://growagardencalcs.com/grow-a-garden-2/stock-predictor): GAG2 stock predictor: seed shop tracker.
+- [How Much Is the Bunny Worth in](https://growagardencalcs.com/grow-a-garden-2/wiki/pets/bunny): How Much Is the Bunny Worth in in Grow a Garden 2: how to get it, ability and value.
+- [Golden Dragonfly](https://growagardencalcs.com/grow-a-garden-2/wiki/pets/dragonfly): Golden Dragonfly in Grow a Garden 2: how to get it, ability and value.
+- [Raccoon](https://growagardencalcs.com/grow-a-garden-2/wiki/pets/raccoon): Raccoon in Grow a Garden 2: how to get it, ability and value.
+- [Rainbow Turtle](https://growagardencalcs.com/grow-a-garden-2/wiki/pets/rainbowturtle): Rainbow Turtle in Grow a Garden 2: how to get it, ability and value.
+- [Bamboo](https://growagardencalcs.com/grow-a-garden-2/wiki/plants/bamboo): Bamboo in Grow a Garden 2: how to get it, cost and value.
+- [Corn](https://growagardencalcs.com/grow-a-garden-2/wiki/plants/corn): Corn in Grow a Garden 2: how to get it, cost and value.
+- [Dragon's Breath](https://growagardencalcs.com/grow-a-garden-2/wiki/plants/dragonsbreath): Dragon's Breath in Grow a Garden 2: how to get it, cost and value.
+- [Ghost Pepper](https://growagardencalcs.com/grow-a-garden-2/wiki/plants/ghostpepper): Ghost Pepper in Grow a Garden 2: how to get it, cost and value.
+- [Moon Bloom](https://growagardencalcs.com/grow-a-garden-2/wiki/plants/moonbloom): Moon Bloom in Grow a Garden 2: how to get it, cost and value.
+- [Mushroom](https://growagardencalcs.com/grow-a-garden-2/wiki/plants/mushroom): Mushroom in Grow a Garden 2: how to get it, cost and value.
+- [Sun Bloom](https://growagardencalcs.com/grow-a-garden-2/wiki/plants/sunbloom): Sun Bloom in Grow a Garden 2: how to get it, cost and value.
+- [Sunflower](https://growagardencalcs.com/grow-a-garden-2/wiki/plants/sunflower): Sunflower in Grow a Garden 2: how to get it, cost and value.
+
+## About this site
+
+- [About](https://growagardencalcs.com/about): About this site: data sources and method.
+- [Changelog](https://growagardencalcs.com/changelog): Data update dates: when each dataset last changed.
+- [Contact](https://growagardencalcs.com/contact): Contact the site owners.
+- [Privacy Policy](https://growagardencalcs.com/privacy): Privacy policy.
+- [Terms of Service](https://growagardencalcs.com/terms): Terms of service.
 
 ## Elsewhere
 
-- https://discord.gg/growagarden
-- https://www.facebook.com/growagardencalc
-- https://www.youtube.com/@GrowAGardenCalcs
+- [Discord](https://discord.gg/growagarden): Grow a Garden Discord community.
+- [Facebook](https://www.facebook.com/growagardencalc): Grow a Garden Calculator on Facebook.
+- [YouTube](https://www.youtube.com/@GrowAGardenCalcs): Grow a Garden Calculator on YouTube.
