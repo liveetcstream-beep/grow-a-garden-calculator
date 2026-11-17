@@ -116,6 +116,16 @@ export default function Footer() {
             <Link href="/terms" className="text-xs transition-colors hover:text-[var(--primary)]" style={{ color: 'var(--muted)' }}>Terms of Service</Link>
           </div>
         </div>
+
+        {/* Featured on badges */}
+        <div className="mt-8 pt-6 flex flex-wrap items-center justify-center gap-4" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+          <a href="https://twelve.tools" target="_blank" rel="noopener noreferrer" title="Featured on Twelve Tools">
+            <img src="https://twelve.tools/badge0-dark.svg" alt="Featured on Twelve Tools" width="200" height="54" loading="lazy" />
+          </a>
+          <a href="https://saaslineup.com/product/grow-a-garden-calculator?ref=badge" rel="dofollow">
+            <img src="https://saaslineup.com/badge/grow-a-garden-calculator.svg" alt="Featured on SaaSLineup" width="182" height="46" loading="lazy" />
+          </a>
+        </div>
       </div>
     </footer>
   );
